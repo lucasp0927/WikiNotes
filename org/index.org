@@ -20,9 +20,5 @@ Notes on physics and other stuff.
 * 通識
 - [[file:worldmusic.org][World Music]]
 
------
-* Notes
-** TODO Electronics
-** TODO Gerenal Physics  
 
 -----
