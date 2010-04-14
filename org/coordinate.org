@@ -6,7 +6,11 @@
 
 Take spherical coordinate for example.
 
-\[dr \Rightarrow h_1=1\], \[d\theta \Rightarrow h_2=r\], \[d\phi \Rightarrow h_3=r\: sin\: \theta\]
+\[dr \Rightarrow h_1=1\]
+
+\[d\theta \Rightarrow h_2=r\]
+
+\[d\phi \Rightarrow h_3=r\: sin\: \theta\]
 
 * Curl
 \begin{equation*}
