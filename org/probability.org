@@ -1,0 +1,29 @@
+#+TITLE: Probability and Statistic 
+#+STARTUP: showall
+#+OPTIONS: toc:3
+#+LaTeX_HEADER: \usepackage{amssymb}
+#+LaTeX_HEADER: \usepackage{amsmath}
+
+* Random Variables
+** Bernoulli Random Variable
+\[
+P_{X}(x)=\begin{cases}
+1-p & x=0\\
+p & x=1\\
+0 & \textrm{otherwise}\end{cases}\]
+** Geometric Random Variable
+\[
+P_{X}(x)=\begin{cases}
+p(1-p)^{x-1} & x=1,2,...\\
+0 & \textrm{otherwise}\end{cases}\]
+** Binomial Random Variable
+\[P_{X}(x)=\binom{n}{x}p^x(1-p)^{n-x}\]
+For $0<p<1$ and $n\geq1$.
+** Pascal Random Variable
+\[P_{X}(x)=\binom{x-1}{k-1}p^k(1-p)^{x-k}\]
+For $0<p<1$ and $k\geq1$.
+** Poisson Random Variable
+\[
+P_{X}(x)=\begin{cases}
+\alpha^{x}e^{-\alpha}/x! & x=0,1,2,...\\
+0 & \textrm{otherwise}\end{cases}\]
