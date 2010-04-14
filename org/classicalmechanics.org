@@ -1,0 +1,9 @@
+#+TITLE:
+#+STARTUP: showall
+#+INCLUDE: header/header.org org
+#+OPTIONS: toc:3
+#+LATEX_HEADER: \usepackage{amssymb}
+* chap9 
+
+------
+[[file:index.org][Back to Index]]

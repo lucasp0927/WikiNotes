@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Quantum Mechanics</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-04-15 00:11:14 CST"/>
+<meta name="author" content="Lucas Peng"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel='stylesheet' type='text/css' href='css/style.css' />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Quantum Mechanics</h1>
+
+<p><a href="index.html">Main</a> | 
+</p>
+
+
+
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Kets, Bras, and Operators </a>
+<ul>
+<li><a href="#sec-1.1">Dual Correspondence </a></li>
+<li><a href="#sec-1.2">Postulate </a></li>
+<li><a href="#sec-1.3">Operators </a></li>
+<li><a href="#sec-1.4">Multiplication </a></li>
+<li><a href="#sec-1.5">The Assocciative Axiom </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">Base Kets and Matrix Representations </a>
+<ul>
+<li><a href="#sec-2.1">Theorem </a></li>
+<li><a href="#sec-2.2">Closure </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">Measurements, Oberservation, and the Uncertainty Relation </a>
+<ul>
+<li><a href="#sec-3.1">Expectation Value </a></li>
+<li><a href="#sec-3.2">Spin 1/2 System </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">Changes of Basis </a></li>
+<li><a href="#sec-5">Position, Momentum and Translation </a></li>
+<li><a href="#sec-6">Wave Function in Position and Momentum Space </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Kets, Bras, and Operators </h2>
+<div class="outline-text-2" id="text-1">
+
+<p><img src="ltxpng/quantum_9cd4a320cb180eaad1b779c87bc9977ca477663a.png"/>.
+</p>
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1">Dual Correspondence </h3>
+<div class="outline-text-3" id="text-1.1">
+
+<p><img src="ltxpng/quantum_bd535a350d269c1120b7b791f9f52d46c241de36.png"/>
+</p>
+<p>
+<img src="ltxpng/quantum_a6f14401ae32bd4e8381943ba561b952593198e1.png"/>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2">Postulate </h3>
+<div class="outline-text-3" id="text-1.2">
+
+<dl>
+<dt>first</dt><dd>
+
+</dd>
+</dl>
+
+<p><img src="ltxpng/quantum_24d46c1ddaadd5b9df06df4a6f35dce53a04c072.png"/>
+</p>
+<dl>
+<dt>Second</dt><dd>
+
+</dd>
+</dl>
+
+<p><img src="ltxpng/quantum_7ad232a9416bcdad15eb02138d4d2aa44e4b9703.png"/>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3">Operators </h3>
+<div class="outline-text-3" id="text-1.3">
+
+<p><img src="ltxpng/quantum_b06af4b06439eebf17f806b65618ffb8cb7a1c69.png"/>, where <img src="ltxpng/quantum_a8424495c3464debb116f99cef46d0d83b7dc81f.png"/> is called <b>Hermitian adjoint</b>. A matrix is called hermitian if <img src="ltxpng/quantum_d5d7f2836b1b7b81edc8094d9f95c0969d33e3c3.png"/> .
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4">Multiplication </h3>
+<div class="outline-text-3" id="text-1.4">
+
+<p><img src="ltxpng/quantum_7bf3fc6d625a554a8d058641fd54304ea7e98c7a.png"/>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5">The Assocciative Axiom </h3>
+<div class="outline-text-3" id="text-1.5">
+
+<p><img src="ltxpng/quantum_8ae33b21145fed226f22a372ef477aef7a35397a.png"/>.
+</p>
+<p>
+Can prove if <img src="ltxpng/quantum_cec2fc4001fc1ee9cf08b8f83b19bf1aed927321.png"/>, <img src="ltxpng/quantum_883d04bef62e0119159f342059f9f2a9d888db8b.png"/> 
+</p>
+
+
+<p>
+<img src="ltxpng/quantum_3bb1b5337ad14b0636bc2f7ee3047386124ea169.png"/>
+</p>
+
+
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Base Kets and Matrix Representations </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1">Theorem </h3>
+<div class="outline-text-3" id="text-2.1">
+
+<p><i>The eigenvalues of a Hermitian operator A are real, the eigenket corresponding to different eigenvalue are orthogonal.</i>
+</p><dl>
+<dt>proof</dt><dd>
+
+
+
+
+</dd>
+</dl>
+
+<p><img src="ltxpng/quantum_b1ba63f4105477c10ac09b919685272eb91604ec.png"/>
+</p>
+
+
+
+
+<p>
+<img src="ltxpng/quantum_7fc1e412717156a8b94d40d4302d4e660850984a.png"/>
+</p>
+
+
+<p>
+so <img src="ltxpng/quantum_c0e0c95cb347aa9fd9d366982df8a3f2addacf32.png"/>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2">Closure </h3>
+<div class="outline-text-3" id="text-2.2">
+
+
+
+<p>
+<img src="ltxpng/quantum_8de0dec22a17819ce2cd3dd48bae9582cf8136f3.png"/>
+</p>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Measurements, Oberservation, and the Uncertainty Relation </h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1">Expectation Value </h3>
+<div class="outline-text-3" id="text-3.1">
+
+<p>Expectation value of A taken with respect to state <img src="ltxpng/quantum_29ad0c76b8036649b16b7d5de45c6d5f024d87fc.png"/>.
+<img src="ltxpng/quantum_0e6bee9dd4b5b4f5b72292102b60bf3a9b841ce8.png"/>
+</p>
+<p>
+Notation <img src="ltxpng/quantum_a7b1fe06e861655cc9b919a6fa991f6d86f1df99.png"/> is somtimes used.
+</p>
+<p>
+because, <img src="ltxpng/quantum_b669f4b0842287564304c985604703e44534ff90.png"/>. This is what expextation value means.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.2" class="outline-3">
+<h3 id="sec-3.2">Spin 1/2 System </h3>
+<div class="outline-text-3" id="text-3.2">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Changes of Basis </h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Position, Momentum and Translation </h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">Wave Function in Position and Momentum Space </h2>
+<div class="outline-text-2" id="text-6">
+
+
+
+<hr/>
+<p>
+<a href="index.html">Back to Index</a>
+</p></div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Lucas Peng
+<a href="mailto:lucasp0927@gmail.com">&lt;lucasp0927@gmail.com&gt;</a>
+</p>
+<p class="date"> Date: 2010-04-15 00:11:14 CST</p>
+<p class="creator">HTML generated by org-mode 6.34c in emacs 23</p>
+</div>
+</div>
+</body>
+</html>

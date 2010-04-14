@@ -1,0 +1,76 @@
+#+TITLE: Relativity
+#+INCLUDE: header/header.org org
+#+OPTIONS: toc:3
+
+* Special Relativity
+** Lorentz transformation
+
+*** Four Velocity
+\begin{equation*}
+\mathbf{x}=X^{\mu}\left( \tau \right)= \left[ \begin{array}{c}
+ct\\
+x^{1}(t)\\
+x^{2}(t)\\
+x^{3}(t)\\
+\end{array}
+ \right]
+\end{equation*}
+
+**** Definition
+Define $\mathbf{U}=\frac{dx}{d\tau}$,$\tau$ is proper time.
+
+ $x^{0}=ct=c\gamma\tau$, $U^{0}=\frac{dx^{0}}{d\tau}=c\gamma$.
+
+ $U^{i}=\frac{dx^{i}}{d\tau}=\frac{dx^{i}}{dx^{0}}\frac{dx^{0}}{d\tau}=\frac{dx^{i}}{dx^{0}}c\gamma=\frac{1}{c}\frac{dx^{i}}{d(t)}c\gamma=\gamma u^{i}$.
+
+Where $u^{i}=\frac{dx^{i}}{dt}$.
+
+so 
+\begin{equation*}
+\mathbf{U}=\gamma \left( \begin{array}{c}
+ c \\
+u^{1}\\
+u^{2}\\
+u^{3}
+\end{array}
+\right)
+\end{equation*}
+
+**** Interpretation
+$U^{0}$ is the speed in time times c. exp: when $\gamma = 1$, $u=0$, $\mathbf{U}=\left( c,0,0,0 \right)$.
+
+$U_{\mu}U^{\mu}=-c^{2}$
+
+**** Note
+移動物數一秒，觀察者觀察到的變化時間and位置。
+*** Four Acceleration
+**** Definition 
+\begin{equation*}
+\mathbf{A}=\frac{d\mathbf{U}}{d\tau}=\left( \gamma_{u}\dot{\gamma}_{u}c,\gamma_{u}^{2}\mathbf{a}+\gamma_{u}\dot{\gamma}_{u}\mathbf{u} \right)=\left( \gamma_{u}^{4}\frac{\mathbf{a}\cdot \mathbf{u}}{c},\gamma_{u}^{2}\mathbf{a}+\gamma_{u}^{4}\frac{\mathbf{a}\cdot \mathbf{u}}{c^{2}}u \right)
+\end{equation*}
+Where $\mathbf{a}=\frac{d\mathbf{u}}{dt}$ and $\dot{\gamma}_{u}=\frac{\mathbf{a}\cdot \mathbf{u}}{c^{2}}\gamma^{3}_{u}$.
+
+Note that a dot above a variable indicates a derivative with respect to the coordinate time in a given reference frame, not the proper time \tau.
+*** Four Force
+**** definition
+ $\mathbf{F}=\frac{d\mathbf{p}}{d \tau}$.
+
+$\mathbf{F}=m\mathbf{A}=\left( \gamma \frac{d\gamma}{dt}mc,\gamma \frac{d}{dt}\left( \gamma m \mathbf{u} \right) \right)= \left(\gamma {d\gamma \over dt} mc,\gamma{\mathbf f}\right)$
+
+m is the proper mass (rest mass).
+
+** Relativistic dynamics
+- tips: $\gamma \beta =  \sqrt{\gamma^{2}-1}$, 可用質量=1,c=1, Lorentz invariant 想， ($E^{2}-p^{2}m^{2}=m_{0}c^{2}$),證 $\gamma^{2}-\gamma^{2}\beta^{2}=1$.
+- Relativistic momentum
+\begin{equation*}
+F=\frac{d}{dt}\left( mv \right)=\frac{d}{dt} \left( \frac{m_{0}v}{\sqrt{1-\frac{v^{2}}{c^{2}}}} \right)  
+\end{equation*}
+
+** Doppler effect
+*** perpendicular source
+ Because $k_{x}=0$, $\frac{\omega ' }{c }=\gamma \frac{\omega ' }{c}$, so $\omega ' =\omega \gamma$.
+*** perpendicular observer
+$k_{x}=\frac{\omega}{c}\times \beta$, $\frac{\omega ' }{c}=\gamma \left( \frac{\omega}{c}-\frac{\omega v}{c^{2}} \right)$, so $\omega ' =\sqrt{1-\beta^{2}} \omega$.
+* General Relativity
+-----
+[[file:index.org][Back to index]]

@@ -1,0 +1,115 @@
+#+TITLE:Complex Variable
+#+INCLUDE: header/header.org org
+#+OPTIONS: toc:3
+* Cauchy-Riemann Condition
+$\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+
+* Cauchy's Integral Theorem
+$\frac{1}{2\pi i}\int_{c}z^{n}dz=0$, if $n \neq -1$
+
+$\frac{1}{2\pi i}\int_{c}z^{n}dz=1$, if $n = -1$
+
+* Cauchy Intergral Formula
+Taylor expantion: about a analytic point, Laurent expantion: about one singular point of $f(z)$.
+$\frac{1}{2\pi i}\int _{c} \frac{f(z)}{z-z_{0}}=f(z_{0})$, if $z_{0}$ is interior, otherwise 0.
+
+* Derivative 
+$f^{n}(z_{0})=\frac{n!}{2\pi i}\frac{f(z) dz }{(z-z_{0})^{n+1}}$
+
+* Laurent Expansion
+$f(z)=\Sigma ^{\infty}_{-\infty} a_{n}\left( z-z_{0} \right)^{n}$,
+where $a_{n}=\frac{1}{2\pi i}\int \frac{f(z^{\prime})dz^{\prime}}{(z^{\prime}-z_{0})^{n+1
+}}$.
+
+* Calculus of Residues
+** Residue Theorem
+The constant $a_{-1}$ of Laurent expansion is called /residue/ of $f(z)$ at $z=z_{0}$.
+Integrate $f(z)$ by intergrate its Laurent expansion term by term. 
+\begin{equation*}
+\int f(z) dz=\int a_{n} (z-z_{0})^{n}dz=a_{-1} \int (z-z_{0})^{-1}dz=2\pi i \times a_{-1}
+\end{equation*}
+so ,
+$\frac{1}{2\pi i}\int f(z) dz=a_{-1}$.
+
+A set of isolated singularities can be handled by intergrate them clockwise, in a counterclockwise contour.
+
+for every singular point,
+
+$\int f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sing because of clockwise direction.
+
+so,
+\begin{equation*}
+\int f(z)dz=2\pi i \times (sum \: of\:  enclosured\:  residues)
+\end{equation*}
+
+This is called the *residue theorm*.
+
+** Useful Trick:
+The function $f(z)$ expand in Laurent series exhinits a pole of oder m at $z=z_{0}$. $a_{-1}=\frac{1}{\left( m-1 \right)!} \frac{d^{m-1}}{dz^{m-1}}\left[ \left( z-z_{0} \right)^{m} f(z) \right]_{z=z_{0}}$, with
+$a_{-1}=\left[ \left( z-z_{0} \right)f(z) \right]_{z=z_{0}}$, when m=1.
+** Infinitesimal radius
+$\int \frac{dz}{z-x_{0}}=i \int ^{2\pi}_{\pi}d\phi = i\pi$ , if counterclockwise,
+
+$\int \frac{dz}{z-x_{0}}=i \int ^{0}_{\pi}d\phi = -i\pi$ , if clockwise.
+
+* Pole Expantion of Meromorphic Function
+Analytic function $f(z)$ that have only isolated poles as singularities are called *meromorphic*.
+
+define: poles $z=a_{1},a_{2},a_{3},\dots$, with residues $b_{n}$
+
+\begin{equation*}
+f(z)=f(0)+\Sigma ^{\infty} _{n=1} b_{n} \left\{ \left( z-a_{n} \right)^{-1} +a_{n}^{-1}\right\}
+\end{equation*}
+
+- Proof:
+
+* Product Expansion of Entire Function
+- Entire Function: A function $f(z)$ that is analytic for all finite z.
+if $f(z)$ has a simple zero. $f(z)=(z-a_{n})g(z)$ with $g(z)$ analytic and $g(a_{n}) \neq 0$.
+
+\begin{equation*}
+\frac{f'(z)}{f(z)}=(z-a_{n})^{-1}+\frac{g'(z)}{g(z)}
+\end{Equation*}
+
+From pole expansion :
+\begin{equation*}
+\frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
+\end{equation*}
+
+Integrate,
+
+\begin{equation*}
+\int^{z}_{0}\frac{f'(z)}{f(z)}dz=ln f(z) -ln f(0)=\frac{zf'(0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left\{ ln \left( z-a_{n} \right)-ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
+\end{equation*}
+
+Exponentiating,
+
+\begin{equation*}
+f(z)=f(0) exp \frac{z f'(0)}{f(0)}\Pi^{\infty}_{1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
+\end{equation*}
+
+** Rouche's Theorm
+if $f(z)$ and $g(z)$ are analytic inside and on a closed contour C and $\left| g(z) \right| < \left| f(z) \right|$ on C then $f(z)$ and $f(z)+g(z)$ have the same number of zeros inside C.
+
+* Evaluation of Definite Integrals
+** Definite Integrals $\int ^{2\pi} _{0} f(sin \theta , cos \theta ) d \theta$
+\begin{equation*}
+I=\int ^{2\pi}_{0} f(sin \theta , cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \Sigma residues \: within \: the \: unit \: circle
+\end{equation*}
+
+** Definite Integrals $\int ^{\infty}_{-\infty}f(x)dx$
+if 
+- $f(z)$ is analytic in the upper plane and has finite number of poles.
+- $f(z)$ vanishes as strong as $\frac{1}{z^{2}}$ , $0 \le arg(z) \le \pi$.
+
+then, $I=2\pi i \times \Sigma residues (upper\: plane)$
+
+** Definite Integrals $\int ^{\infty}_{-\infty} f(x)e^{iax}dx$
+- $f(z)$ is analytic in the upper plane and has finite number of poles.
+- $lim_{\left|  x\right|\Rightarrow \infty} f(z)=0 $,$0 \le arg(z) \le \pi$.
+then, $I=2\pi i \times \Sigma residues (upper\: plane)$
+
+/Jordan's lemma/
+
+-----
+[[file:index.org][Back to index]]

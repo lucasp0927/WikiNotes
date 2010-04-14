@@ -1,0 +1,36 @@
+#+TITLE: How To Remember Div Curl 
+#+STARTUP: showall
+#+OPTIONS: toc:3
+#+LaTeX_HEADER: \usepackage{amssymb}
+#+LaTeX_HEADER: \usepackage{amsmath}
+
+Take spherical coordinate for example.
+
+\[dr \Rightarrow h_1=1\], \[d\theta \Rightarrow h_2=r\], \[d\phi \Rightarrow h_3=r\: sin\: \theta\]
+
+* Curl
+\begin{equation*}
+\nabla\times\mathbf{A}=
+\left| 
+{
+\begin{array}{ccc}
+\frac{a_1}{h_2 h_3} & \frac{a_2}{h_1 h_3} & \frac{a_3}{h_1 h_2}\\ 
+\frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_{2}} & \frac{\partial}{\partial q_{3}}\\
+h_1 \mathbf{A}_1 & h_2 \mathbf{A}_2 & h_3 \mathbf{A}_3\\
+\end{array}
+}
+\right|
+\end{equation*}
+
+First row devided by  $h_2 h_3 \dots$ because while derive Curl we times $\frac{h_2h_3}{h_2h_3}$ so that we can get $h_2 h_3 dq_2 dq_3$
+
+In third row, we time h because it is the h that times to A when doing the intergration.
+
+* Div
+
+\[\nabla \cdot \mathbf{A} = \frac{1}{h_1h_2h_3}\left( \frac{\partial A_1 h_2 h_3}{ \partial q_1}+\frac{\partial A_2 h_1 h_3}{\partial q_2}+\frac{\partial A_3 h_1 h_2}{\partial q_3} \right)\]
+
+Same as curl, devide $h_1h_2h_3$ to get the volumn. And $h_2h_3$ which is the area is what we integrate A with.
+
+------
+[[file:index.org][Back to Index]]

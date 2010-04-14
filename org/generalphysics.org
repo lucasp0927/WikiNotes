@@ -1,0 +1,6 @@
+#+STARTUP: showall
+General Physics
+
+* test
+--------
+[[file:index.org][Back to Index]]

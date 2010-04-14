@@ -1,0 +1,76 @@
+#+TITLE:Quantum Mechanics
+#+INCLUDE: header/header.org org
+#+OPTIONS: toc:3
+* Kets, Bras, and Operators
+$\mathbf{A} \mid a' \rangle =a' \mid a' \rangle$.
+** Dual Correspondence
+$\mid \alpha \rangle \Rightarrow \langle \alpha \mid$
+
+$c_{\alpha}\mid\alpha\rangle + c_{\beta}\mid\beta\rangle\Rightarrow c_{a}^{\star} \langle \alpha\mid+ c_{\beta}^{\star}\langle\beta\mid$
+
+** Postulate
+- first ::
+$\langle\alpha\mid\beta\rangle=\langle\beta\mid\alpha\rangle^{\star}$
+
+- Second ::
+$\langle\alpha\mid\alpha\rangle \ge 0$.
+
+** Operators
+$X\mid \alpha\rangle \Rightarrow \langle\alpha\mid X^{\dagger}$, where $X^{\dagger}$ is called *Hermitian adjoint*. A matrix is called hermitian if $X=X^{\dagger}$ .
+
+** Multiplication
+ $\left( XY \right)^{\dagger}=Y^{\dagger}X^{\dagger}$
+
+** The Assocciative Axiom
+$\left(\mid \beta\rangle\langle \alpha\mid \right)\cdot \mid \gamma\rangle = \mid \beta \rangle \cdot \left( \langle\alpha\mid\gamma\rangle \right)$.
+
+Can prove if $X=\langle \alpha\mid\beta\rangle$, $X^{\dagger}=\langle\beta\mid \alpha\rangle$ 
+
+\begin{equation*}
+\langle \beta \mid X \mid \alpha \rangle=\langle \alpha \mid X^{\dagger} \mid \beta \rangle^{\star}
+\end{equation*}
+
+
+
+
+
+* Base Kets and Matrix Representations
+** Theorem 
+ /The eigenvalues of a Hermitian operator A are real, the eigenket corresponding to different eigenvalue are orthogonal./
+- proof ::
+
+\begin{equation*}
+A\mid a ^{\prime}   \rangle = a^{\prime}    \mid a^{\prime}    \rangle \Rightarrow \langle a^{\prime \prime} \mid A \mid a^{\prime} \rangle=a^{\prime}\langle a^{\prime \prime}\mid a^{\prime}\rangle
+\end{equation*}
+
+\begin{equation*}
+\langle a^{\prime \prime}\mid A= a^{\prime \prime}\langle a^{\prime \prime}\mid \Rightarrow \langle a^{\prime \prime} \mid A \mid a^{\prime}\rangle=a^{\prime \prime}\langle a^{\prime\prime}\mid a^{\prime}\rangle
+\end{equation*}
+
+so $\left( a^{\prime\prime}-a^{\prime} \right) \langle a^{\prime \prime}\mid a^{\prime}\rangle$.
+
+** Closure
+\begin{equation*}
+\Sigma_{a^{\prime}}\mid a^{\prime}\rangle \langle a^{\prime}\mid=1
+\end{equation*}
+
+
+* Measurements, Oberservation, and the Uncertainty Relation 
+** Expectation Value
+Expectation value of A taken with respect to state $\mid \alpha \rangle$.
+$\langle A \rangle=\langle \alpha \mid A \mid \alpha \rangle$
+
+Notation $\langle A \rangle_{\alpha}$ is somtimes used.
+
+because, $\langle A \rangle = \Sigma_{a^{\prime}}\Sigma_{a^{\prime \prime}}\langle \alpha \mid a^{\prime \prime}\rangle\langle a^{\prime \prime} \mid A \mid a^{\prime} \rangle \langle a^{\prime}\mid\alpha\rangle=\Sigma_{a^{\prime}}a^{\prime}\left| \langle a^{\prime}\mid \alpha \rangle. \right|^{2}$. This is what expextation value means.
+
+** Spin 1/2 System
+
+* Changes of Basis
+
+* Position, Momentum and Translation
+
+* Wave Function in Position and Momentum Space
+
+-----
+[[file:index.org][Back to Index]]
