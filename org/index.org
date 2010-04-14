@@ -1,7 +1,7 @@
 #+OPTIONS: toc:nil
 #+STARTUP: showall
 
-#+TITLE: Lucas Peng Web
+#+TITLE: WikiNotes
 #+INCLUDE: header/header.org org
 -----
 Notes on physics and other stuff.
