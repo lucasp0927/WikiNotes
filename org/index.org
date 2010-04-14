@@ -15,6 +15,7 @@ Notes on physics and other stuff.
 * Math
 - [[file:complex.org][Complex Variable]]
 - [[file:coordinate.org][How to Remember Div Curl]]
+- [[file:probability.org][Probability]]
 * EE
 - [[file:electronics.org][Electronics]]
 * 通識
