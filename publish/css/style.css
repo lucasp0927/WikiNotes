@@ -7,6 +7,10 @@ body, p, li {
 	font-size: 1em; 
 }
 
+img {
+  vertical-align: middle;
+}
+
 #table-of-contents {
     color: black;
     background: #FFF;
