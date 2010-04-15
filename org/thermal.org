@@ -6,7 +6,6 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
-
 * The basic
 - Microcanocical $\left( E,N \right)_{fixed}$
 - Canonical $\left( T,N \right)_{fixed}$
