@@ -1,6 +1,7 @@
 #+OPTIONS: toc:nil
 #+STARTUP: showall
-
+#+AUTHOR: Lucas Peng, Andrew Liu 
+#+EMAIL: lucasp0927@gmail.com
 #+TITLE: WikiNotes
 #+INCLUDE: header/header.org org
 -----
