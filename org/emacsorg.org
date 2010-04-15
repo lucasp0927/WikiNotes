@@ -1,0 +1,38 @@
+#+TITLE: Emacs Org Publish Setting
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+
+
+#+BEGIN_SRC emacs-lisp
+(require 'org-publish)
+ (setq org-export-with-LaTeX-fragments t)
+    (require 'org-publish)
+(setq org-publish-project-alist
+'(("wiki"
+:base-directory "~/WikiNotes/org/"
+:base-extension "org"
+:publishing-directory "~/WikiNotes/publish/"
+:recursive t
+:publishing-function org-publish-org-to-html
+:section-numbers nil
+:auto-preamble t
+:table-of-contents nil
+:style "<link rel='stylesheet' type='text/css' href='css/style.css' />"
+:style-include-default t
+)
+("wiki2"
+:base-directory "~/WikiNotes/org/"
+:base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+:publishing-directory "~/WikiNotes/publish/"
+:recursive t
+:publishing-function org-publish-attachment)
+("website" :components ("wiki" "wiki2"))
+))
+#+END_SRC
+
+------
+[[file:index.org][Back to Index]]
