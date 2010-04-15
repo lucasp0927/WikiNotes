@@ -1,5 +1,7 @@
 #+TITLE: How To Remember Div Curl 
-#+STARTUP: showall
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
 #+OPTIONS: toc:3
 #+LaTeX_HEADER: \usepackage{amssymb}
 #+LaTeX_HEADER: \usepackage{amsmath}

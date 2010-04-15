@@ -1,6 +1,11 @@
 #+TITLE:Complex Variable
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:3
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+
 * Cauchy-Riemann Condition
 $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
 

@@ -1,5 +1,7 @@
 #+TITLE: World Music
 #+INCLUDE: header/header.org org
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
 * Japan
 ** 日本雅樂
 - 外來

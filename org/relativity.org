@@ -1,4 +1,8 @@
 #+TITLE: Relativity
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:3
 

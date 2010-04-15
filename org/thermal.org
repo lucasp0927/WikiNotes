@@ -1,4 +1,6 @@
 #+TITLE: Thermal Physics
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:3
 #+LATEX_HEADER: \usepackage{amssymb}
@@ -89,9 +91,9 @@ This is *Brillouin Function*.
 
  $E(j)=j(j+1)\epsilon$, number of degenerate states for level j is $2J+1$.
 
- So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} dj = \frac{kT}{\epsilon}\].
+ So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} dj = \frac{kT}{\epsilon}\]
 
- \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$)
+ From Z_{rot}, we can calculate \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$).
 
  This is just the prediction of equipartition theorem, since a rotation diatomic molecule has two degree of freedom.
 - When $kT \ll \epsilon$
@@ -361,6 +363,49 @@ U can be derive using the same tricks.
 \[U=\frac{3}{5}N_{\epsilon_{F}}+\frac{\pi^{2}}{4}N \frac{(kT)^{2}}{\epsilon_{F}}\]
 
 \[C_{V}= \left( \frac{\partial \bar{E}}{\partial T} \right)_{V,N}=\left( \frac{\pi^2 N k^2 }{2\epsilon_F} \right)T\]
+
+* Semiconductor
+
+In valance bamd,
+\[g(\epsilon)=g_{0v}\left( \epsilon_v-\epsilon \right)^{1/2}\]
+
+In conduction band,
+\[g(\epsilon)=g_{0c}\left( \epsilon-\epsilon_c \right)^{1/2}\]
+
+Where $g_{0c}=g_0 \left( \frac{m_c}{m_e} \right)^{3/2}$, and $g_{0v}=g_0 \left( \frac{m_v}{m_e} \right)^{3/2}$
+
+m_c is the effect mass of a conduction electron.
+m_v is the effect mass of a valence hole.
+m_e is bare elctron mass.
+
+for silicon \epsilon_c - \epsilon_v =1.11 ev at room temperature.
+
+- Conduction band
+
+ \[\bar{N}_c=\int^{\infty}_{\epsilon_c}g_{0c}\left( \epsilon-\epsilon_c \right)^{1/2}\frac{1}{e^{\beta (\epsilon-\mu)}+1}d\epsilon
+   \approx \int^{\infty}_{\epsilon_c}g_{0c}\left( \epsilon-\epsilon_c \right)^{1/2}\frac{1}{e^{\beta(\epsilon-\mu)}+1}d\epsilon\]
+ by $x \equiv \beta \left( \epsilon-\epsilon_c \right)$ we get:
+
+ \[\bar{N}_c= g_{0c}e^{-\beta \left( \epsilon_c-\mu \right)}\left( kT \right)^{3/2}\int^{\infty}_0\sqrt{x}e^{-x}dx\],
+ where $\int^{\infty}_0 \sqrt{x} e^{-x}dx=\frac{\sqrt{\pi}}{2}$.
+
+ we can conclude that $\bar{N}_c$ increace with T repidly.
+
+- Valence Band
+
+ Same method as conduction band, but note that the probability become $1-\frac{1}{e^{\beta \left( \epsilon-\mu \right)}+1}$ for holes.
+
+ $\bar{N}_v$ also increace with T rapidly.
+
+from the conservation requirement we have $\bar{N}_c=\bar{N}_v$, that is 
+$g_{0c}e^{-\beta \left( \epsilon_c-\mu \right)}=g_{0v}e^{-\beta \left( \mu-\epsilon_v \right)}$.
+
+So, \[\mu=\frac{\epsilon_v+\epsilon_c}{2}+\frac{kT}{2}ln\: \left( \frac{g_{0v}}{g_{0c}} \right)\Rightarrow\epsilon_F\equiv \mu\: (T=0)\:=\frac{\epsilon_c+\epsilon_v}{2}\].
+If g_{0v}=g_{oc}, \mu is independance of temperature. 
+
+An ordinary metal has a fixed number of conduction electrons, so it's conductivity depends on how easily the electrons can
+move around. At high temperature collisions occur more frequently and the conductivity is lower. However, for semiconductor
+this effect is by the enourmously greater amount of conduction electrons.
 
 
 ------

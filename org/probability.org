@@ -1,4 +1,7 @@
 #+TITLE: Probability and Statistic 
+#+AUTHOR: Andrew Liu
+#+EMAIL: andrewliu33@gmail.co
+#+INCLUDE: header/header.org org
 #+STARTUP: showall
 #+OPTIONS: toc:3
 #+LaTeX_HEADER: \usepackage{amssymb}
