@@ -7,7 +7,7 @@ lang="en" xml:lang="en">
 <title>Electronics</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2010-04-15 22:41:06 CST"/>
+<meta name="generated" content="2010-04-15 22:54:41 CST"/>
 <meta name="author" content="Lucas Peng"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -35,6 +35,7 @@ lang="en" xml:lang="en">
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
   .org-info-js_info-navigation { border-style:none; }
@@ -93,7 +94,7 @@ lang="en" xml:lang="en">
 </li>
 <li><a href="#sec-2.4">The CG and CB amplifier with active load </a>
 <ul>
-<li><a href="#sec-2.4.1">When file:ltxpng/electronics<sub>028cf0e776fb3bf70715d43e358850f28c5bb6f3</sub>.png </a></li>
+<li><a href="#sec-2.4.1">When file:ltxpng/electronics<sub>962828224424f27ce69926fbd546ecc06717b4e7</sub>.png </a></li>
 <li><a href="#sec-2.4.2">Time Constant </a></li>
 </ul>
 </li>
@@ -112,12 +113,14 @@ lang="en" xml:lang="en">
 <h2 id="sec-1">The Basics </h2>
 <div class="outline-text-2" id="text-1">
 
-<p><img src="ltxpng/electronics_1ed4e851bfad0b5c1758e48983ca6aa1c6525bc3.png"/>,
+<p><img src="ltxpng/electronics_859cb34ba58ff8e4289c61a3899a27b345e7c2ce.png" alt="\[r_0=\frac{V_A}{I_D}\]"/>,
 </p>
 
 
 <p>
-<img src="ltxpng/electronics_5f6cb8abe31950b7f99e8ceeca8bbd02eb7b21c3.png"/>
+<img src="ltxpng/electronics_bc3105d6897da4e3fd35f9233e6f32b2569c386a.png" alt="\begin{eqnarray*}
+g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D}=\frac{2I_D}{V_{ov}}
+\end{eqnarray*}"/>
 </p>
 
 
@@ -130,22 +133,22 @@ lang="en" xml:lang="en">
 
 
 <p>
-<img src="ltxpng/electronics_708aa822006811f5d33ef5d9b34d728f816ba9c1.png"/>
+<img src="ltxpng/electronics_54296b0a4a6f7579feae0128d0a5878a5d0dca01.png" alt="\[R_i=\frac{v_i}{i_i}\Big|_{R_L= \infty}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_9fbec7bbdd9f2a8af677a7b442cdf127e536d8f8.png"/>
+<img src="ltxpng/electronics_81968a335af8229c0412cccc3464142eeb884a1e.png" alt="\[R_{in}=\frac{V_i}{i_i}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_30849fc22f6a352a8855aef6758db2f25a54da0b.png"/>
+<img src="ltxpng/electronics_9eeb824dc0ac23f5826a6de4357dae2ab18582ca.png" alt="\[R_o=\frac{v_x}{i_x}\big|_{v_{i}=0}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_d9a99862e05768734367e6343ec0dc589e482586.png"/>
+<img src="ltxpng/electronics_b4506f4a558722fe9acb58e31e27ecbdbb80a12d.png" alt="\[R_{out}=\frac{v_x}{i_x}\big|_{v_{sig}=0}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_bc15786b45f080155c15aba9d7736133075f4c45.png"/>
+<img src="ltxpng/electronics_d08c6e6738bd83ee363da479770d5ab9d396fb81.png" alt="\[A_{vo}=\frac{V_o}{V_i}\Big|_{R_L=0}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_3f8a6107c6b5a356bd2857599710630377a44426.png"/>
+<img src="ltxpng/electronics_6dcd412c9a3da3a1a3fcfc83bae595e1d4b237c9.png" alt="\[A_v=\frac{v_o}{v_i}\]"/>
 </p>
 </div>
 </div>
@@ -166,10 +169,12 @@ lang="en" xml:lang="en">
 <ol>
 <li>
 Dominate pole response
-<img src="ltxpng/electronics_420b702d3741327134ae6904864128b2880b4365.png"/>
+<img src="ltxpng/electronics_fe5cf1a399ee9fe9c784686d2ec60462dcb925f1.png" alt="\[F_H \approx \frac{1}{1+s/\omega_{p1}}\]"/>
 
 <p>
-<img src="ltxpng/electronics_53b4b468157b5ccd197ddc3453e44a487bace83e.png"/>
+<img src="ltxpng/electronics_fb345844101f6c02ef52576fbb2b93669ea9c721.png" alt="\[\omega_H=1/\sqrt{\left( \frac{1}{\omega^2_{P1}+\frac{1}{\omega_{P2}^2}}+\dots \right)-2 \left( \frac{1}{\omega_{Z1}^2+\frac{1}{\omega_{Z2}^2}}+\dots \right)}
+2. Open Ciruit Time Constant
+   \[\omega_H=\frac{1}{\Sigma_i C_i R_{i0}}\]"/>
 </p></li>
 </ol>
 </div>
@@ -180,10 +185,10 @@ Dominate pole response
 <h3 id="sec-2.2">Miller's effect </h3>
 <div class="outline-text-3" id="text-2.2">
 
-<p><img src="ltxpng/electronics_2a21865550a5f458210862ded893cd0dbb940e6b.png"/>
+<p><img src="ltxpng/electronics_c1846fbf4c3984ce4b9c36330bc2f7cadc70147a.png" alt="\[Z_1=\frac{Z}{1-K}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_685d481423b6b2d444a4b2d40c1394ff88665b82.png"/>
+<img src="ltxpng/electronics_70e38906302cd56e2d946844e6438c3713e5b064.png" alt="\[Z_2=\frac{Z}{1-\frac{1}{K}}\]"/>
 </p></div>
 
 </div>
@@ -204,33 +209,33 @@ Dominate pole response
 Using Miller's Theorem
 
 <p>
-<img src="ltxpng/electronics_5f3253ad0ee6c1e8d3b87493958a0125abf6d481.png"/>.
+<img src="ltxpng/electronics_716118d7ee903f0e5c06579662f0293e01063a6f.png" alt="\[C_{gd} \xrightarrow{\hspace*{2cm}} C_{gd}\left( 1+g_m R^{\prime}_{L} \right)\]"/>.
 </p>
 <p>
-So <img src="ltxpng/electronics_993ccf8da5a4256f7b5d12e37419a86aa35b80e8.png"/>, where <img src="ltxpng/electronics_2a57cb56417d13c100a0930bc9b7d9c0bb4adf20.png"/>
+So <img src="ltxpng/electronics_f960ab9c17297d5e9ebeb4abb4392aa069a5420f.png" alt="$f_H=\frac{1}{2\piC_{in}R_{sig}}$"/>, where <img src="ltxpng/electronics_274c558ede52849f0e2ad9accd25786c0dbb79f0.png" alt="$C_{in}=C_{gs}+C_{gd}\left( 1+g_m R^{\prime}_{L} \right)$"/>
 </p>
 </li>
 <li>
 Using Time Constant
 
 <p>
-<img src="ltxpng/electronics_858b77254ca2896ffde89132c0f5624a3aaf40fb.png"/>, <img src="ltxpng/electronics_85ad9c62ce8202bd8dc8ba37c5bd61156a86ea03.png"/>, <img src="ltxpng/electronics_bb88d7fdbeb6fb069d18c22c97c3c6840509256a.png"/>
+<img src="ltxpng/electronics_9eb8de0f65b21387d196f7f4ce351d1d0c69d418.png" alt="\[R_{gs}=R_{sig}\]"/>, <img src="ltxpng/electronics_6712f9d03d32034fbc956e72945e5c022a3da4a3.png" alt="\[R_{gd}=R^{\prime}_L+R_{sig}+g_m R_{sig}R^{\prime}_L\]"/>, <img src="ltxpng/electronics_0041141671c0693f9808b40573898ccdb50ad752.png" alt="\[R_L=R^{\prime}_L\]"/>
 </p>
 </li>
 <li>
 Adapting the formulas to CE amplifier
 
 <p>
-<img src="ltxpng/electronics_02f017a283dbec3ef3d4db23ce80ac9eefcfa3ef.png"/>, and <img src="ltxpng/electronics_bd82ee031d499d29ce1130bfd14d759637cbf859.png"/>
+<img src="ltxpng/electronics_dab5fb60b2250c5fa4c6339d2c5e1c97b55b8327.png" alt="\[V_{sig}^{\prime}=V_{sig}\frac{r_{\pi}}{R_{sig}+r_{\pi}+r_x}\]"/>, and <img src="ltxpng/electronics_b43f95583872d0bd1b3ad1ea420f862840ce0467.png" alt="\[R_{sig}^{\prime}= r_{\pi} \Big| \Big| \left( R_{sig}+r_x \right)\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_7dd2442f96c4bfea966844f0cbe5cd76c267ded6.png"/>
+<img src="ltxpng/electronics_1977e39e687f3773a56d94d730c4de364deb417b.png" alt="\[A_M=\frac{V_o}{V_{sig}}=-\frac{r_{\pi}}{R_{sig}+r_x+r_{\pi}}g_m R^{\prime}_L\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_170c560061b5a6150b2cecc79d3b03047364008a.png"/>
+<img src="ltxpng/electronics_a70e36d083e71b97146c164c526ae14196b57073.png" alt="\[C_{in}=C_{\pi}+C_{\mu}\left( 1+g_m R_L^{\prime} \right)\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_f10d42372d402b77434738e33cd35c8dbf0468a3.png"/>
+<img src="ltxpng/electronics_df4ca4f1e13fed4df284b857edd880f413aa0380.png" alt="\[f_H\approx \frac{1}{2\pi C_{in}R^{\prime}_{sig}}\]"/>
 </p>
 </li>
 </ul>
@@ -247,18 +252,18 @@ Adapting the formulas to CE amplifier
 </div>
 
 <div id="outline-container-2.4.1" class="outline-4">
-<h4 id="sec-2.4.1">When <img src="ltxpng/electronics_028cf0e776fb3bf70715d43e358850f28c5bb6f3.png"/> </h4>
+<h4 id="sec-2.4.1">When <img src="ltxpng/electronics_962828224424f27ce69926fbd546ecc06717b4e7.png" alt="$R_{L}\neq \infty$"/> </h4>
 <div class="outline-text-4" id="text-2.4.1">
 
 
 <p>
-<img src="ltxpng/electronics_c8aa1588ad2b806416ea6f465a7f60a5f0e8ba6d.png"/>
+<img src="ltxpng/electronics_847758f73573e2b51a420fceaa778892f70c68a4.png" alt="\[i_i=\left( g_m+G_{mb} \right)v_i\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_3acd60d29ffe685e56bdebf8ed21777f946a4b66.png"/> <img src="ltxpng/electronics_806c7a803b55ec1585f5d7f535ded3f8a45dc998.png"/>
+<img src="ltxpng/electronics_c2641d91ed81a60c4c73f4deb85693feb575ccaa.png" alt="\[R_{in}=\frac{r_0+R_L}{1+\left( g_m+g_{mb} \right)r_0}=\frac{r_0+R_L}{A_{vo}}\approx \frac{1}{g_{m+g_{mb}}+\frac{R_L}{A_{vo}}}\]"/> <img src="ltxpng/electronics_d8e506aa8ea5611087b542e21a76986468c46f94.png" alt="\[G_m=\frac{A_{01}A_{vo2}}{r_{02}+A_{vo2}r_{01}}\approx g_{m1}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_7a2b484ceb07d9e7c938a7f98e067eb7ae73ac61.png"/>
+<img src="ltxpng/electronics_749475a9b3e888783595ccb552327f52c15e3aa5.png" alt="\[R_{d1}=r_{01}// \left[ \frac{1}{g_m+g_{mb}}+\frac{R_L}{A_{vo2}} \right]\]"/>
 </p>
 
 
@@ -273,16 +278,16 @@ Adapting the formulas to CE amplifier
 <h4 id="sec-2.4.2">Time Constant </h4>
 <div class="outline-text-4" id="text-2.4.2">
 
-<p><img src="ltxpng/electronics_353aed9ef80819fbabf1a81a9a9fe39df005b620.png"/> sees a <img src="ltxpng/electronics_382c540bd10e7953826d089ab45331076a00566b.png"/>
+<p><img src="ltxpng/electronics_4e8f2e0519aab6f670ac8e3b1d90032b684af8c2.png" alt="$C_{gd1}$"/> sees a <img src="ltxpng/electronics_be36cfd31b5e864695ec9b5fdef3b32548f944ab.png" alt="$R_{sig}$"/>
 </p>
 <p>
-<img src="ltxpng/electronics_cb5a3d7b25c389dbe66b12c85e7d65ced07c5217.png"/> sees a <img src="ltxpng/electronics_37c9b678e57bebbc8b695e507c0df44a0e3c1632.png"/> 
+<img src="ltxpng/electronics_d0c651555f7b1ba70d3f07d1d25a4aaa79d3023f.png" alt="$C_{gd2}$"/> sees a <img src="ltxpng/electronics_efd9a19baeedd17828b63ee38c98d1b51ea31665.png" alt="$R_{gd1}=R_{d1}+ \left( 1+g_{m1}R_{d1} \right)R_{sig}$"/> 
 </p>
 <p>
-<img src="ltxpng/electronics_370cb97466f65b5f341db5ab7fbaeb57d07d0275.png"/> sees <img src="ltxpng/electronics_079a3c242400dfc86b5a4cefe5553f0af2ee971c.png"/>
+<img src="ltxpng/electronics_681b94cd5e647c69d531b3184696a8d1f544ce22.png" alt="$C_{db1}+C_{gs2}$"/> sees <img src="ltxpng/electronics_02505bf58ad956b65a02028befc7260aa6ec7659.png" alt="$R_{d1}$"/>
 </p>
 <p>
-<img src="ltxpng/electronics_85bbfcbc55dd57a3176c35b9ab73b0c937c61bf6.png"/> sees <img src="ltxpng/electronics_bfefe5ca43fd542976c81a4beaa7dc014e0c029f.png"/>
+<img src="ltxpng/electronics_9976e519a1bd125798118f7065960fbd3f01377b.png" alt="$C_L+C_{gd2}$"/> sees <img src="ltxpng/electronics_353afddf2fee51ee7e5f4533e72293999c8a801c.png" alt="$R_L//R_{out}$"/>
 </p>
 </div>
 </div>
@@ -295,11 +300,11 @@ Adapting the formulas to CE amplifier
 
 
 <p>
-As CG amplifier <img src="ltxpng/electronics_8809dacf28a237b7083d8e93c8e74b7adb278e8e.png"/>.
-<img src="ltxpng/electronics_81f6f65dc5baf17fc2f3ca22bbbdbac59c687f68.png"/>. <img src="ltxpng/electronics_61786065de2939919d9b31c3ed58a4d9276adfe9.png"/>
+As CG amplifier <img src="ltxpng/electronics_2423d7b35092e9b149280cd99bb1c199c750abec.png" alt="\[R_{out}=r_0+ \left[ 1+\left( g_m+g_{mb} \right)r_0 \right]R_s \approx r_0 \left[ 1+\left( g_m+g_{mb} \right)R_s \right]\]"/>.
+<img src="ltxpng/electronics_bc8f3d88fcaea084d6c62b4f4518588ba7a9fa50.png" alt="\[A_{vo}=-A_0=-g_m r_0\]"/>. <img src="ltxpng/electronics_e6eddc62e950de0e77a804bf824822e7063e4046.png" alt="\[G_m=\frac{A_{vo}}{R_{out}}=\frac{g_m r_0}{r_0 \left[ 1+\left( g_m+ g_{mb} \right)R_s \right]}=\frac{g_m}{1+\left( g_m+g_{mb} \right)R_s}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_4d00c25041bef794e7670916e2b693796228c604.png"/> reduces the amplifier transconductance and increase its output resistance by the same factor <img src="ltxpng/electronics_e80ddcf4e52bc9bf751ee656677dffe2e8f235ce.png"/>'
+<img src="ltxpng/electronics_bc37434c723e189ca990332ee2adbedc94c012dc.png" alt="$R_s$"/> reduces the amplifier transconductance and increase its output resistance by the same factor <img src="ltxpng/electronics_e0bb5e6a737411eb9a5f81ae3c9d8b8282ba82d3.png" alt="$\left[ 1+\left( g_m+g_{mb} \right)R_s \right]$"/>'
 </p>
 
 </div>
@@ -310,16 +315,16 @@ As CG amplifier <img src="ltxpng/electronics_8809dacf28a237b7083d8e93c8e74b7adb2
 
 
 <p>
-<img src="ltxpng/electronics_35af161e0c36058cdd1b479e982da81d7b3a03b9.png"/>, where <img src="ltxpng/electronics_0bd96c3313fc234303d837c5ffcb020972784a55.png"/>
+<img src="ltxpng/electronics_23424a000d6d7a32889b7e79c403c18a3380a556.png" alt="\[R_{gd}=R_{sig}\left( 1+G_m R^{\prime}_L \right)+R^{\prime}_L\]"/>, where <img src="ltxpng/electronics_879b79043a214b387fef8d5487c52909c426fd28.png" alt="\[R_L^{\prime}=R_L// R_{out}\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_938a59e4e63355850b40e390c3b0d69d466a37a0.png"/>
+<img src="ltxpng/electronics_49aa9c0b1fab5bd0f44158c35b2fe55249f58468.png" alt="\[R_{C_L}=R_L//R_{out}=R^{\prime}_L\]"/>
 </p>
 <p>
-<img src="ltxpng/electronics_efe5d5b433b03b921bc55dc6ed7f52d89d034767.png"/> is hard to derive, <img src="ltxpng/electronics_3cd7fbbce6aee9d026a11689903bb64695f87119.png"/>.
+<img src="ltxpng/electronics_60c3ed15cddf5a373d7cd334c066e4d7e98e2403.png" alt="$R_{gs}$"/> is hard to derive, <img src="ltxpng/electronics_2fcbb02c89a739110243c75c21c31c901852f842.png" alt="\[R_{gs}=\frac{R_{sig}+R_s}{1+\left( g_m+g_{mb} \right)R_s \left( \frac{r_0}{r_0+R_{L}} \right)}\]"/>.
 </p>
 <p>
-When <img src="ltxpng/electronics_382c540bd10e7953826d089ab45331076a00566b.png"/> is large enough. <img src="ltxpng/electronics_5638e9274b7a7c549c871cac9a203299e61ef088.png"/>.
+When <img src="ltxpng/electronics_be36cfd31b5e864695ec9b5fdef3b32548f944ab.png" alt="$R_{sig}$"/> is large enough. <img src="ltxpng/electronics_89493e19c9ac0ddc02a7c790bc4aacced2115873.png" alt="\[\tau_H\approx C_{gd}R_{gd}\]"/>.
 
 </p>
 <hr/>
@@ -330,11 +335,7 @@ When <img src="ltxpng/electronics_382c540bd10e7953826d089ab45331076a00566b.png"/
 </div>
 </div>
 <div id="postamble">
-<p class="author"> Author: Lucas Peng
-<a href="mailto:lucasp0927@gmail.com">&lt;lucasp0927@gmail.com&gt;</a>
-</p>
-<p class="date"> Date: 2010-04-15 22:41:06 CST</p>
-<p class="creator">HTML generated by org-mode 6.34c in emacs 23</p>
+<p class="date"> Date: 2010-04-15 22:54:41 CST</p>
 </div>
 </div>
 </body>

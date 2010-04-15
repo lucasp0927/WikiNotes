@@ -7,7 +7,7 @@ lang="en" xml:lang="en">
 <title>How To Remember Div Curl </title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2010-04-15 22:25:25 CST"/>
+<meta name="generated" content="2010-04-15 22:54:42 CST"/>
 <meta name="author" content="Lucas Peng"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -35,6 +35,7 @@ lang="en" xml:lang="en">
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
   .org-info-js_info-navigation { border-style:none; }
@@ -84,13 +85,13 @@ lang="en" xml:lang="en">
 Take spherical coordinate for example.
 </p>
 <p>
-<img src="ltxpng/coordinate_7c95c1983e7ffe1347ceca000854be1ca66e7204.png"/>
+<img src="ltxpng/coordinate_bd7e651fb8675a1745b743ab358b4f3857548361.png" alt="\[dr \Rightarrow h_1=1\]"/>
 </p>
 <p>
-<img src="ltxpng/coordinate_0338f7b55d0d890ce8cd5e32715adc1229356fec.png"/>
+<img src="ltxpng/coordinate_d070a3c7e51112fb2547a44550e071ab794ef4bb.png" alt="\[d\theta \Rightarrow h_2=r\]"/>
 </p>
 <p>
-<img src="ltxpng/coordinate_0754a82555a7f1dbfe6bb4e02f0e0390a85bce7f.png"/>
+<img src="ltxpng/coordinate_63d96a2fa9ec72be492c4081fe17bc06c3116550.png" alt="\[d\phi \Rightarrow h_3=r\: sin\: \theta\]"/>
 </p>
 
 <div id="table-of-contents">
@@ -110,12 +111,23 @@ Take spherical coordinate for example.
 
 
 <p>
-<img src="ltxpng/coordinate_4c3fa6c00cda9abadb8d49690d3f2f25c032a870.png"/>
+<img src="ltxpng/coordinate_febc13230251df432ef8c3c1200fb590e14ef45a.png" alt="\begin{equation*}
+\nabla\times\mathbf{A}=
+\left| 
+{
+\begin{array}{ccc}
+\frac{a_1}{h_2 h_3} & \frac{a_2}{h_1 h_3} & \frac{a_3}{h_1 h_2}<br/>
+\frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_{2}} & \frac{\partial}{\partial q_{3}}\\
+h_1 \mathbf{A}_1 & h_2 \mathbf{A}_2 & h_3 \mathbf{A}_3\\
+\end{array}
+}
+\right|
+\end{equation*}"/>
 </p>
 
 
 <p>
-First row devided by  <img src="ltxpng/coordinate_bd3a9968fb7198d259eb03be31a2c7d4b8325832.png"/> because while derive Curl we times <img src="ltxpng/coordinate_f0aba866dd03740f0e40fd7d411deb76ff8ca2b0.png"/> so that we can get <img src="ltxpng/coordinate_bb6b7737719829c456300fa50eb66f71ada6b118.png"/>
+First row devided by  <img src="ltxpng/coordinate_064c766265ea1bed8397bd37b0259837b5e575f5.png" alt="$h_2 h_3 \dots$"/> because while derive Curl we times <img src="ltxpng/coordinate_e0bbe2ca403d51b7e8bce6a7b0636f043d671bf8.png" alt="$\frac{h_2h_3}{h_2h_3}$"/> so that we can get <img src="ltxpng/coordinate_03a7e15ce4f37f4d8a88b047076e1675e8559530.png" alt="$h_2 h_3 dq_2 dq_3$"/>
 </p>
 <p>
 In third row, we time h because it is the h that times to A when doing the intergration.
@@ -130,10 +142,10 @@ In third row, we time h because it is the h that times to A when doing the inter
 
 
 <p>
-<img src="ltxpng/coordinate_d2920819583c738fc6cb01b86db196e9c2d36c96.png"/>
+<img src="ltxpng/coordinate_a5a2329008af38e81479ebf712ad584e9e081781.png" alt="\[\nabla \cdot \mathbf{A} = \frac{1}{h_1h_2h_3}\left( \frac{\partial A_1 h_2 h_3}{ \partial q_1}+\frac{\partial A_2 h_1 h_3}{\partial q_2}+\frac{\partial A_3 h_1 h_2}{\partial q_3} \right)\]"/>
 </p>
 <p>
-Same as curl, devide <img src="ltxpng/coordinate_6cc6672b0cff1166d9944a6b1eafa28fd0e4e2b4.png"/> to get the volumn. And <img src="ltxpng/coordinate_511f9cb219ae5dd97e2fa750dfc2c4606fc45066.png"/> which is the area is what we integrate A with.
+Same as curl, devide <img src="ltxpng/coordinate_1afb180f84c9ed0d76269056fb42df398c2e746f.png" alt="$h_1h_2h_3$"/> to get the volumn. And <img src="ltxpng/coordinate_466273aab358334e352d68584489879661791ea5.png" alt="$h_2h_3$"/> which is the area is what we integrate A with.
 </p>
 
 <hr/>
@@ -142,7 +154,7 @@ Same as curl, devide <img src="ltxpng/coordinate_6cc6672b0cff1166d9944a6b1eafa28
 </p></div>
 </div>
 <div id="postamble">
-<p class="date"> Date: 2010-04-15 22:25:25 CST</p>
+<p class="date"> Date: 2010-04-15 22:54:42 CST</p>
 </div>
 </div>
 </body>
