@@ -89,9 +89,9 @@ This is *Brillouin Function*.
 
  $E(j)=j(j+1)\epsilon$, number of degenerate states for level j is $2J+1$.
 
- So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} dj = \frac{kT}{\epsilon}\].
+ So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} dj = \frac{kT}{\epsilon}\]
 
- \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$)
+ From Z_{rot}, we can calculate \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$).
 
  This is just the prediction of equipartition theorem, since a rotation diatomic molecule has two degree of freedom.
 - When $kT \ll \epsilon$
