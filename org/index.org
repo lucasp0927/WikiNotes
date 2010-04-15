@@ -21,6 +21,7 @@ Notes on physics and other stuff.
 - [[file:electronics.org][Electronics]]
 * 通識
 - [[file:worldmusic.org][World Music]]
-
+* emacs
+- [[file:emacsorg.org][Org-Mode Setting]]
 
 -----
