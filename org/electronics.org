@@ -1,5 +1,6 @@
 #+TITLE: Electronics
 #+OPTIONS: toc:3
+#+INCLUDE:header/header.org org
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 * The Basics
@@ -96,4 +97,4 @@ $R_{gs}$ is hard to derive, \[R_{gs}=\frac{R_{sig}+R_s}{1+\left( g_m+g_{mb} \rig
 
 When $R_{sig}$ is large enough. \[\tau_H\approx C_{gd}R_{gd}\].
 ------
-[[File:index.org][Back to Index]]
+[[file:index.org][Back to Index]]

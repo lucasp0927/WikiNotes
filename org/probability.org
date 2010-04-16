@@ -7,26 +7,66 @@
 #+LaTeX_HEADER: \usepackage{amssymb}
 #+LaTeX_HEADER: \usepackage{amsmath}
 
-* Random Variables
+* Basics
+** Expected Value
+\[E[X]=\mu_X=\sum_{x\in S_X}{}{xP_X(s)}\]
+*** Little Trick
+\[E[k^2]=E[k(k-1)]+E[k]\]
+** Derived Random Variable
+\[P_{Y}(y)=\sum_{x:g(x)=y}{P_{X}(x)}\]
+\[E[Y]=\mu_{Y}=\sum_{x\in S_{X}}{g(x)P_{X}(s)}\]
+\[E[aX+b]=aE[X]+b\]
+** Variance
+\[\textrm{Var}[X]=E\left[(X-\mu_X)^2\right]\]
+\[\textrm{Var}[X]=E\left[X^2\right]-(E[X])^2\]
+\[\textrm{Var}[aX+b]=a^{2}\textrm{Var}[X]\]
+** Conditional PMF
+\[P_{X|B}(x)=\begin{cases}
+\frac{P_X(x)}{P[B]} & x\in B \\
+0 & \textrm{otherwise}\end{cases}\]
+* Discrete Random Variables
 ** Bernoulli Random Variable
-\[
-P_{X}(x)=\begin{cases}
+Bernoulli random variable is a single test if an event is going to happen.
+\[P_{X}(x)=\begin{cases}
 1-p & x=0\\
 p & x=1\\
 0 & \textrm{otherwise}\end{cases}\]
+For $0<p<1$.
+\[E[X]=p\]
+\[\textrm{Var}[X]=p(1-p)\]
 ** Geometric Random Variable
-\[
-P_{X}(x)=\begin{cases}
+Geometric random variable describes the probability of $x-1$ continuous success with the last one failure.  
+\[P_{X}(x)=\begin{cases}
 p(1-p)^{x-1} & x=1,2,...\\
 0 & \textrm{otherwise}\end{cases}\]
+For $0<p<1$.
+\[E[X]=1/p\]
+\[\textrm{Var}[X]=(1-p)/p^2\]
 ** Binomial Random Variable
+Binomial random variable tells us when there are $n$ tests, what is the probabilty of $x$ tests are failure?
 \[P_{X}(x)=\binom{n}{x}p^x(1-p)^{n-x}\]
 For $0<p<1$ and $n\geq1$.
+\[E[X]=np\]
+\[\textrm{Var}[X]=np(1-p)\]
 ** Pascal Random Variable
+Pascal random variable is the probability of $k$ failures at the $x$th test.
 \[P_{X}(x)=\binom{x-1}{k-1}p^k(1-p)^{x-k}\]
 For $0<p<1$ and $k\geq1$.
+\[E[x]=k/p\]
+\[\textrm{Var}[X]=k(1-p)p^2\]
 ** Poisson Random Variable
+Let $\lambda$ is the arrival rate (1/T), and $T$ is the time interval.  Then $\alpha=\lambda T$ is the total arrivals, Poisson random varible shows the probability of $x$ arrivals.
 \[
 P_{X}(x)=\begin{cases}
 \alpha^{x}e^{-\alpha}/x! & x=0,1,2,...\\
 0 & \textrm{otherwise}\end{cases}\]
+For $\alpha >0$.
+\[E[X]=\alpha\]
+\[\textrm{Var}[X]=\alpha\]
+** Discrete Uniform Random Variable
+\[
+P_{X}(x)=\begin{cases}
+1/(l-k+1) & x=k,k+1,k+2,...,l \\
+0 & \textrm{otherwise}\end{cases}\]
+\[E[X]=(k+l)/2\]
+\[\textrm{Var}[X]=(l-k)(l-k+2)/12\]

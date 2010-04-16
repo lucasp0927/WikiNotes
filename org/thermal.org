@@ -2,7 +2,7 @@
 #+AUTHOR: Lucas Peng
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
-#+OPTIONS: toc:3
+#+OPTIONS: toc:3 
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 

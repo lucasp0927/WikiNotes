@@ -97,19 +97,19 @@ f(z)=f(0) exp \frac{z f'(0)}{f(0)}\Pi^{\infty}_{1}\left( 1-\frac{z}{a_{n}}e^{\fr
 if $f(z)$ and $g(z)$ are analytic inside and on a closed contour C and $\left| g(z) \right| < \left| f(z) \right|$ on C then $f(z)$ and $f(z)+g(z)$ have the same number of zeros inside C.
 
 * Evaluation of Definite Integrals
-** Definite Integrals $\int ^{2\pi} _{0} f(sin \theta , cos \theta ) d \theta$
+** Definite Integrals \int ^{2\pi} _{0} f(sin \theta , cos \theta ) d \theta
 \begin{equation*}
 I=\int ^{2\pi}_{0} f(sin \theta , cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \Sigma residues \: within \: the \: unit \: circle
 \end{equation*}
 
-** Definite Integrals $\int ^{\infty}_{-\infty}f(x)dx$
+** Definite Integrals \int ^{\infty}_{-\infty}f(x)dx
 if 
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
 - $f(z)$ vanishes as strong as $\frac{1}{z^{2}}$ , $0 \le arg(z) \le \pi$.
 
 then, $I=2\pi i \times \Sigma residues (upper\: plane)$
 
-** Definite Integrals $\int ^{\infty}_{-\infty} f(x)e^{iax}dx$
+** Definite Integrals \int ^{\infty}_{-\infty} f(x)e^{iax}dx
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
 - $lim_{\left|  x\right|\Rightarrow \infty} f(z)=0 $,$0 \le arg(z) \le \pi$.
 then, $I=2\pi i \times \Sigma residues (upper\: plane)$
