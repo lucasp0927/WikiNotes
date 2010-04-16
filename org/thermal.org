@@ -7,9 +7,9 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 
 * The basic
-- Microcanocical $\left( E,N \right)_{fixed}$
-- Canonical $\left( T,N \right)_{fixed}$
-- Grandcanonical $\left(  T,\mu \right)_{fixed}$
+- Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
+- Canonical $\left( T,N \right)_{\mathrm{fixed}}$
+- Grandcanonical $\left(  T,\mu \right)_{\mathrm{fixed}}$
 
 ** Einstein Solid
 $\Omega = \left( \frac{q e}{N} \right)^{N}$, where N is number of oscillators, q is number of energy units.
@@ -122,6 +122,13 @@ This is *Brillouin Function*.
 | Rotation | even, odd               | even, odd                |
 | Spin     | antisymmetric,symmetric | symmetric, antisymmetric |
 |----------+-------------------------+--------------------------|
+
+
+- S=0
+ Degeneracy=1, and only allowed even j rotational state. That is \[Z_{rot}=\sum_{j=even}(2j+1)e^{-j(j+1)\epsilon /kT}\].
+
+- S=1
+ Degeneracy=3, and only allowed odd j rotational state. That is  \[Z_{rot}=\sum_{j=odd}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
 ** Partition Function and Free Energy 
 $F=-kT ln \:Z$, which $F=U-TS$.
