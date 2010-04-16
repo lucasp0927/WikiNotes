@@ -105,7 +105,7 @@ This is *Brillouin Function*.
 
  \[kT \gg \epsilon\], for identical atoms (O_2,N_2), $Z_{rot}\approx \frac{kT}{2\epsilon}$
 
-**** low temperature
+**** Low temperature
 
  At low temperature, one must figure out exactly witch terms should be omitted from the partition function
  at ordinary pressure, all diatomic gases except hydrogen will liquefy long before low temperature are reached.
@@ -123,12 +123,18 @@ This is *Brillouin Function*.
 | Spin     | antisymmetric,symmetric | symmetric, antisymmetric |
 |----------+-------------------------+--------------------------|
 
-
-- S=0
+\\
++ S=0
  Degeneracy=1, and only allowed even j rotational state. That is \[Z_{rot}=\sum_{j=even}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
-- S=1
+ #+CAPTION: Parahydrogen: C_v vs kT/(epsilon)
+ [[./img/parahydrogen.png]]
+
++ S=1
  Degeneracy=3, and only allowed odd j rotational state. That is  \[Z_{rot}=\sum_{j=odd}(2j+1)e^{-j(j+1)\epsilon /kT}\].
+
+ #+CAPTION: Molar Heat Capacities
+ [[./img/Ortho-para_H2_Cvs.jpg]]
 
 ** Partition Function and Free Energy 
 $F=-kT ln \:Z$, which $F=U-TS$.
