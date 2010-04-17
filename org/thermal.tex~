@@ -1,29 +1,61 @@
-#+TITLE: Thermal Physics
-#+AUTHOR: Lucas Peng
-#+EMAIL: lucasp0927@gmail.com
-#+INCLUDE: header/header.org org
-#+OPTIONS: toc:3
-#+LATEX_HEADER: \usepackage{amssymb}
-#+LATEX_HEADER: \usepackage{amsmath}
+% Created 2010-04-16 五 00:30
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
 
-* The basic
-- Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
-- Canonical $\left( T,N \right)_{\mathrm{fixed}}$
-- Grandcanonical $\left(  T,\mu \right)_{\mathrm{fixed}}$
+\title{Thermal Physics}
+\author{Lucas Peng}
+\date{16 四月 2010}
 
-** Einstein Solid
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+
+\href{file:///home/lucaspeng/WikiNotes/org/index.org}{Main} | 
+
+
+\section{The basic}
+\label{sec-1}
+
+\begin{itemize}
+\item Microcanocical $\left( E,N \right)_{fixed}$
+\item Canonical $\left( T,N \right)_{fixed}$
+\item Grandcanonical $\left(  T,\mu \right)_{fixed}$
+\end{itemize}
+\subsection{Einstein Solid}
+\label{sec-1.1}
+
 $\Omega = \left( \frac{q e}{N} \right)^{N}$, where N is number of oscillators, q is number of energy units.
+\subsection{Ideal Gas}
+\label{sec-1.2}
+\subsubsection{Area of D Dimension Hypersphere}
+\label{sec-1.2.1}
 
-** Ideal Gas
-*** Area of D Dimension Hypersphere
 $A=\frac{2\pi ^{\frac{d}{2}}}{\left( \frac{d}{2}-1 \right)!}r^{d-1}$.
-*** \Omega of Ideal Gas
+\subsubsection{$\Omega$ of Ideal Gas}
+\label{sec-1.2.2}
+
 $\Omega_{N} \approx \frac{1}{N!}\frac{V^{N}}{h^{3N}}\frac{\pi ^{\frac{3N}{2}}}{\left( \frac{3N}{2} \right)!}\sqrt{2mU}^{3N}$
 
 Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of freedom in the power of energy (U,q). 
+\subsection{xxx}
+\label{sec-1.3}
+\subsubsection{U}
+\label{sec-1.3.1}
 
-** xxx
-*** U
  $dU=T dS-PdV+\mu dN$
 
  \[\frac{1}{T}=\left( \frac{\partial S}{\partial U} \right)_{v,N}\]
@@ -31,8 +63,9 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
  \[\frac{P}{T}=\left( \frac{\partial S}{\partial V} \right)_{U,N}\]
 
  \[\frac{\mu}{T}=-\left( \frac{\partial S}{\partial N} \right)_{U,V}\]
+\subsubsection{F}
+\label{sec-1.3.2}
 
-*** F
  $F=U-TS$, so $dF=dU-T\: ds-S\: dT$.
  Plug in $dU$ we get $dF=-S \: dT-P \: dV+\mu \: dN$
 
@@ -41,23 +74,32 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
  \[P=- \left( \frac{\partial F}{\partial V} \right)_{T,N}\]
 
  \[\mu = \left( \frac{\partial F}{\partial N} \right)_{T,V}\]
-* Canonical Formalism
-** Boltzmann Factors
+\section{Canonical Formalism}
+\label{sec-2}
+\subsection{Boltzmann Factors}
+\label{sec-2.1}
+
 $\frac{P(s_{2})}{P(s_{1})}=e^{\left[ S_{R}(s_{2})-S_{R}(s_{1}) \right]/k}$, and $dS=\frac{1}{T}\left( dU+PdV-\mu dN \right)$. 
 
-$P(s)=\frac{1}{Z}e^{E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of /all/ Boltzmann factors.
+$P(s)=\frac{1}{Z}e^{E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of \emph{all} Boltzmann factors.
+\subsubsection{Probability of certain state}
+\label{sec-2.1.1}
 
-*** Probability of certain state 
  $P(s)= \frac{1}{Z}e^{-\beta E(s)}$ is the probability of certain state.
+\subsubsection{Probability of certain energy}
+\label{sec-2.1.2}
 
-*** Probability of certain energy
    \begin{eqnarray*}
    P(E) &=& (degeneracy)\times \frac{1}{Z}e^{-\beta E}\\  &=& e^{S/k}\times \frac{1}{Z}e^{-E/kT} \\ &=& \frac{1}{Z}e^{-\beta (E-ST)} \\ &=& \frac{1}{Z}e^{-F/kt}
    \end{eqnarray*}
    is the probability of certain energy.
-** Average Values
+\subsection{Average Values}
+\label{sec-2.2}
+
 $\bar{E}=\frac{\sum E(s)N(s)}{N}=\sum E(s)P(s)$, so $\bar{E}=\frac{1}{Z}\sum E(s) e^{\beta E(s)}$, $\beta=\frac{1}{kT}$.
-*** Useful Trick
+\subsubsection{Useful Trick}
+\label{sec-2.2.1}
+
 $\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=-\frac{\partial}{\partial \beta}ln(Z)$
 
 $\bar{E^{2}}=\frac{1}{Z}\frac{\partial^{2} Z}{\partial \beta^{2}}$
@@ -68,8 +110,9 @@ Relate $C_{v}$ with $\sigma_{E}$
 \begin{eqnarray*}
 \sigma_{E} &=& \left[ \frac{1}{Z}\frac{\partial^{2}Z}{\partial \beta^{2}}-\frac{1}{Z^{2}} \left( \frac{\partial Z}{\partial \beta} \right)^{2}  \right]^{\frac{1}{2}}\\ &=& \left[ \frac{1}{Z}\frac{\partial}{\partial \beta }(-Z \bar{E})-\bar{E}^{2} \right]^{\frac{1}{2}} \\ &=& \left( \frac{\partial \bar{E}}{\partial \beta} \right)^{\frac{1}{2}}\\ &=& \left( -\frac{\partial \bar{E}}{\partial T}\frac{\partial T}{\partial \beta} \right)^{\frac{1}{2}} \\ &=& kT\sqrt{\frac{C_{v}}{k_{B}}}
 \end{eqnarray*}
+\subsection{Paramagnetic in general}
+\label{sec-2.3}
 
-** Paramagnetic in general
 $\mu_{z}=-j \delta_{\mu},(-j+1)\delta_{\mu}, \dots (j-a)\delta_{\mu}, j\delta_{\mu}$, and $E=-\mu B$.
 
 \[Z=\sum^{j}_{n=-j} e^{nb}\]
@@ -81,180 +124,205 @@ Using $\bar{E}=\frac{1}{Z}\frac{\partial Z}{\partial \beta}$ , we get,
 \begin{equation*}
 \bar{E}=-\delta_{\mu}B \left[ (j+\frac{1}{2})coth \left[ b(j+\frac{1}{2}) \right]-\frac{1}{2}coth \: \frac{b}{2} \right]
 \end{equation*}
-This is *Brillouin Function*.
+This is \textbf{Brillouin Function}.
+\subsection{Rotation of Diatomic Molecules}
+\label{sec-2.4}
+\subsubsection{Distinguishable}
+\label{sec-2.4.1}
 
-
-** Rotation of Diatomic Molecules
-*** Distinguishable 
-- When $KT \gg \epsilon$
+\begin{itemize}
+\item When $KT \gg \epsilon$
 
  $E(j)=j(j+1)\epsilon$, number of degenerate states for level j is $2J+1$.
 
  So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} dj = \frac{kT}{\epsilon}\]
 
- From Z_{rot}, we can calculate \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$).
+ From Z$_{\mathrm{rot}}$, we can calculate \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$).
 
  This is just the prediction of equipartition theorem, since a rotation diatomic molecule has two degree of freedom.
-- When $kT \ll \epsilon$
+\item When $kT \ll \epsilon$
   $Z_{rot}=1+3e^{-2\epsilon / kT}$. And $\bar{E}=6\epsilon e^{-2\epsilon /kT}\: \Rightarrow \: C_{V}= \frac{\partial \bar{E}}{\partial T}\approx 3k \left( \frac{2\epsilon}{kT} \right)^{2} e^{-2\epsilon/kT}$
+\end{itemize}
 
 這只是取 $Z_{rot}$ 前兩個項加起來。
+\subsubsection{Identical}
+\label{sec-2.4.2}
+\begin{itemize}
 
-*** Identical
-**** High Temperature
+\item High Temperature\\
+\label{sec-2.4.2.1}%
+\[kT \gg \epsilon\], for identical atoms (O$_2$,N$_2$), $Z_{rot}\approx \frac{kT}{2\epsilon}$
 
- \[kT \gg \epsilon\], for identical atoms (O_2,N_2), $Z_{rot}\approx \frac{kT}{2\epsilon}$
 
-**** Low temperature
-
- At low temperature, one must figure out exactly witch terms should be omitted from the partition function
+\item low temperature\\
+\label{sec-2.4.2.2}%
+At low temperature, one must figure out exactly witch terms should be omitted from the partition function
  at ordinary pressure, all diatomic gases except hydrogen will liquefy long before low temperature are reached.
  
  Even j wave functions are symmetric. Odd j wave functions are anti antisymmetric.
  
- If the /two nuclei are fermions/ their overall wave function must be antisymmetric, only the rotation states with even (odd)
+ If the \emph{two nuclei are fermions} their overall wave function must be antisymmetric, only the rotation states with even (odd)
  j are allowed, if the nuclear spin configurations are antisymmetric (symmetric).
 
- if the two /nucleus are bosons/ the above pairing is reversed.
+ if the two \emph{nucleus are bosons} the above pairing is reversed.
 
-|          | Fermions                | Bosons                   |
-|----------+-------------------------+--------------------------|
-| Rotation | even, odd               | even, odd                |
-| Spin     | antisymmetric,symmetric | symmetric, antisymmetric |
-|----------+-------------------------+--------------------------|
 
-\\
-+ S=0
- Degeneracy=1, and only allowed even j rotational state. That is \[Z_{rot}=\sum_{j=even}(2j+1)e^{-j(j+1)\epsilon /kT}\].
+\begin{center}
+\begin{tabular}{lll}
+           &  Fermions                 &  Bosons                    \\
+\hline
+ Rotation  &  even, odd                &  even, odd                 \\
+ Spin      &  antisymmetric,symmetric  &  symmetric, antisymmetric  \\
+\hline
+\end{tabular}
+\end{center}
 
- #+CAPTION: Parahydrogen: C_v vs kT/(epsilon)
- [[./img/parahydrogen.png]]
 
-+ S=1
- Degeneracy=3, and only allowed odd j rotational state. That is  \[Z_{rot}=\sum_{j=odd}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
- #+CAPTION: Molar Heat Capacities
- [[./img/Ortho-para_H2_Cvs.jpg]]
+\end{itemize} % ends low level
+\subsection{Partition Function and Free Energy}
+\label{sec-2.5}
 
-** Partition Function and Free Energy 
 $F=-kT ln \:Z$, which $F=U-TS$.
 
 $\left( \frac{\partial F}{\partial T} \right)_{V,N}=-S=\frac{F-U}{T}$.
+\subsubsection{Useful Relation}
+\label{sec-2.5.1}
 
-*** Useful Relation
 $S=-\left( \frac{\partial F}{\partial T} \right)_{V,N}$, $P=-\left( \frac{\partial F}{\partial V} \right)_{T,N}$, $\mu= \left( \frac{\partial F}{\partial N } \right)_{T,V}$
+\subsubsection{Partition Function of Composition Systems}
+\label{sec-2.5.2}
 
-*** Partition Function of Composition Systems
 $Z_{Total}= \Pi _{n}Z_{n}$. (non interacting, distinguishable particles)
 
 $Z_{Total}= \frac{1}{N!}\Pi_{n}Z_{n}$. (non interacting, indistinguishable particles)
+\subsection{Equipartition Theorem}
+\label{sec-2.6}
 
-** Equipartition Theorem
-1. $E(q)=c q^{2}$
+\begin{itemize}
+\item $E(q)=c q^{2}$
 
  $Z=\frac{1}{\Delta q}\int^{\infty}_{-\infty} e^{-\beta c q^{2}}dq=\frac{1}{\Delta q}\sqrt{\frac{\pi}{\beta c}}$
 
  $\Delta q$ makes the partition function dimensionless.
 
  $\bar{E}=\frac{1}{2\beta}=\frac{1}{2}kT$
-
-
-- $E(q)=c \left| q \right|$
+\item $E(q)=c \left| q \right|$
 
  $\bar{E}=kT$
-- $E(q)=c \left| q \right|^{\gamma}$
+\item $E(q)=c \left| q \right|^{\gamma}$
 
  $\bar{E}=\frac{kT}{\gamma}$
+\end{itemize}
+\subsection{Ideal Gas revisited}
+\label{sec-2.7}
 
-
-** Ideal Gas revisited
 $Z=\frac{1}{N!}Z_{1}^{N}$, which $Z_{1}=Z_{tr}Z_{int}$. $Z_{tr}$ is the Z due to translation energy  and $Z_{int}$ due to internal energy.
+\subsubsection{One Dimension}
+\label{sec-2.7.1}
 
-*** One Dimension
-#+BEGIN_CENTER
-*important*
-$\color{red}E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$
-#+END_CENTER
+\begin{center}
+\textbf{important}
+$E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$
+\end{center}
 
 $E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$. So $Z_{1d}=\sum e^{-h^{2}n^{2}/8mL^{2}kT}$. When temperature is high enough. $Z_{1d}=\int^{\infty}_{0}e^{-h^{2}n^{2}/8mL^{2}kT}dn=\sqrt{\frac{2\pi mkT}{h^1}}L=\frac{L}{L_{Q}}$
 
-$l_{Q}$ is called *Quantum Length* $l_{Q}=\frac{h}{\sqrt{2\pi mkT}}$. Aside from \pi, it is the De Broglie wavelength of a particle of mass m whose kinetic energy is kT.
+$l_{Q}$ is called \textbf{Quantum Length} $l_{Q}=\frac{h}{\sqrt{2\pi mkT}}$. Aside from $\pi$, it is the De Broglie wavelength of a particle of mass m whose kinetic energy is kT.
+\subsubsection{Three Dimension}
+\label{sec-2.7.2}
 
-*** Three Dimension
 $Z_{tr}=\frac{L_{x}}{l_{Q}}\frac{L_{y}}{l_{Q}}\frac{L_{z}}{l_{Q}}=\frac{V}{v_{Q}}$. $v_{Q}=l_{Q}^{3}=\left( \frac{h}{\sqrt{2\pi mkT}} \right)^{3}$.
 
 $Z_{1}=\frac{V}{v_{Q}}Z_{int}$. So $Z=\frac{1}{N!}\left( \frac{VZ_{int}}{v_{Q}} \right)^{N}$. $ln\: Z=N \left[ ln \: V +ln \: Z_{int}-ln \: N-ln \: v_{Q}+1 \right]$.
 
 Use $F=-kt ln \: Z$ to calculate the attributes of ideal gas.
 
-- A fast derivation of Maxwell-Boltzmann Distribution
+\begin{itemize}
+\item A fast derivation of Maxwell-Boltzmann Distribution
 
  $P(v_{x},v_{y},v_{z})d v_{x}dv_{y}dv_{z}=\frac{1}{Z_{tr}}e^{-mv^{2}/2kT}d^{3}p\int \frac{d^{3}q}{h^{3}}=\left( \frac{m}{2\pi kT} \right)^{3/2}e^{\frac{-mv^{2}}{2kT}}dv_{x}dv_{y}dv_{z}$.
 
- so $P(v)dv=\left( \frac{m}{2\pi kT} \right)^{\frac{3}{2}}e^{\frac{-mv^{2}}{2kT}}4\pi v^{2}dv$ 
+ so $P(v)dv=\left( \frac{m}{2\pi kT} \right)^{\frac{3}{2}}e^{\frac{-mv^{2}}{2kT}}4\pi v^{2}dv$
+\end{itemize}
+\subsubsection{Useful Expression}
+\label{sec-2.7.3}
 
-*** Useful Expression
 \[P=- \left( \frac{\partial F}{\delta V} \right)_{T,N}=\frac{NkT}{V}\]
 
 \[S=- \left( \frac{\partial F}{\partial T} \right)_{V,N}=Nk \left[ ln \left( \frac{V}{Nv_{Q}} \right)+\frac{5}{2} \right]-\frac{\partial F_{int}}{\partial T}\]
 
 \[\mu= \left( \frac{\delta F}{\partial N} \right)_{T,V}=-kT \: ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
-* Grand Canonical Formalism
+\section{Grand Canonical Formalism}
+\label{sec-3}
+
 \begin{equation*}
 P(s)=\frac{1}{Z_{G}}e^{-[E(s)-\mu N(s)]/kT}
 \end{equation*}
 
-Z is called *grand partition function* or the *Gibbs sum*.
+Z is called \textbf{grand partition function} or the \textbf{Gibbs sum}.
 
 \begin{equation*}
 Z_{G}=\sum_{s}e^{-[E(s)-\mu N(s)]/kT}
 \end{equation*}
+\subsection{Useful expressions}
+\label{sec-3.1}
 
-** Useful expressions
-- For N
+\begin{itemize}
+\item For N
 
  \[\bar{N_{i}}=\sum_{s}N_{i}(s)P(s)=\frac{kT}{Z_{G}}\frac{\partial Z_{G}}{\partial\mu_{i}}\]
 
  \[\bar{N_{i}^{2}}=\frac{(kT)^{2}}{Z_{G}}\frac{\partial^{2}Z_{G}}{\partial \mu_{i}^{2}}\]
 
  \[\sigma_{N_{i}}= \left( kT \frac{\partial \bar{n_{i}}}{\partial \mu_{i}} \right)^{1/2}\]
-
-- For E
+\item For E
 
  \[\bar{E}=-\frac{1}{Z_{G}} \frac{\partial Z_{G}}{\partial \beta}\big|_{V,{e^{\beta \mu_{i}}}}\], $e^{\beta \mu_{i}}$ is called fugacity (要逃逸的傾向).
 
  \[\bar{E^{2}}=\frac{1}{Z_{G}}\frac{\partial Z_{G}}{\partial \beta^{2}}\big|_{V,{e^{\beta\mu_{i}}}}\]
 
  \[\sigma_{E}=\left[ -\frac{\partial \bar{E}}{\partial\beta}\big|_{V,{e^{\beta\mu_{i}}}} \right]^{1/2}\]
+\end{itemize}
+\subsection{Grand Potential}
+\label{sec-3.2}
 
-** Grand Potential
 \[\Phi=-kT\: ln\: Z_{G}\]
 
 \[S=- \left( \frac{\partial \Phi }{\partial T} \right)_{V,{\mu_{i}}}\],\[P=- \left( \frac{\partial\Phi}{\partial V} \right)_{T,{\mu_{i}}}\],
 \[N_{i}=- \left( \frac{\partial\Phi}{\partial\delta\mu_i} \right)_{V,T}\].
-* Bosons and Fermions
-*Quantum statics* the study of dense system in which two or more 
+\section{Bosons and Fermions}
+\label{sec-4}
+
+\textbf{Quantum statics} the study of dense system in which two or more 
 identical particles have a reasonable chance of wanting to occupy the same singe particle state.
 So that $Z=\frac{1}{N!}Z_{1}^{N}$ doesn't hold anymore.
-- Particles that can share a state with another particle is called *Bosons*. Exp: photons, pions, helium-4 atoms.
-- Particle that can not share a state with others are called *Fermions*.
+\begin{itemize}
+\item Particles that can share a state with another particle is called \textbf{Bosons}. Exp: photons, pions, helium-4 atoms.
+\item Particle that can not share a state with others are called \textbf{Fermions}.
+\end{itemize}
 When $Z_{1} \gg N$ whether particles are bosons or fermions doesn't matter.
 For example: for ideal gas, $v_{Q}=\left( \frac{h}{\sqrt{2 \pi mkT}} \right)^{3}$. Formula $Z=Z_{1}^{N}/N!$
 will apply as long $\frac{V}{N}\gg v_{Q}$.
-** The Distribution Function
+\subsection{The Distribution Function}
+\label{sec-4.1}
+
 When $Z_{1}\gg N$ is violated we can use Gibbs factor instead. 
 First, we consider a system consider only one state.
-*** Fermions
+\subsubsection{Fermions}
+\label{sec-4.1.1}
+
 $P(n)=\frac{1}{Z_{G}}e^{-(\epsilon-\mu)/kT}$
 
 $Z_{G}=1+e^{-(\epsilon - \mu )/kT}$, because there can only have either 0 or 1 fermions in one state.
 so,$\bar{n}=\sum nP(n)=\frac{1}{e^{(\epsilon-\mu)/kT}+1}$
-This is called *Fermi-Dirac distribution*,
+This is called \textbf{Fermi-Dirac distribution},
 \begin{equation*}
 \bar{n}_{FD}=\frac{1}{e^{(\epsilon-\mu)/kT}+1}
 \end{equation*}
+\subsubsection{Bosons}
+\label{sec-4.1.2}
 
-*** Bosons
 $Z_{G}=1+e^{-(\epsilon-\mu)/kT}+e^{-2(\epsilon-\mu)/kT}+\dots=\frac{1}{1-e^{-(\epsilon-\mu)/kT}}$
 
 \begin{eqnarray*}
@@ -263,23 +331,25 @@ $Z_{G}=1+e^{-(\epsilon-\mu)/kT}+e^{-2(\epsilon-\mu)/kT}+\dots=\frac{1}{1-e^{-(\e
 \end{eqnarray*}
 So, we can calculate $\bar{n}=\frac{1}{e^{(\epsilon-\mu)/kT}-1}$.
 
-This is called *Bose-Einstein distribution*,
+This is called \textbf{Bose-Einstein distribution},
 \begin{equation*}
 \bar{n}_{BE}=\frac{1}{e^{(\epsilon-\mu)/kT}-1}
 \end{equation*}
 
 When $\epsilon \gg \mu$ both Fermi-Dirac distribution and Bose-Einstein distribution approximate 
 Boltzmann distribution.
+\section{Degenerate Fermi Gases}
+\label{sec-5}
 
-* Degenerate Fermi Gases
 Fermions can be helium-3 atoms, protons, neutrons in a neutron star. Or electrons in a chunk of metal.
 
 $\frac{V}{N}\ll v_{Q}$ is the same as $kT \ll \epsilon_{F}$
 When these condition are met, the approximation $T\approx 0$ is accurate.
+\subsection{Zero Temperature}
+\label{sec-5.1}
 
-** Zero Temperature
 At $T=0$ FD distribution become step function. We define $\epsilon_{F}=\mu$, when $T=0$.
-All state below $\epsilon_{F}$ are occupy and all state above are empty. This is called *degenerate*.
+All state below $\epsilon_{F}$ are occupy and all state above are empty. This is called \textbf{degenerate}.
 
 Allowed energy $\epsilon=\frac{h^{2}}{8mL^{2}}\left( n_{x}^{2}+n_{y}^{2}+n_{z}^{2} \right)$.
 
@@ -295,14 +365,16 @@ Then,
 \epsilon_{F}=\frac{h^{2}}{8m}\left( \frac{3N}{\pi V} \right)^{\frac{2}{3}}
 \end{equation*}
 Fermi energy is the highest energy of all the electrons.
-- Total energy $U=\frac{3}{5}N\epsilon_{F}$
+\begin{itemize}
+\item Total energy $U=\frac{3}{5}N\epsilon_{F}$
+\item Degenerate Pressure $P=-\frac{\partial}{\partial V}\left[ \frac{3}{5}N \frac{h^{2}}{8m} \left( \frac{3N}{\pi} \right)^{2/3}V^{-2/3} \right]=\frac{2N\epsilon_{\epsilon_{F}}}{5V}=\frac{2U}{3V}$
+\item Bulk modulus $B=-V \left( \frac{\partial P}{\partial V} \right)_{T}=\frac{10}{9}\frac{U}{N}$
+\end{itemize}
+\subsection{Small Non-Zero Temperature}
+\label{sec-5.2}
+\subsubsection{Density of States}
+\label{sec-5.2.1}
 
-- Degenerate Pressure $P=-\frac{\partial}{\partial V}\left[ \frac{3}{5}N \frac{h^{2}}{8m} \left( \frac{3N}{\pi} \right)^{2/3}V^{-2/3} \right]=\frac{2N\epsilon_{\epsilon_{F}}}{5V}=\frac{2U}{3V}$
-
-- Bulk modulus $B=-V \left( \frac{\partial P}{\partial V} \right)_{T}=\frac{10}{9}\frac{U}{N}$
-
-** Small Non-Zero Temperature
-*** Density of States
 $n=\sqrt{\frac{8mL^{2}}{h^{2}}}\sqrt{\epsilon}$
 
 $dn=\sqrt{\frac{8ml^{2}}{h^{2}}}\frac{1}{2\sqrt{\epsilon}}d\epsilon$
@@ -316,7 +388,7 @@ To derive the total energy:
   &=& \int \epsilon \left[ \frac{\pi}{2}\left( \frac{8mL^{2}}{h^{2}} \right)^{3/2}\sqrt{\epsilon} \right] d\epsilon
 \end{eqnarray*}
 
-number of single particle states per unit energy is called *density of state*.
+number of single particle states per unit energy is called \textbf{density of state}.
 
 \begin{equation*}
 g(\epsilon)=\frac{\pi \left( 8m \right)^{3/2}}{2h^{3}}V \sqrt{\epsilon}=\frac{3N}{2\epsilon_{F}^{3/2}}\sqrt{\epsilon}
@@ -327,19 +399,21 @@ For $T=0$, $N=\int_{0}^{\epsilon_{F}}g(\epsilon_{F})d\epsilon$.
 But for non-zero Temperature, $N=\int_{0}^{\infty}g(\epsilon)\bar{n}_{FD}(\epsilon)d\epsilon$ and
 $U=\int_{0}^{\infty}\epsilon g(\epsilon)\bar{n}_{FD}(\epsilon)d\epsilon$.
 
-Chemical potential \mu is the point where the probability of a state being occupied is exactly $\frac{1}{2}$
-is no longer $\epsilon_{F}$. Because FD distribution is symmetric about \mu, that is, the probability 
-of a state above \mu being occupied is the same as the probability of a state the same amount below \mu being 
-not occupied. Since the density of states id higher to the right of \mu, the chemical potential must 
+Chemical potential $\mu$ is the point where the probability of a state being occupied is exactly $\frac{1}{2}$
+is no longer $\epsilon_{F}$. Because FD distribution is symmetric about $\mu$, that is, the probability 
+of a state above $\mu$ being occupied is the same as the probability of a state the same amount below $\mu$ being 
+not occupied. Since the density of states id higher to the right of $\mu$, the chemical potential must 
 decrease a little or we can increase the number of electrons by simply raise the temperature.
+\subsection{Sommerfeld Expansion}
+\label{sec-5.3}
 
-** Sommerfeld Expansion
    Way to evaluate integral of previous section.
 
 \begin{equation*}
 N=\int_{0}^{\infty} g(\epsilon)\bar{n}_{FD}(\epsilon)d\epsilon=g_{0}\int_{0}^{\infty} \epsilon^{1/2}\bar{n}_{FD}(\epsilon)d\epsilon
 \end{equation*}
-1. First Trick
+\begin{enumerate}
+\item First Trick
 
   Isolate the region around 0 by integrate by part.
   
@@ -350,10 +424,9 @@ N=\int_{0}^{\infty} g(\epsilon)\bar{n}_{FD}(\epsilon)d\epsilon=g_{0}\int_{0}^{\i
   , where $x=\left( \epsilon-\mu \right)/kT$
   
   \[N=\frac{2}{3}g_{0}\int_{-\mu/kT}^{\infty}\frac{e^{x}}{\left( e^{x}+1 \right)^{2}}\epsilon^{3/2}dx\]
-  
-2. Second Trick
+\item Second Trick
 
-  extend the lower limit to -\infty and expand $\epsilon^{3/2}$ at \epsilon=\mu.
+  extend the lower limit to -\infty and expand $\epsilon^{3/2}$ at $\epsilon$=$\mu$.
 
   \[n=\frac{2}{3}g_{0}\int^{\infty}_{-\infty}\frac{e^{x}}{\left( e^{x}+1 \right)^{2}}\left[ 
    \mu^{3/2}+\frac{3}{2}xkT\mu^{1/2}+\frac{3}{8}\left( xkT \right)^{2}\mu^{-1/2} +\dots \right] dx \]
@@ -368,15 +441,17 @@ N=\int_{0}^{\infty} g(\epsilon)\bar{n}_{FD}(\epsilon)d\epsilon=g_{0}\int_{0}^{\i
   \[N=N \left( \frac{\mu}{\epsilon_{F}} \right)^{3/2}+N \frac{\pi^{2}}{8}\frac{(kT)^{2}}{\epsilon_{F}^{3/2}\mu^{1/2}}\]
 
   Cancel N and we find that $\frac{\mu}{\epsilon_{F}} \approx 1$, so set $\mu \approx \epsilon_{F}$ in the
-  correction term. We get $\frac{\mu}{\epsilon_{F}}=1-\frac{\pi^{2}}{12}\left( \frac{kT}{\epsilon_{F}} \right)^{2}+\dots$ 
+  correction term. We get $\frac{\mu}{\epsilon_{F}}=1-\frac{\pi^{2}}{12}\left( \frac{kT}{\epsilon_{F}} \right)^{2}+\dots$
+\end{enumerate}
 
 U can be derive using the same tricks.
 
 \[U=\frac{3}{5}N_{\epsilon_{F}}+\frac{\pi^{2}}{4}N \frac{(kT)^{2}}{\epsilon_{F}}\]
 
 \[C_{V}= \left( \frac{\partial \bar{E}}{\partial T} \right)_{V,N}=\left( \frac{\pi^2 N k^2 }{2\epsilon_F} \right)T\]
+\section{Semiconductor}
+\label{sec-6}
 
-* Semiconductor
 
 In valance bamd,
 \[g(\epsilon)=g_{0v}\left( \epsilon_v-\epsilon \right)^{1/2}\]
@@ -386,13 +461,14 @@ In conduction band,
 
 Where $g_{0c}=g_0 \left( \frac{m_c}{m_e} \right)^{3/2}$, and $g_{0v}=g_0 \left( \frac{m_v}{m_e} \right)^{3/2}$
 
-m_c is the effect mass of a conduction electron.
-m_v is the effect mass of a valence hole.
-m_e is bare elctron mass.
+m$_c$ is the effect mass of a conduction electron.
+m$_v$ is the effect mass of a valence hole.
+m$_e$ is bare elctron mass.
 
-for silicon \epsilon_c - \epsilon_v =1.11 ev at room temperature.
+for silicon $\epsilon$$_c$ - $\epsilon$$_v$ =1.11 ev at room temperature.
 
-- Conduction band
+\begin{itemize}
+\item Conduction band
 
  \[\bar{N}_c=\int^{\infty}_{\epsilon_c}g_{0c}\left( \epsilon-\epsilon_c \right)^{1/2}\frac{1}{e^{\beta (\epsilon-\mu)}+1}d\epsilon
    \approx \int^{\infty}_{\epsilon_c}g_{0c}\left( \epsilon-\epsilon_c \right)^{1/2}\frac{1}{e^{\beta(\epsilon-\mu)}+1}d\epsilon\]
@@ -402,23 +478,25 @@ for silicon \epsilon_c - \epsilon_v =1.11 ev at room temperature.
  where $\int^{\infty}_0 \sqrt{x} e^{-x}dx=\frac{\sqrt{\pi}}{2}$.
 
  we can conclude that $\bar{N}_c$ increace with T repidly.
-
-- Valence Band
+\item Valence Band
 
  Same method as conduction band, but note that the probability become $1-\frac{1}{e^{\beta \left( \epsilon-\mu \right)}+1}$ for holes.
 
  $\bar{N}_v$ also increace with T rapidly.
+\end{itemize}
 
 from the conservation requirement we have $\bar{N}_c=\bar{N}_v$, that is 
 $g_{0c}e^{-\beta \left( \epsilon_c-\mu \right)}=g_{0v}e^{-\beta \left( \mu-\epsilon_v \right)}$.
 
 So, \[\mu=\frac{\epsilon_v+\epsilon_c}{2}+\frac{kT}{2}ln\: \left( \frac{g_{0v}}{g_{0c}} \right)\Rightarrow\epsilon_F\equiv \mu\: (T=0)\:=\frac{\epsilon_c+\epsilon_v}{2}\].
-If g_{0v}=g_{oc}, \mu is independance of temperature. 
+If g$_{\mathrm{0v}}$=g$_{\mathrm{oc}}$, $\mu$ is independance of temperature. 
 
 An ordinary metal has a fixed number of conduction electrons, so it's conductivity depends on how easily the electrons can
 move around. At high temperature collisions occur more frequently and the conductivity is lower. However, for semiconductor
 this effect is by the enourmously greater amount of conduction electrons.
 
 
-------
-[[file:index.org][Back to Index]]
+\hrule
+\href{file:///home/lucaspeng/WikiNotes/org/index.org}{Back to Index}
+
+\end{document}
