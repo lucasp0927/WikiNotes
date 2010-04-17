@@ -132,6 +132,10 @@ CDF:\\
 
 \[\textrm{Var}[X]=1/\lambda^2\]
 
+*** Memoryless property
+\[f_T(t)=f_{T|T>n}(t)\]
+
+\[E[T|T>n]=E[T]+n\]
 ** Erlang Ramdom Variable
 PDF:\\
 \[f_X(x)=\begin{cases}
@@ -158,4 +162,4 @@ Standard normal CDF:\\
 \[\Phi(z)=\frac{1}{\sqrt{2\pi}}\int^z_{-\infty}e^{-u^2/2}du\]
 
 Standard normal complementary CDF:\\
-\[Q(z)=\frac{1}{\sqrt{2\pi}}\int^{-\infty}_z{e^{-u^2/2}du}\]
+\[Q(z)=\frac{1}{\sqrt{2\pi}}\int^{\infty}_z{e^{-u^2/2}du}\]
