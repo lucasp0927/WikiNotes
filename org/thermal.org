@@ -22,7 +22,7 @@ $\Omega_{N} \approx \frac{1}{N!}\frac{V^{N}}{h^{3N}}\frac{\pi ^{\frac{3N}{2}}}{\
 
 Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of freedom in the power of energy (U,q). 
 
-** xxx
+** Maxwell Relation
 *** U
  $dU=T dS-PdV+\mu dN$
 
