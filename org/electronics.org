@@ -1,6 +1,6 @@
 #+TITLE: Electronics
 #+OPTIONS: toc:3
-#+INCLUDE:header/header.org org
+#+INCLUDE: header/header.org org
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 * The Basics

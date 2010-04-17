@@ -2,7 +2,7 @@
 #+AUTHOR: Lucas Peng
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
-#+OPTIONS: toc:3 
+#+OPTIONS: toc:3
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
@@ -173,7 +173,7 @@ $Z=\frac{1}{N!}Z_{1}^{N}$, which $Z_{1}=Z_{tr}Z_{int}$. $Z_{tr}$ is the Z due to
 *** One Dimension
 #+BEGIN_CENTER
 *important*
-$E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$
+$\color{red}E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$
 #+END_CENTER
 
 $E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$. So $Z_{1d}=\sum e^{-h^{2}n^{2}/8mL^{2}kT}$. When temperature is high enough. $Z_{1d}=\int^{\infty}_{0}e^{-h^{2}n^{2}/8mL^{2}kT}dn=\sqrt{\frac{2\pi mkT}{h^1}}L=\frac{L}{L_{Q}}$
