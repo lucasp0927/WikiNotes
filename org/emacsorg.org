@@ -6,6 +6,10 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
+Command line compile
+#+BEGIN_SRC bash
+emacs --batch -l ~/.emacs --funcall org-publish-all
+#+END_SRC
 
 #+BEGIN_SRC emacs-lisp
 (require 'org-publish)
@@ -23,6 +27,9 @@
 :table-of-contents nil
 :style "<link rel='stylesheet' type='text/css' href='css/style.css' />"
 :style-include-default t
+:author-info nil
+:email-info nil
+:creator-info nil
 )
 ("wiki2"
 :base-directory "~/WikiNotes/org/"
