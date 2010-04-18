@@ -45,7 +45,7 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
 ** Boltzmann Factors
 $\frac{P(s_{2})}{P(s_{1})}=e^{\left[ S_{R}(s_{2})-S_{R}(s_{1}) \right]/k}$, and $dS=\frac{1}{T}\left( dU+PdV-\mu dN \right)$. 
 
-$P(s)=\frac{1}{Z}e^{E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of /all/ Boltzmann factors.
+$P(s)=\frac{1}{Z}e^{-E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of /all/ Boltzmann factors.
 
 *** Probability of certain state 
  $P(s)= \frac{1}{Z}e^{-\beta E(s)}$ is the probability of certain state.
@@ -58,7 +58,7 @@ $P(s)=\frac{1}{Z}e^{E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of 
 ** Average Values
 $\bar{E}=\frac{\sum E(s)N(s)}{N}=\sum E(s)P(s)$, so $\bar{E}=\frac{1}{Z}\sum E(s) e^{\beta E(s)}$, $\beta=\frac{1}{kT}$.
 *** Useful Trick
-$\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=-\frac{\partial}{\partial \beta}ln(Z)$
+$\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=\color{red}-\frac{\partial}{\partial \beta}ln(Z)$
 
 $\bar{E^{2}}=\frac{1}{Z}\frac{\partial^{2} Z}{\partial \beta^{2}}$
 
@@ -66,7 +66,12 @@ $\sigma_{E}^{2}=\bar{E^{2}}-\left( \bar{E} \right)^{2}$
 
 Relate $C_{v}$ with $\sigma_{E}$
 \begin{eqnarray*}
-\sigma_{E} &=& \left[ \frac{1}{Z}\frac{\partial^{2}Z}{\partial \beta^{2}}-\frac{1}{Z^{2}} \left( \frac{\partial Z}{\partial \beta} \right)^{2}  \right]^{\frac{1}{2}}\\ &=& \left[ \frac{1}{Z}\frac{\partial}{\partial \beta }(-Z \bar{E})-\bar{E}^{2} \right]^{\frac{1}{2}} \\ &=& \left( \frac{\partial \bar{E}}{\partial \beta} \right)^{\frac{1}{2}}\\ &=& \left( -\frac{\partial \bar{E}}{\partial T}\frac{\partial T}{\partial \beta} \right)^{\frac{1}{2}} \\ &=& kT\sqrt{\frac{C_{v}}{k_{B}}}
+\sigma_{E} &=& \left[ \frac{1}{Z}\frac{\partial^{2}Z}{\partial \beta^{2}}-\frac{1}{Z^{2}} \left( \frac{\partial Z}{\partial \beta} \right)^{2}  \right]^{\frac{1}{2}}\\
+ &=& \left[ \frac{1}{Z}\frac{\partial}{\partial \beta }(-Z \bar{E})-\left( \bar{E}\right) ^{2} \right]^{\frac{1}{2}} \\
+ &=& -\frac{1}{Z}\frac{\partial Z}{\partial \beta}\bar{E}-\frac{\partial\bar{E}}{\partial \beta}-\left( \bar{E} \right)^{2} \\
+ &=& \left(- \frac{\partial \bar{E}}{\partial \beta} \right)^{\frac{1}{2}}\\ 
+ &=& \left( -\frac{\partial \bar{E}}{\partial T}\frac{\partial T}{\partial \beta} \right)^{\frac{1}{2}} \\
+ &=& kT\sqrt{\frac{C_{v}}{k_{B}}}
 \end{eqnarray*}
 
 ** Paramagnetic in general
