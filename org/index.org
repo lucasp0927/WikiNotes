@@ -15,7 +15,7 @@ Notes on physics and other stuff.
 - [[file:classicalmechanics.org][Classical Mechanics]]
 * Math
 - [[file:complex.org][Complex Variable]]
-- [[file:coordinate.org][How to Remember Div Curl]]
+- [[file:coordinate.org][How to Remember Div and Curl]]
 - [[file:probability.org][Probability]]
 * EE
 - [[file:electronics.org][Electronics]]
