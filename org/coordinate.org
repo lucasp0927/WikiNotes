@@ -20,9 +20,9 @@ Take spherical coordinate for example.
 \left| 
 {
 \begin{array}{ccc}
-\frac{a_1}{h_2 h_3} & \frac{a_2}{h_1 h_3} & \frac{a_3}{h_1 h_2}\\ 
+\frac{\mathbf{a_1}}{h_2 h_3} & \frac{\mathbf{a_2}}{h_1 h_3} & \frac{\mathbf{a_3}}{h_1 h_2}\\ 
 \frac{\partial}{\partial q_1} & \frac{\partial}{\partial q_{2}} & \frac{\partial}{\partial q_{3}}\\
-h_1 \mathbf{A}_1 & h_2 \mathbf{A}_2 & h_3 \mathbf{A}_3\\
+h_1 A_1 & h_2 A_2 & h_3 A_3\\
 \end{array}
 }
 \right|
