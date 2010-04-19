@@ -33,7 +33,7 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
  \[\frac{\mu}{T}=-\left( \frac{\partial S}{\partial N} \right)_{U,V}\]
 
 *** F Free Energy
- $F=U-TS$, so $dF=dU-T\: ds-S\: dT$.
+ $f=U-TS$, so $dF=dU-T\: ds-S\: dT$.
  Plug in $dU$ we get $dF=-S \: dT-P \: dV+\mu \: dN$
 
  \[S=- \left( \frac{\partial F}{\partial T}  \right)_{V,N}\]
