@@ -6,7 +6,7 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
-* The basic
+* The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
 - Canonical $\left( T,N \right)_{\mathrm{fixed}}$
 - Grandcanonical $\left(  T,\mu \right)_{\mathrm{fixed}}$
@@ -43,7 +43,7 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
  \[\mu = \left( \frac{\partial F}{\partial N} \right)_{T,V}\]
 * Canonical Formalism
 ** Boltzmann Factors
-$\frac{P(s_{2})}{P(s_{1})}=e^{\left[ S_{R}(s_{2})-S_{R}(s_{1}) \right]/k}$, and $dS=\frac{1}{T}\left( dU+PdV-\mu dN \right)$. 
+$\frac{P(s_{2})}{P(s_{1})}=e^{\left[ S_{R}(s_{2})-S_{R}(s_{1}) \right]/k}$, and $dS=\frac{1}{T}\left( dU+P \: dV-\mu \: dN \right)$. 
 
 $P(s)=\frac{1}{Z}e^{-E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of /all/ Boltzmann factors.
 
@@ -52,7 +52,7 @@ $P(s)=\frac{1}{Z}e^{-E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of
 
 *** Probability of certain energy
    \begin{eqnarray*}
-   P(E) &=& (degeneracy)\times \frac{1}{Z}e^{-\beta E}\\  &=& e^{S/k}\times \frac{1}{Z}e^{-E/kT} \\ &=& \frac{1}{Z}e^{-\beta (E-ST)} \\ &=& \frac{1}{Z}e^{-F/kt}
+   P(E) &=& (\mathrm{degeneracy})\times \frac{1}{Z}e^{-\beta E}\\  &=& e^{S/k}\times \frac{1}{Z}e^{-E/kT} \\ &=& \frac{1}{Z}e^{-\beta (E-ST)} \\ &=& \frac{1}{Z}e^{-F/kt}
    \end{eqnarray*}
    is the probability of certain energy.
 ** Average Values
@@ -95,7 +95,7 @@ This is *Brillouin Function*.
 
  $E(j)=j(j+1)\epsilon$, number of degenerate states for level j is $2J+1$.
 
- So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} dj = \frac{kT}{\epsilon}\]
+ So \[Z_{rot}=\sum^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT} \approx \int^{\infty}_{0}(2j+1)e^{-j(j+1)\epsilon /kT}\: dj = \frac{kT}{\epsilon}\]
 
  From Z_{rot}, we can calculate \[\bar{E}_{rot}=kT\],(when $kT\gg \epsilon$).
 
@@ -130,30 +130,30 @@ This is *Brillouin Function*.
 
 \\
 + Parahydrogen S=0
- Degeneracy=1, and only allowed even j rotational state. That is \[Z_{rot}=\sum_{j=even}(2j+1)e^{-j(j+1)\epsilon /kT}\].
+ Degeneracy=1, and only allowed even j rotational state. That is \[Z_{rot}=\sum_{\mathrm{j=even}}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
  #+CAPTION: Parahydrogen: C_v vs kT/(epsilon)
  [[./img/parahydrogen.png]]
 
 + Orthohydrogen S=1
  Degeneracy=3, and only allowed odd j rotational state. That is
-  \[Z_{rot}=3\sum_{j=odd}(2j+1)e^{-j(j+1)\epsilon /kT}\].
+  \[Z_{rot}=3\sum_{\mathrm{j=odd}}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
  #+CAPTION: Molar Heat Capacities
  [[./img/Ortho-para_H2_Cvs.jpg]]
 
 ** Partition Function and Free Energy 
-$\color{red}F=-kT ln \:Z$, which $F=U-TS$.
+\[\color{red}F=-kT ln \:Z\], which \[F=U-TS\].
 
-$\left( \frac{\partial F}{\partial T} \right)_{V,N}=-S=\frac{F-U}{T}$.
+\[\left( \frac{\partial F}{\partial T} \right)_{V,N}=-S=\frac{F-U}{T}\].
 
 *** Useful Relation
 $S=-\left( \frac{\partial F}{\partial T} \right)_{V,N}$, $P=-\left( \frac{\partial F}{\partial V} \right)_{T,N}$, $\mu= \left( \frac{\partial F}{\partial N } \right)_{T,V}$
 
 *** Partition Function of Composition Systems
-$Z_{Total}= \prod_{n}Z_{n}$. (non interacting, distinguishable particles)
+\[Z_{Total}= \prod_{n}Z_{n}\]. (non interacting, distinguishable particles)
 
-$Z_{Total}= \frac{1}{N!}\prod_{n}Z_{n}$. (non interacting, indistinguishable particles)
+\[Z_{Total}= \frac{1}{N!}\prod_{n}Z_{n}\]. (non interacting, indistinguishable particles)
 
 ** Equipartition Theorem
 1. $E(q)=c q^{2}$
@@ -204,7 +204,7 @@ Use $F=-kt ln \: Z$ to calculate the attributes of ideal gas.
 
 \[S=- \left( \frac{\partial F}{\partial T} \right)_{V,N}=Nk \left[ ln \left( \frac{V}{Nv_{Q}} \right)+\frac{5}{2} \right]-\frac{\partial F_{int}}{\partial T}\]
 
-\[\mu= \left( \frac{\delta F}{\partial N} \right)_{T,V}=-kT \: ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
+\[\mu= \left( \frac{\partial F}{\partial N} \right)_{T,V}=-kT \: ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
 * Grand Canonical Formalism
 \begin{equation*}
 P(s)=\frac{1}{Z_{G}}e^{-[E(s)-\mu N(s)]/kT}
