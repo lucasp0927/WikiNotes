@@ -1,14 +1,60 @@
 #+TITLE:Complex Variable
-#+AUTHOR: Lucas Peng
-#+EMAIL: lucasp0927@gmail.com
+#+AUTHOR: Lucas Peng and Andrew Liu
+#+EMAIL: lucasp0927@gmail.com andrewliu33@gmail.com
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:3
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
-* Cauchy-Riemann Condition
-$\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+* Complex Function
+** Logrithm
+\[\ln z=\log_e|z|+i(\theta+2n\pi)\]
 
+\[\mathrm{Ln} z=\log_e|z|+i\mathrm{Arg}(z)\]
+** Sinosoid
+\[\sin z=(e^{iz}-e^{-iz})/2i\]
+
+\[\cos z=(e^{iz}+e^{-iz})/2\]
+
+\[\sin z=\sin x\cosh y+i\cos x\sinh y\]
+
+\[\cos z=\cos x\cosh y-i\sin x\sinh y\]
+
+\[|\sin z|^2=\sin^2 x+\sinh^2 y\]
+
+\[|\cos z|^2=\cos^2 x+\sinh^2 y\]
+
+\[\sin^{-1}z=-i\ln\left[iz+\left(1-z^2\right)^{1/2}\right]\]
+
+\[\cos^{-1}z=-i\ln\left[z+\left(1-z^2\right)^{1/2}\right]\]
+
+\[\tan^{-1}z=\frac{i}{2}\ln\frac{i+z}{i-z}\]
+
+** Hyperbolic Sinosoid
+\[\sinh z=(e^{z}-e^{-z})/2\]
+
+\[\cosh z=(e^{z}+e^{-z})/2\]
+
+\[\sinh z=\sinh x\cos y+i\cosh x\sin y\]
+
+\[\cosh z=\cosh x\cos y-i\sinh x\sin y\]
+
+\[\sinh^{-1}z=\ln\left[z+\left(z^2+1\right)^{1/2}\right]\]
+
+\[\cosh^{-1}z=\ln\left[z+\left(z^2-1\right)^{1/2}\right]\]
+
+\[\tanh^{-1}z=\frac{1}{2}\ln\frac{1+z}{1-z}\]
+
+** Connections
+
+\[\sinh(iz)=i\sin z\]
+
+\[\cosh(iz)=\cos z\]
+* Cauchy-Riemann Condition
+Suppose $f(z)=u(x,y)+iv(x,y)$ is differentiable at a point $z=x+iy$, then:\\
+$\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+** Criterion for Analyticity
+Suppose $u(x,y)$ and $v(x,y)$ are _continuous_ and have _continuous first-order partial derivatives_ in domain $D$.  If $u$ and $v$ satisfy the Cauchy-Riemann eqations at _all points_ of $D$, then the complex function $f(z)=u(x,y)+iv(x,y)$ is analytic in $D$.
 * Cauchy's Integral Theorem
 $\frac{1}{2\pi i}\int_{c}z^{n}dz=0$, if $n \neq -1$
 
