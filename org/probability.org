@@ -27,7 +27,7 @@
 \[\textrm{Var}[aX+b]=a^{2}\textrm{Var}[X]\]
 ** Conditional PMF
 \[P_{X|B}(x)=\begin{cases}
-\frac{P_X(x)}{P[B]} & x\in B \\
+\frac{\displaystyle P_X(x)}{\displaystyle P[B]} & x\in B \\
 0 & \textrm{otherwise}\end{cases}\]
 * Discrete Random Variables
 ** Bernoulli Random Variable
@@ -139,7 +139,7 @@ CDF:\\
 ** Erlang Ramdom Variable
 PDF:\\
 \[f_X(x)=\begin{cases}
-\frac{\lambda^{n}x^{n-1}e^{-\lambda x}}{(n-1)!} & x \leq 0 \\
+\frac{\displaystyle \lambda^{n}x^{n-1}e^{-\lambda x}}{\displaystyle (n-1)!} & x \leq 0 \\
 0 & \textrm{otherwise}\end{cases}\]
 
 For $\lambda > 0$ and $n \geq 1$, $n \in \mathbb{N}$.
