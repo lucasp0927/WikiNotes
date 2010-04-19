@@ -45,7 +45,7 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
 ** Boltzmann Factors
 $\frac{P(s_{2})}{P(s_{1})}=e^{\left[ S_{R}(s_{2})-S_{R}(s_{1}) \right]/k}$, and $dS=\frac{1}{T}\left( dU+PdV-\mu dN \right)$. 
 
-$P(s)=\frac{1}{Z}e^{E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of /all/ Boltzmann factors.
+$P(s)=\frac{1}{Z}e^{-E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of /all/ Boltzmann factors.
 
 *** Probability of certain state 
  $P(s)= \frac{1}{Z}e^{-\beta E(s)}$ is the probability of certain state.
@@ -58,7 +58,7 @@ $P(s)=\frac{1}{Z}e^{E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of 
 ** Average Values
 $\bar{E}=\frac{\sum E(s)N(s)}{N}=\sum E(s)P(s)$, so $\bar{E}=\frac{1}{Z}\sum E(s) e^{\beta E(s)}$, $\beta=\frac{1}{kT}$.
 *** Useful Trick
-$\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=-\frac{\partial}{\partial \beta}ln(Z)$
+$\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=\color{red}-\frac{\partial}{\partial \beta}ln(Z)$
 
 $\bar{E^{2}}=\frac{1}{Z}\frac{\partial^{2} Z}{\partial \beta^{2}}$
 
@@ -66,7 +66,12 @@ $\sigma_{E}^{2}=\bar{E^{2}}-\left( \bar{E} \right)^{2}$
 
 Relate $C_{v}$ with $\sigma_{E}$
 \begin{eqnarray*}
-\sigma_{E} &=& \left[ \frac{1}{Z}\frac{\partial^{2}Z}{\partial \beta^{2}}-\frac{1}{Z^{2}} \left( \frac{\partial Z}{\partial \beta} \right)^{2}  \right]^{\frac{1}{2}}\\ &=& \left[ \frac{1}{Z}\frac{\partial}{\partial \beta }(-Z \bar{E})-\bar{E}^{2} \right]^{\frac{1}{2}} \\ &=& \left( \frac{\partial \bar{E}}{\partial \beta} \right)^{\frac{1}{2}}\\ &=& \left( -\frac{\partial \bar{E}}{\partial T}\frac{\partial T}{\partial \beta} \right)^{\frac{1}{2}} \\ &=& kT\sqrt{\frac{C_{v}}{k_{B}}}
+\sigma_{E} &=& \left[ \frac{1}{Z}\frac{\partial^{2}Z}{\partial \beta^{2}}-\frac{1}{Z^{2}} \left( \frac{\partial Z}{\partial \beta} \right)^{2}  \right]^{\frac{1}{2}}\\
+ &=& \left[ \frac{1}{Z}\frac{\partial}{\partial \beta }(-Z \bar{E})-\left( \bar{E}\right) ^{2} \right]^{\frac{1}{2}} \\
+ &=& -\frac{1}{Z}\frac{\partial Z}{\partial \beta}\bar{E}-\frac{\partial\bar{E}}{\partial \beta}-\left( \bar{E} \right)^{2} \\
+ &=& \left(- \frac{\partial \bar{E}}{\partial \beta} \right)^{\frac{1}{2}}\\ 
+ &=& \left( -\frac{\partial \bar{E}}{\partial T}\frac{\partial T}{\partial \beta} \right)^{\frac{1}{2}} \\
+ &=& kT\sqrt{\frac{C_{v}}{k_{B}}}
 \end{eqnarray*}
 
 ** Paramagnetic in general
@@ -107,7 +112,7 @@ This is *Brillouin Function*.
 
 **** Low temperature
 
- At low temperature, one must figure out exactly witch terms should be omitted from the partition function
+ At low temperature, one must figure out exactly which terms should be omitted from the partition function
  at ordinary pressure, all diatomic gases except hydrogen will liquefy long before low temperature are reached.
  
  Even j wave functions are symmetric. Odd j wave functions are anti antisymmetric.
@@ -124,20 +129,21 @@ This is *Brillouin Function*.
 |----------+-------------------------+--------------------------|
 
 \\
-+ S=0
++ Parahydrogen S=0
  Degeneracy=1, and only allowed even j rotational state. That is \[Z_{rot}=\sum_{j=even}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
  #+CAPTION: Parahydrogen: C_v vs kT/(epsilon)
  [[./img/parahydrogen.png]]
 
-+ S=1
- Degeneracy=3, and only allowed odd j rotational state. That is  \[Z_{rot}=\sum_{j=odd}(2j+1)e^{-j(j+1)\epsilon /kT}\].
++ Orthohydrogen S=1
+ Degeneracy=3, and only allowed odd j rotational state. That is
+  \[Z_{rot}=3\sum_{j=odd}(2j+1)e^{-j(j+1)\epsilon /kT}\].
 
  #+CAPTION: Molar Heat Capacities
  [[./img/Ortho-para_H2_Cvs.jpg]]
 
 ** Partition Function and Free Energy 
-$F=-kT ln \:Z$, which $F=U-TS$.
+$\color{red}F=-kT ln \:Z$, which $F=U-TS$.
 
 $\left( \frac{\partial F}{\partial T} \right)_{V,N}=-S=\frac{F-U}{T}$.
 
@@ -145,9 +151,9 @@ $\left( \frac{\partial F}{\partial T} \right)_{V,N}=-S=\frac{F-U}{T}$.
 $S=-\left( \frac{\partial F}{\partial T} \right)_{V,N}$, $P=-\left( \frac{\partial F}{\partial V} \right)_{T,N}$, $\mu= \left( \frac{\partial F}{\partial N } \right)_{T,V}$
 
 *** Partition Function of Composition Systems
-$Z_{Total}= \Pi _{n}Z_{n}$. (non interacting, distinguishable particles)
+$Z_{Total}= \prod_{n}Z_{n}$. (non interacting, distinguishable particles)
 
-$Z_{Total}= \frac{1}{N!}\Pi_{n}Z_{n}$. (non interacting, indistinguishable particles)
+$Z_{Total}= \frac{1}{N!}\prod_{n}Z_{n}$. (non interacting, indistinguishable particles)
 
 ** Equipartition Theorem
 1. $E(q)=c q^{2}$
@@ -173,15 +179,15 @@ $Z=\frac{1}{N!}Z_{1}^{N}$, which $Z_{1}=Z_{tr}Z_{int}$. $Z_{tr}$ is the Z due to
 *** One Dimension
 #+BEGIN_CENTER
 *important*
-$\color{red}E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$
+$\color{red}E_{n}=\frac{p^2}{2m}=\frac{h^{2}n^{2}}{8mL^{2}}$
 #+END_CENTER
 
-$E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$. So $Z_{1d}=\sum e^{-h^{2}n^{2}/8mL^{2}kT}$. When temperature is high enough. $Z_{1d}=\int^{\infty}_{0}e^{-h^{2}n^{2}/8mL^{2}kT}dn=\sqrt{\frac{2\pi mkT}{h^1}}L=\frac{L}{L_{Q}}$
+$E_{n}=\frac{h^{2}n^{2}}{8mL^{2}}$. So $Z_{1d}=\sum e^{-h^{2}n^{2}/8mL^{2}kT}$. When temperature is high enough. $Z_{1d}=\int^{\infty}_{0}e^{-h^{2}n^{2}/8mL^{2}kT}dn=\sqrt{\frac{2\pi mkT}{h^1}}L=\frac{L}{l_{Q}}$
 
 $l_{Q}$ is called *Quantum Length* $l_{Q}=\frac{h}{\sqrt{2\pi mkT}}$. Aside from \pi, it is the De Broglie wavelength of a particle of mass m whose kinetic energy is kT.
 
 *** Three Dimension
-$Z_{tr}=\frac{L_{x}}{l_{Q}}\frac{L_{y}}{l_{Q}}\frac{L_{z}}{l_{Q}}=\frac{V}{v_{Q}}$. $v_{Q}=l_{Q}^{3}=\left( \frac{h}{\sqrt{2\pi mkT}} \right)^{3}$.
+$Z_{tr}=\frac{L_{x}}{l_{Q}}\frac{L_{y}}{l_{Q}}\frac{L_{z}}{l_{Q}}=\frac{V}{v_{Q}}$. Where  $v_{Q}=l_{Q}^{3}=\left( \frac{h}{\sqrt{2\pi mkT}} \right)^{3}$.
 
 $Z_{1}=\frac{V}{v_{Q}}Z_{int}$. So $Z=\frac{1}{N!}\left( \frac{VZ_{int}}{v_{Q}} \right)^{N}$. $ln\: Z=N \left[ ln \: V +ln \: Z_{int}-ln \: N-ln \: v_{Q}+1 \right]$.
 
@@ -194,7 +200,7 @@ Use $F=-kt ln \: Z$ to calculate the attributes of ideal gas.
  so $P(v)dv=\left( \frac{m}{2\pi kT} \right)^{\frac{3}{2}}e^{\frac{-mv^{2}}{2kT}}4\pi v^{2}dv$ 
 
 *** Useful Expression
-\[P=- \left( \frac{\partial F}{\delta V} \right)_{T,N}=\frac{NkT}{V}\]
+\[P=- \left( \frac{\partial F}{\partial V} \right)_{T,N}=\frac{NkT}{V}\]
 
 \[S=- \left( \frac{\partial F}{\partial T} \right)_{V,N}=Nk \left[ ln \left( \frac{V}{Nv_{Q}} \right)+\frac{5}{2} \right]-\frac{\partial F_{int}}{\partial T}\]
 
