@@ -58,7 +58,7 @@ $P(s)=\frac{1}{Z}e^{-E(s)/kT}$, where $Z=\sum_{s} e^{-E(s)/kT}$, that is, Sum of
 ** Average Values
 $\bar{E}=\frac{\sum E(s)N(s)}{N}=\sum E(s)P(s)$, so $\bar{E}=\frac{1}{Z}\sum E(s) e^{\beta E(s)}$, $\beta=\frac{1}{kT}$.
 *** Useful Trick
-$\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=\color{red}-\frac{\partial}{\partial \beta}ln(Z)$
+$\bar{E}=-\frac{1}{Z}\frac{\partial Z}{\partial \beta}=\color{red}-\frac{\partial}{\partial \beta}\ln(Z)$
 
 $\bar{E^{2}}=\frac{1}{Z}\frac{\partial^{2} Z}{\partial \beta^{2}}$
 
@@ -81,10 +81,10 @@ $\mu_{z}=-j \delta_{\mu},(-j+1)\delta_{\mu}, \dots (j-a)\delta_{\mu}, j\delta_{\
 
 where $b=\beta B \delta_{\mu}$.
 
-\[Z=\frac{e^{-jb}+e^{\left( j+1 \right)b}}{1-e^b}=\frac{sinh \left( j+\frac{1}{2}b \right)}{sinh \frac{b}{2}}\]
+\[Z=\frac{e^{-jb}+e^{\left( j+1 \right)b}}{1-e^b}=\frac{\sinh \left( j+\frac{1}{2}b \right)}{\sinh \frac{b}{2}}\]
 Using $\bar{E}=\frac{1}{Z}\frac{\partial Z}{\partial \beta}$ , we get,
 \begin{equation*}
-\bar{E}=-\delta_{\mu}B \left[ (j+\frac{1}{2})coth \left[ b(j+\frac{1}{2}) \right]-\frac{1}{2}coth \: \frac{b}{2} \right]
+\bar{E}=-\delta_{\mu}B \left[ (j+\frac{1}{2})\coth \left[ b(j+\frac{1}{2}) \right]-\frac{1}{2}\coth \: \frac{b}{2} \right]
 \end{equation*}
 This is *Brillouin Function*.
 
@@ -143,7 +143,7 @@ This is *Brillouin Function*.
  [[./img/Ortho-para_H2_Cvs.jpg]]
 
 ** Partition Function and Free Energy 
-\[\color{red}F=-kT ln \:Z\], which \[F=U-TS\].
+\[\color{red}F=-kT \ln \:Z\], which \[F=U-TS\].
 
 \[\left( \frac{\partial F}{\partial T} \right)_{V,N}=-S=\frac{F-U}{T}\].
 
@@ -189,9 +189,9 @@ $l_{Q}$ is called *Quantum Length* $l_{Q}=\frac{h}{\sqrt{2\pi mkT}}$. Aside from
 *** Three Dimension
 $Z_{tr}=\frac{L_{x}}{l_{Q}}\frac{L_{y}}{l_{Q}}\frac{L_{z}}{l_{Q}}=\frac{V}{v_{Q}}$. Where  $v_{Q}=l_{Q}^{3}=\left( \frac{h}{\sqrt{2\pi mkT}} \right)^{3}$.
 
-$Z_{1}=\frac{V}{v_{Q}}Z_{int}$. So $Z=\frac{1}{N!}\left( \frac{VZ_{int}}{v_{Q}} \right)^{N}$. $ln\: Z=N \left[ ln \: V +ln \: Z_{int}-ln \: N-ln \: v_{Q}+1 \right]$.
+$Z_{1}=\frac{V}{v_{Q}}Z_{int}$. So $Z=\frac{1}{N!}\left( \frac{VZ_{int}}{v_{Q}} \right)^{N}$. $\ln\: Z=N \left[ \ln \: V +\ln \: Z_{int}-\ln \: N-\ln \: v_{Q}+1 \right]$.
 
-Use $F=-kt ln \: Z$ to calculate the attributes of ideal gas.
+Use $F=-kt \ln \: Z$ to calculate the attributes of ideal gas.
 
 - A fast derivation of Maxwell-Boltzmann Distribution
 
@@ -202,9 +202,9 @@ Use $F=-kt ln \: Z$ to calculate the attributes of ideal gas.
 *** Useful Expression
 \[P=- \left( \frac{\partial F}{\partial V} \right)_{T,N}=\frac{NkT}{V}\]
 
-\[S=- \left( \frac{\partial F}{\partial T} \right)_{V,N}=Nk \left[ ln \left( \frac{V}{Nv_{Q}} \right)+\frac{5}{2} \right]-\frac{\partial F_{int}}{\partial T}\]
+\[S=- \left( \frac{\partial F}{\partial T} \right)_{V,N}=Nk \left[ \ln \left( \frac{V}{Nv_{Q}} \right)+\frac{5}{2} \right]-\frac{\partial F_{int}}{\partial T}\]
 
-\[\mu= \left( \frac{\partial F}{\partial N} \right)_{T,V}=-kT \: ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
+\[\mu= \left( \frac{\partial F}{\partial N} \right)_{T,V}=-kT \: \ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
 * Grand Canonical Formalism
 \begin{equation*}
 P(s)=\frac{1}{Z_{G}}e^{-[E(s)-\mu N(s)]/kT}
@@ -234,7 +234,7 @@ Z_{G}=\sum_{s}e^{-[E(s)-\mu N(s)]/kT}
  \[\sigma_{E}=\left[ -\frac{\partial \bar{E}}{\partial\beta}\big|_{V,{e^{\beta\mu_{i}}}} \right]^{1/2}\]
 
 ** Grand Potential
-\[\Phi=-kT\: ln\: Z_{G}\]
+\[\Phi=-kT\: \ln\: Z_{G}\]
 
 \[S=- \left( \frac{\partial \Phi }{\partial T} \right)_{V,{\mu_{i}}}\],\[P=- \left( \frac{\partial\Phi}{\partial V} \right)_{T,{\mu_{i}}}\],
 \[N_{i}=- \left( \frac{\partial\Phi}{\partial\delta\mu_i} \right)_{V,T}\].
@@ -418,7 +418,7 @@ for silicon \epsilon_c - \epsilon_v =1.11 ev at room temperature.
 from the conservation requirement we have $\bar{N}_c=\bar{N}_v$, that is 
 $g_{0c}e^{-\beta \left( \epsilon_c-\mu \right)}=g_{0v}e^{-\beta \left( \mu-\epsilon_v \right)}$.
 
-So, \[\mu=\frac{\epsilon_v+\epsilon_c}{2}+\frac{kT}{2}ln\: \left( \frac{g_{0v}}{g_{0c}} \right)\Rightarrow\epsilon_F\equiv \mu\: (T=0)\:=\frac{\epsilon_c+\epsilon_v}{2}\].
+So, \[\mu=\frac{\epsilon_v+\epsilon_c}{2}+\frac{kT}{2}\ln\: \left( \frac{g_{0v}}{g_{0c}} \right)\Rightarrow\epsilon_F\equiv \mu\: (T=0)\:=\frac{\epsilon_c+\epsilon_v}{2}\].
 If g_{0v}=g_{oc}, \mu is independance of temperature. 
 
 An ordinary metal has a fixed number of conduction electrons, so it's conductivity depends on how easily the electrons can
