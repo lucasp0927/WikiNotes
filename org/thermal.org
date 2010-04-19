@@ -204,7 +204,7 @@ Use $F=-kt ln \: Z$ to calculate the attributes of ideal gas.
 
 \[S=- \left( \frac{\partial F}{\partial T} \right)_{V,N}=Nk \left[ ln \left( \frac{V}{Nv_{Q}} \right)+\frac{5}{2} \right]-\frac{\partial F_{int}}{\partial T}\]
 
-\[\mu= \left( \frac{\delta F}{\partial N} \right)_{T,V}=-kT \: ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
+\[\mu= \left( \frac{\partial F}{\partial N} \right)_{T,V}=-kT \: ln \left( \frac{VZ_{int}}{Nv_{Q}} \right)\]
 * Grand Canonical Formalism
 \begin{equation*}
 P(s)=\frac{1}{Z_{G}}e^{-[E(s)-\mu N(s)]/kT}
