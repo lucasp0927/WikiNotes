@@ -23,7 +23,7 @@ $\Omega_{N} \approx \frac{1}{N!}\frac{V^{N}}{h^{3N}}\frac{\pi ^{\frac{3N}{2}}}{\
 Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of freedom in the power of energy (U,q). 
 
 ** Maxwell Relation
-*** U
+*** U Energy
  $dU=T dS-PdV+\mu dN$
 
  \[\frac{1}{T}=\left( \frac{\partial S}{\partial U} \right)_{v,N}\]
@@ -32,7 +32,7 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
 
  \[\frac{\mu}{T}=-\left( \frac{\partial S}{\partial N} \right)_{U,V}\]
 
-*** F
+*** F Free Energy
  $F=U-TS$, so $dF=dU-T\: ds-S\: dT$.
  Plug in $dU$ we get $dF=-S \: dT-P \: dV+\mu \: dN$
 
