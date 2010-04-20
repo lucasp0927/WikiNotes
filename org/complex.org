@@ -32,13 +32,17 @@ Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 \[\tan^{-1}z=\frac{i}{2}\ln\frac{i+z}{i-z}\]
 
 ** Hyperbolic Sinosoid
-\[\sinh z=(e^{z}-e^{-z})/2\]
+\[\sinh z=(e^{z}-e^{-z})/2=\sum_{n=1,\mathrm{odd}}^{\infty}\frac{z^n}{n!}\]
 
-\[\cosh z=(e^{z}+e^{-z})/2\]
+\[\cosh z=(e^{z}+e^{-z})/2=\sum_{n=0,\mathrm{even}}^{\infty}\frac{z^n}{n!}\]
 
 \[\sinh z=\sinh x\cos y+i\cosh x\sin y\]
 
 \[\cosh z=\cosh x\cos y-i\sinh x\sin y\]
+
+\[\left| \sinh z \right|^2=\sinh^2 x+\sin^2 y\]
+
+\[\left| \cosh z \right|^2=\cosh^2 x+\sin^2 y\]
 
 \[\sinh^{-1}z=\ln\left[z+\left(z^2+1\right)^{1/2}\right]\]
 
@@ -51,6 +55,11 @@ Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 \[\sinh(iz)=i\sin z\]
 
 \[\cosh(iz)=\cos z\]
+
+\[\sin(iz)=i \sinh z\]
+
+\[\cos (iz) = \cosh z\]
+
 * Cauchy-Riemann Condition
 Suppose $f(z)=u(x,y)+iv(x,y)$ is differentiable at a point $z=x+iy$, then:\\
 $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
@@ -72,6 +81,15 @@ Let $f$ be analytic in a simply connected domain $D$, and let $C$ be a simple cl
 
 ** Derivative 
 \[f^{(n)}(z_{0})=\frac{n!}{2\pi i}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}dz\]
+
+** Cauchy Inequality
+if $f(z)=\sum a_nz^n$ is analytic and bounded, $\left| f(z) \right|\le M$ on a circle of radius $r$ about the orogin.
+, then
+#+BEGIN_CENTER
+\[\left| a_n \right|r^n\le M\] ,(Cauchy's inequality)
+#+END_CENTER
+An immediate consequence if the inequality is *Liouville's Theorem*: if $f(z)$ is analytic and bounded in the entire complex
+plane it is a constant.
 
 * Taylor and Laurent Expansion
 ** Taylor Expansion
