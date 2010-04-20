@@ -82,6 +82,15 @@ Let $f$ be analytic in a simply connected domain $D$, and let $C$ be a simple cl
 ** Derivative 
 \[f^{(n)}(z_{0})=\frac{n!}{2\pi i}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}dz\]
 
+** Cauchy Inequality
+if $f(z)=\sum a_nz^n$ is analytic and bounded, $\left| f(z) \right|\le M$ on a circle of radius $r$ about the orogin.
+, then
+#+BEGIN_CENTER
+\[\left| a_n \right|r^n\le M\] ,(Cauchy's inequality)
+#+END_CENTER
+An immediate consequence if the inequality is *Liouville's Theorem*: if $f(z)$ is analytic and bounded in the entire complex
+plane it is a constant.
+
 * Taylor and Laurent Expansion
 ** Taylor Expansion
 Taylor expansion: about a analytic point
