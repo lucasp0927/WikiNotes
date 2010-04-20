@@ -1,5 +1,6 @@
 publish/*.html*
 publish/ltxpng/
+publish/header/
 org/*~
 org/\#*
 *.swp
