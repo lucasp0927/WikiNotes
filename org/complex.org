@@ -113,7 +113,7 @@ the order of the brance point is infinite.
 * Calculus of Residues
 ** Residue Theorem
 The constant $a_{-1}$ of Laurent expansion is called /residue/ of $f(z)$ at $z=z_{0}$.
-Integrate $f(z)$ by intergrate its Laurent xpansion term by term. 
+Integrate $f(z)$ by intergrate its Laurent expansion term by term. 
 \begin{equation*}
 \int f(z) dz=\int a_{n} (z-z_{0})^{n}dz=a_{-1} \int (z-z_{0})^{-1}dz=2\pi i \times a_{-1}
 \end{equation*}
@@ -134,7 +134,7 @@ so,
 This is called the *residue theorm*.
 
 ** Useful Trick:
-The function $f(z)$ xpand in Laurent series exhinits a pole of oder m at $z=z_{0}$. $a_{-1}=\frac{1}{\left( m-1 \right)!} \frac{d^{m-1}}{dz^{m-1}}\left[ \left( z-z_{0} \right)^{m} f(z) \right]_{z=z_{0}}$, with
+The function $f(z)$ expand in Laurent series exhinits a pole of oder m at $z=z_{0}$. $a_{-1}=\frac{1}{\left( m-1 \right)!} \frac{d^{m-1}}{dz^{m-1}}\left[ \left( z-z_{0} \right)^{m} f(z) \right]_{z=z_{0}}$, with
 $a_{-1}=\left[ \left( z-z_{0} \right)f(z) \right]_{z=z_{0}}$, when m=1.
 ** Infinitesimal radius
 $\int \frac{dz}{z-x_{0}}=i \int ^{2\pi}_{\pi}d\phi = i\pi$ , if counterclockwise,
