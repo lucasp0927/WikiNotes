@@ -1,3 +1,4 @@
 publish/*.html*
 publish/ltxpng/
+publish/header/
 *.swp
