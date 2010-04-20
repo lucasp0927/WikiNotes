@@ -95,13 +95,21 @@ plane it is a constant.
 ** Taylor Expansion
 Taylor expansion: about a analytic point
 
-\[f(z)=\sum^{\infty}_{k=0}\frac{f^{(k)}(z_0)}{k!}\left(z-z_0\right)^k\]
+\[f(z)=\sum^{\infty}_{k=0}\frac{f^{(k)}(z_0)}{k!}\left(z-z_0\right)^k=\frac{1}{2\pi i}\sum_{k=0}^{\infty}\left( z-z_0 \right)^k \oint_C \frac{f(z^{\prime}\: dz^{\prime})}{\left( z^{\prime}-z_0 \right)^{k+1}}\]
 
 ** Laurent Expansion
 Laurent expansion: about one singular point of $f(z)$
 
 \[f(z)=\sum ^{\infty}_{n=-\infty}\frac{1}{2\pi i}\int \frac{f(z^{\prime})dz^{\prime}}{(z^{\prime}-z_{0})^{n+1}} \left( z-z_{0} \right)^{n}\]
 
+** Poles 
+- Simple pole: order 1
+- Essential pole: order \infty
+- Meroomorphic: analytic throughout the finite complex plane *except* for the isolated poles.
+- Entire function: no singularities in the finite complex plane, exp: $\exp (z)$, $\sin (z)$, $\cos (z)$.
+** Branch Points
+$f(z)=z^a$ a is not a integer, if $a=\frac{p}{q}$, $q$ is the order of the branch point. If $a$ is irrational 
+the order of the brance point is infinite. 
 * Calculus of Residues
 ** Residue Theorem
 The constant $a_{-1}$ of Laurent expansion is called /residue/ of $f(z)$ at $z=z_{0}$.
@@ -120,7 +128,7 @@ $\int f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sing because of clockwise direction
 
 so,
 \begin{equation*}
-\int f(z)dz=2\pi i \times (sum \: of\:  enclosured\:  residues)
+\int f(z)dz=2\pi i \times (\mathrm{sum \: of\:  enclosured\:  residues})
 \end{equation*}
 
 This is called the *residue theorm*.
@@ -139,7 +147,7 @@ Analytic function $f(z)$ that have only isolated poles as singularities are call
 define: poles $z=a_{1},a_{2},a_{3},\dots$, with residues $b_{n}$
 
 \begin{equation*}
-f(z)=f(0)+\Sigma ^{\infty} _{n=1} b_{n} \left\{ \left( z-a_{n} \right)^{-1} +a_{n}^{-1}\right\}
+f(z)=f(0)+\sum ^{\infty} _{n=1} b_{n} \left\{ \left( z-a_{n} \right)^{-1} +a_{n}^{-1}\right\}
 \end{equation*}
 
 - Proof:
@@ -154,19 +162,19 @@ if $f(z)$ has a simple zero. $f(z)=(z-a_{n})g(z)$ with $g(z)$ analytic and $g(a_
 
 From pole xpansion :
 \begin{equation*}
-\frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
+\frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\sum ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
 \end{equation*}
 
 Integrate,
 
 \begin{equation*}
-\int^{z}_{0}\frac{f'(z)}{f(z)}dz=\ln f(z) -\ln f(0)=\frac{zf'(0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left\{ \ln \left( z-a_{n} \right)-\ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
+\int^{z}_{0}\frac{f'(z)}{f(z)}dz=\ln f(z) -\ln f(0)=\frac{zf'(0)}{f(0)}+\sum ^{\infty}_{n=1} \left\{ \ln \left( z-a_{n} \right)-\ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
 \end{equation*}
 
 Exponentiating,
 
 \begin{equation*}
-f(z)=f(0) xp \frac{z f'(0)}{f(0)}\Pi^{\infty}_{1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
+f(z)=f(0) xp \frac{z f'(0)}{f(0)}\prod^{\infty}_{n=1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
 \end{equation*}
 
 ** Rouche's Theorm
@@ -175,7 +183,7 @@ if $f(z)$ and $g(z)$ are analytic inside and on a closed contour C and $\left| g
 * Evaluation of Definite Integrals
 ** Definite Integrals \int ^{2\pi} _{0} f(\sin \theta , cos \theta ) d \theta
 \begin{equation*}
-I=\int ^{2\pi}_{0} f(\sin \theta , i\cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \Sigma residues \: within \: the \: unit \: circle
+I=\int ^{2\pi}_{0} f(\sin \theta , i\cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \sum (\mathrm{residues\: within\: the\: unit\: circle})
 \end{equation*}
 
 ** Definite Integrals \int ^{\infty}_{-\infty}f(x)dx
@@ -183,12 +191,12 @@ if
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
 - $f(z)$ vanishes as strong as $\frac{1}{z^{2}}$ , $0 \le arg(z) \le \pi$.
 
-then, $I=2\pi i \times \sum \mathrm{Res}(upper\: plane)$
+then, $I=2\pi i \times \sum \mathrm{Res}(\mathrm{upper \: plane})$
 
 ** Definite Integrals \int ^{\infty}_{-\infty} f(x)e^{iax}dx
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
-- $lim_{\left|  x\right|\Rightarrow \infty} f(z)=0 $ , $0 \le arg(z) \le \pi$.
-then, $I=2\pi i \times \sum \mathrm{Res}(upper\: plane)$
+- \[\lim_{\left|  x\right|\rightarrow \infty} f(z)=0\] , $0 \le arg(z) \le \pi$.
+then, $I=2\pi i \times \sum \mathrm{residues}(\mathrm{upper \: plane})$
 
 /Jordan's lemma/
 
