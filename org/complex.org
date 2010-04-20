@@ -10,7 +10,8 @@
 ** Logrithm
 \[\ln z=\log_e|z|+i(\theta+2n\pi)\]
 
-\[\mathrm{Ln} z=\log_e|z|+i\mathrm{Arg}(z)\]
+\[\mathrm{Ln} z=\log_e|z|+i\mathrm{Arg}(z)\]\\
+Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 ** Sinosoid
 \[\sin z=(e^{iz}-e^{-iz})/2i\]
 
@@ -64,27 +65,38 @@ Suppose $f(z)=u(x,y)+iv(x,y)$ is differentiable at a point $z=x+iy$, then:\\
 $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
 ** Criterion for Analyticity
 Suppose $u(x,y)$ and $v(x,y)$ are _continuous_ and have _continuous first-order partial derivatives_ in domain $D$.  If $u$ and $v$ satisfy the Cauchy-Riemann eqations at _all points_ of $D$, then the complex function $f(z)=u(x,y)+iv(x,y)$ is analytic in $D$.
+** Harmonic Functions
+A real-valued function $\phi(x,y)$ that has continuous second-order partial derivatives in a domain $D$ and satisfies Laplace's equation is said to be _harmonic_ in $D$.
+** A Source of Harmonic Functions
+Suppose $f(z)=u(x,y)+iv(x,y)$ is analytic in a domain $D$.  Then the functions $u(x,y)$ and $v(x,y)$ are harmonic functions.
 * Cauchy's Integral Theorem
-$\frac{1}{2\pi i}\int_{c}z^{n}dz=0$, if $n \neq -1$
-
-$\frac{1}{2\pi i}\int_{c}z^{n}dz=1$, if $n = -1$
+\[\frac{1}{2\pi i}\oint_{c}z^{n}dz=\begin{cases}
+0 & \mathrm{if}\; n \neq -1 \\
+1 & \mathrm{if}\; n=-1\end{cases}\]
 
 * Cauchy Intergral Formula
-Taylor expantion: about a analytic point, Laurent expantion: about one singular point of $f(z)$.
-$\frac{1}{2\pi i}\int _{c} \frac{f(z)}{z-z_{0}}=f(z_{0})$, if $z_{0}$ is interior, otherwise 0.
+Let $f$ be analytic in a simply connected domain $D$, and let $C$ be a simple closed contour lying entirely within D.  If $z_0$ is any point within $C$, then
 
-* Derivative 
-$f^{n}(z_{0})=\frac{n!}{2\pi i}\frac{f(z) dz }{(z-z_{0})^{n+1}}$
+\[f(z_0)=\frac{1}{2\pi i}\oint _{C} \frac{f(z)}{z-z_{0}}dz\]\\
 
-* Laurent Expansion
-$f(z)=\Sigma ^{\infty}_{-\infty} a_{n}\left( z-z_{0} \right)^{n}$,
-where $a_{n}=\frac{1}{2\pi i}\int \frac{f(z^{\prime})dz^{\prime}}{(z^{\prime}-z_{0})^{n+1
-}}$.
+** Derivative 
+\[f^{(n)}(z_{0})=\frac{n!}{2\pi i}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}dz\]
+
+* Taylor and Laurent Expansion
+** Taylor Expansion
+Taylor expansion: about a analytic point
+
+\[f(z)=\sum^{\infty}_{k=0}\frac{f^{(k)}(z_0)}{k!}\left(z-z_0\right)^k\]
+
+** Laurent Expansion
+Laurent expansion: about one singular point of $f(z)$
+
+\[f(z)=\sum ^{\infty}_{n=-\infty}\frac{1}{2\pi i}\int \frac{f(z^{\prime})dz^{\prime}}{(z^{\prime}-z_{0})^{n+1}} \left( z-z_{0} \right)^{n}\]
 
 * Calculus of Residues
 ** Residue Theorem
 The constant $a_{-1}$ of Laurent expansion is called /residue/ of $f(z)$ at $z=z_{0}$.
-Integrate $f(z)$ by intergrate its Laurent expansion term by term. 
+Integrate $f(z)$ by intergrate its Laurent xpansion term by term. 
 \begin{equation*}
 \int f(z) dz=\int a_{n} (z-z_{0})^{n}dz=a_{-1} \int (z-z_{0})^{-1}dz=2\pi i \times a_{-1}
 \end{equation*}
@@ -105,7 +117,7 @@ so,
 This is called the *residue theorm*.
 
 ** Useful Trick:
-The function $f(z)$ expand in Laurent series exhinits a pole of oder m at $z=z_{0}$. $a_{-1}=\frac{1}{\left( m-1 \right)!} \frac{d^{m-1}}{dz^{m-1}}\left[ \left( z-z_{0} \right)^{m} f(z) \right]_{z=z_{0}}$, with
+The function $f(z)$ xpand in Laurent series exhinits a pole of oder m at $z=z_{0}$. $a_{-1}=\frac{1}{\left( m-1 \right)!} \frac{d^{m-1}}{dz^{m-1}}\left[ \left( z-z_{0} \right)^{m} f(z) \right]_{z=z_{0}}$, with
 $a_{-1}=\left[ \left( z-z_{0} \right)f(z) \right]_{z=z_{0}}$, when m=1.
 ** Infinitesimal radius
 $\int \frac{dz}{z-x_{0}}=i \int ^{2\pi}_{\pi}d\phi = i\pi$ , if counterclockwise,
@@ -129,9 +141,9 @@ if $f(z)$ has a simple zero. $f(z)=(z-a_{n})g(z)$ with $g(z)$ analytic and $g(a_
 
 \begin{equation*}
 \frac{f'(z)}{f(z)}=(z-a_{n})^{-1}+\frac{g'(z)}{g(z)}
-\end{Equation*}
+\end{equation*}
 
-From pole expansion :
+From pole xpansion :
 \begin{equation*}
 \frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
 \end{equation*}
@@ -139,22 +151,22 @@ From pole expansion :
 Integrate,
 
 \begin{equation*}
-\int^{z}_{0}\frac{f'(z)}{f(z)}dz=ln f(z) -ln f(0)=\frac{zf'(0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left\{ ln \left( z-a_{n} \right)-ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
+\int^{z}_{0}\frac{f'(z)}{f(z)}dz=\ln f(z) -\ln f(0)=\frac{zf'(0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left\{ \ln \left( z-a_{n} \right)-\ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
 \end{equation*}
 
 Exponentiating,
 
 \begin{equation*}
-f(z)=f(0) exp \frac{z f'(0)}{f(0)}\Pi^{\infty}_{1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
+f(z)=f(0) xp \frac{z f'(0)}{f(0)}\Pi^{\infty}_{1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
 \end{equation*}
 
 ** Rouche's Theorm
 if $f(z)$ and $g(z)$ are analytic inside and on a closed contour C and $\left| g(z) \right| < \left| f(z) \right|$ on C then $f(z)$ and $f(z)+g(z)$ have the same number of zeros inside C.
 
 * Evaluation of Definite Integrals
-** Definite Integrals \int ^{2\pi} _{0} f(sin \theta , cos \theta ) d \theta
+** Definite Integrals \int ^{2\pi} _{0} f(\sin \theta , cos \theta ) d \theta
 \begin{equation*}
-I=\int ^{2\pi}_{0} f(sin \theta , cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \Sigma residues \: within \: the \: unit \: circle
+I=\int ^{2\pi}_{0} f(\sin \theta , i\cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \Sigma residues \: within \: the \: unit \: circle
 \end{equation*}
 
 ** Definite Integrals \int ^{\infty}_{-\infty}f(x)dx
@@ -162,12 +174,12 @@ if
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
 - $f(z)$ vanishes as strong as $\frac{1}{z^{2}}$ , $0 \le arg(z) \le \pi$.
 
-then, $I=2\pi i \times \Sigma residues (upper\: plane)$
+then, $I=2\pi i \times \sum \mathrm{Res}(upper\: plane)$
 
 ** Definite Integrals \int ^{\infty}_{-\infty} f(x)e^{iax}dx
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
-- $lim_{\left|  x\right|\Rightarrow \infty} f(z)=0 $,$0 \le arg(z) \le \pi$.
-then, $I=2\pi i \times \Sigma residues (upper\: plane)$
+- $lim_{\left|  x\right|\Rightarrow \infty} f(z)=0 $ , $0 \le arg(z) \le \pi$.
+then, $I=2\pi i \times \sum \mathrm{Res}(upper\: plane)$
 
 /Jordan's lemma/
 
