@@ -1,0 +1,66 @@
+#+TITLE: Solid State Electronics
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Crystal Structure of Solids
+- crystal structure = lattice + basis
+- primiitive cell: 最小體積之單位晶胞。
+** Convemtional Cell
+七大系統，十四種。
+** Basic Crystal Structure
+- Face Centered Crystal
+- Body Centered Crystal
+  exp: lattice constant $a$, $2/a^3$ is the volume sensity of atoms.
+** Crystal planes and Miller Indices
+${100}$ present ${100}$, ${010}$, ${001}$, ${\bar{1}00}$, ${0\bar{1}0}$, ${00\bar{1}}$.
+
+Bar means that the plane cross the negative axel.
+** The Diamond Structure
+兩相鄰原子之間距離為$\frac{\sqrt{3}}{4}a$.
+
+* Quantumn Mechanics and the Quantumn Theory of Solid
+** Uncertainty Principle
+\[\Delta p \cdot \Delta x \ge \hbar\]
+
+\[v_g=\frac{1}{\hbar}\frac{d\:E}{d\:k}\]
+
+* Schrodinger's wave equation and it's apllications
+** The Wave Equation
+\[\frac{-\hbar}{2m}\cdot \frac{\partial^{2 }\Psi (x,t)}{\partial x^2}+V(x) \Psi (x,t) = j \hbar \frac{\partial \Psi(x,t)}{\partial t}\]
+** Time Independent Wave Equation
+\[\frac{\partial^2 \psi(x)}{\partial x^2}+\frac{2m}{\hbar^2}\left( E-V(x) \right)\psi(x)=0\]
+** Particle in a Infinite Potential Well
+\[E_n=\frac{\hbar^2 n^2 \pi^2}{2ml^{2}}\]
+** Step potential Function
+
+* Formation of Energy Bands
+** Kronig-Penny Model
+At $-b<x <0$, $V=V_0$. $0<x<a$, $V=0$.
+
+- Bloch function
+
+ $\psi(x)=e^{\pm jkx}\cdot u_k(x)$, where $u_{k}(x)=u_k(x+c)$.
+
+ $\alpha^2=\frac{2mE}{\hbar^2}$ and $\beta^2=\frac{2m}{\hbar^2}\left( E-V_0 \right)$.
+
+ To simplify the calculation set $b\rightarrow 0$ and $V_0\rightarrow \infty$. We can get
+ \[\left( \frac{mV_0 b a}{\hbar^2} \right) \cdot \frac{\sin (\alpha a)}{\alpha a}+\cos (\alpha a)=\cos (ka)\]
+
+- Electrical Conduction in Solids
+
+ $v_g=\frac{1}{\hbar}\frac{dE}{dk}$
+
+- Electron Effective Mass
+
+ $\frac{dk}{dt}=\frac{F}{\hbar}$
+
+ $\frac{1}{m^{\star}}=\frac{1}{\hbar^2}\cdot \frac{d^2E}{dk^2}$
+
+- Density of States
+
+ $g(E)=\frac{4\pi \left( 2m \right)^{3/2}}{\hbar^3}\cdot \sqrt{E}$
+  ------
+[[file:index.org][Back to Index]]

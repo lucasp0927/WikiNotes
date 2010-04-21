@@ -19,6 +19,7 @@ Notes on physics and other stuff.
 - [[file:probability.org][Probability]]
 * EE
 - [[file:electronics.org][Electronics]]
+- [[file:sselectronics.org][Solid State Electronics]]
 * 通識
 - [[file:worldmusic.org][World Music]]
 * emacs
