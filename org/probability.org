@@ -17,6 +17,8 @@
 \[E[X]=\mu_X=\sum_{x\in S_X}{}{xP_X(s)}\]
 *** Little Trick
 \[E\left[k^2\right]=E[k(k-1)]+E[k]\]
+*** Another Trick
+\[E[X]=\int^\infty_0[1-F_X(x)]\;dx\]
 ** Derived Random Variable
 \[P_{Y}(y)=\sum_{x:g(x)=y}{P_{X}(x)}\]
 

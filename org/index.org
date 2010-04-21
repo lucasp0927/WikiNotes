@@ -20,8 +20,6 @@ Notes on physics and other stuff.
 * EE
 - [[file:electronics.org][Electronics]]
 - [[file:sselectronics.org][Solid State Electronics]]
-* 通識
-- [[file:worldmusic.org][World Music]]
 * emacs
 - [[file:emacsorg.org][Org-Mode Setting]]
 
