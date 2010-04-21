@@ -59,9 +59,9 @@ At $-b<x <0$, $V=V_0$. $0<x<a$, $V=0$.
 
  $\frac{1}{m^{\star}}=\frac{1}{\hbar^2}\cdot \frac{d^2E}{dk^2}$
 
-- Density of States
+** Density of States
 
- $g(E)=\frac{4\pi \left( 2m \right)^{3/2}}{h^3}\cdot \sqrt{E}$
+\[g(E)=\frac{4\pi \left( 2m \right)^{3/2}}{h^3}\cdot \sqrt{E}\]
 
 - Extension to Semiconductor
 
@@ -69,7 +69,7 @@ At $-b<x <0$, $V=V_0$. $0<x<a$, $V=0$.
 
  *Interesting Question*: Solar cell can generte power when light is apply but not heat, why?
  
-- Fermi Dirac Distibution
+** Fermi Dirac Distibution
 
  $f_{FD}(E)=\frac{1}{1+\exp \left( \frac{E-E_F}{kT} \right)}$
 
@@ -82,9 +82,26 @@ conduction band.
  Note that if $E_c-E_F\gg 3kT$ doesn't hold, the above equation won't be accurate.
 
 ** The Intrinsic Carrier Concentration
+At equilibrium $n_0=p_0=n_i$ which is the intrinsic electron concentration. $E_{Fi}$ is intrinsic Fermi energy.
+ 
 \[n_0 p_0 = n_i^2=N_cN_ve^{\frac{-E_g}{kT}}\]
 Independent of $E_F$.
 ** The Intrinsic Fermi-level Position
 \[E_{Fi}=E_{\mathrm{midgap}}+\frac{3}{4}kT \ln \left( \frac{m_p^{\star}}{m_n^{\star}} \right)\]
+** Dopant Energy and Energy Levels
+- Ionize energy 
+  
+  將五價donor之外圍 donor electron 激發躍升至傳導帶，使 donor 失去電子成為正離子所需能量即為游離能。
+
+  Use Bohr model \[\frac{e^2}{4\pi \epsilon r_n^2}=\frac{m^{\star}v^2}{r_n}\], angular momentum quantize \[m^{\star}v and=n\hbar\].
+
+- Other Expression of n_0 and p_0
+
+   $n_0=N_c \exp \left( \frac{- \left( E-E_F \right)}{kT} \right)=n_i\exp \left( \frac{- \left( E_F-E_{Fi} \right)}{kT} \right)$
+
+*** Degenaracy Factor
+\[\frac{n_d}{N_d}=\frac{1}{1+\frac{1}{g}e^{\frac{E_d-E_F}{kT}}}\], 
+$n_{d}$ is the concentration of donor with electrons.
+    
   ------
 [[file:index.org][Back to Index]]
