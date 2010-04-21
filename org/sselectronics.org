@@ -7,21 +7,21 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 * Crystal Structure of Solids
 - crystal structure = lattice + basis
-- primiitive cell: 最小體積之單位晶胞。
-** Convemtional Cell
+- primitive cell: 最小體積之單位晶胞。
+** Conventional Cell
 七大系統，十四種。
 ** Basic Crystal Structure
 - Face Centered Crystal
 - Body Centered Crystal
-  exp: lattice constant $a$, $2/a^3$ is the volume sensity of atoms.
-** Crystal planes and Miller Indices
+  exp: lattice constant $a$, $2/a^3$ is the volume density of atoms.
+** Crystal planes and Miller Indies
 ${100}$ present ${100}$, ${010}$, ${001}$, ${\bar{1}00}$, ${0\bar{1}0}$, ${00\bar{1}}$.
 
-Bar means that the plane cross the negative axel.
+Bar means that the plane cross the negative axle.
 ** The Diamond Structure
 兩相鄰原子之間距離為$\frac{\sqrt{3}}{4}a$.
 
-* Quantumn Mechanics and the Quantumn Theory of Solid
+* Quantum Mechanics and the Quantum Theory of Solid
 ** Uncertainty Principle
 \[\Delta p \cdot \Delta x \ge \hbar\]
 
@@ -61,6 +61,30 @@ At $-b<x <0$, $V=V_0$. $0<x<a$, $V=0$.
 
 - Density of States
 
- $g(E)=\frac{4\pi \left( 2m \right)^{3/2}}{\hbar^3}\cdot \sqrt{E}$
+ $g(E)=\frac{4\pi \left( 2m \right)^{3/2}}{h^3}\cdot \sqrt{E}$
+
+- Extension to Semiconductor
+
+ $g_c=\frac{4\pi \left( 2m^{\star}_n \right)^{3/2}}{\hbar^3}\cdot \sqrt{E-E_{c}}$
+
+ *Interesting Question*: Solar cell can generte power when light is apply but not heat, why?
+ 
+- Fermi Dirac Distibution
+
+ $f_{FD}(E)=\frac{1}{1+\exp \left( \frac{E-E_F}{kT} \right)}$
+
+* The Semiconductor in Equilibrium
+** Intrinsic Semiconductor
+\[N_c=2 \left( \frac{2\pi m_n^{\star}kT}{h^2} \right)^{3/2}\], this is called effective density of states in the 
+conduction band.
+
+\[n_0=N_c\cdot e^{-\frac{E_c-E_F}{kT}}\]
+ Note that if $E_c-E_F\gg 3kT$ doesn't hold, the above equation won't be accurate.
+
+** The Intrinsic Carrier Concentration
+\[n_0 p_0 = n_i^2=N_cN_ve^{\frac{-E_g}{kT}}\]
+Independent of $E_F$.
+** The Intrinsic Fermi-level Position
+\[E_{Fi}=E_{\mathrm{midgap}}+\frac{3}{4}kT \ln \left( \frac{m_p^{\star}}{m_n^{\star}} \right)\]
   ------
 [[file:index.org][Back to Index]]
