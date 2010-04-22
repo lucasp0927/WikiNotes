@@ -26,3 +26,20 @@
 \[\mathbf{E}=\epsilon_0\mathbf{D}\]
 
 \[\mathbf{B}=\frac{\mathbf{H}}{\mu_0}\]
+** Maxwell's Equations in Integral Form
+\[\oint_C \mathbf{E}\cdot d\mathbf{l}=-\frac{d}{dt}\int_S \mathbf{B}\cdot d\mathbf{S}\]
+
+\[\oint_C \mathbf{H}\cdot d\mathbf{l}=\int_S \mathbf{J}\cdot d\mathbf{S}+\frac{d}{dt}\int_S \mathbf{D}\cdot d\mathbf{S}\]
+
+\[\oint_S \mathbf{D}\cdot d\mathbf{S}=\int_V \rho\:dv\]
+
+\[\oint_S \mathbf{B}\cdot d\mathbf{S}=0\]
+
+** Maxwell's Equations in Differential Form
+\[\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}\]
+
+\[\nabla\times\mathbf{H}=\mathbf{J}+\frac{\partial\mathbf{D}}{\partial t}\]
+
+\[\nabla\cdot\mathbf{D}=\rho\]
+
+\[\nabla\cdot\mathbf{B}=0\]
