@@ -29,7 +29,7 @@ Bar means that the plane cross the negative axle.
 
 * Schrodinger's wave equation and it's apllications
 ** The Wave Equation
-\[\frac{-\hbar}{2m}\cdot \frac{\partial^{2 }\Psi (x,t)}{\partial x^2}+V(x) \Psi (x,t) = j \hbar \frac{\partial \Psi(x,t)}{\partial t}\]
+\[\frac{-\hbar^2}{2m}\cdot \frac{\partial^{2 }\Psi (x,t)}{\partial x^2}+V(x) \Psi (x,t) = j \hbar \frac{\partial \Psi(x,t)}{\partial t}\]
 ** Time Independent Wave Equation
 \[\frac{\partial^2 \psi(x)}{\partial x^2}+\frac{2m}{\hbar^2}\left( E-V(x) \right)\psi(x)=0\]
 ** Particle in a Infinite Potential Well
