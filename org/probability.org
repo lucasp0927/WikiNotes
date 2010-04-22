@@ -13,6 +13,10 @@
 1. For any event $A$, $P[A]\geq 0$
 2. $P[S]=1$
 3. For any countable collection $A_1,A_2$ ... of mutually exclusive events \[P[A_1\cup A_2\cup ...]=P[A_1]+P[A_2]+...\]
+** Bayes' Theorem
+\[P[B|A]=\frac{P[A|B]P[B]}{P[A]}\]
+
+\[P[B_i|A]=\frac{P[A|B_i]P[B_i]}{\sum^m_{i=1}P[A|B_i]P[B_i]}\]
 ** Expected Value
 \[E[X]=\mu_X=\sum_{x\in S_X}{}{xP_X(s)}\]
 *** Little Trick

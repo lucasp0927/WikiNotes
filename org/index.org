@@ -13,6 +13,7 @@ Notes on physics and other stuff.
 - [[file:quantum.org][Quantum Mechanics]]
 - [[file:generalphysics.org][General Physics]]
 - [[file:classicalmechanics.org][Classical Mechanics]]
+- [[file:electromagnetic.org][Electromagnetics]]
 * Math
 - [[file:complex.org][Complex Variable]]
 - [[file:coordinate.org][How to Remember Div and Curl]]
