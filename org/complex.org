@@ -10,7 +10,7 @@
 ** Logrithm
 \[\ln z=\log_e|z|+i(\theta+2n\pi)\]
 
-\[\mathrm{Ln} z=\log_e|z|+i\mathrm{Arg}(z)\]\\
+\[\mathrm{Ln}\: z=\log_e|z|+i\mathrm{Arg}(z)\]\\
 Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 ** Sinosoid
 \[\sin z=(e^{iz}-e^{-iz})/2i\]
