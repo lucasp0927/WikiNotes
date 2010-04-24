@@ -25,7 +25,7 @@ emacs --batch -l ~/.emacs --funcall org-publish-all
 :section-numbers nil
 :auto-preamble t
 :table-of-contents nil
-:style "<link rel='stylesheet' type='text/css' href='css/style.css' />"
+:style "<link rel='stylesheet' type='text/css' href='css/style.css' /><script type='text/javascript' src='js/jquery.js'></script><script type='text/javascript' src='js/toggle.js'></script>"
 :style-include-default t
 :author-info nil
 :email-info nil
