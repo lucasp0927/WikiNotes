@@ -10,7 +10,8 @@
 ** Logrithm
 \[\ln z=\log_e|z|+i(\theta+2n\pi)\]
 
-\[\mathrm{Ln} z=\log_e|z|+i\mathrm{Arg}(z)\]
+\[\mathrm{Ln}\: z=\log_e|z|+i\mathrm{Arg}(z)\]\\
+Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 ** Sinosoid
 \[\sin z=(e^{iz}-e^{-iz})/2i\]
 
@@ -31,13 +32,17 @@
 \[\tan^{-1}z=\frac{i}{2}\ln\frac{i+z}{i-z}\]
 
 ** Hyperbolic Sinosoid
-\[\sinh z=(e^{z}-e^{-z})/2\]
+\[\sinh z=(e^{z}-e^{-z})/2=\sum_{n=1,\mathrm{odd}}^{\infty}\frac{z^n}{n!}\]
 
-\[\cosh z=(e^{z}+e^{-z})/2\]
+\[\cosh z=(e^{z}+e^{-z})/2=\sum_{n=0,\mathrm{even}}^{\infty}\frac{z^n}{n!}\]
 
 \[\sinh z=\sinh x\cos y+i\cosh x\sin y\]
 
-\[\cosh z=\cosh x\cos y-i\sinh x\sin y\]
+\[\cosh z=\cosh x\cos y+i\sinh x\sin y\]
+
+\[\left| \sinh z \right|^2=\sinh^2 x+\sin^2 y\]
+
+\[\left| \cosh z \right|^2=\cosh^2 x+\sin^2 y\]
 
 \[\sinh^{-1}z=\ln\left[z+\left(z^2+1\right)^{1/2}\right]\]
 
@@ -50,28 +55,61 @@
 \[\sinh(iz)=i\sin z\]
 
 \[\cosh(iz)=\cos z\]
+
+\[\sin(iz)=i \sinh z\]
+
+\[\cos (iz) = \cosh z\]
+
 * Cauchy-Riemann Condition
 Suppose $f(z)=u(x,y)+iv(x,y)$ is differentiable at a point $z=x+iy$, then:\\
 $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
 ** Criterion for Analyticity
 Suppose $u(x,y)$ and $v(x,y)$ are _continuous_ and have _continuous first-order partial derivatives_ in domain $D$.  If $u$ and $v$ satisfy the Cauchy-Riemann eqations at _all points_ of $D$, then the complex function $f(z)=u(x,y)+iv(x,y)$ is analytic in $D$.
+** Harmonic Functions
+A real-valued function $\phi(x,y)$ that has continuous second-order partial derivatives in a domain $D$ and satisfies Laplace's equation is said to be _harmonic_ in $D$.
+** A Source of Harmonic Functions
+Suppose $f(z)=u(x,y)+iv(x,y)$ is analytic in a domain $D$.  Then the functions $u(x,y)$ and $v(x,y)$ are harmonic functions.
 * Cauchy's Integral Theorem
-$\frac{1}{2\pi i}\int_{c}z^{n}dz=0$, if $n \neq -1$
-
-$\frac{1}{2\pi i}\int_{c}z^{n}dz=1$, if $n = -1$
+\[\frac{1}{2\pi i}\oint_{c}z^{n}dz=\begin{cases}
+0 & \mathrm{if}\; n \neq -1 \\
+1 & \mathrm{if}\; n=-1\end{cases}\]
 
 * Cauchy Intergral Formula
-Taylor expantion: about a analytic point, Laurent expantion: about one singular point of $f(z)$.
-$\frac{1}{2\pi i}\int _{c} \frac{f(z)}{z-z_{0}}=f(z_{0})$, if $z_{0}$ is interior, otherwise 0.
+Let $f$ be analytic in a simply connected domain $D$, and let $C$ be a simple closed contour lying entirely within D.  If $z_0$ is any point within $C$, then
 
-* Derivative 
-$f^{n}(z_{0})=\frac{n!}{2\pi i}\frac{f(z) dz }{(z-z_{0})^{n+1}}$
+\[f(z_0)=\frac{1}{2\pi i}\oint _{C} \frac{f(z)}{z-z_{0}}dz\]\\
 
-* Laurent Expansion
-$f(z)=\Sigma ^{\infty}_{-\infty} a_{n}\left( z-z_{0} \right)^{n}$,
-where $a_{n}=\frac{1}{2\pi i}\int \frac{f(z^{\prime})dz^{\prime}}{(z^{\prime}-z_{0})^{n+1
-}}$.
+** Derivative 
+\[f^{(n)}(z_{0})=\frac{n!}{2\pi i}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}dz\]
 
+** Cauchy Inequality
+if $f(z)=\sum a_nz^n$ is analytic and bounded, $\left| f(z) \right|\le M$ on a circle of radius $r$ about the orogin.
+, then
+#+BEGIN_CENTER
+\[\left| a_n \right|r^n\le M\] ,(Cauchy's inequality)
+#+END_CENTER
+An immediate consequence if the inequality is *Liouville's Theorem*: if $f(z)$ is analytic and bounded in the entire complex
+plane it is a constant.
+
+* Taylor and Laurent Expansion
+** Taylor Expansion
+Taylor expansion: about a analytic point
+
+\[f(z)=\sum^{\infty}_{k=0}\frac{f^{(k)}(z_0)}{k!}\left(z-z_0\right)^k=\frac{1}{2\pi i}\sum_{k=0}^{\infty}\left( z-z_0 \right)^k \oint_C \frac{f(z^{\prime})\: dz^{\prime}}{\left( z^{\prime}-z_0 \right)^{k+1}}\]
+
+** Laurent Expansion
+Laurent expansion: about one singular point of $f(z)$
+
+\[f(z)=\sum ^{\infty}_{n=-\infty}\frac{1}{2\pi i}\int \frac{f(z^{\prime})dz^{\prime}}{(z^{\prime}-z_{0})^{n+1}} \left( z-z_{0} \right)^{n}\]
+
+** Poles 
+- Simple pole: order 1
+- Essential pole: order \infty
+- Meroomorphic: analytic throughout the finite complex plane *except* for the isolated poles.
+- Entire function: no singularities in the finite complex plane, exp: $\exp (z)$, $\sin (z)$, $\cos (z)$.
+** Branch Points
+$f(z)=z^a$ a is not a integer, if $a=\frac{p}{q}$, $q$ is the order of the branch point. If $a$ is irrational 
+the order of the brance point is infinite. 
 * Calculus of Residues
 ** Residue Theorem
 The constant $a_{-1}$ of Laurent expansion is called /residue/ of $f(z)$ at $z=z_{0}$.
@@ -90,7 +128,7 @@ $\int f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sing because of clockwise direction
 
 so,
 \begin{equation*}
-\int f(z)dz=2\pi i \times (sum \: of\:  enclosured\:  residues)
+\int f(z)dz=2\pi i \times (\mathrm{sum \: of\:  enclosured\:  residues})
 \end{equation*}
 
 This is called the *residue theorm*.
@@ -109,7 +147,7 @@ Analytic function $f(z)$ that have only isolated poles as singularities are call
 define: poles $z=a_{1},a_{2},a_{3},\dots$, with residues $b_{n}$
 
 \begin{equation*}
-f(z)=f(0)+\Sigma ^{\infty} _{n=1} b_{n} \left\{ \left( z-a_{n} \right)^{-1} +a_{n}^{-1}\right\}
+f(z)=f(0)+\sum ^{\infty} _{n=1} b_{n} \left\{ \left( z-a_{n} \right)^{-1} +a_{n}^{-1}\right\}
 \end{equation*}
 
 - Proof:
@@ -120,45 +158,45 @@ if $f(z)$ has a simple zero. $f(z)=(z-a_{n})g(z)$ with $g(z)$ analytic and $g(a_
 
 \begin{equation*}
 \frac{f'(z)}{f(z)}=(z-a_{n})^{-1}+\frac{g'(z)}{g(z)}
-\end{Equation*}
+\end{equation*}
 
-From pole expansion :
+From pole xpansion :
 \begin{equation*}
-\frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
+\frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\sum ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
 \end{equation*}
 
 Integrate,
 
 \begin{equation*}
-\int^{z}_{0}\frac{f'(z)}{f(z)}dz=ln f(z) -ln f(0)=\frac{zf'(0)}{f(0)}+\Sigma ^{\infty}_{n=1} \left\{ ln \left( z-a_{n} \right)-ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
+\int^{z}_{0}\frac{f'(z)}{f(z)}dz=\ln f(z) -\ln f(0)=\frac{zf'(0)}{f(0)}+\sum ^{\infty}_{n=1} \left\{ \ln \left( z-a_{n} \right)-\ln \left( -a_{n} \right) +\frac{z}{a_{n}} \right\}
 \end{equation*}
 
 Exponentiating,
 
 \begin{equation*}
-f(z)=f(0) exp \frac{z f'(0)}{f(0)}\Pi^{\infty}_{1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
+f(z)=f(0) xp \frac{z f'(0)}{f(0)}\prod^{\infty}_{n=1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
 \end{equation*}
 
 ** Rouche's Theorm
 if $f(z)$ and $g(z)$ are analytic inside and on a closed contour C and $\left| g(z) \right| < \left| f(z) \right|$ on C then $f(z)$ and $f(z)+g(z)$ have the same number of zeros inside C.
 
 * Evaluation of Definite Integrals
-** Definite Integrals \int ^{2\pi} _{0} f(sin \theta , cos \theta ) d \theta
-\begin{equation*}
-I=\int ^{2\pi}_{0} f(sin \theta , cos \theta )d \theta = -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}=\left( -i \right)2 \pi i \times \Sigma residues \: within \: the \: unit \: circle
-\end{equation*}
+** Definite Integrals \int ^{2\pi} _{0} f(\sin \theta , cos \theta ) d \theta
+\begin{eqnarray*}
+I &=& \int ^{2\pi}_{0} f(\sin \theta , i\cos \theta )d \theta\\  &=& -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}\\ &=& \left( -i \right)2 \pi i \times \sum (\mathrm{residues\: within\: the\: unit\: circle})
+\end{eqnarray*}
 
 ** Definite Integrals \int ^{\infty}_{-\infty}f(x)dx
 if 
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
 - $f(z)$ vanishes as strong as $\frac{1}{z^{2}}$ , $0 \le arg(z) \le \pi$.
 
-then, $I=2\pi i \times \Sigma residues (upper\: plane)$
+then, $I=2\pi i \times \sum \mathrm{Res}(\mathrm{upper \: plane})$
 
 ** Definite Integrals \int ^{\infty}_{-\infty} f(x)e^{iax}dx
 - $f(z)$ is analytic in the upper plane and has finite number of poles.
-- $lim_{\left|  x\right|\Rightarrow \infty} f(z)=0 $,$0 \le arg(z) \le \pi$.
-then, $I=2\pi i \times \Sigma residues (upper\: plane)$
+- \[\lim_{\left|  x\right|\rightarrow \infty} f(z)=0\] , $0 \le arg(z) \le \pi$.
+then, $I=2\pi i \times \sum \mathrm{residues}(\mathrm{upper \: plane})$
 
 /Jordan's lemma/
 

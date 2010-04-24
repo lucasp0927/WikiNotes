@@ -13,15 +13,17 @@ Notes on physics and other stuff.
 - [[file:quantum.org][Quantum Mechanics]]
 - [[file:generalphysics.org][General Physics]]
 - [[file:classicalmechanics.org][Classical Mechanics]]
+- [[file:electromagnetic.org][Electromagnetics]]
 * Math
 - [[file:complex.org][Complex Variable]]
 - [[file:coordinate.org][How to Remember Div and Curl]]
 - [[file:probability.org][Probability]]
 * EE
 - [[file:electronics.org][Electronics]]
-* 通識
-- [[file:worldmusic.org][World Music]]
+- [[file:sselectronics.org][Solid State Electronics]]
 * emacs
 - [[file:emacsorg.org][Org-Mode Setting]]
 
 -----
+** TODO General Physics
+** TODO Signals and Systems

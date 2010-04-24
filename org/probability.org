@@ -13,10 +13,16 @@
 1. For any event $A$, $P[A]\geq 0$
 2. $P[S]=1$
 3. For any countable collection $A_1,A_2$ ... of mutually exclusive events \[P[A_1\cup A_2\cup ...]=P[A_1]+P[A_2]+...\]
+** Bayes' Theorem
+\[P[B|A]=\frac{P[A|B]P[B]}{P[A]}\]
+
+\[P[B_i|A]=\frac{P[A|B_i]P[B_i]}{\sum^m_{i=1}P[A|B_i]P[B_i]}\]
 ** Expected Value
 \[E[X]=\mu_X=\sum_{x\in S_X}{}{xP_X(s)}\]
 *** Little Trick
 \[E\left[k^2\right]=E[k(k-1)]+E[k]\]
+*** Another Trick
+\[E[X]=\int^\infty_0[1-F_X(x)]\;dx\]
 ** Derived Random Variable
 \[P_{Y}(y)=\sum_{x:g(x)=y}{P_{X}(x)}\]
 
@@ -31,7 +37,7 @@
 \[\textrm{Var}[aX+b]=a^{2}\textrm{Var}[X]\]
 ** Conditional PMF
 \[P_{X|B}(x)=\begin{cases}
-\frac{P_X(x)}{P[B]} & x\in B \\
+\frac{\displaystyle P_X(x)}{\displaystyle P[B]} & x\in B \\
 0 & \textrm{otherwise}\end{cases}\]
 * Discrete Random Variables
 ** Bernoulli Random Variable
@@ -143,7 +149,7 @@ CDF:\\
 ** Erlang Ramdom Variable
 PDF:\\
 \[f_X(x)=\begin{cases}
-\frac{\lambda^{n}x^{n-1}e^{-\lambda x}}{(n-1)!} & x \leq 0 \\
+\frac{\displaystyle \lambda^{n}x^{n-1}e^{-\lambda x}}{\displaystyle (n-1)!} & x \leq 0 \\
 0 & \textrm{otherwise}\end{cases}\]
 
 For $\lambda > 0$ and $n \geq 1$, $n \in \mathbb{N}$.

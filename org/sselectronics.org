@@ -1,0 +1,107 @@
+#+TITLE: Solid State Electronics
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Crystal Structure of Solids
+- crystal structure = lattice + basis
+- primitive cell: 最小體積之單位晶胞。
+** Conventional Cell
+七大系統，十四種。
+** Basic Crystal Structure
+- Face Centered Crystal
+- Body Centered Crystal
+  exp: lattice constant $a$, $2/a^3$ is the volume density of atoms.
+** Crystal planes and Miller Indies
+${100}$ present ${100}$, ${010}$, ${001}$, ${\bar{1}00}$, ${0\bar{1}0}$, ${00\bar{1}}$.
+
+Bar means that the plane cross the negative axle.
+** The Diamond Structure
+兩相鄰原子之間距離為$\frac{\sqrt{3}}{4}a$.
+
+* Quantum Mechanics and the Quantum Theory of Solid
+** Uncertainty Principle
+\[\Delta p \cdot \Delta x \ge \hbar\]
+
+\[v_g=\frac{1}{\hbar}\frac{d\:E}{d\:k}\]
+
+* Schrodinger's wave equation and it's apllications
+** The Wave Equation
+\[\frac{-\hbar^2}{2m}\cdot \frac{\partial^{2 }\Psi (x,t)}{\partial x^2}+V(x) \Psi (x,t) = j \hbar \frac{\partial \Psi(x,t)}{\partial t}\]
+** Time Independent Wave Equation
+\[\frac{\partial^2 \psi(x)}{\partial x^2}+\frac{2m}{\hbar^2}\left( E-V(x) \right)\psi(x)=0\]
+** Particle in a Infinite Potential Well
+\[E_n=\frac{\hbar^2 n^2 \pi^2}{2ml^{2}}\]
+** Step potential Function
+
+* Formation of Energy Bands
+** Kronig-Penny Model
+At $-b<x <0$, $V=V_0$. $0<x<a$, $V=0$.
+
+- Bloch function
+
+ $\psi(x)=e^{\pm jkx}\cdot u_k(x)$, where $u_{k}(x)=u_k(x+c)$.
+
+ $\alpha^2=\frac{2mE}{\hbar^2}$ and $\beta^2=\frac{2m}{\hbar^2}\left( E-V_0 \right)$.
+
+ To simplify the calculation set $b\rightarrow 0$ and $V_0\rightarrow \infty$. We can get
+ \[\left( \frac{mV_0 b a}{\hbar^2} \right) \cdot \frac{\sin (\alpha a)}{\alpha a}+\cos (\alpha a)=\cos (ka)\]
+
+- Electrical Conduction in Solids
+
+ $v_g=\frac{1}{\hbar}\frac{dE}{dk}$
+
+- Electron Effective Mass
+
+ $\frac{dk}{dt}=\frac{F}{\hbar}$
+
+ $\frac{1}{m^{\star}}=\frac{1}{\hbar^2}\cdot \frac{d^2E}{dk^2}$
+
+** Density of States
+
+\[g(E)=\frac{4\pi \left( 2m \right)^{3/2}}{h^3}\cdot \sqrt{E}\]
+
+- Extension to Semiconductor
+
+ $g_c=\frac{4\pi \left( 2m^{\star}_n \right)^{3/2}}{\hbar^3}\cdot \sqrt{E-E_{c}}$
+
+ *Interesting Question*: Solar cell can generte power when light is apply but not heat, why?
+ 
+** Fermi Dirac Distibution
+
+ $f_{FD}(E)=\frac{1}{1+\exp \left( \frac{E-E_F}{kT} \right)}$
+
+* The Semiconductor in Equilibrium
+** Intrinsic Semiconductor
+\[N_c=2 \left( \frac{2\pi m_n^{\star}kT}{h^2} \right)^{3/2}\], this is called effective density of states in the 
+conduction band.
+
+\[n_0=N_c\cdot e^{-\frac{E_c-E_F}{kT}}\]
+ Note that if $E_c-E_F\gg 3kT$ doesn't hold, the above equation won't be accurate.
+
+** The Intrinsic Carrier Concentration
+At equilibrium $n_0=p_0=n_i$ which is the intrinsic electron concentration. $E_{Fi}$ is intrinsic Fermi energy.
+ 
+\[n_0 p_0 = n_i^2=N_cN_ve^{\frac{-E_g}{kT}}\]
+Independent of $E_F$.
+** The Intrinsic Fermi-level Position
+\[E_{Fi}=E_{\mathrm{midgap}}+\frac{3}{4}kT \ln \left( \frac{m_p^{\star}}{m_n^{\star}} \right)\]
+** Dopant Energy and Energy Levels
+- Ionize energy 
+  
+  將五價donor之外圍 donor electron 激發躍升至傳導帶，使 donor 失去電子成為正離子所需能量即為游離能。
+
+  Use Bohr model \[\frac{e^2}{4\pi \epsilon r_n^2}=\frac{m^{\star}v^2}{r_n}\], angular momentum quantize \[m^{\star}v and=n\hbar\].
+
+- Other Expression of n_0 and p_0
+
+   $n_0=N_c \exp \left( \frac{- \left( E-E_F \right)}{kT} \right)=n_i\exp \left( \frac{- \left( E_F-E_{Fi} \right)}{kT} \right)$
+
+*** Degenaracy Factor
+\[\frac{n_d}{N_d}=\frac{1}{1+\frac{1}{g}e^{\frac{E_d-E_F}{kT}}}\], 
+$n_{d}$ is the concentration of donor with electrons.
+    
+  ------
+[[file:index.org][Back to Index]]
