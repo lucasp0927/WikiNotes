@@ -1,17 +1,17 @@
  $(document).ready(function(){
-   $('.outline-2').toggle(function(){
-     $('.outline-3',this).hide("slow");
-     $('.outline-text-2',this).hide("slow");
+   $('h2').toggle(function(){
+     $(this).parent().find('.outline-3').hide("slow");
+     $(this).parent().find('.outline-text-2').hide("slow");
    }, function(){
-     $('.outline-3',this).show("slow");
-     $('.outline-text-2',this).show("slow");
+     $(this).parent().find('.outline-3').show("slow");
+     $(this).parent().find('.outline-text-2').show("slow");
    });
-   $('.outline-3').toggle(function(){
-     $('.outline-4',this).hide("slow");
-     $('.outline-text-3',this).hide("slow");
+   $('h3').toggle(function(){
+     $(this).parent().find('.outline-4').hide("slow");
+     $(this).parent().find('.outline-text-3').hide("slow");
    }, function(){
-     $('.outline-4',this).show("slow");
-     $('.outline-text-3',this).show("slow");
+     $(this).parent().find('.outline-4').show("slow");
+     $(this).parent().find('.outline-text-3').show("slow");
    });
  });
 
