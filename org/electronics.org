@@ -4,6 +4,13 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 * The Basics
+** MOSFET
+Triode region:\\
+\[i_D=\mu_n C_{ox}\frac{W}{L}\left[(V_{GS}-V_t)V_DS-\frac{1}{2}V^2_{DS}\right]\]
+
+Saturation region:\\
+\[i_D=\frac{1}{2}\mu_n C_{ox}\frac{W}{L}\left(V_{GS}-V_t\right)^2(1+\lambda V_{DS})\]
+
 \[r_0=\frac{V_A}{I_D}\],
 
 \begin{eqnarray*}
@@ -29,7 +36,7 @@ g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D
 1. Dominate pole response
    \[F_H \approx \frac{1}{1+s/\omega_{p1}}\]
 
-   \[\omega_H=1/\sqrt{\left( \frac{1}{\omega^2_{P1}+\frac{1}{\omega_{P2}^2}}+\dots \right)-2 \left( \frac{1}{\omega_{Z1}^2+\frac{1}{\omega_{Z2}^2}}+\dots \right)}
+   \[\omega_H=1/\sqrt{\left( \frac{1}{\omega^2_{P1}}+\frac{1}{\omega_{P2}^2}+\dots \right)-2 \left( \frac{1}{\omega_{Z1}^2}+\frac{1}{\omega_{Z2}^2}+\dots \right)}\]
 2. Open Ciruit Time Constant
    \[\omega_H=\frac{1}{\Sigma_i C_i R_{i0}}\]
 ** Miller's effect
@@ -42,7 +49,7 @@ g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D
 
  \[C_{gd} \xrightarrow{\hspace*{2cm}} C_{gd}\left( 1+g_m R^{\prime}_{L} \right)\].
 
- So $f_H=\frac{1}{2\piC_{in}R_{sig}}$, where $C_{in}=C_{gs}+C_{gd}\left( 1+g_m R^{\prime}_{L} \right)$
+ So $f_H=\frac{1}{2\pi C_{in}R_{sig}}$, where $C_{in}=C_{gs}+C_{gd}\left( 1+g_m R^{\prime}_{L} \right)$
 
 - Using Time Constant
 
