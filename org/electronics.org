@@ -29,7 +29,7 @@ g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D
 1. Dominate pole response
    \[F_H \approx \frac{1}{1+s/\omega_{p1}}\]
 
-   \[\omega_H=1/\sqrt{\left( \frac{1}{\omega^2_{P1}+\frac{1}{\omega_{P2}^2}}+\dots \right)-2 \left( \frac{1}{\omega_{Z1}^2+\frac{1}{\omega_{Z2}^2}}+\dots \right)}
+   \[\omega_H=1/\sqrt{\left( \frac{1}{\omega^2_{P1}}+\frac{1}{\omega_{P2}^2}+\dots \right)-2 \left( \frac{1}{\omega_{Z1}^2}+\frac{1}{\omega_{Z2}^2}+\dots \right)}\]
 2. Open Ciruit Time Constant
    \[\omega_H=\frac{1}{\Sigma_i C_i R_{i0}}\]
 ** Miller's effect
@@ -42,7 +42,7 @@ g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D
 
  \[C_{gd} \xrightarrow{\hspace*{2cm}} C_{gd}\left( 1+g_m R^{\prime}_{L} \right)\].
 
- So $f_H=\frac{1}{2\piC_{in}R_{sig}}$, where $C_{in}=C_{gs}+C_{gd}\left( 1+g_m R^{\prime}_{L} \right)$
+ So $f_H=\frac{1}{2\pi C_{in}R_{sig}}$, where $C_{in}=C_{gs}+C_{gd}\left( 1+g_m R^{\prime}_{L} \right)$
 
 - Using Time Constant
 
@@ -96,5 +96,24 @@ As CG amplifier \[R_{out}=r_0+ \left[ 1+\left( g_m+g_{mb} \right)r_0 \right]R_s 
 $R_{gs}$ is hard to derive, \[R_{gs}=\frac{R_{sig}+R_s}{1+\left( g_m+g_{mb} \right)R_s \left( \frac{r_0}{r_0+R_{L}} \right)}\].
 
 When $R_{sig}$ is large enough. \[\tau_H\approx C_{gd}R_{gd}\].
+
+* Differential Amplifier
+** MOS differential pair
+*** Common-Mode Input
+\[v_{CM\mathrm{max}}=V_t+V_{DD}-IR_D/2\]
+
+\[v_{CM\mathrm{min}}=-V_{SS}+V_{CS}+V_t+V_{OV}\]
+*** Differential Input
+\[-\sqrt{2}V_{OV}\leq v_{id} \leq \sqrt{2}V_{OV}\]
+*** Large Signal Operation
+\[i_{D1}=\frac{I}{2}+\sqrt{k^\prime_n\frac{W}{L}I}\left(\frac{v_{id}}{2}\right)\sqrt{1-\frac{(v_{id}/2)^2}{I/k^\prime_n\frac{W}{L}}}\]
+
+\[i_{D2}=\frac{I}{2}-\sqrt{k^\prime_n\frac{W}{L}I}\left(\frac{v_{id}}{2}\right)\sqrt{1-\frac{(v_{id}/2)^2}{I/k^\prime_n\frac{W}{L}}}\]
+
+Simplicity:
+
+\[i_{D1}=\frac{I}{2}+\left(\frac{I}{V_{OV}}\right)\left(\frac{v_{id}}{2}\right)\]
+
+\[i_{D2}=\frac{I}{2}-\left(\frac{I}{V_{OV}}\right)\left(\frac{v_{id}}{2}\right)\]
 ------
 [[file:index.org][Back to Index]]
