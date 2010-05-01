@@ -122,5 +122,17 @@ Simplicity:
 \[i_{D1}=\frac{I}{2}+\left(\frac{I}{V_{OV}}\right)\left(\frac{v_{id}}{2}\right)\]
 
 \[i_{D2}=\frac{I}{2}-\left(\frac{I}{V_{OV}}\right)\left(\frac{v_{id}}{2}\right)\]
+*** Small Signal Operation
+Differential gain:\\
+\[A_d=g_m R_D\]
+
+With MOSFET's $r_0$:\\
+\[v_{o1}=-g_m(R_D||r_o)(v_{id}/2)\]
+
+\[v_{o2}=g_m(R_D||r_o)(v_{id}/2)\]
+
+\[v_o = g_m(R_D||r_o)v_{id}\]
+
+
 ------
 [[file:index.org][Back to Index]]
