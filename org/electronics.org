@@ -4,6 +4,13 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 * The Basics
+** MOSFET
+Triode region:\\
+\[i_D=\mu_n C_{ox}\frac{W}{L}\left[(V_{GS}-V_t)V_DS-\frac{1}{2}V^2_{DS}\right]\]
+
+Saturation region:\\
+\[i_D=\frac{1}{2}\mu_n C_{ox}\frac{W}{L}\left(V_{GS}-V_t\right)^2(1+\lambda V_{DS})\]
+
 \[r_0=\frac{V_A}{I_D}\],
 
 \begin{eqnarray*}
