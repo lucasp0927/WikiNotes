@@ -161,5 +161,17 @@ With MOSFET's $r_0$:\\
 
 \[\mathrm{CMRR}=(2g_m R_{SS})/\left(\frac{\Delta g_m}{g_m}\right)\]
 
+* Differential Amplifier with Active Load
+** MOS version
+*** Basics
+\[G_m=g_m\]
+
+\[R_o=r_{o2}||r_{o4}\]
+
+\[A_d=\frac{1}{2}g_m r_o=\frac{A_0}{2}\]
+
+\[A_{cm}=-\frac{1}{2R_{SS}}\frac{r_{o4}}{1+g_{m3}r_{o3}}\simeq -\frac{1}{2g_{m3}R_{SS}}\]
+
+\[\mathrm{CMRR}=(g_m r_o)(g_m R_{SS})\]
 ------
 [[file:index.org][Back to Index]]
