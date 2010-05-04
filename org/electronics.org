@@ -17,13 +17,17 @@ Saturation region:\\
 g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D}=\frac{2I_D}{V_{ov}}
 \end{eqnarray*}
 
+\[C_{gs}+C_{gd}=\frac{g_m}{2\pi f_T}\]
 ** BJT
+\[I_C=I_Se^{V_{BE}/V_T}\]
+
 \[g_m=\frac{I_C}{V_T}\]
 
 \[r_\pi=\frac{\beta}{g_m}=\frac{V_T}{I_E}\]
 
 \[r_e=\frac{\alpha}{g_m}\]
 
+\[C_\pi+C_\mu = \frac{g_m}{2\pi f_T}\]
 ** Amplifier
 
 \[R_i=\frac{v_i}{i_i}\Big|_{R_L= \infty}\]
@@ -168,10 +172,11 @@ With MOSFET's $r_0$:\\
 
 \[R_o=r_{o2}||r_{o4}\]
 
-\[A_d=\frac{1}{2}g_m r_o=\frac{A_0}{2}\]
+\[A_d=g_m(r_{o2}||r_{o4})=\frac{1}{2}g_m r_o=\frac{A_0}{2}\]
 
 \[A_{cm}=-\frac{1}{2R_{SS}}\frac{r_{o4}}{1+g_{m3}r_{o3}}\simeq -\frac{1}{2g_{m3}R_{SS}}\]
 
 \[\mathrm{CMRR}=(g_m r_o)(g_m R_{SS})\]
 ------
 [[file:index.org][Back to Index]]
+
