@@ -23,7 +23,7 @@ $\Omega_{N} \approx \frac{1}{N!}\frac{V^{N}}{h^{3N}}\frac{\pi ^{\frac{3N}{2}}}{\
 Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of freedom in the power of energy (U,q). 
 
 ** Maxwell Relation
-*** U Energy
+*** U (Energy)
  $dU=T dS-PdV+\mu dN$
 
  \[\frac{1}{T}=\left( \frac{\partial S}{\partial U} \right)_{v,N}\]
@@ -32,7 +32,7 @@ Note that ideal gas and Einstein solid both have $\frac{1}{2}$ times degree of f
 
  \[\frac{\mu}{T}=-\left( \frac{\partial S}{\partial N} \right)_{U,V}\]
 
-*** F Free Energy
+*** F (Free Energy)
  $f=U-TS$, so $dF=dU-T\: ds-S\: dT$.
  Plug in $dU$ we get $dF=-S \: dT-P \: dV+\mu \: dN$
 
@@ -189,7 +189,7 @@ $l_{Q}$ is called *Quantum Length* $l_{Q}=\frac{h}{\sqrt{2\pi mkT}}$. Aside from
 *** Three Dimension
 $Z_{tr}=\frac{L_{x}}{l_{Q}}\frac{L_{y}}{l_{Q}}\frac{L_{z}}{l_{Q}}=\frac{V}{v_{Q}}$. Where  $v_{Q}=l_{Q}^{3}=\left( \frac{h}{\sqrt{2\pi mkT}} \right)^{3}$.
 
-$Z_{1}=\frac{V}{v_{Q}}Z_{int}$. So $Z=\frac{1}{N!}\left( \frac{VZ_{int}}{v_{Q}} \right)^{N}$. $\ln\: Z=N \left[ \ln \: V +\ln \: Z_{int}-\ln \: N-\ln \: v_{Q}+1 \right]$.
+Single particle partition function, $Z_{1}=\frac{V}{v_{Q}}Z_{int}$. So $Z=\frac{1}{N!}\left( \frac{VZ_{int}}{v_{Q}} \right)^{N}$. $\ln\: Z=N \left[ \ln \: V +\ln \: Z_{int}-\ln \: N-\ln \: v_{Q}+1 \right]$.
 
 Use $F=-kt \ln \: Z$ to calculate the attributes of ideal gas.
 
@@ -251,7 +251,7 @@ will apply as long $\frac{V}{N}\gg v_{Q}$.
 When $Z_{1}\gg N$ is violated we can use Gibbs factor instead. 
 First, we consider a system consider only one state.
 *** Fermions
-$P(n)=\frac{1}{Z_{G}}e^{-(\epsilon-\mu)/kT}$
+$P(n)=\frac{1}{Z_{G}}e^{-n(\epsilon-\mu)/kT}$
 
 $Z_{G}=1+e^{-(\epsilon - \mu )/kT}$, because there can only have either 0 or 1 fermions in one state.
 so,$\bar{n}=\sum nP(n)=\frac{1}{e^{(\epsilon-\mu)/kT}+1}$
@@ -459,7 +459,7 @@ so \[E \approx \frac{3Nm^4c^5}{{p_{\scriptscriptstyle F}^3}}\left( \frac{1}{4} {
 
 and \[P\approx \frac{2}{3}\frac{E}{V}\]
 
-** White Dwarfs
+X** White Dwarfs
 a white dwarf is a gas sphere if ionized helium. Number density of electron is \[n= N/V \approx \frac{M/2m_n}{M/\rho}=\frac{\rho}{2m_n}=3\times 10^{36}m^{-3}\].
 \[P=-\left( \frac{\partial E}{\partial V} \right)_{N,T=0}=\frac{Nm_e^4c^5}{8V{p_{\scriptscriptstyle F}}^3}\left[ \left( 1+{y_{\scriptscriptstyle F}}^2 \right)^{1/2}\left( 2 {y_{\scriptscriptstyle F}}^3 -3 {y_{\scriptscriptstyle F}} \right)+3 \ln \left( y_{\scriptscriptstyle F}+\left( 1+ {y_{\scriptscriptstyle F}}^2 \right)^{1/2} \right) \right]\]
 With \[y_{\scriptscriptstyle F}=\frac{P_{\scriptscriptstyle F}}{m_e c}\]
@@ -476,6 +476,43 @@ We get a R is a function of M. When $r=0$, $M=M_0$. For $M>M_0$ we repeat the ab
 turn into a neutron star.
 
 * Black Body Radiation
+** The Plank Distribution
+\[E_n = 0, \: hf, \: 2hf \dots\]
 
-------
+Partition function for a single oscillator is 
+\begin{eqnarray*}
+Z &=& 1+e^{-\beta hf}+e^{-2\beta hf}+\dots \\ &=& \frac{1}{1-e^{-\beta hf}}
+\end{eqnarray*}
+
+So the average energy is $\bar{E} = -\frac{1}{Z}\frac{\partial Z}{\partial \beta} = \frac{hf}{e^{hf/kT}-1}$, if we think of the energy 
+as coming in units of $hf$, then the average number of units of energy in the oscillator is  $\frac{1}{e^{hf/kT}-1}$. This is called *Plank distribution*.
+
+if $hf \gg kT$ then they are frozen out.
+
+Photons have zero chemical potential.
+
+** The Plank Spectrum
+
+\[u(\epsilon)=\frac{8\pi}{\left( hc \right)^3} \frac{\epsilon^3}{e^{\frac{\epsilon}{kT}}}-1\]
+
+\[\frac{U}{V}=\frac{8\pi \left( kT \right)^4}{\left( hc \right)^3} \int^{\infty}_0 \frac{x^3}{e^x-1}dx=\frac{8\pi^5 \left( kT \right)^4}{15 \left( hc \right)^{3}}\]
+
+** Entropy of a Photon Gas
+The easieat wat to caculate the entropy is from the heat capacity, \[C_V=\left( \frac{\partial U}{\partial T} \right)_V= 4aT^3\].
+where $a=\frac{8 \pi^5 k^4 V}{15 \left( hc \right)^3}$.
+
+\begin{eqnarray*}
+S(T) &=& \int^T_0 \frac{C_V \left( T^{\prime} \right)}{T^{\prime}} dT^{\prime} \\ &=& 4a \int^T_0 \left( T^{\prime} \right)^2 dT^{\prime} \\ 
+&=& \frac{4}{3}a T^3
+\end{eqnarray*}
+
+** Photons Escaping through a Hole
+
+Only photons   $c\: dt$ within the hole are able to escape. So the energy in the chunk is $\frac{U}{V}c\: dt R^2 \sin \theta \: d \theta \: d \phi$.
+
+But only the photons that are pointing the correct direction can escape $\frac{A \cos \theta}{4\pi R^2}$. After integration, power per unit area is
+$\frac{c}{4}\frac{U}{V}$. Plug in the $\frac{U}{V}$. Then \[\mathrm{power\:per\: unit\: area} = \sigma T^4\], where \sigma is called *Stefan-Boltzmann constant*
+\[\sigma=\frac{2\pi^5 k^4}{15 h^3 c^2}= 5.67 \times 10^{-8}\frac{W}{m^2 K^4}\].
+
+-----
 [[file:index.org][Back to Index]]
