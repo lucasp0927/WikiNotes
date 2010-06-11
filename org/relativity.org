@@ -75,6 +75,69 @@ F=\frac{d}{dt}\left( mv \right)=\frac{d}{dt} \left( \frac{m_{0}v}{\sqrt{1-\frac{
  Because $k_{x}=0$, $\frac{\omega ' }{c }=\gamma \frac{\omega ' }{c}$, so $\omega ' =\omega \gamma$.
 *** perpendicular observer
 $k_{x}=\frac{\omega}{c}\times \beta$, $\frac{\omega ' }{c}=\gamma \left( \frac{\omega}{c}-\frac{\omega v}{c^{2}} \right)$, so $\omega ' =\sqrt{1-\beta^{2}} \omega$.
+
+* Differential Geometry
+** Vector
+\[V=v^{\mu}e_{\mu}\]
+set $f(x^{\mu})$ is a function that map M to $R^{1}$.  A parametrised curve $x^{\mu}\left( \lambda \right)$.
+
+\[f \left( x^{\mu} \left( \lambda \right) \right) = g \left( \lambda \right)\]
+
+\[\frac{d}{d\lambda}= \frac{d x^{\mu}}{d\lambda}\frac{\partial}{\partial x^{\mu}}\]
+
+Then $\frac{dx^{\mu}}{d \lambda }$ is called component and $\frac{\partial}{\partial x^{\mu}}$ is called basis. Vectors are in tangent space.
+
+Now, take sphere coordinate as example, $\mathbf{r} = r\sin \theta \cos \phi \: \mathbf{i} +r \sin \theta \sin \phi \:  \mathbf{j} + r cos \theta \: \mathbf{k}$
+
+Then, we can define  $\mathbf{e}_r=\frac{\partial \mathbf{r}}{\partial r}$
+
+*vectors and directional derivatives are one to one corresponding*
+
+*** Lie Bracket
+\[W=\left[ V,U \right]\]
+
+\[W^n = V^i \frac{\partial U^n}{\partial x^i}-U^i\frac{\partial V^n}{\partial x^i}\]
+ 
+A coordinate is holonomic if $\left[ e_i, e_j \right]=0$. The structure is defined as $\left[ e_i,e_j \right]=C^m_{ij}e_m$.
+
+*** Coordinate Transform
+\[V^{\prime}_{\mu} = \frac{\partial x^{\prime \mu}}{\delta x^{\lambda}}V^{\lambda}\]
+
+\[e^{\prime}_{\mu}= \frac{\partial x^{\lambda}}{\partial x^{\prime \mu}}e^{\lambda}\]
+*** Dual Vector
+\omega linear map a vector to $R^1$. That is $\omega \left( \vec{a} \right)= \omega_{\alpha} a^{\alpha}$. For example \[\frac{df}{d\sigma}=\frac{dx^{\sigma}}{d\sigma}\frac{\delta f}{\partial x^{\sigma}}\].
+Where $\frac{\partial f}{\partial x^{\sigma }}$ is the gradient.
+
+\[e^{\alpha}\left( e_{\beta} \right) = \delta ^{\alpha}_{\beta}\]
+** One Form
+\[\nabla r=\frac{\partial r}{\partial x}\mathbf{i}+\frac{\partial r}{\partial y}\mathbf{j}+\frac{\partial r}{\partial z}\mathbf{k}=e^r\]
+
+Dual properbility
+\[e^u\cdot e_u=e^v\cdot e_v = e^w \cdot e_w =1\], \[e^u\cdot e_v=e^v\cdot e_w = e^w \cdot e_u =0\]
+
+*One Form* \[\mathbf{\omega}=\omega_{\mu}e^{\mu}\]
+
+\[\langle dx^{\mu}, \frac{\partial}{\partial x^{\nu}} \rangle = \delta ^{\mu} _{\nu} \]
+
+*** Coordinate Transform
+\[\theta^{\prime\mu}=\frac{\partial x^{\prime\mu}}{\partial x^{\nu}}\theta^{\nu}\]
+
+\[\omega^{\prime}_{\nu}=\frac{\partial x^{\mu}}{x^{\prime\nu}}\omega_{\mu}\]
+** Tensor
+Linear map pairs of vectors to real number.
+\[t \left( a,b,c \right) = t_{\alpha \beta}^{\gamma} a^{\alpha} b^{\beta} c_{\gamma}\]
+
+*** Mertic Tensor
+Product of 2 one-form. \[ds^2=g_{ik}dx^i dx^k\].
+*** Absolute Differentiation
+\[\frac{\partial V^{\mu}}{\partial x^{\nu}}=V^{\mu}_{,\nu}\]
+\[\nabla_i V=V^m_{,i}e_m+V^me_{m,i}\], so \[\nabla V=  \left( \nabla_i V \right) \theta^i = \left( V^m_{,i}e_m+v^me_{m,i} \right) \theta^i\].
+*** Connection coefficients
+Define \[e_{m,i}=\Gamma^k_{mi}e_k\]. \[\Gamma^i_{mk}=\Gamma^i_{km}\]
+
+Define absolute differentiation \[V^{\mu}_{;\nu}=V^{\mu}_{,\nu}+\Gamma^{\mu}_{k\nu}V^k\], So that \[\nabla V=V^{\mu}_{;\nu}e_{\mu}\theta^{\nu}\]
+
+Still need to add 3.194 and 3.207.
 * General Relativity
 -----
 [[file:index.org][Back to index]]
