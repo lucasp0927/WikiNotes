@@ -29,4 +29,4 @@ A conceptual web of physics knowledge base on logical and/or historical order. A
 * Implementation
 - backward link should be done by computer.
 ------
-[[file:index.org][Back to Index]]
+[[file:../index.org][Back to Index]]
