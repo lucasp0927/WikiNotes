@@ -1,0 +1,32 @@
+#+TITLE: Plan
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: ../header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Goals
+A conceptual web of physics knowledge base on logical and/or historical order. Aim for easy understanding by human brain (use conceptual language). Can easily sort and search in multiple ways. For example, search all assumption and law that a assumption is base on, search all the theorems that a law or a assumption invoke.
+** notes
+- This is not a Wikipedia, page should be written so that one can catch the concept at the first glimpse. At least for people who have read the topic before.
+* Feature
+- A theorem per page.
+- Every page are linked together with logical and/or historical relation.
+- The web start from most basic observation, math theorem, intuition.
+- Page are linked both forward and backward.
+- Able to plot a relation graph (?).
+- Several search method.
+ 
+* Structure
+** Page type
+- *Fact*: experimental fact, sensory fact that intuition base on, math theorem.
+- *Assumption*: may linked together.
+- *Law*
+- *Theorem*
+- *Mathematical technique*: approximations and special techniques.
+- *Specific cases*
+
+* Implementation
+- backward link should be done by computer.
+------
+[[file:index.org][Back to Index]]
