@@ -133,11 +133,18 @@ Product of 2 one-form. \[ds^2=g_{ik}dx^i dx^k\].
 \[\frac{\partial V^{\mu}}{\partial x^{\nu}}=V^{\mu}_{,\nu}\]
 \[\nabla_i V=V^m_{,i}e_m+V^me_{m,i}\], so \[\nabla V=  \left( \nabla_i V \right) \theta^i = \left( V^m_{,i}e_m+v^me_{m,i} \right) \theta^i\].
 *** Connection coefficients
-Define \[e_{m,i}=\Gamma^k_{mi}e_k\]. \[\Gamma^i_{mk}=\Gamma^i_{km}\]
+Define \[e_{m,i}=\Gamma^k_{mi}e_k\].
+
+ \[\Gamma^i_{mk}=\Gamma^i_{km}\]
 
 Define absolute differentiation \[V^{\mu}_{;\nu}=V^{\mu}_{,\nu}+\Gamma^{\mu}_{k\nu}V^k\], So that \[\nabla V=V^{\mu}_{;\nu}e_{\mu}\theta^{\nu}\]
 
-Still need to add 3.194 and 3.207.
+*** Relation between \Gamma and g.
+
+\[\Gamma^{\nu}_{\mu\kappa}= \frac{1}{2}g^{\nu\rho}\left( g_{\mu \rho ,\kappa}+g_{\kappa\rho,\mu}-g_{\mu\kappa,\rho} \right)\]
+
+need to add 3.207.
+
 * General Relativity
 -----
 [[file:index.org][Back to index]]
