@@ -514,6 +514,8 @@ At 1500k, the photon pressure is about $10^{-3}Pa$.
 /fast memorize/ \[\frac{\epsilon}{e^{\beta\epsilon}-1} \pi n^2 dn = \left( \frac{2L}{hc} \right)^3 \pi \frac{\epsilon^{3}}{e^{\beta\epsilon}-1}\]
 
 \[\frac{U}{V}=\frac{8\pi \left( kT \right)^4}{\left( hc \right)^3} \int^{\infty}_0 \frac{x^3}{e^x-1}dx=\frac{8\pi^5 \left( kT \right)^4}{15 \left( hc \right)^{3}}\]
+
+*peak at* \[\epsilon = 2.82 kT\]
 ** The Plank Distribution
 \[E_n = 0, \: hf, \: 2hf \dots\]
 
@@ -607,8 +609,36 @@ Knowing one of them is sufficient for knowing others.
 
 So the relaxation time is \[\tau = \frac{1}{B\left[ \frac{8\pi \epsilon^3}{\left( hc \right)^3} +2u \left( \epsilon \right)\right]}\]
 ** Cosmic Background Radiation
-The present photon tempurature $T=2.73k$. Peaks at
-** Hawking radiation
+The present photon tempurature $T=2.73k$. Peaks at $\epsilon=1.6\times 10^{-4} eV$ (far infrared).
 
+A rough argument on $T=3K$, \[S \propto T^3 V\] ??
+
+*** Neutron Radiation
+- Three family :: $\nu_{e}$, $\bar{\nu}_{e}$, $\nu_{\mu}$, $\bar{\nu}_{\mu}$, $\nu_{\tau}$, $\bar{\nu}_{\tau}$.
+- Properties :: Spin $frac{1}{2}$, fermion, rest mass = 0, chemical potential = 0, electricity neutral.
+$\hat{z}$ the direction of momentum. Nutrino $s_z=-\frac{1}{2}$ (left hand helicity), antinutrino $s_z=\frac{1}{2}$ (right helicity).
+\begin{eqnarray*}
+\bar{E} &=& 3 \int^{\infty}_0 \frac{8\pi V \epsilon^2}{\left( hc \right)^3}\frac{\epsilon}{e^{\beta\epsilon}+1}d\epsilon \\ &=& \frac{24 \pi V}{\left( hc \right)^3} \left( kT \right)^4 \int ^{\infty}_{0} \frac{x^3}{e^x+1} dx \\ &=& \frac{7\pi^5V \left( kT \right)^4}{5 \left( hc \right)^3}
+\end{eqnarray*}
+
+Using same method $\bar{N}=135.9V \left( \frac{kT}{hc} \right)^{3}$.
+
+The present nutrino tempurature is 1.95k.
+
+For the brief time in the early universe, the tempurature was hot enough to produce large numbers of electron positron pairs. These pairs cinstituted a third type of background radiation.
+
+** Hawking radiation
+The radius of a blackhole $\approx \frac{2GM}{c^2}$. Surface $\approx \frac{16 \pi^2 G^2 M^2}{c^4}$, Entropy $\approx \frac{8\pi^2 GM^2}{hc}k$. 
+- Rough estimation :: \[Mc^2 \approx N \frac{hc}{\lambda} \approx N \left( \frac{hc^3}{GM} \right)\], \[S\approx Nk \approx \frac{GM^2}{hc}k\].
+
+\[\frac{1}{T}= \frac{\partial S}{c^2 \partial M} \Rightarrow T \approx \frac{hc^3}{16\pi^2 GMk}\] 
+
+for $M=2\times 10^{30}kg$ (one solar mass), $T=6\times 10^{-8}k$. The blackbody radiation peaks at $\epsilon = 2.82 kT \approx 1.5 \times 10^{-11} eV$. \[\lambda = 84km\]. Emmitted power $\sigma A T^4 \approx 6\times 10^{-12}eV/s$.
+
+Now imagine a blackhole in empty space, where it emits radiation but absorbs nothing; that is, the blackhole evaporates.
+
+\[\frac{d \left( Mc^2 \right)}{dt}= -\sigma A^4  \Rightarrow \frac{dM}{dt}= \frac{-H}{M^2}\], where $H\approx \frac{hc^6}{30720 \pi^6 G^2} \approx 4 \times 10^{15} kg^3/s$.
+
+The life time $\tau=\frac{M_i^3}{dt}$, with $M_i$ denoting the initial mass of a blackhole. $\tau = 2\times 10^{67}$ years for $M_i\approx 2\times 10^{30} kg$.
 -----
 [[file:index.org][Back to Index]]
