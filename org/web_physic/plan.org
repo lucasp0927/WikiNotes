@@ -14,7 +14,7 @@ A conceptual web of physics knowledge base on logical and/or historical order. A
 - Every page are linked together with logical and/or historical relation.
 - The web start from most basic observation, math theorem, intuition.
 - Page are linked both forward and backward.
-- Able to plot a relation graph (?).
+- Able to plot a relation graph (?). use [[http://en.wikipedia.org/wiki/Graphviz][Graphviz]]?
 - Several search method.
  
 * Structure

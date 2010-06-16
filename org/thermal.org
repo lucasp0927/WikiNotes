@@ -476,6 +476,46 @@ We get a R is a function of M. When $r=0$, $M=M_0$. For $M>M_0$ we repeat the ab
 turn into a neutron star.
 
 * Black Body Radiation
+For massless particles $\mu=0$. Because they can be create spontaneously.
+** The Density of States
+\[ \left[ p_x, p_y, p_z \right]= \left( \frac{h}{2L} \right) \left[ n_x, n_y, n_z \right]\]
+
+\[g \left( n \right) dn = 2 \times \frac{1}{8} 4\pi n^2 dn\]  so,
+
+\[g \left( p \right) dp = 2 \cdot \frac{1}{8} \cdot \left( \frac{2L}{h} \right)^3 4\pi p^2 dp = \frac{8\pi V}{h^3} p^2 dp\]
+
+density of state in enrgy space.
+
+\[g \left( \epsilon \right) d\epsilon = \frac{8\pi V}{h^3 c^3} \epsilon^2 d\epsilon \]
+
+average energy is 
+\begin{eqnarray*}
+\bar{E} &=& \int^{\infty}_0 \frac{\epsilon}{e^{\beta \epsilon}-1}\frac{8\pi V}{\left( hc \right)^3} \epsilon^2 d\epsilon \\ &=& \frac{8\pi V \left( kT \right)^4}{\left( hc \right)^3} ]\int^{\infty}_0 \frac{x^3}{e^x-1}dx \\ &=& \frac{8}{15} \pi^5 V \frac{ \left( kT \right)^4}{ \left( hc \right)^{3}}
+\end{eqnarray*}
+
+where \[\int^{\infty}_0 \frac{x^3}{e^x-1}dx=\Gamma \left( 4 \right) \zeta \left( 4 \right)\]
+[[#math]]
+
+** Properties of Photom Gas
+*** Heat Capacity And Entropy
+So, heat capacity \[C_V = \left( \frac{\partial \bar{E}}{\partial T} \right)_V= 4 \frac{\bar{E}}{T}\]
+and the entropy \[S=\int^T_0 \frac{C_V \left( T^{\prime} \right)}{T^{\prime}} dT^{\prime} = \frac{4}{3} \frac{\bar{E}}{T}\]
+*** Pressure
+Helmholtz free energy \[F=\bar{E} - TS = - \frac{1}{3} \bar{E}\], Using Euler equation $\bar{E} = TS-PV$, because $\mu = 0$. So $P=\frac{1}{3}\cdot \frac{\bar{E}}{V}$
+
+At 1500k, the photon pressure is about $10^{-3}Pa$. 
+*** Mean Photon Number
+\begin{eqnarray*}
+\bar{N} &=& \int^{\infty}_0 \frac{1}{e^{\beta\epsilon}-1} \frac{8\pi V}{\left( hc \right)^3 } \epsilon^2 \: d\epsilon \\ &=& \frac{8\pi V \left( kT \right)^3}{\left( hc \right)^3} \Gamma \left( 3 \right) \zeta \left( 3 \right) \\ &=& \frac{19.23 \pi V}{ \left( hc \right)^3} \left( kT \right)^{3}
+\end{eqnarray*}
+** The Plank Spectrum
+\[u(\epsilon)=\frac{8\pi}{\left( hc \right)^3} \frac{\epsilon^3}{e^{\frac{\epsilon}{kT}}-1}\]
+
+/fast memorize/ \[\frac{\epsilon}{e^{\beta\epsilon}-1} \pi n^2 dn = \left( \frac{2L}{hc} \right)^3 \pi \frac{\epsilon^{3}}{e^{\beta\epsilon}-1}\]
+
+\[\frac{U}{V}=\frac{8\pi \left( kT \right)^4}{\left( hc \right)^3} \int^{\infty}_0 \frac{x^3}{e^x-1}dx=\frac{8\pi^5 \left( kT \right)^4}{15 \left( hc \right)^{3}}\]
+
+*peak at* \[\epsilon = 2.82 kT\]
 ** The Plank Distribution
 \[E_n = 0, \: hf, \: 2hf \dots\]
 
@@ -491,11 +531,7 @@ if $hf \gg kT$ then they are frozen out.
 
 Photons have zero chemical potential.
 
-** The Plank Spectrum
 
-\[u(\epsilon)=\frac{8\pi}{\left( hc \right)^3} \frac{\epsilon^3}{e^{\frac{\epsilon}{kT}}}-1\]
-
-\[\frac{U}{V}=\frac{8\pi \left( kT \right)^4}{\left( hc \right)^3} \int^{\infty}_0 \frac{x^3}{e^x-1}dx=\frac{8\pi^5 \left( kT \right)^4}{15 \left( hc \right)^{3}}\]
 
 ** Entropy of a Photon Gas
 The easieat wat to caculate the entropy is from the heat capacity, \[C_V=\left( \frac{\partial U}{\partial T} \right)_V= 4aT^3\].
@@ -513,6 +549,96 @@ Only photons   $c\: dt$ within the hole are able to escape. So the energy in the
 But only the photons that are pointing the correct direction can escape $\frac{A \cos \theta}{4\pi R^2}$. After integration, power per unit area is
 $\frac{c}{4}\frac{U}{V}$. Plug in the $\frac{U}{V}$. Then \[\mathrm{power\:per\: unit\: area} = \sigma T^4\], where \sigma is called *Stefan-Boltzmann constant*
 \[\sigma=\frac{2\pi^5 k^4}{15 h^3 c^2}= 5.67 \times 10^{-8}\frac{W}{m^2 K^4}\].
+** Integral In Quantum Statics
+:PROPERTIES:
+:CUSTOM_ID:  math
+:END:
+\[\zeta \left( n \right) = \sum^{\infty}_{k=1}\frac{1}{k^n}\]
 
+\[\int^{\infty}_0 \frac{x^n}{e^x-1}dx=\Gamma \left( n+1 \right) \zeta \left( n+1 \right)\]
+
+\[\int^{\infty}_0 \frac{x^n}{e^x +1} dx = \left( 1-\frac{1}{2^n} \right) \Gamma \left( n+1 \right) \zeta \left( n+1 \right)\]
+* Black Body Radiation Exercise
+** The Sun And Earth
+- The solar constant : amount of solar radiation recieved by earth at outer atmosphere per area per time $\approx 1370 W/m^{2}$.
+- the distance from earth to sun $1.5 \times 10^{11}m$.
+- the liminosity of sun $3.9 \times 10^{24} W$.
+- Radius of sun $7\times 10^{8} m$, emissivity 1.
+Surface tempurture $= \left( \frac{luminosity}{ \sigma 4\pi r_{sun}^2} \right)^{\frac{1}{4}}= 5800k$
+
+The plank spectrum of the sun peak at $e=1.41eV$. That is $\lambda = 880nm$. 
+*** A Crude Estimation Of Earth's Surface Temputure
+Assume earth as a perfect black body then we can easily conclude $T=279k$. But average tempurature is $288k$.
+
+*** Greenhouse Effect
+Estimate the earth's surface temperature including the greenhouse effect. Bith the earth's surface temperature and the temperature of atmosphere are about few hundred k. So their main radiation regime is in the infrared region the emissivity is approximated one. 
+
+Atmosphere emit and absorb 0.7, earth emmit 1.2.(?)
+
+\[\sigma T_{atm}^4 4\pi r^2 = \pi r^2 \times 0.7 \times \mathrm{solar\: constant}\], $T_{atm} = 255k$.
+\[\sigma T_{ear}^4 4\pi r^2 = \pi r^2 \times 1.2 \times \mathrm{solar\: constant}\], $T_{ear} = 292k$.
+
+** Radius of Sirius
+Estimate the sizes of stars by using Stefan-Boltzmann law.
+*** Sirius A
+The spectrum peaks at $\epsilon =2.4 eV$, luminosity $\approx 24$ luminosity of the sun. 
+
+\[T_{sirius A}= \frac{2.4}{1.41} T_{sun} \], \[r_{sirius A}= \left( \frac{24}{1.7^4} \right)^{1/2} r_{sun} = 1.69 r_{sun}\].
+
+** Two Atom system
+Consider a two states atom with energy gap $hf$.
+- Spontaneous emission :: state2 $\Rightarrow$ state1 + 1 photon
+- Stimulated emission :: state2 + 1 photon $\Rightarrow$ state1 + 2 photons
+- Stimulated absorption :: state 1 + 1 photon $\Rightarrow$ state2
+
+Now a collection of N atoms are bathed in thermal radiation inside a cavity at tempurature $T$, with $N_1$ of them are at state 1 and $N_2$ at state2 initially.
+
+\[\frac{d \bar{N}_1}{dt} = A \bar{N}_2 (\mathrm{spontaneous\: emission}) +B^{\prime} \bar{N}_2 u(\epsilon) (\mathrm{stimulated \:emission}) + B \bar{N}_1 u(\epsilon) (\mathrm{stimulated \: absorption})\]
+
+also, becaus $N_1+N_2=N$, $\frac{d \bar{N}_1}{dt}= - \frac{d \bar{N}_2}{dt}$
+
+in equillibrium $\frac{d \bar{N}_1}{dt}=0$ and $\frac{\bar{N}_2^{eq}}{\bar{N}_1^{eq}}=e^{-\beta\epsilon}$. $\frac{d\bar{N}_1}{dt}=0$ leads to \[\left( A+B^{\prime} u \left( \epsilon \right) \right)e^{-\beta\epsilon} = B u \left( \epsilon \right)\].
+
+\[A= \left( B e^{-\beta\epsilon} -B^{\prime}\right) \frac{\epsilon\beta}{e^{\beta\epsilon}-1}\frac{8\pi}{\left( hc \right)^{3}}\].
+
+$A$, $B$, $B^{\prime}$ are independent of thermal dynamic so in order to make the above equation independent of tempurature we abtain, $B=B^{\prime}$ and $A=B \frac{8\pi \epsilon^3}{\left( hc \right)^3}$.
+
+Knowing one of them is sufficient for knowing others.
+
+\[\frac{d\bar{N}_1}{dt}=B \left[ \frac{8\pi \epsilon^3}{\left( hc \right)^3}+u \left( \epsilon \right) \right]N - B \left[ \frac{8\pi\epsilon^3}{\left( hc \right)^3}+2u \left( \epsilon\right) \right]\bar{N}_{1}\]
+
+So the relaxation time is \[\tau = \frac{1}{B\left[ \frac{8\pi \epsilon^3}{\left( hc \right)^3} +2u \left( \epsilon \right)\right]}\]
+** Cosmic Background Radiation
+The present photon tempurature $T=2.73k$. Peaks at $\epsilon=1.6\times 10^{-4} eV$ (far infrared).
+
+A rough argument on $T=3K$, \[S \propto T^3 V\] ??
+
+*** Neutron Radiation
+- Three family :: $\nu_{e}$, $\bar{\nu}_{e}$, $\nu_{\mu}$, $\bar{\nu}_{\mu}$, $\nu_{\tau}$, $\bar{\nu}_{\tau}$.
+- Properties :: Spin $frac{1}{2}$, fermion, rest mass = 0, chemical potential = 0, electricity neutral.
+$\hat{z}$ the direction of momentum. Nutrino $s_z=-\frac{1}{2}$ (left hand helicity), antinutrino $s_z=\frac{1}{2}$ (right helicity).
+\begin{eqnarray*}
+\bar{E} &=& 3 \int^{\infty}_0 \frac{8\pi V \epsilon^2}{\left( hc \right)^3}\frac{\epsilon}{e^{\beta\epsilon}+1}d\epsilon \\ &=& \frac{24 \pi V}{\left( hc \right)^3} \left( kT \right)^4 \int ^{\infty}_{0} \frac{x^3}{e^x+1} dx \\ &=& \frac{7\pi^5V \left( kT \right)^4}{5 \left( hc \right)^3}
+\end{eqnarray*}
+
+Using same method $\bar{N}=135.9V \left( \frac{kT}{hc} \right)^{3}$.
+
+The present nutrino tempurature is 1.95k.
+
+For the brief time in the early universe, the tempurature was hot enough to produce large numbers of electron positron pairs. These pairs cinstituted a third type of background radiation.
+
+** Hawking radiation
+The radius of a blackhole $\approx \frac{2GM}{c^2}$. Surface $\approx \frac{16 \pi^2 G^2 M^2}{c^4}$, Entropy $\approx \frac{8\pi^2 GM^2}{hc}k$. 
+- Rough estimation :: \[Mc^2 \approx N \frac{hc}{\lambda} \approx N \left( \frac{hc^3}{GM} \right)\], \[S\approx Nk \approx \frac{GM^2}{hc}k\].
+
+\[\frac{1}{T}= \frac{\partial S}{c^2 \partial M} \Rightarrow T \approx \frac{hc^3}{16\pi^2 GMk}\] 
+
+for $M=2\times 10^{30}kg$ (one solar mass), $T=6\times 10^{-8}k$. The blackbody radiation peaks at $\epsilon = 2.82 kT \approx 1.5 \times 10^{-11} eV$. \[\lambda = 84km\]. Emmitted power $\sigma A T^4 \approx 6\times 10^{-12}eV/s$.
+
+Now imagine a blackhole in empty space, where it emits radiation but absorbs nothing; that is, the blackhole evaporates.
+
+\[\frac{d \left( Mc^2 \right)}{dt}= -\sigma A^4  \Rightarrow \frac{dM}{dt}= \frac{-H}{M^2}\], where $H\approx \frac{hc^6}{30720 \pi^6 G^2} \approx 4 \times 10^{15} kg^3/s$.
+
+The life time $\tau=\frac{M_i^3}{dt}$, with $M_i$ denoting the initial mass of a blackhole. $\tau = 2\times 10^{67}$ years for $M_i\approx 2\times 10^{30} kg$.
 -----
 [[file:index.org][Back to Index]]
