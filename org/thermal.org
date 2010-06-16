@@ -459,7 +459,7 @@ so \[E \approx \frac{3Nm^4c^5}{{p_{\scriptscriptstyle F}^3}}\left( \frac{1}{4} {
 
 and \[P\approx \frac{2}{3}\frac{E}{V}\]
 
-X** White Dwarfs
+** White Dwarfs
 a white dwarf is a gas sphere if ionized helium. Number density of electron is \[n= N/V \approx \frac{M/2m_n}{M/\rho}=\frac{\rho}{2m_n}=3\times 10^{36}m^{-3}\].
 \[P=-\left( \frac{\partial E}{\partial V} \right)_{N,T=0}=\frac{Nm_e^4c^5}{8V{p_{\scriptscriptstyle F}}^3}\left[ \left( 1+{y_{\scriptscriptstyle F}}^2 \right)^{1/2}\left( 2 {y_{\scriptscriptstyle F}}^3 -3 {y_{\scriptscriptstyle F}} \right)+3 \ln \left( y_{\scriptscriptstyle F}+\left( 1+ {y_{\scriptscriptstyle F}}^2 \right)^{1/2} \right) \right]\]
 With \[y_{\scriptscriptstyle F}=\frac{P_{\scriptscriptstyle F}}{m_e c}\]
