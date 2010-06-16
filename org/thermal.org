@@ -615,7 +615,7 @@ A rough argument on $T=3K$, \[S \propto T^3 V\] ??
 
 *** Neutron Radiation
 - Three family :: $\nu_{e}$, $\bar{\nu}_{e}$, $\nu_{\mu}$, $\bar{\nu}_{\mu}$, $\nu_{\tau}$, $\bar{\nu}_{\tau}$.
-- Properties :: Spin $frac{1}{2}$, fermion, rest mass = 0, chemical potential = 0, electricity neutral.
+- Properties :: Spin $\frac{1}{2}$, fermion, rest mass = 0, chemical potential = 0, electricity neutral.
 $\hat{z}$ the direction of momentum. Nutrino $s_z=-\frac{1}{2}$ (left hand helicity), antinutrino $s_z=\frac{1}{2}$ (right helicity).
 \begin{eqnarray*}
 \bar{E} &=& 3 \int^{\infty}_0 \frac{8\pi V \epsilon^2}{\left( hc \right)^3}\frac{\epsilon}{e^{\beta\epsilon}+1}d\epsilon \\ &=& \frac{24 \pi V}{\left( hc \right)^3} \left( kT \right)^4 \int ^{\infty}_{0} \frac{x^3}{e^x+1} dx \\ &=& \frac{7\pi^5V \left( kT \right)^4}{5 \left( hc \right)^3}
