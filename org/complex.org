@@ -115,27 +115,37 @@ the order of the brance point is infinite.
 The constant $a_{-1}$ of Laurent expansion is called /residue/ of $f(z)$ at $z=z_{0}$.
 Integrate $f(z)$ by intergrate its Laurent expansion term by term. 
 \begin{equation*}
-\int f(z) dz=\int a_{n} (z-z_{0})^{n}dz=a_{-1} \int (z-z_{0})^{-1}dz=2\pi i \times a_{-1}
+\oint_C f(z) dz=\oint_C a_{n} (z-z_{0})^{n}dz=a_{-1} \oint_C (z-z_{0})^{-1}dz=2\pi i \times a_{-1}
 \end{equation*}
 so ,
-$\frac{1}{2\pi i}\int f(z) dz=a_{-1}$.
+$\frac{1}{2\pi i}\oint_C f(z) dz=a_{-1}$.
 
 A set of isolated singularities can be handled by intergrate them clockwise, in a counterclockwise contour.
 
 for every singular point,
 
-$\int f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sing because of clockwise direction.
+$\oint f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sing because of clockwise direction.
 
 so,
 \begin{equation*}
-\int f(z)dz=2\pi i \times (\mathrm{sum \: of\:  enclosured\:  residues})
+\oint f(z)dz=2\pi i\sum_{k=1}^n\textrm{Res}(f(z),z_k) 
 \end{equation*}
 
 This is called the *residue theorm*.
 
 ** Useful Trick:
-The function $f(z)$ expand in Laurent series exhinits a pole of oder m at $z=z_{0}$. $a_{-1}=\frac{1}{\left( m-1 \right)!} \frac{d^{m-1}}{dz^{m-1}}\left[ \left( z-z_{0} \right)^{m} f(z) \right]_{z=z_{0}}$, with
-$a_{-1}=\left[ \left( z-z_{0} \right)f(z) \right]_{z=z_{0}}$, when m=1.
+\[a_{-1}=\textrm{Res}(f(z),z_0)\]
+
+*** Simple pole
+\[\textrm{Res}(f(z),z_0)=\lim_{z\to z_0}(z-z_0)f(z)\]
+
+**** Fractial Simple Pole
+\[f(z)=g(z)/h(z)\]
+
+\[\textrm{Res}(f(z),z_0)=\frac{g(z_0)}{h^\prime(z_0)}\]
+
+*** Pole of order n
+\[\textrm{Res}(f(z).z_0)=\frac{1}{\left( m-1 \right)!} \lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\left( z-z_{0} \right)^{m} f(z) \]
 ** Infinitesimal radius
 $\int \frac{dz}{z-x_{0}}=i \int ^{2\pi}_{\pi}d\phi = i\pi$ , if counterclockwise,
 
@@ -160,7 +170,7 @@ if $f(z)$ has a simple zero. $f(z)=(z-a_{n})g(z)$ with $g(z)$ analytic and $g(a_
 \frac{f'(z)}{f(z)}=(z-a_{n})^{-1}+\frac{g'(z)}{g(z)}
 \end{equation*}
 
-From pole xpansion :
+From pole expansion :
 \begin{equation*}
 \frac{f '(z) }{f(z)}=\frac{f' (0)}{f(0)}+\sum ^{\infty}_{n=1} \left[ \frac{1}{a_{n}}+\frac{1}{z-a_{n}} \right]
 \end{equation*}
@@ -174,7 +184,7 @@ Integrate,
 Exponentiating,
 
 \begin{equation*}
-f(z)=f(0) xp \frac{z f'(0)}{f(0)}\prod^{\infty}_{n=1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
+f(z)=f(0) \exp \frac{z f'(0)}{f(0)}\prod^{\infty}_{n=1}\left( 1-\frac{z}{a_{n}}e^{\frac{z}{a_{n}}} \right)
 \end{equation*}
 
 ** Rouche's Theorm
@@ -185,6 +195,10 @@ if $f(z)$ and $g(z)$ are analytic inside and on a closed contour C and $\left| g
 \begin{eqnarray*}
 I &=& \int ^{2\pi}_{0} f(\sin \theta , i\cos \theta )d \theta\\  &=& -i \int f \left( \frac{z-z^{-1}}{2i},\frac{z+z^{-1}}{2} \right)\frac{dz}{z}\\ &=& \left( -i \right)2 \pi i \times \sum (\mathrm{residues\: within\: the\: unit\: circle})
 \end{eqnarray*}
+
+Alternative,
+
+\[\oint_C F\left(\frac{1}{2}(z+z^{-1}),\frac{1}{2i}(z,z^{-1})\right)\frac{dz}{iz}\]
 
 ** Definite Integrals \int ^{\infty}_{-\infty}f(x)dx
 if 
@@ -200,5 +214,15 @@ then, $I=2\pi i \times \sum \mathrm{residues}(\mathrm{upper \: plane})$
 
 /Jordan's lemma/
 
+* Other Applications of Residue
+** Summation of Series by Residue Theorem
+\[\sum^{\infty}_{n=-\infty}\frac{1}{P(n)}=-\pi \sum^k_{j=1}\textrm{Res}\left(\frac{\cot(\pi z)}{P(z)},z_j\right)\]
+
+\[\sum^{\infty}_{n=-\infty}\frac{(-1)^n}{P(n)}=-\pi \sum^k_{j=1}\textrm{Res}\left(\frac{\csc(\pi z)}{P(z)},z_j\right)\]
+
+** Inverse of Laplace Transform
+\[u(t)f(t)=L^{-1}[F(z)]=\frac{1}{2\pi i}\int^{a+i\infty}_{a-i\infty}F(z)e^{zt}dz\]
+
+\[u(t)f(t)=L^{-1}[F(z)]=\sum^{n}_{j=1}\textrm{Res}\left(e^{zt}F(z),z_j\right)\]
 -----
 [[file:index.org][Back to index]]

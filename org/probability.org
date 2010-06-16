@@ -175,3 +175,31 @@ Standard normal CDF:\\
 
 Standard normal complementary CDF:\\
 \[Q(z)=\frac{1}{\sqrt{2\pi}}\int^{\infty}_z{e^{-u^2/2}du}\]
+
+* Pairs of Random Variables
+** Definition
+\[\textrm{Cov}[X,Y]=E[(X-\mu_X)(Y-\mu_Y)]\]
+
+\[r_{X,Y} = E[XY]\]
+
+\[\rho_{X,Y}=\frac{\textrm{Cov}[X,Y]}{\sqrt{\textrm{Var}[X]\textrm{Var}[Y]}}\]
+
+** Facts
+\[E[X+Y]=E[X]+E[Y]\]
+
+\[\textrm{Var}[X+Y]=\textrm{Var}[X]+\textrm{Var}[Y]+2\textrm{Cov}[X,Y]\]
+
+\[\textrm{Cov}[X,Y]=r_{X,Y}-\mu_X \mu_Y\]
+** Conditioning
+\[\textrm{Var}[W|B]=E\left[\left(W-\mu_{W|B}\right)^2|B\right]=E\left[W^2|B\right]-(\mu_{W|B})^2\]
+
+\[E[E[X|Y]]=E[X]\]
+
+** Independent
+
+\[\textrm{Cov}[X,Y]=\rho_{X,Y}=0\]
+
+\[E[XY]=E[X]E[Y]\]
+
+** Bivariate Gussian Random Variables
+\[f_{X,Y}(x,y)=\frac{e^{\displaystyle{-\frac{\left(\frac{x-\mu_1}{\sigma_1}\right)^2-\frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1 \sigma+2}+\left(\frac{y-\mu_2}{\sigma_2}\right)^2}{2(1-\rho^2)}}}}{2\pi\sigma_1 \sigma_2\sqrt{1-\rho^2}}\]
