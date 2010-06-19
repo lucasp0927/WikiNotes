@@ -2,7 +2,7 @@
 #+AUTHOR: Lucas Peng
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
-#+OPTIONS: toc:3
+#+OPTIONS: toc:2
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
@@ -640,5 +640,24 @@ Now imagine a blackhole in empty space, where it emits radiation but absorbs not
 \[\frac{d \left( Mc^2 \right)}{dt}= -\sigma A^4  \Rightarrow \frac{dM}{dt}= \frac{-H}{M^2}\], where $H\approx \frac{hc^6}{30720 \pi^6 G^2} \approx 4 \times 10^{15} kg^3/s$.
 
 The life time $\tau=\frac{M_i^3}{dt}$, with $M_i$ denoting the initial mass of a blackhole. $\tau = 2\times 10^{67}$ years for $M_i\approx 2\times 10^{30} kg$.
+
+* Debye Theory of Solids
+The porblem of Einstein model is that the atoms in a crystal do not vibrate independently of each other. In low-frequency modes of oscillation in which large qroups of atoms are all moving together. In high frequency modes atoms are moving opposite to their neighbors.
+
+- Sound waves in solids cannot have wavelengths shorter than twice the atomic spacing. 
+
+\[\epsilon=hf=\frac{hc_S}{\lambda}=\frac{hc_sn}{2L}\]
+
+\[\bar{n}_{pl}=\frac{1}{e^{\epsilon/kT}-1}\]
+
+These units of energies particles are called *phonons*. The total energy is \[U=3\sum_{n_X}\sum_{n_y}\sum_{n_z}\epsilon \bar{n}_{pl}\left( \epsilon \right)\], where $N_{max}=n^{1/3}$
+
+Instead intergral over a cube, we intergral over a sphere. with $n_{max}=\left( \frac{6N}{\pi} \right)^{1/3}$. We can get \[U=\frac{9NkT^4}{T_D^3}\int_0^{\frac{T_D}{T}}\frac{x^3}{e^x-1}dx\]. Where *Debye temperature* \[\frac{T_D}{T}=\frac{hc_sn_{max}}{2LkT}\].
+
+** High Temperature
+When $T\gg T_D$, use the approximation $e^x\approx 1+X$. This leads to \[U=3kT\], which agree with equipartition theorem (and the Einstein model).
+
+** Low Temperature 
+Replace upper limit with ifinity. \[U=\frac{3\pi^4}{5}\frac{NkT^4}{T_{D^3}}\]. The total heat capacity is therefore \[C=\gamma T + \frac{23 \pi^4Nk}{5T_{D^3}}T^{3}\] for metal. Where $\gamma=\pi^2nk^2/2\epsilon_F$ in the free electron model.
 -----
 [[file:index.org][Back to Index]]
