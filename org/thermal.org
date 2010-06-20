@@ -659,11 +659,30 @@ When $T\gg T_D$, use the approximation $e^x\approx 1+X$. This leads to \[U=3kT\]
 
 ** Low Temperature 
 Replace upper limit with ifinity. \[U=\frac{3\pi^4}{5}\frac{NkT^4}{T_{D^3}}\]. The total heat capacity is therefore \[C=\gamma T + \frac{12 \pi^4Nk}{5T_{D^3}}T^{3}\] for metal. Where $\gamma=\pi^2nk^2/2\epsilon_F$ in the free electron model.
+
+* Debye Theory 2
+\[g(k)dk=3\cdot \frac{1}{8}\left(  \frac{l}{\pi}\right)^3 4\pi k^2 dk\], leads to \[g \left(  \omega\right) d\omega = \frac{V}{2\pi^2} \left( \frac{2}{c_t^4}+\frac{1}{c_l^3} \right)\]. (density of states)
+
+The finite spacing of atoms implies a cutoff freqiency (the debye freqiency).
+
+\[3N-6= \frac{V}{2\pi^2} \left( \frac{2}{c_t^3}+\frac{1}{c_l^3} \right) \int^{\omega_D}_0 \omega^2 d\omega\]
+
+For $N\gg 1$, \[\omega_D^3 \approx \frac{18\pi^2 N}{V} \left( \frac{2}{c_t^3}+\frac{1}{c_l^3} \right)^{-1}\]
+
+Debye approximated the integral over an sphere by preserving the total number of normal modes. Neglecting the zero point energy. \[\bar{E} \approx \int^{\omega_D}_0 \frac{\hbar \omega}{e^{\beta \hbar \omega}-1} \frac{9N\omega^2}{\omega_D^3} d\omega = \frac{9N \hbar}{\omega_D^3} \int^{\omega_D}_0 \frac{\omega^3}{e^{\beta \hbar \omega}-1} d\omega \]
+
+Differential and set $x=\beta \hbar \omega$ 
+- High Temperature :: \[C_v \approx 3Nk-\frac{3}{20}Nk \left( \frac{T_D}{T} \right)^2\], where $T_D=\frac{\hbar \omega_D}{k}$.
+- Low Temperature ::  \[C_v \approx \left( \frac{12\pi^4Nk}{5T_D^3} \right)T^3\]
+
+For metals at low tempurature $C_V\approx N_c \left( \frac{\pi^2k^2}{2\epsilon_F} \right)T+N\left( \frac{12\pi^4Nk}{5T_D^3} \right)T^3$
 * Bose-Einstein Condensation
 Photons and phonons are bosons that can be created in arbitary numbers. How about normal bosons?
 
-\[\epsilon_0=\frac{h^2}{8mL^2} \left(1^2+1^2+1^2  \right)\]
+Density of states \[g \left( p \right)dp = g_s \frac{1}{8} \left(  \frac{2L}{h}\right)^3 4\pi p^2 dp\], leads to \[g \left( \epsilon \right) d\epsilon = g_{\epsilon} \frac{2\pi V}{h^3} \left( 2m \right)^{3/2} \epsilon^{1/2} d\epsilon \].
 
-Bose-Einstein distribution \[N_0=\frac{1}{e^{\left( \epsilon_0-\mu \right)/kT}-1} \approx \frac{1}{1+\left( \epsilon_{0}-\mu \right)/kT -1}=\frac{kT}{\epsilon_0-\mu}\]
+\[N=g_s \frac{2\pi V}{h^3} \left( 2m \right)^{3/2} \int_0^{\infty} \frac{\epsilon^{1/2}}{e^{\beta \left( \epsilon-\mu \right)}-1} d\epsilon +\frac{g_s}{e^{-\beta\mu}-1}=N_{\mathrm{exited}}+n_0\]
+
+*fill in the caculations*
 -----
 [[file:index.org][Back to Index]]
