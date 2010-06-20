@@ -658,6 +658,13 @@ Instead intergral over a cube, we intergral over a sphere. with $n_{max}=\left( 
 When $T\gg T_D$, use the approximation $e^x\approx 1+X$. This leads to \[U=3kT\], which agree with equipartition theorem (and the Einstein model).
 
 ** Low Temperature 
-Replace upper limit with ifinity. \[U=\frac{3\pi^4}{5}\frac{NkT^4}{T_{D^3}}\]. The total heat capacity is therefore \[C=\gamma T + \frac{23 \pi^4Nk}{5T_{D^3}}T^{3}\] for metal. Where $\gamma=\pi^2nk^2/2\epsilon_F$ in the free electron model.
+Replace upper limit with ifinity. \[U=\frac{3\pi^4}{5}\frac{NkT^4}{T_{D^3}}\]. The total heat capacity is therefore \[C=\gamma T + \frac{12 \pi^4Nk}{5T_{D^3}}T^{3}\] for metal. Where $\gamma=\pi^2nk^2/2\epsilon_F$ in the free electron model.
+* Bose-Einstein Condensation
+Photons and phonons are bosons that can be created in arbitary numbers. How about normal bosons?
+
+\[\epsilon_0=\frac{h^2}{8mL^2} \left(1^2+1^2+1^2  \right)\]
+
+Bose-Einstein distribution \[N_0=\frac{1}{e^{\left( \epsilon_0-\mu \right)/kT}-1} \approx \frac{1}{1+\left( \epsilon_{0}-\mu \right)/kT -1}=\frac{kT}{\epsilon_0-\mu}\]
+
 -----
 [[file:index.org][Back to Index]]
