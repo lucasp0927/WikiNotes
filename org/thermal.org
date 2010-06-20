@@ -665,6 +665,5 @@ Photons and phonons are bosons that can be created in arbitary numbers. How abou
 \[\epsilon_0=\frac{h^2}{8mL^2} \left(1^2+1^2+1^2  \right)\]
 
 Bose-Einstein distribution \[N_0=\frac{1}{e^{\left( \epsilon_0-\mu \right)/kT}-1} \approx \frac{1}{1+\left( \epsilon_{0}-\mu \right)/kT -1}=\frac{kT}{\epsilon_0-\mu}\]
-
 -----
 [[file:index.org][Back to Index]]
