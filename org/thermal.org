@@ -6,6 +6,50 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
+* Classical Thermodynamics
+- Object: complex system
+- Goal: macroscopic properties out of the collective behavior of many constituent particles.
+
+* The zeroth, first, second laws of thermodynamics
+
+** The zeroth Law of Thermodynamics
+- Goal: to give temperature a fundemental physical meaning.
+- Statement: If bodies A and B are each in thermal equilibruim with a third body C, then thdy are in thermal equilibrium with each other.
+Hence these systems have a common intensive quantity, the temperature (T).
+
+Furthermore, the kinetic theory of gases gives temperature a microscopic meaning.
+
+*** Derivation
+Assumption:
+- No potential between gas molecules 
+- molecular volume being negligible
+- elastic collisions between the gas molecules and the walls
+\[F_i=\frac{\Delta P_{xi}}{\Delta t}=\frac{2mv_{xi}}{2L/v_{xi}}=\frac{mv_{xi}^2}{L}\]
+\[P=\frac{\sum_iF_i}{L^2}=\frac{m}{L^2}\left( \sum_iv_{xi}^2 \right) = \frac{m}{V}\bar{v_x^2}\]
+
+where V is volume, n is molar number, M is molar mass, N is molecular number, m is molecular mass.
+
+Assume isotropicity, \[P-\frac{nM}{3V}\bar{v^{2}}=\frac{nM}{3V}v_{rms}^2\]
+So, \[v_{rms}^2=3 \left( \frac{pV}{nM} \right) = 3 \left( \frac{RT}{M} \right)\]
+
+R is the gas constant
+
+Hebce, the temperature is a macroscopic observable quantity characterizing the microscopic property.
+the meansquare speed, of ideal-gas systems.
+** Internal energy
+The collective kinetic and potential energies associated with the random motions of the atoms, molecules and other microscopic bodies within an object.
+
+** The first law of thermodynamics:
+\[\Delta E_{int}= Q-W\] assuming $\Delta U=\Delta K = 0$. (Both macroscopic).
+*** Heat
+the transferred internal energy between the system and the environment without doing macroscopic work.
+
+$Q>0$: The heat absorbed by the system from the environment ($T_{sys}<T_{env}$).
+
+$W>0$: The positive work done by the system on the environment.
+
+If the thermodynamics process is quasistatic, the system is wlways in approximate thermodynamics equilibrium and in any intermediate state the system has well-defined (PVT). We can plot the whole process on the PV diagram.
+
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
 - Canonical $\left( T,N \right)_{\mathrm{fixed}}$
