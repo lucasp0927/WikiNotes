@@ -1,5 +1,6 @@
 #+TITLE: Thermal Physics
 #+AUTHOR: Lucas Peng
+
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:2
@@ -49,6 +50,24 @@ $Q>0$: The heat absorbed by the system from the environment ($T_{sys}<T_{env}$).
 $W>0$: The positive work done by the system on the environment.
 
 If the thermodynamics process is quasistatic, the system is wlways in approximate thermodynamics equilibrium and in any intermediate state the system has well-defined (PVT). We can plot the whole process on the PV diagram.
+
+* Some properties of ideal gas
+** Specific heat
+\[C_v = \frac{Q}{n\Delta T}\big| _{n,v,\Delta T \Rightarrow 0} = \frac{\Delta E_{int}}{n \Delta T} \big| _{\Delta T \Rightarrow 0} \]
+\[C_p = \frac{Q}{n \Delta T} \big| _{n,P,\Delta T \Rightarrow 0} = \frac{\Delta E _{int}+P\Delta v }{n \Delta T}\big| _{\Delta T \Rightarrow 0} = C_v+R\]
+
+** Average translational kinetic energy per molecule
+   \[\bar{K_{tra}}=\frac{1}{2}v\bar{v^2}=\frac{1}{2}m \left( \frac{3RT}{M} \right) = \frac{3}{2} \left( \frac{R}{N_a} \right)T = \frac{3}{2}kT\]
+The equipartition theorem concerns not just translation kinetic energy but all forms of energy which are quadratic function of coordinates or velocities.
+$E_{int}=f \left( \frac{1}{2} RT \right)$ , with f denoting the number of degrees of greedom.
+
+** Adiabatic expansion of compression
+\[\Delta E_{int} = - \int P\:dv\]
+\[nC_V\: dT = -P \: dv = \frac{-nRT}{v}dv\]
+\[\frac{dT}{T} = - \left( \frac{R}{C_v} \right) \frac{dv}{v}= - \left( \frac{C_p-C_v}{C_v} \right)\frac{dv}{v}=- \left( \gamma - 1 \right) \frac{dv}{v}\]
+\[Tv^{\gamma -1}=const\]
+$pv^{\gamma}=const$
+
 
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
