@@ -6,6 +6,8 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
+To compile latex fragment correctly, install texlive, texlive-latex-extra, dvipng (may be included in texlive-picture).
+
 Command line compile
 #+BEGIN_SRC bash
 emacs --batch -l ~/.emacs --funcall org-publish-all
