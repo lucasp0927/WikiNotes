@@ -75,7 +75,18 @@ $E_{int}=f \left( \frac{1}{2} RT \right)$ , with f denoting the number of degree
 \[pv^{\gamma}=const\]
 
 ** Interesting Problems
-*** The virial expansion of real gases
+*** Barometric equation (1.16)
+\[\frac{dP}{dz}= - \frac{mg}{kT}P\]
+
+\[ A \left[ P(z) - P(z+dz) \right] = \left( \rho A\:dz \right)g\]
+
+\[\frac{dP}{dz}=-\frac{mP}{kT}g\]
+
+If T is approximately independent of z.
+
+\[P(z)=P(0) e^{-\frac{mg}{kT}z}\]
+
+*** The virial expansion of real gases (1.17)
 \[PV = nRT \left( 1+\frac{B (T)}{\left( \frac{v}{n} \right)}+\frac{C (T)}{ \left( \frac{v}{n} \right)^2}+ \dots \right)\]
 
 A special case: the van der waals equation:
