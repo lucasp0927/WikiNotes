@@ -101,6 +101,12 @@ For low temperature, $B(T)<0$. For high temperature, $B(T)>0$.
 
 This result is generally true for real gases. It indicates the attractive force dominating at low temperature and the repulsive force dominating at high temperature.
 
+For example $B(T)$ for $N_2$ at 1atm.
+
+| T(k) | B($cm^{2}/mol$) | B(T)/(v/n) |
+|      |                 |            |
+
+
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
 - Canonical $\left( T,N \right)_{\mathrm{fixed}}$
