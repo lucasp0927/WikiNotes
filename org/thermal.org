@@ -70,9 +70,9 @@ $E_{int}=f \left( \frac{1}{2} RT \right)$ , with f denoting the number of degree
 
 \[\frac{dT}{T} = - \left( \frac{R}{C_v} \right) \frac{dv}{v}= - \left( \frac{C_p-C_v}{C_v} \right)\frac{dv}{v}=- \left( \gamma - 1 \right) \frac{dv}{v}\]
 
-\[Tv^{\gamma -1}=const\]
+\[Tv^{\gamma -1}=\mathrm{const}\]
 
-\[pv^{\gamma}=const\]
+\[pv^{\gamma}=\mathrm{const}\]
 
 ** Interesting Problems
 *** Barometric equation (1.16)
@@ -93,7 +93,7 @@ A special case: the van der waals equation:
 \begin{eqnarray*}
  \left( P+\frac{an^2}{v^2} \right) \left( v-nb \right) &=& nRT\\
  PV &=& nRT \left( \frac{1}{1-b \left( \frac{n}{v} \right)}-\frac{an}{RTv} \right) \approx nRT \left[ 1+\frac{b-\frac{a}{RT}}{\frac{v}{n}}+\frac{b^2}{ \left( \frac{v}{n} \right)^{2}} \right]\\
-B(T) &=& b-\frac{1}{RT}\\
+B(T) &=& b-\frac{a}{RT}\\
 C(T) &=& b^{2}
 \end{eqnarray*}
 
@@ -104,9 +104,88 @@ This result is generally true for real gases. It indicates the attractive force 
 For example $B(T)$ for $N_2$ at 1atm.
 
 | T(k) | B($cm^{2}/mol$) | B(T)/(v/n) |
-|      |                 |            |
+|------+-----------------+------------|
+|  100 | -160            | -07019     |
+|  200 | -35             | -0.0021    |
+|  300 | -4.2            | -0.00017   |
+|  400 | 9.0             | 0.00027    |
+|  500 | 16.9            | 0.00041    |
+|  600 | 21.3            | 0.00043    |
 
+By setting $b-\frac{a}{R\cdot 200}=-35$ and $b-\frac{a}{R\cdot 300}=-4.2$, we have $a=145000J\cdot \frac{cm^3}{mol^2}$, and $b=58\frac{cm^3}{mol}$.
+At high temperatures, the van der waals equation is pretty good.
 
+*** bulk modulus for ideal gas (1.39)
+Isothermal bulk modulud=s for ideal gas
+
+\[B=\frac{\Delta P}{-\frac{\Delta v}{v}}\big| _{T,\Delta P \Rightarrow 0} = -v\frac{dP}{dv}\big|_T = \frac{nRT}{v}=P\]
+
+Adiabatic bulk modulus for idal gas
+
+\[B=\frac{\Delta P}{-\frac{\Delta v}{v}}\big| _{q = 0, \Delta P \Rightarrow 0} = -v \frac{d}{dv} \left( \frac{\mathrm{const}}{v^{\gamma}} \right) = \gamma \left( \frac{\mathrm{const}}{v^{\gamma}} \right) = \gamma P\]
+
+For computing the speed of sound, one should use the adiabatic B, due to sound traveling mach faster than heat transfer. Note that $B_{adiabatic}>B_{isothermal}$, since $\gamma = \frac{c_p}{c_v}>1$.
+
+*** 1.40
+If an ideal gas expands.
+
+\[PV^{\gamma}=\mathrm{const},\: TV^{\gamma -1}=\mathrm{const}\]
+
+\[d \left( \ln P \right) = -\gamma d \left( \ln v \right)\]
+
+\[d \left( \ln T \right) = \left( -\gamma -1 \right) d \left( \ln V \right)\]
+
+\[d \left( \ln P \right) = \frac{\gamma}{\gamma -1} d \left( \ln T \right)\]
+
+\[\frac{dT}{dP}= \frac{2}{f+2} \frac{T}{P}\]
+
+if the temperatures gradiant $\frac{dT}{dz}$ exceed a certain crital level, convection will occur, the condition for convection to occure is that the rising air (approximated as adiavate wxpansion and cooling) must remain warmer than the surrouding air.
+
+Assuming $\left| \frac{dT}{dz} \right|$ just at the critical value.
+
+\[\frac{dT}{dp}=\frac{2}{f+2} \left( \frac{T}{P} \right)\]
+
+\[\frac{dP}{dz}=-\frac{mg}{kT}P\]
+
+\[\frac{dT}{dz}=-\frac{2}{f+2} \left( \frac{mg}{k} \right)= -10^{\circ}C/km\]
+
+*** 1.46
+We have a general identity \[\left( \frac{\partial P}{\partial T} \right)_v=\frac{- \left( \frac{\partial v}{\partial T} \right)_P}{\left( \frac{\partial v}{\partial P} \right)_T} = \frac{-\frac{1}{v} \left( \frac{\partial v}{\partial T} \right)_P}{- \frac{1}{v}\left( \frac{\partial v}{\partial P} \right)_T}=\frac{\beta}{\kappa_{T}}\]
+
+For solid and liquid \[\frac{\beta}{\kappa_{T}} \approx 10^6~10^{7} pa/k\]. Hence, to measure $C_v$ of solid or liquid require fairly large pressure!
+
+- Derivation
+set \[f(v,P,T)=0\] as equation of state. \[df=0\]
+
+\[ \left( \frac{\partial f}{\partial v} \right)_{P,T}+ \left( \frac{\partial f}{\partial P} \right)_{v,T} dP+ \left( \frac{\partial f}{\partial T} \right)_{v,P}=0\]
+
+\begin{eqnarray*}
+\left( \frac{\partial f}{\partial T} \right)_{v,P} &=& -\left( \frac{\partial f}{\partial P} \right)_{v,T} \left( \frac{\partial P}{\partial T} \right)_{v}\\
+\left( \frac{\partial f}{\partial P} \right)_{v,T} &=& -\left( \frac{\partial f}{\partial v} \right)_{P,T} \left( \frac{\partial v}{\partial P} \right)_{T}\\
+\left( \frac{\partial f}{\partial T} \right)_{v,P} &=& -\left( \frac{\partial f}{\partial v} \right)_{P,T} \left( \frac{\partial v}{\partial T} \right)_{P}\\
+\end{eqnarray*}
+we get 
+\[\left( \frac{\partial P}{\partial T} \right)_v=- \frac{ \left( \frac{\partial v}{\partial T} \right)_P}{ \left( \frac{\partial v}{\partial P} \right)_{T}}\]
+
+- Other way
+\[dV_1= \left( \frac{\partial v}{\partial T} \right)_P \: dT= \beta v \: dT\]
+
+compensate
+
+\[dv_2 = \left( \frac{\partial v}{\partial P} \right)_T \: dP = -\kappa_T v \: dP\]
+
+\[dv_1+dv_2=0\]
+
+so, \[ \left( \frac{\partial P}{\partial T} \right)_V= \frac{\beta}{\kappa_T}\]
+
+For an ideal gas 
+
+\[ \beta = \frac{1}{v}\cdot \frac{\partial}{\partial T} = \frac{nR}{Pv} = \frac{1}{T}\]
+
+\[\kappa_T= -\frac{1}{v} \frac{\partial}{\partial P} \left( \frac{nRT}{P} \right) = \frac{nRT}{vP^2}= \frac{1}{P}\]
+
+*** More practice 
+1.7,1.8,1.15,1.27,1.28,1.31,1.38,1,43,1.48
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
 - Canonical $\left( T,N \right)_{\mathrm{fixed}}$
