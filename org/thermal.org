@@ -186,6 +186,39 @@ For an ideal gas
 
 *** More practice 
 1.7,1.8,1.15,1.27,1.28,1.31,1.38,1,43,1.48
+* The kinetic theory of ideal gases
+** Maxwell's molecular velocity distribution
+*** Isotropicity of gases
+Independence of motion in each direction in the probability sence.
+\[P \left( \vec{v} \right) \Rightarrow P_{1} \left( \left| \vec{v} \right| \right) \Rightarrow P_2 \left( v^{2} \right) \]
+
+\[P_2 \left( v_x^2+v_y^2+v_z^2 \right) = P \left( v_x \right) P \left( v_y \right) P \left( v_z \right) \]
+
+exponential form, $P \left( \vec{v} \right) = C \exp \left( av^2 \right)$, because $v\Rightarrow \infty$, $P \left( \vec{v} \right) = 0$, so $a<0$.
+
+after normalize $c= \left( \frac{-a}{\pi} \right)^{\frac{3}{2}}$
+
+with $\frac{RT}{M}=\bar{v_x^{2}}$. We can get $a=-\frac{M}{2RT}$. So \[P \left( \vec{v} \right) \: d\vec{v} = \left( \frac{m}{2\pi RT} \right)^{\frac{3}{2}} \exp \left( -\frac{Mv^2}{2RT} \right) \: d\vec{v}\]
+
+** The mean free path
+\[\lambda = \frac{\mathrm{length \: of\: path}}{\mathrm{number\: of \: collision}} = \frac{\bar{v} \Delta t}{\pi d^2 \bar{v_{rel}} \Delta t \left( \frac{N}{V} \right)}\]
+
+where $d$ is molecular diameter, $\bar{v}$ is average molecular speed, $\bar{v_{rel}}$ is the average relative speed between molecules.
+
+- $\bar{v}=\sqrt{ \frac{8R T}{\pi M}}$ 
+- \[\bar{v_{rel}}= \left( \frac{M}{2\pi RT} \right)^3 \int\int d \vec{v_1}\: d \vec{v_2} \left| \vec{v_1}-\vec{v_2} \right| \exp \left( - \frac{M}{2RT} \left( v_1^2+v_2^2 \right) \right)  \]
+
+ set $v_{av}= \frac{1}{2} \left( v_1 + v_2 \right)$ and $v_{rel}=v_1-v_2$. Then, \[\bar{v_{rel}} = \left[ \left( \frac{2M}{2\pi RT} \right)^{\frac{3}{2}} \int \: d v_{av} \exp \left( -\frac{M}{RT} v_{av}^2 \right) \right] \cdot \left[  \left( \frac{M/2}{2\pi RT} \right)^{\frac{3}{2}} \int dv_{rel} \exp \left( \frac{-M}{4RT} v_{rel}^2 \right) \right] = \sqrt{\frac{8RT}{\pi \left( \frac{M}{2} \right)}}= \sqrt{2} \bar{v}\]
+
+$\lambda = \frac{1}{\sqrt{2} \pi d^2 \left( N/V \right)}$
+
+* Effusion
+A tiny hole is poked in a container full of gas, the gas will start leaking out.
+
+\[ dN = -\int N \left( \frac{A v_x dt}{V}  \right)P \left( \vec{v} \right) \: d\: \vec{v} \]
+
+\[\tau = \left( \frac{V}{A} \right) \left( \frac{RT}{2\piM} \right)^{-\frac{1}{2}}\]
+
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
 - Canonical $\left( T,N \right)_{\mathrm{fixed}}$
