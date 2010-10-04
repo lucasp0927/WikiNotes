@@ -217,7 +217,43 @@ A tiny hole is poked in a container full of gas, the gas will start leaking out.
 
 \[ dN = -\int N \left( \frac{A v_x dt}{V}  \right)P \left( \vec{v} \right) \: d\: \vec{v} \]
 
-\[\tau = \left( \frac{V}{A} \right) \left( \frac{RT}{2\piM} \right)^{-\frac{1}{2}}\]
+\[ \frac{dN}{dt}=-N \left( \frac{A}{V} \right) \left( \frac{RT}{2 \pi M} \right)^{\frac{1}{2}}\]
+
+So, \[N \left( t \right) = N \left( 0 \right)  \exp \left( -\frac{t}{\tau} \right)\]. \[\tau = \left( \frac{V}{A} \right) \left( \frac{RT}{2\pi M} \right)^{\frac{1}{2}}\]
+* Rate of process
+** Heat conduction
+Assume $dN \propto \left( \frac{N}{V} \right) T^{1/2}$.
+
+$|\lambda|\lambda|\lambda|$
+
+\begin{eqnarray*}
+dQ &=& \left( dN_1 \right) C_v T_1 - \left( dN_2 \right)C_v T_2\\
+   &=& aT_1^{1/2}C_v T_1 - aT_2^{1/2} C_v T_2\\
+   &=& aT_1^{3/2}C_V \left[  1- \left( 1+\frac{1}{T_1} \frac{dT}{dx} \lambda \right)^{3/2} \right]\: \mathrm{because,}T_2=T_1+\frac{dT}{dx}\lambda\\
+   &\approx& aT^{3/2} C_v \left( -\frac{1}{T_1}\frac{dT}{dx}\lambda \cdot \frac{3}{2} \right)\\
+   &=& -dN_1 C_v \frac{dT}{dx}\lambda\cdot \frac{3}{2}\\
+   &=& -N \left( \frac{A}{V} \right) dt \left( \frac{1}{2} \bar{\left| v_x \right|} \right) C_v \left( \frac{1}{\frac{N}{v}\pi d^2 \sqrt{2}} \right)\frac{dT}{dx}\cdot \frac{3}{2}
+\end{eqnarray*}
+\[k_t=\frac{3C_v}{2 \sqrt{2} \pi d^2} \left( \frac{RT}{2\pi M} \right)^{1/2}\]
+
+** Viscosity
+*Shear stress* is $\frac{\left| F_x \right|}{A}=\eta \left| \frac{d\bar{v_x}}{dz} \right|$.
+*** Viscosity of an ideal gas
+Devide the gas into layers with thickness $\lambda$.
+
+\begin{eqnarray*}
+\frac{ \left| F_x \right|}{A} dt &=& \frac{1}{A} \left| \sum_i dp_{x,i} \right|\\
+                                 &=& \frac{1}{A} \left( dN \right) \left| m \frac{d \bar{v_x}}{dz} \right| \lambda\\
+                                 &=& \frac{1}{A} \left[ N \frac{A}{V} dt \left( \frac{1}{2} \left| \bar{v_z} \right| \right) \right] m \frac{1}{\frac{N}{V} \pi d^2\sqrt{2}} \left| \frac{d \bar{v_x}}{dz} \right| \\
+\end{eqnarray*}
+
+\[ \eta = \frac{m}{\sqrt{2} \pi d^2} \left( \frac{RT}{2\pi M} \right)^{1/2}\]
+
+** Diffusion
+Particle current density: $J_x = -D \frac{dn}{dx}$.
+
+$D \left( \mathrm{diffurion\: coefficient} \right) \approx O \left( 10^{-8} m^2/s \right)$ for $H^{+}$ ions through water at room temperature and 1 atm. $O \left( 10^{-11} m^2/s \right)$ for protens through water at room temperature and 1 atm. $O \left( 10^{-5}m^2/s \right)$ for small molecules diffusing through air at room temperature and 1 atm.
+*** Diffusion of small particle through ideal gas
 
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
