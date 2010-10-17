@@ -254,6 +254,47 @@ Particle current density: $J_x = -D \frac{dn}{dx}$.
 
 $D \left( \mathrm{diffurion\: coefficient} \right) \approx O \left( 10^{-8} m^2/s \right)$ for $H^{+}$ ions through water at room temperature and 1 atm. $O \left( 10^{-11} m^2/s \right)$ for protens through water at room temperature and 1 atm. $O \left( 10^{-5}m^2/s \right)$ for small molecules diffusing through air at room temperature and 1 atm.
 *** Diffusion of small particle through ideal gas
+The tracer particles $n_{tra} \ll n$ (idea gas). Where $n_{tra}$ is function of $x$ and $n$ is uniform.
+
+Seperate the space int to slab of $\lambda$. 
+\[A \left( J_x \: dt \right) = A dt \left( \frac{1}{2} \bar{\left| v_x \right|} \right) \left( - \frac{dn_{tra}}{dx} \lambda \right)\]
+
+\[D=\frac{1}{2} \lambda \bar{\left|  v_x\right|}=\lambda \left( \frac{kT}{2\pi M_{tra}} \right)^{1/2}\]
+
+\[\lambda = \frac{\bar{v_{tra}}}{n\omega d^2 \bar{v_{relative}}}= \frac{1}{n\pi d^2} \left( \frac{\mathrm{reduced M}}{M_{tra}} \right)^{1/2}= \left( \frac{-k_b T}{P(\mathrm{of\: ideal\: gase})} \right) \frac{2}{\pi d^2} \left( \frac{\mathrm{reduced M}}{M_{tra}} \right)^{1/2}\]
+
+$d$ is average over tracer particle and ideal gas molecule.
+
+\[D \propto \frac{T^{3/2}}{P}\]
+
+** Interesting Exercise
+*** prob 1.62 
+Consider a uniform rod in the $x$ direction.
+
+\[ \left( A \epsilon \right) \frac{nC_v\Delta T}{\Delta t} - A k_t \left( \frac{\Delta T}{\Delta x}\Big|_{x+\frac{1}{2}\epsilon}-\frac{\Delta T}{\Delta x}\Big|_{x-\frac{1}{2}\epsilon} \right)\]
+
+That is, \[\frac{\partial T \left( x,t \right)}{\partial t}- \frac{k_t}{nC_v}\cdot \frac{\partial^2 T \left( x,t \right)}{\partial x^2}\]
+
+$n$ is th number density, $C_v$ specific heat at constant value per molecule. For solid, $\frac{k_t}{nC_v}$ is approximately independent of temperature (around the room temperature scale).
+
+suppose $T \left( x,t=0 \right)=T_0+\delta \left( x \right)$, 
+\[\frac{\partial \tilde{T} \left( k,t \right)}{\partial t}= -k^2 \left( \frac{k_x}{nC_v} \right) \tilde{T_0} \left( k,t \right)\]
+
+with $\tilde{T} \left( k,t \right) = \frac{1}{2\pi} \int ^{\infty}_{-\infty} T^{\prime} \left( x,t \right)e^{-kx} \:dx$ and $T^{\prime} \left( x,t \right) =T \left( x,t \right)-T_{0}$
+
+\[\tilde{T} \left( k,t \right) = A \left( k \right) \exp \left( - \frac{k_t}{nC_v}k^2t \right)\]
+
+and \[ A \left( k \right) =\tilde{T} \left( k,t=0 \right) = \frac{1}{2\pi} \int^{\infty}_{-\infty} T^{\prime} \left( x,0 \right) e^{-ikx}\:dx = \frac{1}{2\pi}\]
+
+\[T^{\prime} \left( x,t \right) = \int^{\infty}_{-\infty} \frac{1}{2\pi} \exp \left( \frac{k_t}{nC_v}k^2t \right) \exp \left( ikx \right)\: dk = \frac{1}{\sqrt{4\pi \left( \frac{k_t}{nC_v} \right)t}} \exp \left( -\frac{x^2}{4 \left( \frac{k_t}{nC_v} \right)t} \right)\]
+
+Physically, this solution corresponds to a pulse of excess energy plused at $x=0$ at time $t=0$. As $t$ increases, it then spreads out and eventually the rod's temperature become uniform.
+*** 1.69
+By the same token, we have $\frac{\partial n \left( x,t \right)}{\partial t}= D \frac{\partial^2 n \left( x,t \right)}{\partial x^2}$ for small particles diffusing through ideal gas ( D is independent of $x$). we again have $n \left( x,t \right)=\frac{N_{tra}}{\sqrt {4\pi Dt}}e^{-\frac{x^2}{4Dt}}$. $N_{tra}$ total number of tracer particles, $n \left( xmt \right)$ number density of tracer particles. Note that, for diffution of ideal gas, $D$ is a function of $x$. Hence $\frac{\partial n \left( x,t \right)}{\partial t}= \frac{\partial}{\delta x} \left[ D \left( x \right) \frac{\partial n \left( x,t \right)}{\partial x} \right]$. $n \left( x,t \right)$ number ofdensity of gas molecules.
+
+1.59 1.65 1.67
+
+* The Second Law of Thermodynamics
 
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
