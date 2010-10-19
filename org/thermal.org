@@ -295,7 +295,35 @@ By the same token, we have $\frac{\partial n \left( x,t \right)}{\partial t}= D 
 1.59 1.65 1.67
 
 * The Second Law of Thermodynamics
+* Statistical interpretation of entropy
+** Foundation of statistical mechanicals
+*** Boltzmann's hypothesis
+- equal probability, a priori:
+ An isolated system samples every accessibla microstate with equal probability. For an isolated system =, the mose provbable macrostate (the quilibrium state) is the one with the lqrgest number of microstates.
+- By denoting $\Omega$ as the number of microstates compatible with the macroscopic constraints, Boltzmann conjectured $S=f (\Omega)$ and $f$ being a strictly increasing funcrion.
+ In addition: $S$ is additive. $\Omega$ is multiplication.
 
+ If A and B are two independent systems. Namely, $f(\Omega_A,\Omega_B)=f(\Omega_A) f(\Omega_B)$. Then f is a logarithmic function. $S=c \ln \Omega$, $c$ is a constant with the unit $J/k$.
+
+ By emplying the following example, c can be deternined.The isothermal expansion of classical ideal gas. $\Delta S = \int \frac{dQ}{T}=\int \frac{\rho dv}{T}=Nk_B \ln \left( \frac{V_f}{V_i} \right)$ by classical thermaldynamics. In constrast, the mocrostates is denoted by (${p_i,q_i}$, $i=1 \dots 3N$). For isothermal process, the distribution of ${p_i}$ is unchanged. Hence, $\Delta S= c \ln \left[ \frac{\Omega_f}{\Omega_i} \right] = c\ln \left[ \frac{\left( v_f \right)^N}{\left( v_i \right)^N} \right]=N c \ln \left( \frac{v_f}{v_i} \right)$. By assuming c being $k_b$, are perfectly connects the statistical interpretation of $S$ with classical thermodynamics.
+- Is this interpretation contradictory to the time reversal invariance of classical mechanics? The answer is NO. Consider athe diffusion of a gas from a smaller into a larger volume. If one is really able to reverse all momenta in the final state, the process would in fact be reversed. However, this is an event with an incredibly small probability. Since there is only one point in phase space leading to the recersal of the process.
+
+** Statistical calculation of the entropy of a monoatomic ideal gas
+- stirlings approximation
+ for $n\gg 1$. $\ln \left( n! \right) \approx n \ln n - n$.
+- the volume of n-dimensional hypersphere = $\frac{\pi^{n/2}}{\frac{n}{2}\Gamma \left( \frac{n}{2} \right)}R^{n}$.
+
+  derivation
+
+  \[\int^{\infty}_{\infty} dx_1 \dots dx_n \exp \left( -\sum^n_{i-1}x_i^2 \right)=\left( \sqrt{\pi} \right)^n\]
+  \[ \int d\Omega \int^{\infty}_0 r^{n-1} dr e^{-r^2}=\int d\Omega \left[ \int^{\infty}_0 e^{-n} u^{\frac{n}{2}-1}\frac{dn}{2} \right] = \frac{1}{2} \Gamma \left( \frac{n}{2} \right) \int d\Omega\]
+
+  $\Omega$ is solid angle.
+  
+  \[S \: d\Omega - \frac{2\pi^{\frac{n}{2}}}{\Gamma \left( \frac{n}{2} \right)}\]
+  \[\int d\Omega \int^R_0 dr r^{n-1} - \frac{\pi^{\frac{n}{2}}}{\frac{n}{2}\Gamma \left( \frac{n}{2} \right)}R^n\]
+
+- Gibbs paradox
 * The Basic
 - Microcanocical $\left( E,N \right)_{\mathrm{fixed}}$
 - Canonical $\left( T,N \right)_{\mathrm{fixed}}$
