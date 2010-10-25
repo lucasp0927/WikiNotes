@@ -14,6 +14,7 @@ Notes on physics and other stuff.
 - [[file:thermal.org][Thermal Physics]]
 - [[file:relativity.org][Relativity]]
 - [[file:quantum.org][Quantum Mechanics]]
+- [[file:quantumoptics.org][Quantum Optics]]
 - [[file:generalphysics.org][General Physics]]
 - [[file:classicalmechanics.org][Classical Mechanics]]
 - [[file:electromagnetic.org][Electromagnetics]]
