@@ -6,7 +6,34 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 * Atom field interaction semiclassical theory
+** Atom field interaction Hamiltonian
+\[H=\frac{1}{2} \left[ \mathbf{p}-e\mathbf{A} \left( \mathbf{r},t \right) \right]^2+eU \left( \mathbf{r} ,t \right)+V \left( r \right)\]
 
+Where $\mathbf{A}$ and $U$ are the vector and scalar potentials of the external field. $V$ is an electrostatic potential that is normaly the atomic binding potential.
+** Dipole approximation
+\[\mathbf{A} \left( \mathbf{r}_0+\mathbf{r},t \right) = \mathbf{A} \left( t \right) \exp \left[ i\mathbf{k}\cdot \left( \mathbf{r}_0+\mathbf{r} \right) \right] \approx \mathbf{A} \left( t \right)\exp \left( i\mathbf{k}\cdot \mathbf{r}_{0} \right)\]
+\[\mathbf{A} \left( \mathbf{r},t \right)\approx \mathbf{A} \left( \mathbf{r}_0,t \right)\]
+
+In the radiation gauge.
+\[U \left( \mathbf{r},t \right) =0 \] and \[\nabla \cdot \mathbf{A}=0\]
+
+The Schrodinger equation became
+
+\[ \left\{ -\frac{\hbar^2}{2m}\left[ \nabla-\frac{ie}{\hbar}\mathbf{A} \left( \mathbf{r}_0,t \right) \right]^2 \right\}\psi \left( \mathbf{r},t \right)=i\hbar \frac{\delta \psi \left( \mathbf{r},t \right)}{\partial t}\].
+
+To simplify, define $\psi \left( \mathbf{r},t \right)=\exp \left[ \frac{ie}{\hbar}\mathbf{A}\left( \mathbf{r}_0,t \right)\cdot \mathbf{r} \right]\phi \left( \mathbf{r},t \right)$
+
+Plug it in the schrodinger equation and simplify $i\hbar \dot{\phi} \left( \mathbf{r},t \right)= \left[ H_0-H_1 \right]\phi \left( \mathbf{r},t \right)$, where $H_0=\frac{p^2}{2m}+V \left( r \right)$ and $H_1=-e\mathbf{r}\cdot \mathbf{E} \left( \mathbf{r}_0,t \right)$.
+
+/note: skip 5.1.1 5.1.3/
+
+** Interaction of a single two-level atom with a single mode field
+*** Probability method
+The wave function of a two-level atom can be written in the form:
+
+\[ \left| \psi \left( t \right) \right\rangle = C_a \left( t \right) \left| a \right\rangle+C_b \left( t \right) \left| b \right\rangle\]
+
+\[H_0= \left( \left| a \right\rangle \left\langle a \right|+\left| b \right\rangle \left\langle b \right|\right) H_0 \left( \left| a \right\rangle \left\langle a \right|+\left| b \right\rangle \left\langle b \right|\right) = \hbar \omega_a \left| a \right\rangle \left\langle a \right| + \hbar \omega_b \left| b \right\rangle \left\langle b \right|\]
 
 ------
 [[file:index.org][Back to Index]]
