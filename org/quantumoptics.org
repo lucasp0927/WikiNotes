@@ -19,7 +19,7 @@ In the radiation gauge.
 
 The Schrodinger equation became
 
-\[ \left\{ -\frac{\hbar^2}{2m}\left[ \nabla-\frac{ie}{\hbar}\mathbf{A} \left( \mathbf{r}_0,t \right) \right]^2 \right\}\psi \left( \mathbf{r},t \right)=i\hbar \frac{\delta \psi \left( \mathbf{r},t \right)}{\partial t}\].
+\[ \left\{ -\frac{\hbar^2}{2m}\left[ \nabla-\frac{ie}{\hbar}\mathbf{A} \left( \mathbf{r}_0,t \right) \right]^2 \right\}\psi \left( \mathbf{r},t \right)=i\hbar \frac{\delta \psi \left( \mathbf{r},t \right)}{\partial t}\]
 
 To simplify, define $\psi \left( \mathbf{r},t \right)=\exp \left[ \frac{ie}{\hbar}\mathbf{A}\left( \mathbf{r}_0,t \right)\cdot \mathbf{r} \right]\phi \left( \mathbf{r},t \right)$
 
