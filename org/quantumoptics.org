@@ -7,7 +7,7 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 * Atom field interaction semiclassical theory
 ** Atom field interaction Hamiltonian
-\[H=\frac{1}{2} \left[ \mathbf{p}-e\mathbf{A} \left( \mathbf{r},t \right) \right]^2+eU \left( \mathbf{r} ,t \right)+V \left( r \right)\]
+\[H=\frac{1}{2m} \left[ \mathbf{p}-e\mathbf{A} \left( \mathbf{r},t \right) \right]^2+eU \left( \mathbf{r} ,t \right)+V \left( r \right)\]
 
 Where $\mathbf{A}$ and $U$ are the vector and scalar potentials of the external field. $V$ is an electrostatic potential that is normaly the atomic binding potential.
 ** Dipole approximation
@@ -25,6 +25,8 @@ To simplify, define $\psi \left( \mathbf{r},t \right)=\exp \left[ \frac{ie}{\hba
 
 Plug it in the schrodinger equation and simplify $i\hbar \dot{\phi} \left( \mathbf{r},t \right)= \left[ H_0-H_1 \right]\phi \left( \mathbf{r},t \right)$, where $H_0=\frac{p^2}{2m}+V \left( r \right)$ and $H_1=-e\mathbf{r}\cdot \mathbf{E} \left( \mathbf{r}_0,t \right)$.
 
+Note that $\mathbf{A}^2$ is usually small and can be ignored.
+
 /note: skip 5.1.1 5.1.3/
 
 ** Interaction of a single two-level atom with a single mode field
@@ -35,5 +37,57 @@ The wave function of a two-level atom can be written in the form:
 
 \[H_0= \left( \left| a \right\rangle \left\langle a \right|+\left| b \right\rangle \left\langle b \right|\right) H_0 \left( \left| a \right\rangle \left\langle a \right|+\left| b \right\rangle \left\langle b \right|\right) = \hbar \omega_a \left| a \right\rangle \left\langle a \right| + \hbar \omega_b \left| b \right\rangle \left\langle b \right|\]
 
+\begin{eqnarray*}
+  H_1 &=& -exE \left( t \right) \\
+      &=& -e \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle a \right|  \right)x \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle b \right|  \right)\\
+      &=& - \left( P_{ab} \left| a \right\rangle \left\langle b \right| + P_{ba}\left| b \right\rangle  \left\langle a \right|\right)
+\end{eqnarray*}
+
+$\mathcal{P}$ is the matrix element of the electric dipole moment.
+
+Note that $\left\langle a \right|x \left| a \right\rangle$ and $\left\langle b \right|x \left| b \right\rangle$ are zero.
+
+Set $E \left( t \right)=\mathcal{E} \cos \left( \nu t \right)$
+
+So that,
+
+\[ \dot{C_a} = -\omega_a C_a +i \Omega_{R} e^{-i\phi} \cos \left( \nu t \right) C_b\]
+
+
+\[ \dot{C_b} = -\omega_b C_b +i \Omega_{R} e^{i\phi} \cos \left( \nu t \right) C_a\]
+
+Where $\Omega_R=\frac{ \left| \mathcal{P}_{ba} \right| \mathcal{E}}{\hbar}$ is the /Rabi frequency/. $\phi$ is the phase of the dipole matrix element.
+
+Write the equations of motion for the slowly varying amplitudes.
+
+\[C_a = c_a e^{-i\omega_a t}\]
+
+\[C_b = c_b e^{-i\omega_b t}\]
+
+Plug them into $\dot{C_{a}}$.
+
+\[\dot{c_a}=i \frac{\Omega_R}{2}e^{-i\phi}c_b e^{i \left( \omega -\nu \right)t}\]
+
+\[\dot{c_b}=i \frac{\Omega_R}{2}e^{-i\phi}c_a e^{-i \left( \omega -\nu \right)t}\]
+
+Where $\omega=\omega_a-\omega_b$ is the atomic transition frequency. We ignore $\exp \left( \pm i \left( \omega+\nu \right) \right)$, this is called *rotating wave approximation*.
+
+Solutions are
+
+\[c_a \left( t \right) = \left( a_1 e^{i\Omega t/2}+ a_2 e^{-i \Omega t/2} \right) e^{i\Delta t/2}\]
+
+\[c_b \left( t \right) = \left( b_1 e^{i\Omega t/2}+ b_2 e^{-i \Omega t/2} \right) e^{-i\Delta t/2}\]
+
+where $\Delta = \omega-\nu$ and $\Omega=\sqrt{\Omega_R^2+ \left( \omega-\nu \right)^{2}}$.
+*** Interaction Picture
+*interaction picture* in which we assign to the state vector the time dependence due only to the interaction energy.
+
+\[\left| \Psi \left( t \right) \right\rangle = U_0 \left( t \right) \left| \Psi_I \left( t \right) \right\rangle\]
+
+where \[U_0 \left( t \right) = \exp \left( - \frac{i}{\hbar} \mathcal{H}_0 t \right)\]
+
+plug $\left| \Psi \left( t \right) \right\rangle$ back to the schrodinger equation:
+
+\[\frac{\partial}{\partial t} \left| \Psi_I \left( t \right) \right\rangle =U^{\dagger}_0 \left( t \right) \left( -\frac{i}{\hbar}\mathcal{H}_{1}\right)U_0 \left( t \right) \left| \Psi_I \left( t \right) \right\rangle  = - \frac{i}{\hbar} \mathcal{V} \left( t \right) \left| \Psi_I \left( t \right) \right\rangle\]
 ------
 [[file:index.org][Back to Index]]
