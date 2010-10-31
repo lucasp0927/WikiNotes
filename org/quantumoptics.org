@@ -40,10 +40,10 @@ The wave function of a two-level atom can be written in the form:
 \begin{eqnarray*}
   H_1 &=& -exE \left( t \right) \\
       &=& -e \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle a \right|  \right)x \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle b \right|  \right)\\
-      &=& - \left( P_{ab} \left| a \right\rangle \left\langle b \right| + P_{ba}\left| b \right\rangle  \left\langle a \right|\right)
+      &=& - \left( \mathcal{P}_{ab} \left| a \right\rangle \left\langle b \right| + \mathcal{P}_{ba}\left| b \right\rangle  \left\langle a \right|\right)E \left( t \right)
 \end{eqnarray*}
 
-$\mathcal{P}$ is the matrix element of the electric dipole moment.
+$\mathcal{P}_{ab}=e \left\langle a \right|x \left| b \right\rangle$ is the matrix element of the electric dipole moment.
 
 Note that $\left\langle a \right|x \left| a \right\rangle$ and $\left\langle b \right|x \left| b \right\rangle$ are zero.
 
@@ -82,12 +82,61 @@ where $\Delta = \omega-\nu$ and $\Omega=\sqrt{\Omega_R^2+ \left( \omega-\nu \rig
 *** Interaction Picture
 *interaction picture* in which we assign to the state vector the time dependence due only to the interaction energy.
 
-\[\left| \Psi \left( t \right) \right\rangle = U_0 \left( t \right) \left| \Psi_I \left( t \right) \right\rangle\]
+\[\left| \psi \left( t \right) \right\rangle = U_0 \left( t \right) \left| \psi_I \left( t \right) \right\rangle\]
 
 where \[U_0 \left( t \right) = \exp \left( - \frac{i}{\hbar} \mathcal{H}_0 t \right)\]
 
-plug $\left| \Psi \left( t \right) \right\rangle$ back to the schrodinger equation:
+And \[\frac{\partial U_0}{\partial t} = \frac{-i}{\hbar} H_0 U_0\]
+ 
+plug $\left| \psi \left( t \right) \right\rangle$ back to the schrodinger equation:
 
-\[\frac{\partial}{\partial t} \left| \Psi_I \left( t \right) \right\rangle =U^{\dagger}_0 \left( t \right) \left( -\frac{i}{\hbar}\mathcal{H}_{1}\right)U_0 \left( t \right) \left| \Psi_I \left( t \right) \right\rangle  = - \frac{i}{\hbar} \mathcal{V} \left( t \right) \left| \Psi_I \left( t \right) \right\rangle\]
+\[\frac{\partial}{\partial t} \left| \psi_I \left( t \right) \right\rangle =U^{\dagger}_0 \left( t \right) \left( -\frac{i}{\hbar}\mathcal{H}_{1}\right)U_0 \left( t \right) \left| \psi_I \left( t \right) \right\rangle  = - \frac{i}{\hbar} \mathcal{V} \left( t \right) \left| \psi_I \left( t \right) \right\rangle\]
+
+$\mathcal{V}$ is the *interaction picture Hamiltonian*.
+
+An operator in the schrodinger picture can be transform by $\mathcal{O}_I=U_o^{\dagger} \left( t \right) \mathcal{O} U_0 \left( t \right)$.
+
+\[U_I \left( t \right) = \mathcal{T} \left\{ e^{-\frac{i}{\hbar}\int^t_0\mathcal{V} \left( \tau \right)\: d\tau } \right\}\]
+
+*** Example of interaction picture
+\[U_0 \left( t \right) = e^{-i \omega_a t} \left| a \right\rangle \left\langle a \right| + e^{-i \omega_b t} \left| b \right\rangle \left\langle b \right|\]
+
+The interaction Hamiltonian:
+
+\begin{eqnarray*}
+\mathcal{V} \left( t \right) &=& -\frac{\hbar}{\mathcal{E}} \Omega_R U_0^{\dagger} \left( e^{-i \phi}\left| a \right\rangle \left\langle b \right| + e^{i\phi}\left| b \right\rangle \left\langle a \right|\right)U_0 \left( t \right) \mathcal{E}\cos \nu t\\
+  &=& -\frac{\hbar \Omega_R}{2} \left[ e^{-i\phi} \left| a \right\rangle  \left\langle b \right| e^{i\Delta t}+e^{i\phi}\left| b \right\rangle \left\langle a \right| e^{-i\Delta t}+e^{-i\phi} \left| a \right\rangle \left\langle b \right|e^{i \left( \omega+\nu \right)t}+e^{i\phi}\left\langle b \right| \left| a \right\rangle e^{-i \left( \omega+\nu \right)t}\right]
+\end{eqnarray*}
+
+where $\Delta=\omega-\nu$. Apply rotating wave approximation, and assume $\Delta = 0$ (resonance):
+
+\[ \mathcal{V} = - \frac{\hbar \Omega_R}{2} \left( e^{-i \phi} \left| a \right\rangle  \left\langle b \right|+e^{i\phi} \left| b \right\rangle \left\langle a \right|\right)\]
+
+Use time ordering intergration, obtain $U_I \left( t \right) = \cos \left( \frac{\Omega_R t}{2}\right) \left( \left| a \right\rangle \left\langle a \right|+\left| b \right\rangle \left\langle b \right| \right)+i \sin \left( \frac{\Omega_R t}{2} \right) \left( e^{-i\phi}\left| a \right\rangle \left\langle b \right| +e^{i\phi} \left| b \right\rangle \left\langle a \right|\right)$
+
+/ask 5.2.27 why ignore U_0/
+
+*** Density matrix for a two-level atom
+Density matrix $\rho = \sum_{\psi}\mathbf{P}_{\psi}\left| \psi \right\rangle \left\langle \psi \right|$
+
+- Equation of motion for the density matrix
+
+ \[\dot{\rho}=\sum_{\psi} \mathbf{P}_{\psi} \left( \left| \dot{\psi} \right\rangle \left\langle \psi \right|+\left| \psi \right\rangle \left\langle \dot{\psi} \right|\right) \]
+
+ Replace $\left| \dot{\psi} \right\rangle$ with schrodinger equation.
+
+ \[\dot{\rho} = - \frac{i}{\hbar} \left[ \mathcal{H},\rho \right]\]
+
+ Lioville or Von Neumann equation of motion for the density matrix. Give statistical as well as quantum mechanics information. In this equation we have not included the decay of the atomic levels due to spontaneous emission. The sxcited atomic levels can also decay because of collisions and other phenomena. The finite lifetime of the atomic levels can be described very well by adding phenomenological decay terms to the density operator equation. the decay rates can be incorporated by a relaxation matrix $\Gamma$.
+
+ \[ \left\langle n \right| \Gamma \left| m \right\rangle = \gamma_n \delta_{nm}\]
+
+ \[\dot{\rho} = \frac{-i}{\hbar} \left[ \mathcal{H},\rho \right]-\frac{1}{2} \left\{ \Gamma,\rho \right\}\]
+
+ The element of matrix density:
+
+ \[\dot{\rho}_{ij} = -\frac{i}{\hbar} \sum_k \left( \mathcal{H}_{ik} \rho_{kj}-\rho_{ik}\mathcal{H}_{kj} \right)-\frac{1}{2} \sum_k \left( \Gamma_{ik}\rho_{kj}+\rho_{ik}\Gamma_{kj} \right)\]
+
+
 ------
 [[file:index.org][Back to Index]]
