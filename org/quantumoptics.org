@@ -137,6 +137,5 @@ Density matrix $\rho = \sum_{\psi}\mathbf{P}_{\psi}\left| \psi \right\rangle \le
 
  \[\dot{\rho}_{ij} = -\frac{i}{\hbar} \sum_k \left( \mathcal{H}_{ik} \rho_{kj}-\rho_{ik}\mathcal{H}_{kj} \right)-\frac{1}{2} \sum_k \left( \Gamma_{ik}\rho_{kj}+\rho_{ik}\Gamma_{kj} \right)\]
 
-
 ------
 [[file:index.org][Back to Index]]

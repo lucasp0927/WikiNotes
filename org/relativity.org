@@ -21,7 +21,7 @@ x^{3}(t)\\
 \end{equation*}
 
 **** Definition
-Define $\mathbf{U}=\frac{dx}{d\tau}$,$\tau$ is proper time.
+Define $\mathbf{U}=\frac{dx}{d\tau}$, $\tau$ is proper time.
 
  $x^{0}=ct=c\gamma\tau$, $U^{0}=\frac{dx^{0}}{d\tau}=c\gamma$.
 

@@ -10,7 +10,7 @@
 ** Logrithm
 \[\ln z=\log_e|z|+i(\theta+2n\pi)\]
 
-\[\mathrm{Ln}\: z=\log_e|z|+i\mathrm{Arg}(z)\]\\
+\[\mathrm{Ln}\: z=\log_e|z|+i\mathrm{Arg}(z)\]
 Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 ** Sinosoid
 \[\sin z=(e^{iz}-e^{-iz})/2i\]
@@ -61,7 +61,8 @@ Undefined at $z=0$, discontinuous at $z<0$ (because of $\mathrm{Arg}(z)$)
 \[\cos (iz) = \cosh z\]
 
 * Cauchy-Riemann Condition
-Suppose $f(z)=u(x,y)+iv(x,y)$ is differentiable at a point $z=x+iy$, then:\\
+Suppose $f(z)=u(x,y)+iv(x,y)$ is differentiable at a point $z=x+iy$, then:
+
 $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$ and $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
 ** Criterion for Analyticity
 Suppose $u(x,y)$ and $v(x,y)$ are _continuous_ and have _continuous first-order partial derivatives_ in domain $D$.  If $u$ and $v$ satisfy the Cauchy-Riemann eqations at _all points_ of $D$, then the complex function $f(z)=u(x,y)+iv(x,y)$ is analytic in $D$.
@@ -77,7 +78,7 @@ Suppose $f(z)=u(x,y)+iv(x,y)$ is analytic in a domain $D$.  Then the functions $
 * Cauchy Intergral Formula
 Let $f$ be analytic in a simply connected domain $D$, and let $C$ be a simple closed contour lying entirely within D.  If $z_0$ is any point within $C$, then
 
-\[f(z_0)=\frac{1}{2\pi i}\oint _{C} \frac{f(z)}{z-z_{0}}dz\]\\
+\[f(z_0)=\frac{1}{2\pi i}\oint _{C} \frac{f(z)}{z-z_{0}}dz\]
 
 ** Derivative 
 \[f^{(n)}(z_{0})=\frac{n!}{2\pi i}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}dz\]
