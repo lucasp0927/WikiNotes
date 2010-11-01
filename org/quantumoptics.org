@@ -165,6 +165,7 @@ plug in the Hamiltonians,
 where $\gamma_{ab}=\frac{\left( \gamma_a+\gamma_b \right)}{2}$ and /c.c is the complex conjugate./
 
 * Coherent trapping - dark states
+#+attr_html: width="50%"
 [[./img/darkstates.png]]
 
 - Hamiltonians
@@ -200,6 +201,7 @@ The population is /trapped/ in the lower states.
 * Electromagnetically induced transparency
 Electromagnetically induced transparency (EIT) in which interference is introduced by driving the upper two levels of a three level atomic system with a strong coherent field. As the figure shows under appropriate conditions, the medium becomes effectively transparent for a probe field. Levels $\left| a \right\rangle$ and $\left| b \right\rangle$ are coupled by a probe field of amplitude $\mathcal{E}$ and frequency $\nu$, whose dispersion and absorption are interested in. $\left| a \right\rangle$ and $\left| c \right\rangle$ are coupled by a strong coherent field of frequency $\nu_{\mu}$. With Rabi frequency $\Omega_{\mu}e^{-i\phi_{\mu}}$.
 
+#+attr_html: width="30%"
 [[./img/eit.png]]
 
  \[\mathcal{H}=\mathcal{H}_0+\mathcal{H}_1\]
