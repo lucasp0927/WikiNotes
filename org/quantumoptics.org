@@ -127,7 +127,7 @@ Density matrix $\rho = \sum_{\psi}\mathbf{P}_{\psi}\left| \psi \right\rangle \le
 
  \[\dot{\rho} = - \frac{i}{\hbar} \left[ \mathcal{H},\rho \right]\]
 
- Lioville or Von Neumann equation of motion for the density matrix. Give statistical as well as quantum mechanics information. In this equation we have not included the decay of the atomic levels due to spontaneous emission. The sxcited atomic levels can also decay because of collisions and other phenomena. The finite lifetime of the atomic levels can be described very well by adding phenomenological decay terms to the density operator equation. the decay rates can be incorporated by a relaxation matrix $\Gamma$.
+ Lioville or Von Neumann equation of motion for the density matrix. Give statistical as well as quantum mechanics information. In this equation we have not included the decay of the atomic levels due to spontaneous emission. The excited atomic levels can also decay because of collisions and other phenomena. The finite lifetime of the atomic levels can be described very well by adding phenomenological decay terms to the density operator equation. the decay rates can be incorporated by a relaxation matrix $\Gamma$.
 
  \[ \left\langle n \right| \Gamma \left| m \right\rangle = \gamma_n \delta_{nm}\]
 
@@ -198,7 +198,7 @@ If $\omega_{R1}=\Omega_{R2}$, $\left| \psi \left( 0 \right) \right\rangle=\frac{
 The population is /trapped/ in the lower states.
 
 * Electromagnetically induced transparency
-Electromagnetically induced transparency (EIT) in which interference is introduced by driving the upper two levels of a three level atomic system with a strong coherent field. As the figure shows under appropriate conditions, the medium beomes effectively transparent for a probe field. Levels $\left| a \right\rangle$ and $\left| b \right\rangle$ are coupled by a probe field of amplitude $\mathcal{E}$ and frequency $\nu$, whose dispersion and absorption are interested in. $\left| a \right\rangle$ and $\left| c \right\rangle$ are coupled by a strong coherent field of frequency $\nu_{\mu}$. With Rabi frequency $\Omega_{\mu}e^{-i\phi_{\mu}}$.
+Electromagnetically induced transparency (EIT) in which interference is introduced by driving the upper two levels of a three level atomic system with a strong coherent field. As the figure shows under appropriate conditions, the medium becomes effectively transparent for a probe field. Levels $\left| a \right\rangle$ and $\left| b \right\rangle$ are coupled by a probe field of amplitude $\mathcal{E}$ and frequency $\nu$, whose dispersion and absorption are interested in. $\left| a \right\rangle$ and $\left| c \right\rangle$ are coupled by a strong coherent field of frequency $\nu_{\mu}$. With Rabi frequency $\Omega_{\mu}e^{-i\phi_{\mu}}$.
 
 [[./img/eit.png]]
 
@@ -207,5 +207,55 @@ Electromagnetically induced transparency (EIT) in which interference is introduc
  \[\mathcal{H}_0=\hbar\omega_a \left| a \right\rangle \left\langle a \right| + \hbar \omega_b \left| b \right\rangle \left\langle b \right|+\hbar\omega_c \left| c \right\rangle \left\langle c \right|\]
 
  \[\mathcal{H}_1=-\frac{\hbar}{2} \left( \frac{\mathcal{P}_{ab}\mathcal{E}}{\hbar}e^{-i\nu t} \left| a \right\rangle \left\langle b \right|+\Omega_{\mu}e^{-i\phi_{\mu}}e^{-i \nu_{\mu}t} \left| a \right\rangle \left\langle c \right|\right)+ \mathrm{H.c}\]
+
+Assume $\rho_{bb}^{\left( 0 \right)}=1$, $\rho_{aa}^{(0)}=\rho_{cc}^{(0)}=\rho_{ca}^{(0)}=0$. And substitite:
+
+\[\rho_{ab}=\tilde{\rho}_{ab}e^{-i\nu t}\]
+
+\[\rho_{cb}=\tilde{\rho}_{cb}e^{-i \left( \nu+\omega_{ca} \right)t}\]
+
+We get
+
+\[ \dot{\mathbf{R}} = -\mathbf{M}\mathbf{R}+\mathbf{A}\]
+
+Where
+
+\[\mathbf{R}= \left( \begin{array}{c}
+\tilde{\rho}_{ab}\\
+\tilde{\rho}_{cb} \end{array} \right)\]
+
+\[\mathbf{M}= \left( 
+\begin{array}{cc}
+\gamma_1+i\Delta&-\frac{1}{2}\Omega_{\mu}e^{-i\phi_{\mu}}\\
+-\frac{1}{2}\Omega_{\mu}e^{i\phi_{\mu}}&\gamma_3+i\Delta
+\end{array}
+ \right)\]
+
+\[\mathbf{A}=
+\left( 
+\begin{array}{c}
+i\mathcal{P}_{ab}\mathcal{E}/2\hbar\\
+0
+\end{array}
+ \right)\]
+
+And then intergrating 
+
+\begin{eqnarray*}
+R \left( t \right) &=& \int^t_{-\infty} e^{-\mathbf{M} \left( t-t^{\prime} \right)}A\: dt^{\prime}\\
+&=& \mathbf{M}^{-1}\mathbf{A}
+\end{eqnarray*}
+
+\[\rho_{ab} \left( t \right) = \frac{i \mathcal{P}_{ab}\mathcal{E}e^{-i\nu t} \left( \gamma_3+i\Delta \right)}{2\hbar \left[ \left( \gamma_1+i\Delta \right) \left( \gamma_3+i\Delta \right)+\Omega_{\mu}^2/4 \right]}\]
+
+real part of complex susceptibility
+
+\[\chi^{\prime} = \frac{N_a \left| \mathcal{P}_{ab} \right|^2\Delta}{\epsilon_0\hbar Z} \left[ \gamma_3 \left( \gamma_1+\gamma_3 \right) + \left( \Delta^2-\gamma_1\gamma_3 - \Omega_{\mu}^2/4 \right) \right]\]
+
+\[\chi^{\prime \prime} = \frac{N_a \left| \mathcal{P}_{ab} \right|^2\Delta}{\epsilon_0\hbar Z} \left[ \Delta^{2} \left( \gamma_1+\gamma_3 \right) -\gamma_{3} \left( \Delta^2-\gamma_1\gamma_3 - \Omega_{\mu}^2/4 \right) \right]\]
+
+Where $N_a$ is the atom number density and 
+
+\[Z=\left( \Delta^2-\gamma_{1}\gamma_3-\Omega_{\mu}^2/4 \right)^2+\Delta^2 \left( \gamma_{1}+\gamma_3 \right)^2\]
 ------
 [[file:index.org][Back to Index]]

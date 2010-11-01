@@ -43,7 +43,7 @@ The collective kinetic and potential energies associated with the random motions
 *** Heat
 the transferred internal energy between the system and the environment without doing macroscopic work.
 
-$Q>0$: The heat absorbed by the system from the environment ($T_{sys}<T_{env}$).
+$Q>0$: The heat absorbed by the system from the environment $T_{sys}<T_{env}$.
 
 $W>0$: The positive work done by the system on the environment.
 
