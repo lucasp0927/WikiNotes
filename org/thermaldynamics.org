@@ -1,0 +1,328 @@
+#+TITLE: Thermaldynamics
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+OPTIONS: toc:2
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Classical Thermodynamics
+- Object: complex system
+- Goal: macroscopic properties out of the collective behavior of many constituent particles.
+
+* The zeroth, first, second laws of thermodynamics
+
+** The zeroth Law of Thermodynamics
+- Goal: to give temperature a fundemental physical meaning.
+- Statement: If bodies A and B are each in thermal equilibruim with a third body C, then thdy are in thermal equilibrium with each other.
+Hence these systems have a common intensive quantity, the temperature (T).
+
+Furthermore, the kinetic theory of gases gives temperature a microscopic meaning.
+
+*** Derivation
+Assumption:
+- No potential between gas molecules 
+- molecular volume being negligible
+- elastic collisions between the gas molecules and the walls
+\[F_i=\frac{\Delta P_{xi}}{\Delta t}=\frac{2mv_{xi}}{2L/v_{xi}}=\frac{mv_{xi}^2}{L}\]
+\[P=\frac{\sum_iF_i}{L^2}=\frac{m}{L^2}\left( \sum_iv_{xi}^2 \right) = \frac{m}{V}\bar{v_x^2}\]
+
+where V is volume, n is molar number, M is molar mass, N is molecular number, m is molecular mass.
+
+Assume isotropicity, \[P-\frac{nM}{3V}\bar{v^{2}}=\frac{nM}{3V}v_{rms}^2\]
+So, \[v_{rms}^2=3 \left( \frac{pV}{nM} \right) = 3 \left( \frac{RT}{M} \right)\]
+
+R is the gas constant
+
+Hebce, the temperature is a macroscopic observable quantity characterizing the microscopic property.
+the meansquare speed, of ideal-gas systems.
+** Internal energy
+The collective kinetic and potential energies associated with the random motions of the atoms, molecules and other microscopic bodies within an object.
+
+** The first law of thermodynamics:
+\[\Delta E_{int}= Q-W\] assuming $\Delta U=\Delta K = 0$. (Both macroscopic).
+*** Heat
+the transferred internal energy between the system and the environment without doing macroscopic work.
+
+$Q>0$: The heat absorbed by the system from the environment ($T_{sys}<T_{env}$).
+
+$W>0$: The positive work done by the system on the environment.
+
+If the thermodynamics process is quasistatic, the system is wlways in approximate thermodynamics equilibrium and in any intermediate state the system has well-defined (PVT). We can plot the whole process on the PV diagram.
+
+* Some properties of ideal gas
+** Specific heat
+\[C_v = \frac{Q}{n\Delta T}\big| _{n,v,\Delta T \Rightarrow 0} = \frac{\Delta E_{int}}{n \Delta T} \big| _{\Delta T \Rightarrow 0} \]
+
+\[C_p = \frac{Q}{n \Delta T} \big| _{n,P,\Delta T \Rightarrow 0} = \frac{\Delta E _{int}+P\Delta v }{n \Delta T}\big| _{\Delta T \Rightarrow 0} = C_v+R\]
+
+** Average translational kinetic energy per molecule
+   \[\bar{K_{tra}}=\frac{1}{2}v\bar{v^2}=\frac{1}{2}m \left( \frac{3RT}{M} \right) = \frac{3}{2} \left( \frac{R}{N_a} \right)T = \frac{3}{2}kT\]
+
+The equipartition theorem concerns not just translation kinetic energy but all forms of energy which are quadratic function of coordinates or velocities.
+$E_{int}=f \left( \frac{1}{2} RT \right)$ , with f denoting the number of degrees of greedom.
+
+** Adiabatic expansion of compression
+\[\Delta E_{int} = - \int P\:dv\]
+
+\[nC_V\: dT = -P \: dv = \frac{-nRT}{v}dv\]
+
+\[\frac{dT}{T} = - \left( \frac{R}{C_v} \right) \frac{dv}{v}= - \left( \frac{C_p-C_v}{C_v} \right)\frac{dv}{v}=- \left( \gamma - 1 \right) \frac{dv}{v}\]
+
+\[Tv^{\gamma -1}=\mathrm{const}\]
+
+\[pv^{\gamma}=\mathrm{const}\]
+
+** Interesting Problems
+*** Barometric equation (1.16)
+\[\frac{dP}{dz}= - \frac{mg}{kT}P\]
+
+\[ A \left[ P(z) - P(z+dz) \right] = \left( \rho A\:dz \right)g\]
+
+\[\frac{dP}{dz}=-\frac{mP}{kT}g\]
+
+If T is approximately independent of z.
+
+\[P(z)=P(0) e^{-\frac{mg}{kT}z}\]
+
+*** The virial expansion of real gases (1.17)
+\[PV = nRT \left( 1+\frac{B (T)}{\left( \frac{v}{n} \right)}+\frac{C (T)}{ \left( \frac{v}{n} \right)^2}+ \dots \right)\]
+
+A special case: the van der waals equation:
+\begin{eqnarray*}
+ \left( P+\frac{an^2}{v^2} \right) \left( v-nb \right) &=& nRT\\
+ PV &=& nRT \left( \frac{1}{1-b \left( \frac{n}{v} \right)}-\frac{an}{RTv} \right) \approx nRT \left[ 1+\frac{b-\frac{a}{RT}}{\frac{v}{n}}+\frac{b^2}{ \left( \frac{v}{n} \right)^{2}} \right]\\
+B(T) &=& b-\frac{a}{RT}\\
+C(T) &=& b^{2}
+\end{eqnarray*}
+
+For low temperature, $B(T)<0$. For high temperature, $B(T)>0$.
+
+This result is generally true for real gases. It indicates the attractive force dominating at low temperature and the repulsive force dominating at high temperature.
+
+For example $B(T)$ for $N_2$ at 1atm.
+
+| T(k) | B($cm^{2}/mol$) | B(T)/(v/n) |
+|------+-----------------+------------|
+|  100 | -160            | -07019     |
+|  200 | -35             | -0.0021    |
+|  300 | -4.2            | -0.00017   |
+|  400 | 9.0             | 0.00027    |
+|  500 | 16.9            | 0.00041    |
+|  600 | 21.3            | 0.00043    |
+
+By setting $b-\frac{a}{R\cdot 200}=-35$ and $b-\frac{a}{R\cdot 300}=-4.2$, we have $a=145000J\cdot \frac{cm^3}{mol^2}$, and $b=58\frac{cm^3}{mol}$.
+At high temperatures, the van der waals equation is pretty good.
+
+*** bulk modulus for ideal gas (1.39)
+Isothermal bulk modulud=s for ideal gas
+
+\[B=\frac{\Delta P}{-\frac{\Delta v}{v}}\big| _{T,\Delta P \Rightarrow 0} = -v\frac{dP}{dv}\big|_T = \frac{nRT}{v}=P\]
+
+Adiabatic bulk modulus for idal gas
+
+\[B=\frac{\Delta P}{-\frac{\Delta v}{v}}\big| _{q = 0, \Delta P \Rightarrow 0} = -v \frac{d}{dv} \left( \frac{\mathrm{const}}{v^{\gamma}} \right) = \gamma \left( \frac{\mathrm{const}}{v^{\gamma}} \right) = \gamma P\]
+
+For computing the speed of sound, one should use the adiabatic B, due to sound traveling mach faster than heat transfer. Note that $B_{adiabatic}>B_{isothermal}$, since $\gamma = \frac{c_p}{c_v}>1$.
+
+*** 1.40
+If an ideal gas expands.
+
+\[PV^{\gamma}=\mathrm{const},\: TV^{\gamma -1}=\mathrm{const}\]
+
+\[d \left( \ln P \right) = -\gamma d \left( \ln v \right)\]
+
+\[d \left( \ln T \right) = \left( -\gamma -1 \right) d \left( \ln V \right)\]
+
+\[d \left( \ln P \right) = \frac{\gamma}{\gamma -1} d \left( \ln T \right)\]
+
+\[\frac{dT}{dP}= \frac{2}{f+2} \frac{T}{P}\]
+
+if the temperatures gradiant $\frac{dT}{dz}$ exceed a certain crital level, convection will occur, the condition for convection to occure is that the rising air (approximated as adiavate wxpansion and cooling) must remain warmer than the surrouding air.
+
+Assuming $\left| \frac{dT}{dz} \right|$ just at the critical value.
+
+\[\frac{dT}{dp}=\frac{2}{f+2} \left( \frac{T}{P} \right)\]
+
+\[\frac{dP}{dz}=-\frac{mg}{kT}P\]
+
+\[\frac{dT}{dz}=-\frac{2}{f+2} \left( \frac{mg}{k} \right)= -10^{\circ}C/km\]
+
+*** 1.46
+We have a general identity \[\left( \frac{\partial P}{\partial T} \right)_v=\frac{- \left( \frac{\partial v}{\partial T} \right)_P}{\left( \frac{\partial v}{\partial P} \right)_T} = \frac{-\frac{1}{v} \left( \frac{\partial v}{\partial T} \right)_P}{- \frac{1}{v}\left( \frac{\partial v}{\partial P} \right)_T}=\frac{\beta}{\kappa_{T}}\]
+
+For solid and liquid \[\frac{\beta}{\kappa_{T}} \approx 10^6~10^{7} pa/k\]. Hence, to measure $C_v$ of solid or liquid require fairly large pressure!
+
+- Derivation
+set \[f(v,P,T)=0\] as equation of state. \[df=0\]
+
+\[ \left( \frac{\partial f}{\partial v} \right)_{P,T}+ \left( \frac{\partial f}{\partial P} \right)_{v,T} dP+ \left( \frac{\partial f}{\partial T} \right)_{v,P}=0\]
+
+\begin{eqnarray*}
+\left( \frac{\partial f}{\partial T} \right)_{v,P} &=& -\left( \frac{\partial f}{\partial P} \right)_{v,T} \left( \frac{\partial P}{\partial T} \right)_{v}\\
+\left( \frac{\partial f}{\partial P} \right)_{v,T} &=& -\left( \frac{\partial f}{\partial v} \right)_{P,T} \left( \frac{\partial v}{\partial P} \right)_{T}\\
+\left( \frac{\partial f}{\partial T} \right)_{v,P} &=& -\left( \frac{\partial f}{\partial v} \right)_{P,T} \left( \frac{\partial v}{\partial T} \right)_{P}\\
+\end{eqnarray*}
+we get 
+\[\left( \frac{\partial P}{\partial T} \right)_v=- \frac{ \left( \frac{\partial v}{\partial T} \right)_P}{ \left( \frac{\partial v}{\partial P} \right)_{T}}\]
+
+- Other way
+\[dV_1= \left( \frac{\partial v}{\partial T} \right)_P \: dT= \beta v \: dT\]
+
+compensate
+
+\[dv_2 = \left( \frac{\partial v}{\partial P} \right)_T \: dP = -\kappa_T v \: dP\]
+
+\[dv_1+dv_2=0\]
+
+so, \[ \left( \frac{\partial P}{\partial T} \right)_V= \frac{\beta}{\kappa_T}\]
+
+For an ideal gas 
+
+\[ \beta = \frac{1}{v}\cdot \frac{\partial}{\partial T} = \frac{nR}{Pv} = \frac{1}{T}\]
+
+\[\kappa_T= -\frac{1}{v} \frac{\partial}{\partial P} \left( \frac{nRT}{P} \right) = \frac{nRT}{vP^2}= \frac{1}{P}\]
+
+*** More practice 
+1.7,1.8,1.15,1.27,1.28,1.31,1.38,1,43,1.48
+* The kinetic theory of ideal gases
+** Maxwell's molecular velocity distribution
+*** Isotropicity of gases
+Independence of motion in each direction in the probability sence.
+\[P \left( \vec{v} \right) \Rightarrow P_{1} \left( \left| \vec{v} \right| \right) \Rightarrow P_2 \left( v^{2} \right) \]
+
+\[P_2 \left( v_x^2+v_y^2+v_z^2 \right) = P \left( v_x \right) P \left( v_y \right) P \left( v_z \right) \]
+
+exponential form, $P \left( \vec{v} \right) = C \exp \left( av^2 \right)$, because $v\Rightarrow \infty$, $P \left( \vec{v} \right) = 0$, so $a<0$.
+
+after normalize $c= \left( \frac{-a}{\pi} \right)^{\frac{3}{2}}$
+
+with $\frac{RT}{M}=\bar{v_x^{2}}$. We can get $a=-\frac{M}{2RT}$. So \[P \left( \vec{v} \right) \: d\vec{v} = \left( \frac{m}{2\pi RT} \right)^{\frac{3}{2}} \exp \left( -\frac{Mv^2}{2RT} \right) \: d\vec{v}\]
+
+** The mean free path
+\[\lambda = \frac{\mathrm{length \: of\: path}}{\mathrm{number\: of \: collision}} = \frac{\bar{v} \Delta t}{\pi d^2 \bar{v_{rel}} \Delta t \left( \frac{N}{V} \right)}\]
+
+where $d$ is molecular diameter, $\bar{v}$ is average molecular speed, $\bar{v_{rel}}$ is the average relative speed between molecules.
+
+- $\bar{v}=\sqrt{ \frac{8R T}{\pi M}}$ 
+- \[\bar{v_{rel}}= \left( \frac{M}{2\pi RT} \right)^3 \int\int d \vec{v_1}\: d \vec{v_2} \left| \vec{v_1}-\vec{v_2} \right| \exp \left( - \frac{M}{2RT} \left( v_1^2+v_2^2 \right) \right)  \]
+
+ set $v_{av}= \frac{1}{2} \left( v_1 + v_2 \right)$ and $v_{rel}=v_1-v_2$. Then, \[\bar{v_{rel}} = \left[ \left( \frac{2M}{2\pi RT} \right)^{\frac{3}{2}} \int \: d v_{av} \exp \left( -\frac{M}{RT} v_{av}^2 \right) \right] \cdot \left[  \left( \frac{M/2}{2\pi RT} \right)^{\frac{3}{2}} \int dv_{rel} \exp \left( \frac{-M}{4RT} v_{rel}^2 \right) \right] = \sqrt{\frac{8RT}{\pi \left( \frac{M}{2} \right)}}= \sqrt{2} \bar{v}\]
+
+$\lambda = \frac{1}{\sqrt{2} \pi d^2 \left( N/V \right)}$
+
+* Effusion
+A tiny hole is poked in a container full of gas, the gas will start leaking out.
+
+\[ dN = -\int N \left( \frac{A v_x dt}{V}  \right)P \left( \vec{v} \right) \: d\: \vec{v} \]
+
+\[ \frac{dN}{dt}=-N \left( \frac{A}{V} \right) \left( \frac{RT}{2 \pi M} \right)^{\frac{1}{2}}\]
+
+So, \[N \left( t \right) = N \left( 0 \right)  \exp \left( -\frac{t}{\tau} \right)\]. \[\tau = \left( \frac{V}{A} \right) \left( \frac{RT}{2\pi M} \right)^{\frac{1}{2}}\]
+* Rate of process
+** Heat conduction
+Assume $dN \propto \left( \frac{N}{V} \right) T^{1/2}$.
+
+$|\lambda|\lambda|\lambda|$
+
+\begin{eqnarray*}
+dQ &=& \left( dN_1 \right) C_v T_1 - \left( dN_2 \right)C_v T_2\\
+   &=& aT_1^{1/2}C_v T_1 - aT_2^{1/2} C_v T_2\\
+   &=& aT_1^{3/2}C_V \left[  1- \left( 1+\frac{1}{T_1} \frac{dT}{dx} \lambda \right)^{3/2} \right]\: \mathrm{because,}T_2=T_1+\frac{dT}{dx}\lambda\\
+   &\approx& aT^{3/2} C_v \left( -\frac{1}{T_1}\frac{dT}{dx}\lambda \cdot \frac{3}{2} \right)\\
+   &=& -dN_1 C_v \frac{dT}{dx}\lambda\cdot \frac{3}{2}\\
+   &=& -N \left( \frac{A}{V} \right) dt \left( \frac{1}{2} \bar{\left| v_x \right|} \right) C_v \left( \frac{1}{\frac{N}{v}\pi d^2 \sqrt{2}} \right)\frac{dT}{dx}\cdot \frac{3}{2}
+\end{eqnarray*}
+\[k_t=\frac{3C_v}{2 \sqrt{2} \pi d^2} \left( \frac{RT}{2\pi M} \right)^{1/2}\]
+
+** Viscosity
+*Shear stress* is $\frac{\left| F_x \right|}{A}=\eta \left| \frac{d\bar{v_x}}{dz} \right|$.
+*** Viscosity of an ideal gas
+Devide the gas into layers with thickness $\lambda$.
+
+\begin{eqnarray*}
+\frac{ \left| F_x \right|}{A} dt &=& \frac{1}{A} \left| \sum_i dp_{x,i} \right|\\
+                                 &=& \frac{1}{A} \left( dN \right) \left| m \frac{d \bar{v_x}}{dz} \right| \lambda\\
+                                 &=& \frac{1}{A} \left[ N \frac{A}{V} dt \left( \frac{1}{2} \left| \bar{v_z} \right| \right) \right] m \frac{1}{\frac{N}{V} \pi d^2\sqrt{2}} \left| \frac{d \bar{v_x}}{dz} \right| \\
+\end{eqnarray*}
+
+\[ \eta = \frac{m}{\sqrt{2} \pi d^2} \left( \frac{RT}{2\pi M} \right)^{1/2}\]
+
+** Diffusion
+Particle current density: $J_x = -D \frac{dn}{dx}$.
+
+$D \left( \mathrm{diffurion\: coefficient} \right) \approx O \left( 10^{-8} m^2/s \right)$ for $H^{+}$ ions through water at room temperature and 1 atm. $O \left( 10^{-11} m^2/s \right)$ for protens through water at room temperature and 1 atm. $O \left( 10^{-5}m^2/s \right)$ for small molecules diffusing through air at room temperature and 1 atm.
+*** Diffusion of small particle through ideal gas
+The tracer particles $n_{tra} \ll n$ (idea gas). Where $n_{tra}$ is function of $x$ and $n$ is uniform.
+
+Seperate the space int to slab of $\lambda$. 
+\[A \left( J_x \: dt \right) = A dt \left( \frac{1}{2} \bar{\left| v_x \right|} \right) \left( - \frac{dn_{tra}}{dx} \lambda \right)\]
+
+\[D=\frac{1}{2} \lambda \bar{\left|  v_x\right|}=\lambda \left( \frac{kT}{2\pi M_{tra}} \right)^{1/2}\]
+
+\[\lambda = \frac{\bar{v_{tra}}}{n\omega d^2 \bar{v_{relative}}}= \frac{1}{n\pi d^2} \left( \frac{\mathrm{reduced M}}{M_{tra}} \right)^{1/2}= \left( \frac{-k_b T}{P(\mathrm{of\: ideal\: gase})} \right) \frac{2}{\pi d^2} \left( \frac{\mathrm{reduced M}}{M_{tra}} \right)^{1/2}\]
+
+$d$ is average over tracer particle and ideal gas molecule.
+
+\[D \propto \frac{T^{3/2}}{P}\]
+
+** Interesting Exercise
+*** prob 1.62 
+Consider a uniform rod in the $x$ direction.
+
+\[ \left( A \epsilon \right) \frac{nC_v\Delta T}{\Delta t} - A k_t \left( \frac{\Delta T}{\Delta x}\Big|_{x+\frac{1}{2}\epsilon}-\frac{\Delta T}{\Delta x}\Big|_{x-\frac{1}{2}\epsilon} \right)\]
+
+That is, \[\frac{\partial T \left( x,t \right)}{\partial t}- \frac{k_t}{nC_v}\cdot \frac{\partial^2 T \left( x,t \right)}{\partial x^2}\]
+
+$n$ is th number density, $C_v$ specific heat at constant value per molecule. For solid, $\frac{k_t}{nC_v}$ is approximately independent of temperature (around the room temperature scale).
+
+suppose $T \left( x,t=0 \right)=T_0+\delta \left( x \right)$, 
+\[\frac{\partial \tilde{T} \left( k,t \right)}{\partial t}= -k^2 \left( \frac{k_x}{nC_v} \right) \tilde{T_0} \left( k,t \right)\]
+
+with $\tilde{T} \left( k,t \right) = \frac{1}{2\pi} \int ^{\infty}_{-\infty} T^{\prime} \left( x,t \right)e^{-kx} \:dx$ and $T^{\prime} \left( x,t \right) =T \left( x,t \right)-T_{0}$
+
+\[\tilde{T} \left( k,t \right) = A \left( k \right) \exp \left( - \frac{k_t}{nC_v}k^2t \right)\]
+
+and \[ A \left( k \right) =\tilde{T} \left( k,t=0 \right) = \frac{1}{2\pi} \int^{\infty}_{-\infty} T^{\prime} \left( x,0 \right) e^{-ikx}\:dx = \frac{1}{2\pi}\]
+
+\[T^{\prime} \left( x,t \right) = \int^{\infty}_{-\infty} \frac{1}{2\pi} \exp \left( \frac{k_t}{nC_v}k^2t \right) \exp \left( ikx \right)\: dk = \frac{1}{\sqrt{4\pi \left( \frac{k_t}{nC_v} \right)t}} \exp \left( -\frac{x^2}{4 \left( \frac{k_t}{nC_v} \right)t} \right)\]
+
+Physically, this solution corresponds to a pulse of excess energy plused at $x=0$ at time $t=0$. As $t$ increases, it then spreads out and eventually the rod's temperature become uniform.
+*** 1.69
+By the same token, we have $\frac{\partial n \left( x,t \right)}{\partial t}= D \frac{\partial^2 n \left( x,t \right)}{\partial x^2}$ for small particles diffusing through ideal gas ( D is independent of $x$). we again have $n \left( x,t \right)=\frac{N_{tra}}{\sqrt {4\pi Dt}}e^{-\frac{x^2}{4Dt}}$. $N_{tra}$ total number of tracer particles, $n \left( xmt \right)$ number density of tracer particles. Note that, for diffution of ideal gas, $D$ is a function of $x$. Hence $\frac{\partial n \left( x,t \right)}{\partial t}= \frac{\partial}{\delta x} \left[ D \left( x \right) \frac{\partial n \left( x,t \right)}{\partial x} \right]$. $n \left( x,t \right)$ number ofdensity of gas molecules.
+
+1.59 1.65 1.67
+
+* The Second Law of Thermodynamics
+* Statistical interpretation of entropy
+** Foundation of statistical mechanicals
+*** Boltzmann's hypothesis
+- equal probability, a priori:
+ An isolated system samples every accessibla microstate with equal probability. For an isolated system =, the mose provbable macrostate (the quilibrium state) is the one with the lqrgest number of microstates.
+- By denoting $\Omega$ as the number of microstates compatible with the macroscopic constraints, Boltzmann conjectured $S=f (\Omega)$ and $f$ being a strictly increasing funcrion.
+ In addition: $S$ is additive. $\Omega$ is multiplication.
+
+ If A and B are two independent systems. Namely, $f(\Omega_A,\Omega_B)=f(\Omega_A) f(\Omega_B)$. Then f is a logarithmic function. $S=c \ln \Omega$, $c$ is a constant with the unit $J/k$.
+
+ By emplying the following example, c can be deternined.The isothermal expansion of classical ideal gas. $\Delta S = \int \frac{dQ}{T}=\int \frac{\rho dv}{T}=Nk_B \ln \left( \frac{V_f}{V_i} \right)$ by classical thermaldynamics. In constrast, the mocrostates is denoted by (${p_i,q_i}$, $i=1 \dots 3N$). For isothermal process, the distribution of ${p_i}$ is unchanged. Hence, $\Delta S= c \ln \left[ \frac{\Omega_f}{\Omega_i} \right] = c\ln \left[ \frac{\left( v_f \right)^N}{\left( v_i \right)^N} \right]=N c \ln \left( \frac{v_f}{v_i} \right)$. By assuming c being $k_b$, are perfectly connects the statistical interpretation of $S$ with classical thermodynamics.
+- Is this interpretation contradictory to the time reversal invariance of classical mechanics? The answer is NO. Consider athe diffusion of a gas from a smaller into a larger volume. If one is really able to reverse all momenta in the final state, the process would in fact be reversed. However, this is an event with an incredibly small probability. Since there is only one point in phase space leading to the recersal of the process.
+
+** Statistical calculation of the entropy of a monoatomic ideal gas
+- stirlings approximation
+ for $n\gg 1$. $\ln \left( n! \right) \approx n \ln n - n$.
+- the volume of n-dimensional hypersphere = $\frac{\pi^{n/2}}{\frac{n}{2}\Gamma \left( \frac{n}{2} \right)}R^{n}$.
+
+  derivation
+
+  \[\int^{\infty}_{\infty} dx_1 \dots dx_n \exp \left( -\sum^n_{i-1}x_i^2 \right)=\left( \sqrt{\pi} \right)^n\]
+  \[ \int d\Omega \int^{\infty}_0 r^{n-1} dr e^{-r^2}=\int d\Omega \left[ \int^{\infty}_0 e^{-n} u^{\frac{n}{2}-1}\frac{dn}{2} \right] = \frac{1}{2} \Gamma \left( \frac{n}{2} \right) \int d\Omega\]
+
+  $\Omega$ is solid angle.
+  
+  \[S \: d\Omega - \frac{2\pi^{\frac{n}{2}}}{\Gamma \left( \frac{n}{2} \right)}\]
+  \[\int d\Omega \int^R_0 dr r^{n-1} - \frac{\pi^{\frac{n}{2}}}{\frac{n}{2}\Gamma \left( \frac{n}{2} \right)}R^n\]
+
+- Gibbs paradox
+
+
+-----
+[[file:index.org][Back to Index]]

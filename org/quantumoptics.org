@@ -92,7 +92,7 @@ plug $\left| \psi \left( t \right) \right\rangle$ back to the schrodinger equati
 
 \[\frac{\partial}{\partial t} \left| \psi_I \left( t \right) \right\rangle =U^{\dagger}_0 \left( t \right) \left( -\frac{i}{\hbar}\mathcal{H}_{1}\right)U_0 \left( t \right) \left| \psi_I \left( t \right) \right\rangle  = - \frac{i}{\hbar} \mathcal{V} \left( t \right) \left| \psi_I \left( t \right) \right\rangle\]
 
-$\mathcal{V}$ is the *interaction picture Hamiltonian*.
+$\mathcal{V}$ is the *interaction picture Hamiltonian* .
 
 An operator in the schrodinger picture can be transform by $\mathcal{O}_I=U_o^{\dagger} \left( t \right) \mathcal{O} U_0 \left( t \right)$.
 
@@ -116,7 +116,7 @@ Use time ordering intergration, obtain $U_I \left( t \right) = \cos \left( \frac
 
 /ask 5.2.27 why ignore U_0/
 
-*** Density matrix for a two-level atom
+** Density matrix for a two-level atom
 Density matrix $\rho = \sum_{\psi}\mathbf{P}_{\psi}\left| \psi \right\rangle \left\langle \psi \right|$
 
 - Equation of motion for the density matrix
@@ -136,6 +136,68 @@ Density matrix $\rho = \sum_{\psi}\mathbf{P}_{\psi}\left| \psi \right\rangle \le
  The element of matrix density:
 
  \[\dot{\rho}_{ij} = -\frac{i}{\hbar} \sum_k \left( \mathcal{H}_{ik} \rho_{kj}-\rho_{ik}\mathcal{H}_{kj} \right)-\frac{1}{2} \sum_k \left( \Gamma_{ik}\rho_{kj}+\rho_{ik}\Gamma_{kj} \right)\]
+
+** Two-level atom
+State of the system is linear combination of states $\left| a \right\rangle$ and $\left| b \right\rangle$. That is $\left| \psi \right\rangle = C_a \left| a \right\rangle+ C_b \left| b \right\rangle$.
+
+\[\rho = \left| \psi \right\rangle \left\langle \psi \right|\]
+
+So the density matrix elements are:
+
+\[\rho_{aa}= \left| C_a \left( t \right) \right|^{2}\]
+
+\[\rho_{bb}= \left| C_b \left( t \right) \right|^{2}\]
+
+\[\rho_{ab}=C_aC_b^{*}\]
+
+\[\rho_{ba}=\rho_{ab}^{*}\]
+
+Off diagnal element determine the atomic polarization.
+
+plug in the Hamiltonians,
+
+\[\dot{\rho}_{aa}=-\gamma_a\rho_{aa}+\frac{i}{\hbar} \left( \mathcal{P}_{ab}E\rho_{ba}-\mathrm{c.c} \right)\]
+
+\[\dot{\rho}_{bb}=-\gamma_a\rho_{bb}-\frac{i}{\hbar} \left( \mathcal{P}_{ab}E\rho_{ba}-\mathrm{c.c} \right)\]
+
+\[\dot{\rho}_{ab}=-\left( i\omega+\gamma_{ab} \right)\rho_{ab}-\frac{i}{\hbar}\mathcal{P}_{ab}E \left( \rho_{aa}-\rho_{bb} \right)\]
+
+where $\gamma_{ab}=\frac{\left( \gamma_a+\gamma_b \right)}{2}$ and /c.c is the complex conjugate./
+
+* Coherent trapping - dark states
+[[./img/darkstates.png]]
+
+- Hamiltonians
+
+ \[\mathcal{H}=\mathcal{H}_0+\mathcal{H}_1\]
+
+ \[\mathcal{H}_0=\hbar\omega_a \left| a \right\rangle \left\langle a \right| + \hbar \omega_b \left| b \right\rangle \left\langle b \right|+\hbar\omega_c \left| c \right\rangle \left\langle c \right|\]
+
+ \[\mathcal{H}_1=-\frac{\hbar}{2} \left( \Omega_{Rq}e^{-i\phi_1}e^{-i\nu_1 t} \left| a \right\rangle \left\langle b \right|+\Omega_{R2}e^{-i\phi_2}e^{-i\nu_2 t} \left| a \right\rangle \left\langle c \right|\right)+ \mathrm{H.c}\]
+
+ H.c is the conjugate such as $\left| a \right\rangle \left\langle b \right|$ to $\left|  b\right\rangle \left\langle a \right|$, and the coefficient are C.c. The rotational wave approximation is already applied to $\mathcal{H}_1$.
+
+The atomic wave function can be written as \[\left| \psi \left( t \right) \right\rangle=\sum_{j=a,b,c}c_j \left( t \right) e^{-i\omega_j t}\left| j \right\rangle\]
+
+Assume the fields to be resonant with the $\left| a \right\rangle \Rightarrow \left| b \right\rangle$ and the $\left| a \right\rangle \Rightarrow \left| c \right\rangle$ transitions respectively.
+
+\[\dot{c}_a= \frac{i}{2}\left( \Omega_{R1} e^{-i\phi_1} c_b + \Omega_{R2} e^{-i\phi_2}c_c \right)\]
+
+\[\dot{c}_b= \frac{i}{2}\Omega_{R1} e^{i\phi_1}c_a\]
+
+\[\dot{c}_c= \frac{i}{2}\Omega_{R2} e^{i\phi_2}c_a\]
+
+If $\omega_{R1}=\Omega_{R2}$, $\left| \psi \left( 0 \right) \right\rangle=\frac{1}{\sqrt{2}} \left| b \right\rangle+ \frac{1}{\sqrt{2}} e^{-i\theta} \left| c \right\rangle$, and $\phi_1-\phi_2-\theta=\pm \pi$.
+
+\[c_a \left( t \right) = 0\]
+
+\[c_b \left( t \right) = \frac{1}{\sqrt{2}}\]
+
+\[c_c \left( t \right) = \frac{1}{\sqrt{2}} e^{-i\theta}\]
+
+The population is /trapped/ in the lower states.
+
+* Electromagnetically induced transparency
 
 ------
 [[file:index.org][Back to Index]]
