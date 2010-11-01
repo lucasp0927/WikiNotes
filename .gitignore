@@ -1,6 +1,7 @@
 publish/*.html*
 publish/web_physic/*.html*
 publish/ltxpng/
+publish/MathJax/
 publish/header/
 org/*~
 org/\#*
