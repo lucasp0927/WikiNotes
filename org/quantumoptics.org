@@ -173,7 +173,7 @@ where $\gamma_{ab}=\frac{\left( \gamma_a+\gamma_b \right)}{2}$ and /c.c is the c
 
  \[\mathcal{H}_0=\hbar\omega_a \left| a \right\rangle \left\langle a \right| + \hbar \omega_b \left| b \right\rangle \left\langle b \right|+\hbar\omega_c \left| c \right\rangle \left\langle c \right|\]
 
- \[\mathcal{H}_1=-\frac{\hbar}{2} \left( \Omega_{Rq}e^{-i\phi_1}e^{-i\nu_1 t} \left| a \right\rangle \left\langle b \right|+\Omega_{R2}e^{-i\phi_2}e^{-i\nu_2 t} \left| a \right\rangle \left\langle c \right|\right)+ \mathrm{H.c}\]
+ \[\mathcal{H}_1=-\frac{\hbar}{2} \left( \Omega_{R1}e^{-i\phi_1}e^{-i\nu_1 t} \left| a \right\rangle \left\langle b \right|+\Omega_{R2}e^{-i\phi_2}e^{-i\nu_2 t} \left| a \right\rangle \left\langle c \right|\right)+ \mathrm{H.c}\]
 
  H.c is the conjugate such as $\left| a \right\rangle \left\langle b \right|$ to $\left|  b\right\rangle \left\langle a \right|$, and the coefficient are C.c. The rotational wave approximation is already applied to $\mathcal{H}_1$.
 
@@ -198,6 +198,14 @@ If $\omega_{R1}=\Omega_{R2}$, $\left| \psi \left( 0 \right) \right\rangle=\frac{
 The population is /trapped/ in the lower states.
 
 * Electromagnetically induced transparency
+Electromagnetically induced transparency (EIT) in which interference is introduced by driving the upper two levels of a three level atomic system with a strong coherent field. As the figure shows under appropriate conditions, the medium beomes effectively transparent for a probe field. Levels $\left| a \right\rangle$ and $\left| b \right\rangle$ are coupled by a probe field of amplitude $\mathcal{E}$ and frequency $\nu$, whose dispersion and absorption are interested in. $\left| a \right\rangle$ and $\left| c \right\rangle$ are coupled by a strong coherent field of frequency $\nu_{\mu}$. With Rabi frequency $\Omega_{\mu}e^{-i\phi_{\mu}}$.
 
+[[./img/eit.png]]
+
+ \[\mathcal{H}=\mathcal{H}_0+\mathcal{H}_1\]
+
+ \[\mathcal{H}_0=\hbar\omega_a \left| a \right\rangle \left\langle a \right| + \hbar \omega_b \left| b \right\rangle \left\langle b \right|+\hbar\omega_c \left| c \right\rangle \left\langle c \right|\]
+
+ \[\mathcal{H}_1=-\frac{\hbar}{2} \left( \frac{\mathcal{P}_{ab}\mathcal{E}}{\hbar}e^{-i\nu t} \left| a \right\rangle \left\langle b \right|+\Omega_{\mu}e^{-i\phi_{\mu}}e^{-i \nu_{\mu}t} \left| a \right\rangle \left\langle c \right|\right)+ \mathrm{H.c}\]
 ------
 [[file:index.org][Back to Index]]
