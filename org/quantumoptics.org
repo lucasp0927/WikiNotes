@@ -226,20 +226,9 @@ Where
 \tilde{\rho}_{ab}\\
 \tilde{\rho}_{cb} \end{array} \right)\]
 
-\[\mathbf{M}= \left( 
-\begin{array}{cc}
-\gamma_1+i\Delta&-\frac{1}{2}\Omega_{\mu}e^{-i\phi_{\mu}}\\
--\frac{1}{2}\Omega_{\mu}e^{i\phi_{\mu}}&\gamma_3+i\Delta
-\end{array}
- \right)\]
+\[\mathbf{M}= \left(\begin{array}{cc}\gamma_1+i\Delta&-\frac{1}{2}\Omega_{\mu}e^{-i\phi_{\mu}}\\-\frac{1}{2}\Omega_{\mu}e^{i\phi_{\mu}}&\gamma_3+i\Delta\end{array} \right)\]
 
-\[\mathbf{A}=
-\left( 
-\begin{array}{c}
-i\mathcal{P}_{ab}\mathcal{E}/2\hbar\\
-0
-\end{array}
- \right)\]
+\[\mathbf{A}=\left( \begin{array}{c}i\mathcal{P}_{ab}\mathcal{E}/2\hbar\\0\end{array} \right)\]
 
 And then intergrating 
 
