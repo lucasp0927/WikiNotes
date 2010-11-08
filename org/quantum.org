@@ -7,18 +7,15 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 
 * Kets, Bras, and Operators
-$\mathbf{A} \mid a' \rangle =a' \mid a' \rangle$.
-** Dual Correspondence
-$\mid \alpha \rangle \Rightarrow \langle \alpha \mid$
-
-$c_{\alpha}\mid\alpha\rangle + c_{\beta}\mid\beta\rangle\Rightarrow c_{a}^{\star} \langle \alpha\mid+ c_{\beta}^{\star}\langle\beta\mid$
-
 ** Postulate
 - first ::
-$\langle\alpha\mid\beta\rangle=\langle\beta\mid\alpha\rangle^{\star}$
+$\langle\alpha\mid\beta\rangle=\langle\beta\mid\alpha\rangle^{*}$
 
 - Second ::
 $\langle\alpha\mid\alpha\rangle \ge 0$.
+
+** Schwarz And Triangle Inequalities
+\[\left| \left\langle V | W\right\rangle \right| \le \left| V \right| \left| W \right|\]
 
 ** Operators
 $X\mid \alpha\rangle \Rightarrow \langle\alpha\mid X^{\dagger}$, where $X^{\dagger}$ is called *Hermitian adjoint*. A matrix is called hermitian if $X=X^{\dagger}$ .
@@ -32,7 +29,7 @@ $\left(\mid \beta\rangle\langle \alpha\mid \right)\cdot \mid \gamma\rangle = \mi
 Can prove if $X=\langle \alpha\mid\beta\rangle$, $X^{\dagger}=\langle\beta\mid \alpha\rangle$ 
 
 \begin{equation*}
-\langle \beta \mid X \mid \alpha \rangle=\langle \alpha \mid X^{\dagger} \mid \beta \rangle^{\star}
+\langle \beta \mid X \mid \alpha \rangle=\langle \alpha \mid X^{\dagger} \mid \beta \rangle^{*}
 \end{equation*}
 
 
@@ -71,11 +68,6 @@ because, $\langle A \rangle = \Sigma_{a^{\prime}}\Sigma_{a^{\prime \prime}}\lang
 
 ** Spin 1/2 System
 
-* Changes of Basis
-
-* Position, Momentum and Translation
-
-* Wave Function in Position and Momentum Space
 
 -----
 [[file:index.org][Back to Index]]
