@@ -39,7 +39,7 @@ The wave function of a two-level atom can be written in the form:
 
 \begin{eqnarray*}
   H_1 &=& -exE \left( t \right) \\
-      &=& -e \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle a \right|  \right)x \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle b \right|  \right)\\
+      &=& -e \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle b \right|  \right)x \left( \left| a \right\rangle \left\langle a \right| +\left| b \right\rangle \left\langle b \right|  \right) E \left( t \right)\\
       &=& - \left( \mathcal{P}_{ab} \left| a \right\rangle \left\langle b \right| + \mathcal{P}_{ba}\left| b \right\rangle  \left\langle a \right|\right)E \left( t \right)
 \end{eqnarray*}
 
