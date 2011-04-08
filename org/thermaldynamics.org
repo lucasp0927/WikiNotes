@@ -1,4 +1,4 @@
-#+TITLE: Thermaldynamics
+#+TITLE: Thermodynamics
 #+AUTHOR: Lucas Peng
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org

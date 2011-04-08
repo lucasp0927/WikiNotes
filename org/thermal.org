@@ -6,7 +6,7 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
-- [[file:thermaldynamics.org][Thermaldynamics]]
+- [[file:thermaldynamics.org][Thermodynamics]]
 - [[file:statistics.org][Statistics]]
 
 -----
