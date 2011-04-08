@@ -1,0 +1,26 @@
+#+TITLE: Thermodynamic Square
+#+OPTIONS: toc:2
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Thermodynamic Square
+ [[./img/thermosquare.png]]
+
+good physicists have studied under very fine (ambitious) teachers.
+
+** Energy
+\[dU = TdS - PdV\]
+** Helmholtz free energy (F or A)
+\[F = U-TS \]
+\[dF = -SdT-PdV\]
+** Gibbs free energy
+\[G = F+PV = U-TS+PV = \mu N \]
+\[dG = -Sdt + VdP\]
+** Emphalpy
+\[H = U+PV = G+TS\]
+\[dH = SdT + VdP\]
+
+------
+[[file:index.org][Back to Index]]
