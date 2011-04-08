@@ -8,8 +8,8 @@
 Notes on physics and other stuff.
 -----
 * Physics
-** Web of Physics
-- [[file:./web_physic/plan.org][Plan]]
+#** Web of Physics
+#- [[file:./web_physic/plan.org][Plan]]
 ** Lecture notes
 - [[file:thermal.org][Thermal Physics]]
 - [[file:relativity.org][Relativity]]

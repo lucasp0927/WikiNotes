@@ -3,6 +3,7 @@ publish/web_physic/*.html*
 publish/ltxpng/
 publish/MathJax/
 publish/header/
+publish/MathJax_1.0/
 org/*~
 org/\#*
 *.swp
