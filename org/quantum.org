@@ -68,6 +68,13 @@ because, $\langle A \rangle = \Sigma_{a^{\prime}}\Sigma_{a^{\prime \prime}}\lang
 
 ** Spin 1/2 System
 
-
+* Rotation of spin one-half
+** Rotate about z
+\[\left( \begin{array}{cc} e^{i \phi /2}&0 \\  0 & e^{-i\phi /2}\end{array} \right)\]
+** Rotate about x
+\[\left( \begin{array}{cc}  \cos \phi /2  &  i \sin \phi /2 \\ i \sin \phi /2 & \cos \phi /2 \end{array} \right)\]
+** Rotate about z
+\[\left( \begin{array}{cc}  \cos \phi /2 & \sin \phi /2 \\ - \sin \phi /2 & \cos \phi /2 \end{array} \right)\]
 -----
 [[file:index.org][Back to Index]]
+

@@ -1,0 +1,93 @@
+#+TITLE: Statistical Mechanics
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Basic of Thermodynamics
+** Thermal Contact
+System 1 and System 2 in contact. The total multiplicity $\Omega^{(0)}=\Omega_1 \times \Omega_2$. When $\Omega^{(0)}$ max.
+
+\[\frac{\partial \Omega_1 \left( E_1 \right)}{\delta E_1}\Omega_2+\Omega_1 \left( E_1 \right) \frac{\partial \Omega_2 \left( E_2 \right)}{\partial E_2}\cdot \frac{\partial E_2}{\partial E_1}=0 \]
+
+where $\frac{\partial E_2}{\partial E_1}=-1$
+
+\[
+\frac{\partial \ln \left( \Omega_1 \right)}{\partial E_1} = \frac{\partial \ln \left( \Omega_2 \right)}{\partial E_2} = \beta
+ \]
+
+$S=k \ln \Omega$, $\beta = \frac{1}{kT}$. So $\left( \frac{\partial S}{\partial E} \right)_{N,V}=\frac{1}{T}$
+
+[[file:thermodynamic_square.org][Thermodynamic Square]]
+
+** Other contact
+using $dU= TdS-PdV+\mu dN$
+- $\frac{\partial \ln \Omega_1}{\partial E_1}=\frac{\partial \ln \Omega_2}{\partial E_2}=\beta=\frac{1}{kT}$
+- $\frac{\partial \ln \Omega_1}{\partial V_1}=\frac{\partial \ln \Omega_2}{\partial V_2}=\eta=\frac{P}{kT}$
+- $\frac{\partial \ln \Omega_1}{\partial N_1}=\frac{\partial \ln \Omega_2}{\partial N_2}=\eta=\frac{-\mu}{kT}$
+
+** S Centric Equations
+  \[\frac{1}{T} = \frac{\partial S}{\delta E} \]
+  \[\frac{P}{T} = \frac{\partial S}{\delta V} \]
+  \[\frac{\mu}{T} = \frac{-\partial S}{\delta N} \]
+
+** E Centric Equations
+  \[T = \frac{\partial E}{\partial S}\]
+  \[P = T \frac{\partial S}{\partial V} = \frac{\partial S}{\partial V} \times \frac{\partial E}{\partial S} = - \frac{\partial E}{\partial V}\]
+  Using $\frac{\partial x}{\partial y} \frac{\partial y}{\partial z} \frac{\partial z}{\partial x} = -1$.
+  \[\mu = -T \frac{\partial S}{\partial N} = -\frac{\partial S}{\partial N} \times \frac{\partial E}{\partial S} =  \frac{\partial E}{\partial N}\]
+
+** Heat capacity
+\[C_v = \left( \frac{\partial E}{\partial T} \right)_{N,V} = \frac{\partial E}{\partial S} \frac{\partial S}{\partial T} = T \left( \frac{\partial S}{\partial T} \right)_{N,V}\]
+
+\[C_P = \left( \frac{\partial H}{\partial T} \right)_{N,P} = \left( \frac{\partial E+PV}{\partial T} \right)_{N,P} = T \left( \frac{\partial S}{\partial T} \right)_{N,P}\]
+
+** Classic Ideal Gas
+\[\Omega \propto V^N \Rightarrow PV=nkT\]
+
+\[\epsilon = \frac{h^2}{8mL^2} \left( n_x^2+n_y^2+n_z^2 \right)\]
+
+\[n_x^2+n_y^2+n_z^2=\frac{8mV^{2/3}}{h^2}\epsilon = \epsilon^{*}\]
+
+\[\sum_{r=1}^{3N}n_r^2= E^{*}= \frac{8, V^{2/3}E}{h^2}\]
+
+This means that $S \left( N,V,E \right) = S \left( N,V^{2/3}E \right)$. Adiabitic process $S,N$ constant, leads to $V^{2/3}E=\mathrm{constant}$
+
+Now compute the multiplicity of classical ideal gas.
+
+$\Omega_N \left( E^{\star} \right)$ lattice points lying on surface of 3N-D sphere of $\sqrt{E^{\star}}$
+
+$\Sigma_N \left( E^{\star} \right)$ lattice points lying within surface of 3N-D sphere of $\sqrt{E^{\star}}$
+
+\[\Sigma_N \left( E^{\star} \right) = \sum_{E^{\star\prime} < E^{\star}}\Omega_N \left( E^{\star\prime} \right)\]
+
+Volume of multidimension sphere.
+
+\[\Sigma_N \left( E^{\star} \right) = \left( \frac{1}{2} \right)^{3N} \left\{ \frac{\pi^{3N/2}}{\left( \frac{3N}{2} \right)!}{E^{\star}}^{3N/2} \right\}\]
+
+Using stiring approximation.
+
+\[\ln \Sigma \left( N,V,E \right) = N \ln \left( \frac{V}{h^3}\left( \frac{4\pi m E}{3N} \right)^{3/2} \right)+\frac{3}{2}N\]
+
+Counting points in $\Delta E$ range $\Gamma \left( N,V,E,\Delta \right)= \frac{\partial \Sigma}{\partial E}\Delta$.
+
+For $N\gg 1$. $\ln \Gamma = \ln \Sigma$, Surface is growing as fast as volume.
+
+\[S=k\ln \Gamma=k \ln \Sigma =  Nk \ln \left( \frac{V}{h^3}\left( \frac{4\pi m E}{3N} \right)^{3/2} \right)+\frac{3}{2}Nk\]
+
+Now, calculate the properties of classical ideal gas.
+
+\[E=\frac{3h^2N}{4\pi m V^{2/3}} \exp \left( \frac{2S}{3Nk}-1 \right)\]
+
+\[T= \left( \frac{\partial E}{\partial S} \right) \Rightarrow E= \frac{3}{2}NkT\]
+\[P= -\left( \frac{\partial E}{\partial V} \right)\Rightarrow P=\frac{2}{3}\frac{E}{V}\]
+
+** Bibbs paradox
+\[S=k \ln \frac{\Omega}{N!} = S_0-k \ln N +N\]
+
+\[S=k\ln \Gamma=k \ln \Sigma =  Nk \ln \left( \frac{V}{Nh^3}\left( \frac{4\pi m E}{3N} \right)^{3/2} \right)+\frac{5}{2}Nk\]
+
+
+------
+[[file:index.org][Back to Index]]

@@ -12,6 +12,7 @@ Notes on physics and other stuff.
 #- [[file:./web_physic/plan.org][Plan]]
 ** Lecture notes
 - [[file:thermal.org][Thermal Physics]]
+- [[file:statistical_mechanics.org][Statistical Mechanics]]
 - [[file:relativity.org][Relativity]]
 - [[file:quantum.org][Quantum Mechanics]]
 - [[file:quantumoptics.org][Quantum Optics]]
