@@ -259,5 +259,45 @@ Q_N \left( V,T \right) = \int_0^{\infty} e^{-\beta E} g \left( E \right) dE
 
 $Q_N$ is the Laplace transform of $g(E)$.
 
+** The Classical System
+\[
+Q_N \left( V,T \right) = \frac{1}{N! h^{3N}} \int e^{-\beta H \left( q,p \right)}d\omega
+\]
+
+*** Ideal Gas
+\[H = \sum \left( \frac{p_i^2}{2m} \right)\]
+\[
+\begin{eqnarray}
+Q_N &=& \frac{V^N}{N!h^{3N}}\left[ \int_0^{\infty}e^{-p^2/2mkT} \left( 4\pi p^2 dp \right) \right]^N \\
+    &=& \frac{1}{N!} \left[ \frac{V}{h^3} \left( 2\pi mkT \right)^{3/2} \right]^{N}
+\end{eqnarray}
+\]
+
+\[Q_N = \frac{1}{N!} Q_1^N \]
+\[ A = -kT \ln Q_N = NkT \left[ \ln \left\{ \frac{N}{V} \left( \frac{h^2}{2\pi mkT} \right)^{3/2} \right\}-1 \right]\]
+
+*** A System of Harmonic Oscillators (classical)
+
+\[
+H = \frac{1}{2} m \omega^2 q_i^2+\frac{1}{2m} p_i^2
+\] 
+
+\[
+\begin{eqnarray}
+Q_1 \left( \beta \right) &=& \int \int \exp \left\{ -\beta \left( \frac{1}{2} m \omega^2 q_i^2+\frac{1}{2m} p_i^2 \right) \right\} \frac{dp dq}{h}\\
+&=& \frac{1}{\beta \hbar \omega}
+\end{eqnarray}
+\]
+
+\[Q_N \left( \beta \right) = \left( \beta \hbar \omega \right)^{-N}\]
+
+*** A System of Harmonic Oscillators (quantum)
+\[\epsilon_n = \left( n+\frac{1}{2} \right) \hbar \omega\]
+
+\[
+Q_1=\sum_{n=0}^{\infty}e^{-\beta \left( n+1/2 \right)\hbar \omega}= \left\{ 2 \sinh \left( \frac{1}{2}\beta \hbar \omega \right) \right\}^{-1}
+\]
+*** The Statistics of Paramagnetism
+
 ------
 [[file:index.org][Back to Index]]
