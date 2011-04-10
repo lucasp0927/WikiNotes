@@ -131,7 +131,7 @@ In this ensemble the macrostate of a system is defined by N,V and E.
 \left\{
 \begin{array}{rl}
 \rho \left( q,p \right) &=& \mathrm{const}. &\mbox{if $E-\frac{1}{2}\Delta \le H \le E+\frac{1}{2} \Delta$}\\
-&=& = 0 &\mbox{otherwise}
+&=&  0 &\mbox{otherwise}
 \end{array}
 \right.
 \]
@@ -190,5 +190,74 @@ W \left\{ n_r \right\} = \frac{N!}{n_0!n_1!n_2! \dots}
 \[
 \left\langle n_r \right\rangle = \frac{\sum_{\left\{ n_r \right\} n_r W \left( n_r \right) }}{\sum_{\left\{ n_r \right\} W \left\{ n_r \right\} }}
 \]
+
+In the limit of $N\Rightarrow \infty$. These two are the same.
+
+- Canonical distribution
+\[P_r = \frac{\left\langle n_r \right\rangle}{N}=\frac{\exp \left( -\beta E_r \right)}{\sum_r \exp \left( -\beta E_{r} \right)} \]
+
+$\beta$ is determined by the equation
+\[ U=- \frac{\partial}{\partial \beta} \ln \left\{ \sum_r \exp \left( -\beta E_r \right) \right\}\]
+
+** Physical Significance Of The Various Statistical Quantities In The Caconical Ensemble
+\[A = U-TS\]
+\[dA = -SdT-PdV +\mu dN\]
+\[
+\left\{ 
+\begin{array}{rl}
+S &=& -\frac{dA}{dT}\\
+P &=& \underbrace{-\frac{dA}{dV}}_{
+\begin{array}{rl}
+P=-\frac{\sum_{r} \frac{\partial E_r}{\partial V}\exp \left( - \beta E_r \right)}{\sum_r \exp \left( -\beta E_r \right)}\\
+PdV=-\sum_r P_r dE_r = -dU\\
+\end{array}
+}\\
+\mu &=& \frac{dA}{dN}\\
+U &=& A+TS = \underbrace{A - T \frac{\partial A}{\partial T}}_{C_V = \left( \frac{\partial U}{\partial T} \right)_{N,V}=-T \left( \frac{\partial^2 A}{\partial T^2} \right)_{N,V}}=-T^2 \left[ \frac{\partial}{\partial T} \frac{A}{T} \right]= \left[ \frac{\partial \left( A/T \right)}{\partial \left( 1/T \right)} \right]
+\end{array}
+\right.
+\]
+
+Compare,
+\[
+\ln \left\{ \sum_r \exp \left( -\beta E_r \right) \right\}= -\beta A
+\]
+
+- Partition Function
+\[
+\left\{
+\begin{array}{rl} 
+A &=& -kT \ln Q_N \left( V,T \right)\\
+Q_N \left( V,T \right) &=& \sum_r \exp \left( \frac{-E_r}{kT} \right)
+\end{array}
+\right.
+\]
+
+\[P_r = Q^{-1} \exp \left( -\beta E_r \right)\]
+
+With degenerate
+\[
+Q_N = \sum_i g_i \exp \left( -\beta E_i \right)
+\]
+
+- Entropy
+\[\left\langle \ln P_r \right\rangle = - \ln Q -\beta \left\langle E_r \right\rangle = \beta \left( A-U \right) = -S/k\]
+\[S = -k \sum_r P_r \ln P_r \]
+
+for $\Omega$ state all equally likely to occur. $p_r = 1/\Omega$
+
+\[S=-k \sum \left\{ \frac{1}{\Omega} \ln \left( \frac{1}{\Omega} \right) \right\}=k \ln \Omega \]
+
+- Density Of State
+\[
+P \left( E \right)dE =\frac{\exp \left( -\beta E \right) g \left( E \right)dE}{\int \exp \left( -\beta E \right) g \left( E \right)dE}
+\]
+
+\[
+Q_N \left( V,T \right) = \int_0^{\infty} e^{-\beta E} g \left( E \right) dE
+\]
+
+$Q_N$ is the Laplace transform of $g(E)$.
+
 ------
 [[file:index.org][Back to Index]]
