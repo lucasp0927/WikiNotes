@@ -28,16 +28,24 @@ using $dU= TdS-PdV+\mu dN$
 - $\frac{\partial \ln \Omega_1}{\partial N_1}=\frac{\partial \ln \Omega_2}{\partial N_2}=\eta=\frac{-\mu}{kT}$
 
 ** S Centric Equations
-  \[\frac{1}{T} = \frac{\partial S}{\delta E} \]
-  \[\frac{P}{T} = \frac{\partial S}{\delta V} \]
-  \[\frac{\mu}{T} = \frac{-\partial S}{\delta N} \]
-
+\[
+\left\{
+\begin{array}{rl}
+  \frac{1}{T}&=&\frac{\partial S}{\delta E} \\
+  \frac{P}{T}&=&\frac{\partial S}{\delta V} \\
+  \frac{\mu}{T}&=&\frac{-\partial S}{\delta N}\\
+\end{array} \right.
+\]
 ** E Centric Equations
-  \[T = \frac{\partial E}{\partial S}\]
-  \[P = T \frac{\partial S}{\partial V} = \frac{\partial S}{\partial V} \times \frac{\partial E}{\partial S} = - \frac{\partial E}{\partial V}\]
   Using $\frac{\partial x}{\partial y} \frac{\partial y}{\partial z} \frac{\partial z}{\partial x} = -1$.
-  \[\mu = -T \frac{\partial S}{\partial N} = -\frac{\partial S}{\partial N} \times \frac{\partial E}{\partial S} =  \frac{\partial E}{\partial N}\]
-
+\[
+\left\{
+\begin{array}{rl}
+  T &=& \frac{\partial E}{\partial S}\\
+  P &=& T \frac{\partial S}{\partial V} = \frac{\partial S}{\partial V} \times \frac{\partial E}{\partial S} = - \frac{\partial E}{\partial V}\\
+  \mu &=& -T \frac{\partial S}{\partial N} = -\frac{\partial S}{\partial N} \times \frac{\partial E}{\partial S} =  \frac{\partial E}{\partial N}
+\end{array}\right.
+\]
 ** Heat capacity
 \[C_v = \left( \frac{\partial E}{\partial T} \right)_{N,V} = \frac{\partial E}{\partial S} \frac{\partial S}{\partial T} = T \left( \frac{\partial S}{\partial T} \right)_{N,V}\]
 
@@ -88,6 +96,99 @@ Now, calculate the properties of classical ideal gas.
 
 \[S=k\ln \Gamma=k \ln \Sigma =  Nk \ln \left( \frac{V}{Nh^3}\left( \frac{4\pi m E}{3N} \right)^{3/2} \right)+\frac{5}{2}Nk\]
 
+* Elements of Ensemble Theory
+\[
+\left.
+\begin{array}{rl}
+\dot{q}_i&=&\frac{\partial H}{\partial p_i}\\
+\dot{p}_i&=&-\frac{\partial H}{\partial q_i}\\
+\end{array} \right\} i=1,2,3\dots 3N
+\]
 
+- Ensemble Average
+\[
+\left\langle f\right\rangle = \frac{\int f(q,p) \rho (q,p) d^{3N}q d^{3N}p}{\int \rho(q,p) d^{3N}q d^{3N}p}
+\]
+- Stationary State
+\[
+\frac{\partial \rho}{\partial t} = 0
+\]
+
+** Liouville's Theorem
+- Equation of continuity
+\[ \frac{\partial \rho }{\partial t}+\nabla \cdot \left( \rho v \right) = 0\]
+
+\[ \frac{\partial \rho }{\partial t} + \sum_{i=1}^{3N} \left( \frac{\partial \rho}{\partial q_i} \dot{q}_i+ \frac{\partial \rho}{\partial p_i} \dot{p}_i \right)+\rho \sum_{i=1}^{3N}  \underbrace{ \left(\frac{\partial \dot{q}_i}{\partial q_i}+ \frac{\partial \dot{p}_i}{\partial p_i}\right)}_{\frac{\partial \dot{q}_i}{\partial q_i}=\frac{\partial^2 H}{\partial q_i\partial p_i}=-\frac{\partial \dot{p}_i}{\partial p_{i}}}  =0\]
+
+- Liouville's Theorem
+\[ \frac{d \rho}{d t}=\frac{\partial \rho}{\partial t}+ \left[ \rho ,H \right]=0\]
+
+For stationary state ($\rho = \mathrm{const}$): $\left[ \rho ,H \right]=0$. However, other way to satisfy this is $\rho (p,q) = \rho \left( H(p,q) \right)$. The most natural choice in this class of ensembles is $\rho \propto \exp \left( -H/kT \right)$.
+
+* Microcanonical ensemble
+In this ensemble the macrostate of a system is defined by N,V and E.
+\[
+\left\{
+\begin{array}{rl}
+\rho \left( q,p \right) &=& \mathrm{const}. &\mbox{if $E-\frac{1}{2}\Delta \le H \le E+\frac{1}{2} \Delta$}\\
+&=& = 0 &\mbox{otherwise}
+\end{array}
+\right.
+\]
+
+Since the ensemble is a stationaty one, thus $\mbox{the ensemble average}=\mbox{long-time average}$.
+
+** Examples
+- fundamental volume
+
+$\omega_{0}$ equivalent to one microstate.
+\[ \Gamma = \frac{\omega}{\omega_0}\]
+
+*** Classical Ideal Gas
+\[\omega = \int d^{3N}p d^{3N}q\]
+
+- Integrate over $q_{i}$ gives $V^{N}$.
+- $p_{i}$ part
+  \[2m \left( E-\frac{1}{2}\Delta \right) < \sum_{i=1}^{3N}y_i^{2} < 2m \left( E+\frac{1}{2}\Delta \right)\]
+  Using $S_n \left( R \right) = \frac{2\pi^{n/2}}{\Gamma \left( n/2 \right)}R^{n-1}$.
+
+\[\omega = \frac{\Delta}{E}V^N \frac{\left( 2\pi m E \right)^{3N/2}}{\left[ \frac{3N}{2}-1 \right]!} \]
+
+\[\left( \frac{\omega}{\Gamma} \right)_{\mbox{asymp}} = \omega_0=h^{3N}\]
+
+Generally if the system under study has $N$ degrees of freedom, the desired conversion factor is
+\[\omega_0 = h^N\]
+
+* Canonical Ensemble
+Fixed temperature. The macrostate is defined through $N$, $V$ and $T$.
+
+** Equilibrium Between A System And A Heat Reservoir
+System $\left( E_r ; T \right)$
+
+Reservoir $\left( E^{\prime}_r;T \right)$
+
+\[P_r = \frac{\exp \left( -\beta E_r \right)}{\sum_r \exp \left( - \beta E_{r} \right)}\]
+
+** A System in the canonical ensemble
+Consider an ensemble of $N$ identical system. $n_r$ denotes the number of system at time $t$, have the energy value $E_r$, the set of numbers $\left\{ n_r \right\}$ must satisfy the obvious conditions.
+
+\[
+\left\{  
+\begin{array}{rl}
+\sum_r n_r &=& N\\
+\sum_r n_r E_r &=& E = NU
+\end{array}
+\right.
+\] 
+
+\[
+W \left\{ n_r \right\} = \frac{N!}{n_0!n_1!n_2! \dots}
+\]
+
+- Most probable mode $\left\{ n_r^{\star} \right\}$ when $W \left\{ n_r \right\}$ biggest.
+- Average 
+\[
+\left\langle n_r \right\rangle = \frac{\sum_{\left\{ n_r \right\} n_r W \left( n_r \right) }}{\sum_{\left\{ n_r \right\} W \left\{ n_r \right\} }}
+\]
 ------
 [[file:index.org][Back to Index]]
