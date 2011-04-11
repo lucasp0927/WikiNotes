@@ -75,6 +75,97 @@ because, $\langle A \rangle = \Sigma_{a^{\prime}}\Sigma_{a^{\prime \prime}}\lang
 \[\left( \begin{array}{cc}  \cos \phi /2  &  i \sin \phi /2 \\ i \sin \phi /2 & \cos \phi /2 \end{array} \right)\]
 ** Rotate about z
 \[\left( \begin{array}{cc}  \cos \phi /2 & \sin \phi /2 \\ - \sin \phi /2 & \cos \phi /2 \end{array} \right)\]
+
+* Rotational Invariance and Angular Momentum
+\[
+U \left[ R \left( \epsilon_z \mathbf{k} \right) \right] = \mathbf{I} - \frac{i \epsilon_z L_z}{\hbar}
+\]
+
+\[
+\mathbf{L}_z = \mathbf{X}\mathbf{P}_y-\mathbf{Y}\mathbf{P}_{x}
+\]
+
+- Coordinate Basis
+\[
+\mathbf{L}_z = x \left( -i\hbar \frac{\partial}{\partial y} \right)-y \left( -i \hbar \frac{\partial}{\partial x} \right)
+\]
+
+- Momentum Basis
+\[
+\mathbf{L}_z = i\hbar \frac{\partial}{\partial p_x} p_{y}- i \hbar \frac{\partial}{\partial p_y} p_x
+\]
+
+\[
+\mathbf{L}_z = -i\hbar \frac{\partial}{\partial \phi}
+\]
+
+** Eigenvalue of $L_{z}$
+\[
+L_z \left| l_z \right\rangle = l_z \left| l_z \right\rangle
+\]
+\[
+l_z = m\hbar, m=0,\pm 1,\pm 2 \dots
+\]
+
+** Angular Momentum
+\[
+\left[ L_x,L_y \right] = i \hbar L_z
+\]
+
+This imply $\mathbf{L} \times \mathbf{L} = i\hbar \mathbf{L}$.
+
+\[L^2 = L_x^2+L_y^2+L_z^2\]
+
+** Eigenvalue Problem of $L^{2}$ and $L_{z}$
+- Raising and Lower operators
+\[
+L_{\pm}=L_x \pm i L_y
+\]
+
+\[
+\left\{
+\begin{array}
+\mathbf{J}^2 \left| jm \right\rangle &=& j \left( j+1 \right) \hbar^2 \left| jm \right\rangle, &j=0,1/2,1\dots\\
+\mathbf{J}_z \left| jm \right\rangle &=& m\hbar \left| jm \right\rangle, &m=j,j-1,\dots,-j
+\end{array}
+\right.
+\]
+
+\[
+J_{\pm} \left| jm \right\rangle = \hbar \sqrt{\left( j \mp m \right)\left( j \pm m+1 \right)} \left| j,m\pm 1 \right\rangle
+\]
+
+** Finite Rotation
+\[
+D^{(j)}\left[ R \left( \theta \right) \right] = \exp \left[ - \frac{i \theta \cdot \mathbf{J}^{(j)}}{\hbar} \right]
+\]
+
+* Spin
+\[
+\left\{ 
+\begin{array}{rl}
+\mathbf{S} &=& \frac{\hbar}{2}\mathbf{\sigma}\\
+S_x &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&0 &1 \\ &1 &0 \end{array} \right]\\
+S_y &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&0 &-i \\ &i &0 \end{array} \right]\\
+S_z &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&1 &0 \\ &0 &-1 \end{array} \right]
+\end{array}
+\right.
+\]
+
+** Properties of Pauli Matrices
+- anticommute
+\[
+\left[ \sigma_i,\sigma_j \right]_{+}=0
+\]
+- $\sigma_{x}\sigma_{y}=i\sigma_{z}$
+- $\mathrm{Tr} \sigma_{i}=0$
+- $\left( \hat{n}\cdot\mathbf{\sigma}\right)^2=\mathbf{I}$
+- Very useful identity
+\[
+\left( \mathbf{A}\cdot\mathbf{\sigma} \right)\left( \mathbf{B}\cdot\mathbf{\sigma} \right)=\mathbf{A}\cdot \mathbf{B} \mathbf{I}+i \left( \mathbf{A}\times \mathbf{B} \right)\cdot \mathbf{\sigma}
+\]
+
+
 -----
 [[file:index.org][Back to Index]]
 
