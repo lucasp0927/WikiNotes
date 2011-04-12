@@ -73,7 +73,7 @@ because, $\langle A \rangle = \Sigma_{a^{\prime}}\Sigma_{a^{\prime \prime}}\lang
 \[\left( \begin{array}{cc} e^{i \phi /2}&0 \\  0 & e^{-i\phi /2}\end{array} \right)\]
 ** Rotate about x
 \[\left( \begin{array}{cc}  \cos \phi /2  &  i \sin \phi /2 \\ i \sin \phi /2 & \cos \phi /2 \end{array} \right)\]
-** Rotate about z
+** Rotate about y
 \[\left( \begin{array}{cc}  \cos \phi /2 & \sin \phi /2 \\ - \sin \phi /2 & \cos \phi /2 \end{array} \right)\]
 
 * Rotational Invariance and Angular Momentum
@@ -152,6 +152,8 @@ S_z &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&1 &0 \\ &0 &-1 \end{array} \rig
 \right.
 \]
 
+
+
 ** Properties of Pauli Matrices
 - anticommute
 \[
@@ -164,7 +166,34 @@ S_z &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&1 &0 \\ &0 &-1 \end{array} \rig
 \[
 \left( \mathbf{A}\cdot\mathbf{\sigma} \right)\left( \mathbf{B}\cdot\mathbf{\sigma} \right)=\mathbf{A}\cdot \mathbf{B} \mathbf{I}+i \left( \mathbf{A}\times \mathbf{B} \right)\cdot \mathbf{\sigma}
 \]
+** Explicit Forms of Rotation Operation
+\[
+U \left[ R \left( \theta \right) \right] = \exp \left( -i \theta\cdot S /\hbar \right)=\cos \left( \theta /2 \right)\mathbf{I}-i \sin \left( \theta /2 \right)\hat{\theta}\cdot\mathbf{\sigma}
+\]
+* Spin Dynamics
+\[
+\mathbf{T}=\mu\times \mathbf{B}
+\]
+- gyromagnetic ratio
+\[
+\mu=\gamma l, \gamma=\frac{q}{2mc}
+\]
+\[
+H_{int}=-\mu \cdot \mathbf{B}
+\]
+* Addition of Angular Momenta
+- Total angular momentum operator
+\[
+\mathbf{S}=\mathbf{S}_1+\mathbf{S}_{2}
+\]
 
+\[
+\mathbf{S}^2=\left( \mathbf{S}_{1}+\mathbf{S}_{2} \right)\cdot \left( \mathbf{S}_1+\mathbf{S}_{2} \right)  =\mathbf{S}_1^2+\mathbf{S}_2^2+2\mathbf{S}_{1}\cdot \mathbf{S}_2
+\]
+
+\[
+\mathbf{S}_1\cdot \mathbf{S}_2=S_{1z}S_{2z}+\frac{1}{2}\left( S_{1+}S_{2-}+S_{1-}S_{2+} \right)
+\]
 
 -----
 [[file:index.org][Back to Index]]
