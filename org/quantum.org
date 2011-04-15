@@ -116,6 +116,13 @@ This imply $\mathbf{L} \times \mathbf{L} = i\hbar \mathbf{L}$.
 
 \[L^2 = L_x^2+L_y^2+L_z^2\]
 
+\[
+\mathbf{c}=\mathbf{a}\times \mathbf{b}
+\]
+\[
+c_i= \epsilon_{ijk}a_j b_k
+\]
+
 ** Eigenvalue Problem of $L^{2}$ and $L_{z}$
 - Raising and Lower operators
 \[
