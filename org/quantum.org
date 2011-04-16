@@ -131,7 +131,7 @@ L_{\pm}=L_x \pm i L_y
 
 \[
 \left\{
-\begin{array}
+\begin{array}{rl}
 \mathbf{J}^2 \left| jm \right\rangle &=& j \left( j+1 \right) \hbar^2 \left| jm \right\rangle, &j=0,1/2,1\dots\\
 \mathbf{J}_z \left| jm \right\rangle &=& m\hbar \left| jm \right\rangle, &m=j,j-1,\dots,-j
 \end{array}
@@ -145,6 +145,33 @@ J_{\pm} \left| jm \right\rangle = \hbar \sqrt{\left( j \mp m \right)\left( j \pm
 ** Finite Rotation
 \[
 D^{(j)}\left[ R \left( \theta \right) \right] = \exp \left[ - \frac{i \theta \cdot \mathbf{J}^{(j)}}{\hbar} \right]
+\]
+* The Hydrogen Atom
+** The eigenvalue problem
+\[
+\left\{ \frac{d^2}{dr^2}+\frac{2m}{\hbar^2}\left[ E+\frac{e^2}{r}-\frac{l \left( l+1 \right)\hbar^2}{2mr^2} \right] \right\}U_{El}=0
+\]
+
+\[
+\left\{ 
+\begin{array}{rl}
+\Psi_{Elm}&=&\frac{U_{El}}{r}Y^m_l\\
+U_{El}&=&e^{-\rho}v_{El}\\
+v_{El} &=& \rho^{l+1}\sum_{k=0}^{\infty} C_k \rho^{k}\\
+\frac{C_{k+1}}{C_k}&=&\frac{-e^2 \lambda + 2 \left( k+l+1 \right)}{\left( k+l+2 \right)\left( k+l+1 \right)-\left( l+1 \right)l }
+\end{array}
+\right.
+\]
+
+\[
+\left\{
+\begin{array}{rl}
+\rho &=& \sqrt{\frac{2mW}{\hbar^2}}r\\
+\lambda &=& \sqrt{\frac{2m}{\hbar^2W}}\\
+\mathrm{Ry} &=& \frac{me^4}{2\hbar^2}\\
+a_0 &=& \frac{\hbar^2}{me^2}
+\end{array} 
+\right.
 \]
 
 * Spin
