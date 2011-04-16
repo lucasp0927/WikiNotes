@@ -131,10 +131,10 @@ L_{\pm}=L_x \pm i L_y
 
 \[
 \left\{
-\begin{array}{rl}
-\mathbf{J}^2 \left| jm \right\rangle &=& j \left( j+1 \right) \hbar^2 \left| jm \right\rangle, &j=0,1/2,1\dots\\
-\mathbf{J}_z \left| jm \right\rangle &=& m\hbar \left| jm \right\rangle, &m=j,j-1,\dots,-j
-\end{array}
+\begin{eqnarray}
+\mathbf{J}^2 \left| jm \right\rangle =& j \left( j+1 \right) \hbar^2 \left| jm \right\rangle, &j=0,1/2,1\dots\\
+\mathbf{J}_z \left| jm \right\rangle =& m\hbar \left| jm \right\rangle, &m=j,j-1,\dots,-j
+\end{eqnarray}
 \right.
 \]
 
@@ -154,35 +154,35 @@ D^{(j)}\left[ R \left( \theta \right) \right] = \exp \left[ - \frac{i \theta \cd
 
 \[
 \left\{ 
-\begin{array}{rl}
-\Psi_{Elm}&=&\frac{U_{El}}{r}Y^m_l\\
-U_{El}&=&e^{-\rho}v_{El}\\
-v_{El} &=& \rho^{l+1}\sum_{k=0}^{\infty} C_k \rho^{k}\\
-\frac{C_{k+1}}{C_k}&=&\frac{-e^2 \lambda + 2 \left( k+l+1 \right)}{\left( k+l+2 \right)\left( k+l+1 \right)-\left( l+1 \right)l }
-\end{array}
+\begin{eqnarray}
+\Psi_{Elm}=&\frac{U_{El}}{r}Y^m_l\\
+U_{El}=&e^{-\rho}v_{El}\\
+v_{El}=& \rho^{l+1}\sum_{k=0}^{\infty} C_k \rho^{k}\\
+\frac{C_{k+1}}{C_k}=&\frac{-e^2 \lambda + 2 \left( k+l+1 \right)}{\left( k+l+2 \right)\left( k+l+1 \right)-\left( l+1 \right)l }
+\end{eqnarray}
 \right.
 \]
 
 \[
 \left\{
-\begin{array}{rl}
-\rho &=& \sqrt{\frac{2mW}{\hbar^2}}r\\
-\lambda &=& \sqrt{\frac{2m}{\hbar^2W}}\\
-\mathrm{Ry} &=& \frac{me^4}{2\hbar^2}\\
-a_0 &=& \frac{\hbar^2}{me^2}
-\end{array} 
+\begin{eqnarray}
+\rho =& \sqrt{\frac{2mW}{\hbar^2}}r\\
+\lambda =& \sqrt{\frac{2m}{\hbar^2W}}\\
+\mathrm{Ry} =& \frac{me^4}{2\hbar^2}\\
+a_0 =& \frac{\hbar^2}{me^2}
+\end{eqnarray} 
 \right.
 \]
 
 * Spin
 \[
 \left\{ 
-\begin{array}{rl}
-\mathbf{S} &=& \frac{\hbar}{2}\mathbf{\sigma}\\
-S_x &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&0 &1 \\ &1 &0 \end{array} \right]\\
-S_y &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&0 &-i \\ &i &0 \end{array} \right]\\
-S_z &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&1 &0 \\ &0 &-1 \end{array} \right]
-\end{array}
+\begin{eqnarray}
+\mathbf{S} =& \frac{\hbar}{2}\mathbf{\sigma}\\
+S_x =& \frac{\hbar}{2} \left[ \begin{array}{cc}0&1\\1&0\end{array} \right]\\
+S_y =& \frac{\hbar}{2} \left[ \begin{array}{cc}0&-i\\i&0\end{array} \right]\\
+S_z =& \frac{\hbar}{2} \left[ \begin{array}{cc}1&0\\0&-1\end{array} \right]
+\end{eqnarray}
 \right.
 \]
 
@@ -199,6 +199,13 @@ S_z &=& \frac{\hbar}{2} \left[ \begin{array}{rl}&1 &0 \\ &0 &-1 \end{array} \rig
 - Very useful identity
 \[
 \left( \mathbf{A}\cdot\mathbf{\sigma} \right)\left( \mathbf{B}\cdot\mathbf{\sigma} \right)=\mathbf{A}\cdot \mathbf{B} \mathbf{I}+i \left( \mathbf{A}\times \mathbf{B} \right)\cdot \mathbf{\sigma}
+\]
+- Commutation Relations
+\[
+\left[ \sigma_a,\sigma_b \right] = 2i \epsilon_{abc}\sigma_c
+\]
+\[
+\left\{ \sigma_a.\sigma_b \right\} = 2\delta_{ab}\mathbf{I}
 \]
 ** Explicit Forms of Rotation Operation
 \[
@@ -227,6 +234,30 @@ H_{int}=-\mu \cdot \mathbf{B}
 
 \[
 \mathbf{S}_1\cdot \mathbf{S}_2=S_{1z}S_{2z}+\frac{1}{2}\left( S_{1+}S_{2-}+S_{1-}S_{2+} \right)
+\]
+* The Variational and WKB Methods
+** The Variationsl Method
+- example consider a problem in a potential $V(x) = \lambda x^{4}$.
+  trail function $\psi - e^{-\alpha x^2/2}$.
+  The energy as a function of $\alpha$ is 
+\[
+E \left( \alpha \right) = \frac{\int e^{-\alpha x^2/2 } \left( -\frac{\hbar^2}{2m} \frac{d^2}{dx^2}+\lambda x^4 \right)e^{-\alpha x^2/2} dx}{  \int e^{-\alpha x^2} dx} = \frac{\hbar^2 \alpha}{4m}+\frac{3\lambda}{4 \alpha^{2}}
+\]
+- For Coulomb Potential $V=-e^{2}/r$. Trail function $\psi = \exp \left( -\alpha r^2 \right)$
+\[
+E \left( \alpha \right) = \frac{\int \left[ e^{-\alpha r^2} \left( -\frac{\hbar^2}{2m}\frac{1}{r^2}\frac{d}{dr}r^2 \frac{d}{dr}-\frac{e^2}{r} \right) \right]r^2 dr}{\int e^{-2\alpha r^2}r^2 dr}=\frac{3\hbar^2\alpha}{2m}-\left( \frac{2}{\pi} \right)^{1/2}2 e^2 \alpha^{1/2}
+\]
+- Ground state of He
+\[
+H= -\frac{h^2}{2m} \left( \nabla_1^2+\nabla_2^2 \right)-\frac{2e^2}{r_1}-\frac{e^2}{r_2}+\frac{e^2}{r_{12}}
+\]
+
+** WKB Method
+\[
+\psi \left( x \right) = \psi \left( x_0 \right) \exp \left[ \pm \left( \frac{i}{\hbar} \right)\int^x_{x_0} p \left( x^{\prime} \right)dx^{\prime} \right]
+\]
+\[
+\psi \left( x \right) - \psi \left( x_0 \right) \left[ \frac{p \left( x_0 \right)}{p \left( x \right)} \right]^{1/2}\exp \left[ \pm \frac{i}{\hbar} \int^x_{x_0} p \left( x^{\prime} \right)dx^{\prime} \right]
 \]
 
 -----
