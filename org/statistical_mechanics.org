@@ -30,21 +30,21 @@ using $dU= TdS-PdV+\mu dN$
 ** S Centric Equations
 \[
 \left\{
-\begin{array}{rl}
-  \frac{1}{T}&=&\frac{\partial S}{\delta E} \\
-  \frac{P}{T}&=&\frac{\partial S}{\delta V} \\
-  \frac{\mu}{T}&=&\frac{-\partial S}{\delta N}\\
-\end{array} \right.
+\begin{align}
+  \frac{1}{T}=&\frac{\partial S}{\delta E} \\
+  \frac{P}{T}=&\frac{\partial S}{\delta V} \\
+  \frac{\mu}{T}=&\frac{-\partial S}{\delta N}\\
+\end{align} \right.
 \]
 ** E Centric Equations
   Using $\frac{\partial x}{\partial y} \frac{\partial y}{\partial z} \frac{\partial z}{\partial x} = -1$.
 \[
 \left\{
-\begin{array}{rl}
-  T &=& \frac{\partial E}{\partial S}\\
-  P &=& T \frac{\partial S}{\partial V} = \frac{\partial S}{\partial V} \times \frac{\partial E}{\partial S} = - \frac{\partial E}{\partial V}\\
-  \mu &=& -T \frac{\partial S}{\partial N} = -\frac{\partial S}{\partial N} \times \frac{\partial E}{\partial S} =  \frac{\partial E}{\partial N}
-\end{array}\right.
+\begin{align}
+  T =& \frac{\partial E}{\partial S}\\
+  P =& T \frac{\partial S}{\partial V} = \frac{\partial S}{\partial V} \times \frac{\partial E}{\partial S} = - \frac{\partial E}{\partial V}\\
+  \mu =& -T \frac{\partial S}{\partial N} = -\frac{\partial S}{\partial N} \times \frac{\partial E}{\partial S} =  \frac{\partial E}{\partial N}
+\end{align}\right.
 \]
 ** Heat capacity
 \[C_v = \left( \frac{\partial E}{\partial T} \right)_{N,V} = \frac{\partial E}{\partial S} \frac{\partial S}{\partial T} = T \left( \frac{\partial S}{\partial T} \right)_{N,V}\]
@@ -99,10 +99,10 @@ Now, calculate the properties of classical ideal gas.
 * Elements of Ensemble Theory
 \[
 \left.
-\begin{array}{rl}
-\dot{q}_i&=&\frac{\partial H}{\partial p_i}\\
-\dot{p}_i&=&-\frac{\partial H}{\partial q_i}\\
-\end{array} \right\} i=1,2,3\dots 3N
+\begin{align}
+\dot{q}_i=&\frac{\partial H}{\partial p_i}\\
+\dot{p}_i=&-\frac{\partial H}{\partial q_i}\\
+\end{align} \right\} i=1,2,3\dots 3N
 \]
 
 - Ensemble Average
@@ -129,10 +129,10 @@ For stationary state ($\rho = \mathrm{const}$): $\left[ \rho ,H \right]=0$. Howe
 In this ensemble the macrostate of a system is defined by N,V and E.
 \[
 \left\{
-\begin{array}{rl}
-\rho \left( q,p \right) &=& \mathrm{const}. &\mbox{if $E-\frac{1}{2}\Delta \le H \le E+\frac{1}{2} \Delta$}\\
-&=&  0 &\mbox{otherwise}
-\end{array}
+\begin{align}
+\rho \left( q,p \right) =& \mathrm{const}. &\mbox{if $E-\frac{1}{2}\Delta \le H \le E+\frac{1}{2} \Delta$}\\
+=&  0 &\mbox{otherwise}
+\end{align}
 \right.
 \]
 
@@ -174,10 +174,10 @@ Consider an ensemble of $N$ identical system. $n_r$ denotes the number of system
 
 \[
 \left\{  
-\begin{array}{rl}
-\sum_r n_r &=& N\\
-\sum_r n_r E_r &=& E = NU
-\end{array}
+\begin{align}
+\sum_r n_r =& N\\
+\sum_r n_r E_r =& E = NU
+\end{align}
 \right.
 \] 
 
@@ -204,17 +204,17 @@ $\beta$ is determined by the equation
 \[dA = -SdT-PdV +\mu dN\]
 \[
 \left\{ 
-\begin{array}{rl}
-S &=& -\frac{dA}{dT}\\
-P &=& \underbrace{-\frac{dA}{dV}}_{
-\begin{array}{rl}
+\begin{align}
+S =& -\frac{dA}{dT}\\
+P =& \underbrace{-\frac{dA}{dV}}_{
+\begin{align}
 P=-\frac{\sum_{r} \frac{\partial E_r}{\partial V}\exp \left( - \beta E_r \right)}{\sum_r \exp \left( -\beta E_r \right)}\\
 PdV=-\sum_r P_r dE_r = -dU\\
-\end{array}
+\end{align}
 }\\
-\mu &=& \frac{dA}{dN}\\
-U &=& A+TS = \underbrace{A - T \frac{\partial A}{\partial T}}_{C_V = \left( \frac{\partial U}{\partial T} \right)_{N,V}=-T \left( \frac{\partial^2 A}{\partial T^2} \right)_{N,V}}=-T^2 \left[ \frac{\partial}{\partial T} \frac{A}{T} \right]= \left[ \frac{\partial \left( A/T \right)}{\partial \left( 1/T \right)} \right]
-\end{array}
+\mu=& \frac{dA}{dN}\\
+U=& A+TS = \underbrace{A - T \frac{\partial A}{\partial T}}_{C_V = \left( \frac{\partial U}{\partial T} \right)_{N,V}=-T \left( \frac{\partial^2 A}{\partial T^2} \right)_{N,V}}=-T^2 \left[ \frac{\partial}{\partial T} \frac{A}{T} \right]= \left[ \frac{\partial \left( A/T \right)}{\partial \left( 1/T \right)} \right]
+\end{align}
 \right.
 \]
 
@@ -226,10 +226,10 @@ Compare,
 - Partition Function
 \[
 \left\{
-\begin{array}{rl} 
-A &=& -kT \ln Q_N \left( V,T \right)\\
-Q_N \left( V,T \right) &=& \sum_r \exp \left( \frac{-E_r}{kT} \right)
-\end{array}
+\begin{align}
+A =& -kT \ln Q_N \left( V,T \right)\\
+Q_N \left( V,T \right) =& \sum_r \exp \left( \frac{-E_r}{kT} \right)
+\end{align}
 \right.
 \]
 
@@ -267,10 +267,10 @@ Q_N \left( V,T \right) = \frac{1}{N! h^{3N}} \int e^{-\beta H \left( q,p \right)
 *** Ideal Gas
 \[H = \sum \left( \frac{p_i^2}{2m} \right)\]
 \[
-\begin{eqnarray}
-Q_N &=& \frac{V^N}{N!h^{3N}}\left[ \int_0^{\infty}e^{-p^2/2mkT} \left( 4\pi p^2 dp \right) \right]^N \\
-    &=& \frac{1}{N!} \left[ \frac{V}{h^3} \left( 2\pi mkT \right)^{3/2} \right]^{N}
-\end{eqnarray}
+\begin{align}
+Q_N =& \frac{V^N}{N!h^{3N}}\left[ \int_0^{\infty}e^{-p^2/2mkT} \left( 4\pi p^2 dp \right) \right]^N \\
+    =& \frac{1}{N!} \left[ \frac{V}{h^3} \left( 2\pi mkT \right)^{3/2} \right]^{N}
+\end{align}
 \]
 
 \[Q_N = \frac{1}{N!} Q_1^N \]
@@ -283,10 +283,10 @@ H = \frac{1}{2} m \omega^2 q_i^2+\frac{1}{2m} p_i^2
 \] 
 
 \[
-\begin{eqnarray}
-Q_1 \left( \beta \right) &=& \int \int \exp \left\{ -\beta \left( \frac{1}{2} m \omega^2 q_i^2+\frac{1}{2m} p_i^2 \right) \right\} \frac{dp dq}{h}\\
-&=& \frac{1}{\beta \hbar \omega}
-\end{eqnarray}
+\begin{align}
+Q_1 \left( \beta \right) =& \int \int \exp \left\{ -\beta \left( \frac{1}{2} m \omega^2 q_i^2+\frac{1}{2m} p_i^2 \right) \right\} \frac{dp dq}{h}\\
+=& \frac{1}{\beta \hbar \omega}
+\end{align}
 \]
 
 \[Q_N \left( \beta \right) = \left( \beta \hbar \omega \right)^{-N}\]
@@ -298,7 +298,15 @@ Q_1 \left( \beta \right) &=& \int \int \exp \left\{ -\beta \left( \frac{1}{2} m 
 Q_1=\sum_{n=0}^{\infty}e^{-\beta \left( n+1/2 \right)\hbar \omega}= \left\{ 2 \sinh \left( \frac{1}{2}\beta \hbar \omega \right) \right\}^{-1}
 \]
 *** The Statistics of Paramagnetism
+* The Grand Canonical Ensemble
+** A System In The Grand Canonical Ensemble
+\[
+\left\{
+\begin{align}
 
+\end{align} 
+\right.
+\]
 
 ------
 [[file:index.org][Back to Index]]

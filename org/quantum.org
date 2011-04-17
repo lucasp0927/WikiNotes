@@ -131,10 +131,10 @@ L_{\pm}=L_x \pm i L_y
 
 \[
 \left\{
-\begin{eqnarray}
+\begin{align}
 \mathbf{J}^2 \left| jm \right\rangle =& j \left( j+1 \right) \hbar^2 \left| jm \right\rangle, &j=0,1/2,1\dots\\
 \mathbf{J}_z \left| jm \right\rangle =& m\hbar \left| jm \right\rangle, &m=j,j-1,\dots,-j
-\end{eqnarray}
+\end{align}
 \right.
 \]
 
@@ -154,35 +154,35 @@ D^{(j)}\left[ R \left( \theta \right) \right] = \exp \left[ - \frac{i \theta \cd
 
 \[
 \left\{ 
-\begin{eqnarray}
+\begin{align}
 \Psi_{Elm}=&\frac{U_{El}}{r}Y^m_l\\
 U_{El}=&e^{-\rho}v_{El}\\
 v_{El}=& \rho^{l+1}\sum_{k=0}^{\infty} C_k \rho^{k}\\
 \frac{C_{k+1}}{C_k}=&\frac{-e^2 \lambda + 2 \left( k+l+1 \right)}{\left( k+l+2 \right)\left( k+l+1 \right)-\left( l+1 \right)l }
-\end{eqnarray}
+\end{align}
 \right.
 \]
 
 \[
 \left\{
-\begin{eqnarray}
+\begin{align}
 \rho =& \sqrt{\frac{2mW}{\hbar^2}}r\\
 \lambda =& \sqrt{\frac{2m}{\hbar^2W}}\\
 \mathrm{Ry} =& \frac{me^4}{2\hbar^2}\\
 a_0 =& \frac{\hbar^2}{me^2}
-\end{eqnarray} 
+\end{align} 
 \right.
 \]
 
 * Spin
 \[
 \left\{ 
-\begin{eqnarray}
+\begin{align}
 \mathbf{S} =& \frac{\hbar}{2}\mathbf{\sigma}\\
 S_x =& \frac{\hbar}{2} \left[ \begin{array}{cc}0&1\\1&0\end{array} \right]\\
 S_y =& \frac{\hbar}{2} \left[ \begin{array}{cc}0&-i\\i&0\end{array} \right]\\
 S_z =& \frac{\hbar}{2} \left[ \begin{array}{cc}1&0\\0&-1\end{array} \right]
-\end{eqnarray}
+\end{align}
 \right.
 \]
 
