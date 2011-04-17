@@ -291,6 +291,8 @@ Q_1 \left( \beta \right) =& \int \int \exp \left\{ -\beta \left( \frac{1}{2} m \
 
 \[Q_N \left( \beta \right) = \left( \beta \hbar \omega \right)^{-N}\]
 
+Compare this with ideal gas one, no need to $/N!$ because ideal gas is nonlocalized.
+
 *** A System of Harmonic Oscillators (quantum)
 \[\epsilon_n = \left( n+\frac{1}{2} \right) \hbar \omega\]
 
@@ -303,10 +305,46 @@ Q_1=\sum_{n=0}^{\infty}e^{-\beta \left( n+1/2 \right)\hbar \omega}= \left\{ 2 \s
 \[
 \left\{
 \begin{align}
-
+\frac{n_{r,s}}{N}=&\frac{\exp \left( -\alpha N_r -\beta E_s\right)}{\sum_{r,s}\exp \left( -\alpha N_r -\beta E_s \right)}\\
+\bar{N}=&-\frac{\partial }{\partial \alpha} \left\{ \ln \exp \left( -\alpha N_r -\beta E_s \right) \right\}\\
+\bar{E}=&-\frac{\partial }{\partial \beta} \left\{ \ln \exp \left( -\alpha N_r -\beta E_s \right) \right\}\\
+\beta=&\frac{1}{kT}\\
+\alpha=&-\frac{\mu}{kT}
 \end{align} 
 \right.
 \]
 
+** Physical significance of the various statistical quantities
+- fugacity
+\[
+z = e^{-\alpha} = e^{\mu/kT}
+\]
+
+- q-potential
+\[
+\begin{align}
+q =& \ln \left( \sum_{r,s} \exp(\frac{N_r \mu -E_{s}}{kT}) \right) = \frac{PV}{kT}\\
+  =& \ln \left( \sum_{r,s} z^{N_r}e^{-\beta E_s} \right)\\
+  =& \ln \left( \sum_{N_r=0}^{\infty}z^{N_r}Q_{N_r}\left( V,T \right) \right)
+\end{align}
+\]
+** Deriving thermodynamic quantities from q-potential
+- Grand Partition Function
+\[D = \sum_{N_r=0}^{\infty} z^{N_r} Q_{N_r}\left( V,T \right)\]
+\[P=\frac{kT}{V}q \left( z,V,T \right) \]
+\[N=z \left[ \frac{\partial}{\partial z} q \left( z,V,T \right) \right]_{V,T} = kT \left[ \frac{\partial}{\partial \mu} q \right]_{V,T}\]
+\[U=-\left[ \frac{\partial}{\partial z} q \left( z,V,T \right) \right]_{z,V} = kT^{2} \left[ \frac{\partial}{\partial T} q \right]_{z,V}\]
+\[A=-kT \ln \frac{D \left( z,V,T \right)}{z^{N}}\]
+\[S=\frac{U-A}{T}=kT \frac{\partial q}{\partial T} - Nk \ln z+kq\]
+** Example - Classical Ideal Gas
+Since particles are nonlocalized they can be anywhere in the space available; so $Q_1 = V f \left( T \right)$.
+- Grand partition function
+\[D=\sum_{N_r=0}^{\infty}z^{N_r}Q_{N_r}=\sum_{N_r=0}^{\infty} \frac{\left\{ zV f \left( T \right) \right\}^{N_r}}{N_r!}=\exp \left\{ zV f \left( T \right) \right\}\]
+
+so, $q=zV f \left( T \right)$.
+** Example - Independent Localized
+
+
 ------
 [[file:index.org][Back to Index]]
+
