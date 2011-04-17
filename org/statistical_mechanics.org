@@ -91,7 +91,7 @@ Now, calculate the properties of classical ideal gas.
 \[T= \left( \frac{\partial E}{\partial S} \right) \Rightarrow E= \frac{3}{2}NkT\]
 \[P= -\left( \frac{\partial E}{\partial V} \right)\Rightarrow P=\frac{2}{3}\frac{E}{V}\]
 
-** Bibbs paradox
+** Gibbs paradox
 \[S=k \ln \frac{\Omega}{N!} = S_0-k \ln N +N\]
 
 \[S=k\ln \Gamma=k \ln \Sigma =  Nk \ln \left( \frac{V}{Nh^3}\left( \frac{4\pi m E}{3N} \right)^{3/2} \right)+\frac{5}{2}Nk\]
@@ -298,6 +298,7 @@ Q_1 \left( \beta \right) &=& \int \int \exp \left\{ -\beta \left( \frac{1}{2} m 
 Q_1=\sum_{n=0}^{\infty}e^{-\beta \left( n+1/2 \right)\hbar \omega}= \left\{ 2 \sinh \left( \frac{1}{2}\beta \hbar \omega \right) \right\}^{-1}
 \]
 *** The Statistics of Paramagnetism
+
 
 ------
 [[file:index.org][Back to Index]]

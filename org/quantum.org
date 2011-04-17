@@ -260,6 +260,14 @@ H= -\frac{h^2}{2m} \left( \nabla_1^2+\nabla_2^2 \right)-\frac{2e^2}{r_1}-\frac{e
 \psi \left( x \right) - \psi \left( x_0 \right) \left[ \frac{p \left( x_0 \right)}{p \left( x \right)} \right]^{1/2}\exp \left[ \pm \frac{i}{\hbar} \int^x_{x_0} p \left( x^{\prime} \right)dx^{\prime} \right]
 \]
 
+- Useful integration
+\[
+\int^b_a \sqrt{\frac{1}{x}-\frac{1}{b}}dx = \left\{ \cos^{-1} \sqrt{\frac{a}{b}} - \sqrt{\frac{a}{b} \left( 1-\frac{a}{b} \right)} \right\} \sqrt{b}
+\]
+
+\[
+\int \frac{\cos^2 x}{a} dx = \frac{x+\sin x \cos x}{2a}
+\]
 -----
 [[file:index.org][Back to Index]]
 
