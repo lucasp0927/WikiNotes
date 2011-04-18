@@ -152,6 +152,8 @@ D^{(j)}\left[ R \left( \theta \right) \right] = \exp \left[ - \frac{i \theta \cd
 \left\{ \frac{d^2}{dr^2}+\frac{2m}{\hbar^2}\left[ E+\frac{e^2}{r}-\frac{l \left( l+1 \right)\hbar^2}{2mr^2} \right] \right\}U_{El}=0
 \]
 
+Here $e^2=\frac{e^2}{4\pi \epsilon_0}$.
+
 \[
 \left\{ 
 \begin{align}
@@ -257,7 +259,7 @@ H= -\frac{h^2}{2m} \left( \nabla_1^2+\nabla_2^2 \right)-\frac{2e^2}{r_1}-\frac{e
 \psi \left( x \right) = \psi \left( x_0 \right) \exp \left[ \pm \left( \frac{i}{\hbar} \right)\int^x_{x_0} p \left( x^{\prime} \right)dx^{\prime} \right]
 \]
 \[
-\psi \left( x \right) - \psi \left( x_0 \right) \left[ \frac{p \left( x_0 \right)}{p \left( x \right)} \right]^{1/2}\exp \left[ \pm \frac{i}{\hbar} \int^x_{x_0} p \left( x^{\prime} \right)dx^{\prime} \right]
+\psi \left( x \right) = \psi \left( x_0 \right) \left[ \frac{p \left( x_0 \right)}{p \left( x \right)} \right]^{1/2}\exp \left[ \pm \frac{i}{\hbar} \int^x_{x_0} p \left( x^{\prime} \right)dx^{\prime} \right]
 \]
 
 - Useful integration
