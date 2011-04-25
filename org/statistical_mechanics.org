@@ -9,12 +9,12 @@
 ** Thermal Contact
 System 1 and System 2 in contact. The total multiplicity $\Omega^{(0)}=\Omega_1 \times \Omega_2$. When $\Omega^{(0)}$ max.
 
-\[\frac{\partial \Omega_1 \left( E_1 \right)}{\delta E_1}\Omega_2+\Omega_1 \left( E_1 \right) \frac{\partial \Omega_2 \left( E_2 \right)}{\partial E_2}\cdot \frac{\partial E_2}{\partial E_1}=0 \]
+\[\frac{\partial \Omega_1 \left( E_1 \right)}{\partial E_1}\Omega_2+\Omega_1 \left( E_1 \right) \frac{\partial \Omega_2 \left( E_2 \right)}{\partial E_2}\cdot \frac{\partial E_2}{\partial E_1}=0 \]
 
 where $\frac{\partial E_2}{\partial E_1}=-1$
 
 \[
-\frac{\partial \ln \left( \Omega_1 \right)}{\partial E_1} = \frac{\partial \ln \left( \Omega_2 \right)}{\partial E_2} = \beta
+\frac{\partial \ln \left( \Omega_1 \right)}{\partial E_1} = \frac{\partial \ln \left( \Omega_2 \right)}{\partial E_2} = \beta = \frac{1}{kT}
  \]
 
 $S=k \ln \Omega$, $\beta = \frac{1}{kT}$. So $\left( \frac{\partial S}{\partial E} \right)_{N,V}=\frac{1}{T}$
@@ -25,15 +25,15 @@ $S=k \ln \Omega$, $\beta = \frac{1}{kT}$. So $\left( \frac{\partial S}{\partial 
 using $dU= TdS-PdV+\mu dN$
 - $\frac{\partial \ln \Omega_1}{\partial E_1}=\frac{\partial \ln \Omega_2}{\partial E_2}=\beta=\frac{1}{kT}$
 - $\frac{\partial \ln \Omega_1}{\partial V_1}=\frac{\partial \ln \Omega_2}{\partial V_2}=\eta=\frac{P}{kT}$
-- $\frac{\partial \ln \Omega_1}{\partial N_1}=\frac{\partial \ln \Omega_2}{\partial N_2}=\eta=\frac{-\mu}{kT}$
+- $\frac{\partial \ln \Omega_1}{\partial N_1}=\frac{\partial \ln \Omega_2}{\partial N_2}=\xi=\frac{-\mu}{kT}$
 
 ** S Centric Equations
 \[
 \left\{
 \begin{align}
-  \frac{1}{T}=&\frac{\partial S}{\delta E} \\
-  \frac{P}{T}=&\frac{\partial S}{\delta V} \\
-  \frac{\mu}{T}=&\frac{-\partial S}{\delta N}\\
+  \frac{1}{T}=&\frac{\partial S}{\partial E} \\
+  \frac{P}{T}=&\frac{\partial S}{\partial V} \\
+  \frac{\mu}{T}=&\frac{-\partial S}{\partial N}\\
 \end{align} \right.
 \]
 ** E Centric Equations
@@ -52,13 +52,16 @@ using $dU= TdS-PdV+\mu dN$
 \[C_P = \left( \frac{\partial H}{\partial T} \right)_{N,P} = \left( \frac{\partial E+PV}{\partial T} \right)_{N,P} = T \left( \frac{\partial S}{\partial T} \right)_{N,P}\]
 
 ** Classic Ideal Gas
+\[
+V_n=\frac{\pi^{n/2}}{\left( n/2 \right)!}R^n
+\]
 \[\Omega \propto V^N \Rightarrow PV=nkT\]
 
 \[\epsilon = \frac{h^2}{8mL^2} \left( n_x^2+n_y^2+n_z^2 \right)\]
 
 \[n_x^2+n_y^2+n_z^2=\frac{8mV^{2/3}}{h^2}\epsilon = \epsilon^{*}\]
 
-\[\sum_{r=1}^{3N}n_r^2= E^{*}= \frac{8, V^{2/3}E}{h^2}\]
+\[\sum_{r=1}^{3N}n_r^2= E^{*}= \frac{8m V^{2/3}E}{h^2}\]
 
 This means that $S \left( N,V,E \right) = S \left( N,V^{2/3}E \right)$. Adiabitic process $S,N$ constant, leads to $V^{2/3}E=\mathrm{constant}$
 
@@ -188,7 +191,7 @@ W \left\{ n_r \right\} = \frac{N!}{n_0!n_1!n_2! \dots}
 - Most probable mode $\left\{ n_r^{\star} \right\}$ when $W \left\{ n_r \right\}$ biggest.
 - Average 
 \[
-\left\langle n_r \right\rangle = \frac{\sum_{\left\{ n_r \right\} n_r W \left( n_r \right) }}{\sum_{\left\{ n_r \right\} W \left\{ n_r \right\} }}
+\left\langle n_r \right\rangle = \frac{\sum_{\left\{ n_r \right\} n_r W \left{ n_r \right} }}{\sum_{\left\{ n_r \right\} W \left\{ n_r \right\} }}
 \]
 
 In the limit of $N\Rightarrow \infty$. These two are the same.
