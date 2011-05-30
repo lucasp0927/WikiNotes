@@ -191,7 +191,7 @@ W \left\{ n_r \right\} = \frac{N!}{n_0!n_1!n_2! \dots}
 - Most probable mode $\left\{ n_r^{\star} \right\}$ when $W \left\{ n_r \right\}$ biggest.
 - Average 
 \[
-\left\langle n_r \right\rangle = \frac{\sum_{\left\{ n_r \right\} n_r W \left{ n_r \right} }}{\sum_{\left\{ n_r \right\} W \left\{ n_r \right\} }}
+\left\langle n_r \right\rangle = \frac{\sum_{\left\{ n_r \right\}} n_r W \left\{ n_r \right\} }{\sum_{\left\{ n_r \right\}} W \left\{ n_r \right\} }
 \]
 
 In the limit of $N\Rightarrow \infty$. These two are the same.
@@ -346,8 +346,105 @@ Since particles are nonlocalized they can be anywhere in the space available; so
 
 so, $q=zV f \left( T \right)$.
 ** Example - Independent Localized
+* The Theory of Simple Gases
+- Non-interacting
+- indistinguishable
+- N V E
+- $\Omega \left( N,V,E \right) $,  number of /distinct/ microstate.
+** Energy Cells
+$\epsilon_i$ average energy of the level, $g_i \gg 1$. $n_1$ in first cell, $n_2$ in second cell, and so on.
+\[
+\sum n_i = N
+\]
+\[
+\sum n_i \epsilon_{i} = E
+\]
+\[
+\Omega \left( N,V,E \right) = \sum_\left\{ n_i \right\}^{\prime} W \left\{ n_i \right\}
+\]
+The primed summation goes over alll distbution sets that satisfied first two conditions.
+\[
+W \left\{ n_i \right\} = \prod_i w \left( i \right)
+\]
+\[
+w_{B.E.} = \frac{\left( n_i+g_i-1 \right)!}{n_i!\left( g_i-1 \right)!}
+\]
+since, few particle can be in the same state.
+\[
+w_{F.D.} = \frac{g_i!}{n_i! \left( g_i-n_i \right)!}
+\]
+** Entropy
+\[
+S = k \ln \left[ \sum_{\left\{ n_i \right\}^{\prime}} W \left\{ n_i \right\} \right]
+\]
+The log of sum can be approximated by the log of the largest term in the sum.
+\[
+S \approx \ln W \left\{ n_i^{\star} \right\}
+\]
+use Lagrange's multipliers to get the distribution.
+** Ideal Gas
+- Partition Function
+\[
+Q_N \left( V,T \right) = \sum^{\prime}_{\left\{ n_{\epsilon} \right\}} g \left\{ n_{\epsilon} \right\} e^{-\beta \sum_{\epsilon}n_\epsilon \epsilon}
+\]
+\[
+\left\{ 
+\begin{align}
+g_{B.E.}\left\{ n_{\epsilon} \right\} =& 1\\
+g_{F.D.}\left\{ n_{\epsilon} \right\} =& 
+\begin{cases}
+1 & \mbox{if all }n_{\epsilon}=0 \mbox{ or } 1\\
+0 & \mbox{otherwise}
+\end{cases}
+\\
+g_{M.B.}\left\{ n_{\epsilon} \right\} =& \prod \frac{1}{n_\epsilon!} \\
+\end{align}
+\right.
+\]
+- Maxwell Boltzmann
+use multinomial theorem.
+\[
+Q_N = \frac{1}{N!} \left[ Q_1 \left[ V,T \right]\right]^{N}
+\]
+with $g\left( p \right)dp = \frac{V}{h^3}4\pi p^2dp$
+\[
+Q_1 =\frac{V}{\lambda^3} \mbox{with, } \lambda = \frac{h}{\sqrt{2\pi mkT}}
+\]
+\[
+Q_N = \frac{V^N}{N! \lambda^{3N}}
+\]
+\[
+L \left( z,V,T \right)= \sum_{N=0}^{\infty} z^N Q_N= \exp \left( z \frac{V}{\lambda^{3}} \right)
+\]
 
-
+** B.E. and F.D.
+$L$ is more easily tractable.
+\[
+L = 
+\begin{cases}
+\prod_{\epsilon} \frac{1}{1-z e^{-\beta\epsilon}}& \mbox{in the B.E. case, with $ze^{-\beta\epsilon} < q$}\\
+\prod_{\epsilon} 1+z e^{-\beta\epsilon}& \mbox{in the F.D. case}
+\end{cases}
+\]
+- q-potential
+\[
+q \left( z,V,T \right) = \frac{PV}{kT} = \ln L
+\]
+Write $q$ in form applicable to all three cases.
+\[
+q \left( z,V,T \right) = \frac{PV}{kT} = \frac{1}{a} \sum_{\epsilon} \ln \left( 1+aze^{-\beta \epsilon} \right), \mbox{with } a=
+\begin{cases}
+a=-1&\mbox{B.E}\\
+a=0&\mbox{classic}\\
+a=1&\mbox{F.D}
+\end{cases}
+\]
+\[
+\bar{N} = z \frac{\partial q}{\partial z}= \sum_{\epsilon}\frac{1}{z^{-1} e^{\beta\epsilon}+a}
+\]
+\[
+\bar{E} = - \frac{\partial q}{\partial \beta}= \sum_{\epsilon}\frac{\epsilon}{z^{-1} e^{\beta\epsilon}+a}
+\]
 ------
 [[file:index.org][Back to Index]]
 
