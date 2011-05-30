@@ -350,7 +350,7 @@ so, $q=zV f \left( T \right)$.
 - Non-interacting
 - indistinguishable
 - N V E
-- $\Omega \left( N,V,E \right) $,  number of /distinct/ microstate.
+- $\Omega \left( N,V,E \right)$,  number of /distinct/ microstate.
 ** Energy Cells
 $\epsilon_i$ average energy of the level, $g_i \gg 1$. $n_1$ in first cell, $n_2$ in second cell, and so on.
 \[
@@ -379,7 +379,7 @@ S = k \ln \left[ \sum_{\left\{ n_i \right\}^{\prime}} W \left\{ n_i \right\} \ri
 \]
 The log of sum can be approximated by the log of the largest term in the sum.
 \[
-S \approx \ln W \left\{ n_i^{\star} \right\}
+S \approx k \ln W \left\{ n_i^{\star} \right\}
 \]
 use Lagrange's multipliers to get the distribution.
 ** Ideal Gas
@@ -445,6 +445,17 @@ a=1&\mbox{F.D}
 \[
 \bar{E} = - \frac{\partial q}{\partial \beta}= \sum_{\epsilon}\frac{\epsilon}{z^{-1} e^{\beta\epsilon}+a}
 \]
+** Statistics Of The Occupation Numbers
+\[
+\begin{align}
+\left\langle n_{\epsilon} \right\rangle =& \frac{1}{L} \left[ -\frac{1}{\beta} \left( \frac{\partial L}{\partial \epsilon} \right)_{z,T,\mbox{all other $\epsilon$}} \right]\\
+=& -\frac{1}{\beta} \left( \frac{\partial q}{\partial \epsilon} \right)\\
+=& \frac{1}{z^{-1}e^{\beta\epsilon}+a}
+\end{align}
+\]
+** Gaseous Systems Composed Of Molecules With Internal Motion
+
+
 ------
 [[file:index.org][Back to Index]]
 
