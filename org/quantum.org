@@ -270,6 +270,94 @@ H= -\frac{h^2}{2m} \left( \nabla_1^2+\nabla_2^2 \right)-\frac{2e^2}{r_1}-\frac{e
 \[
 \int \frac{\cos^2 x}{a} dx = \frac{x+\sin x \cos x}{2a}
 \]
+* Time-Dependent Perturbation Theory
+Perturbative solution to 
+\[
+H \left( t \right) = H^0+H^1 \left( t \right)
+\]
+- idea: if at $t=0$ system is in eigenstate $\left| i^0 \right\rangle$ of $H^0$. what is the amplitude for it to be in other eigenstates.
+** First Order
+\[
+\left| \psi \left( t \right) \right\rangle = \sum_n c_{n} \left( t \right) \left| n^0 \right\rangle
+\]
+if $H^1 = 0$ ,
+\[
+c_{n} \left( t \right) = c_n \left( 0 \right) \exp \left( -i E^0_n t /\hbar \right)
+\]
+\[
+\left| \psi \right\rangle = \sum_n d_n \left( t \right) \exp \left( -i E^0_n t /\hbar \right) \left| n^0 \right\rangle
+\]
+Apply $i\hbar \frac{\partial}{\partial t}-H_0-H_1$ to it.
+\[
+\sum_n \left( i\hbar \dot{d_n}+\rlap{//////}{d_n \left( t \right) E_n^0}-H_1 \left( t \right) d_n \left( t \right) -\rlap{//////}{E_n^0 d_n \left( t \right)}\right)\exp \left( -i E^0_n t /\hbar \right) \left| n^{0} \right\rangle = 0
+\]
+Then dot it with $\left\langle f^0 \right|\exp \left( -i E^0_f t /\hbar \right)$, get
+\[
+i \hbar \dot{d_f} =\sum_n \left\langle f^0 \right| H_1 \left( t \right) \left| n^0 \right\rangle \exp \left( i \left( \omega_f - \omega_n \right)t \right) d_n \left( t \right)
+\]
+
+- for zero order $d_n \left( 0 \right) = \delta_{ni}$, $\dot{d_f} = 0$
+- for first order 
+\[
+\dot{d_f} \left( t \right) = -\frac{i}{\hbar} \left\langle f^0 \right| H_1 \left( t \right) \left| i^0 \right\rangle \exp \left( i \left( \omega_f - \omega_i \right)t \right)
+\]
+** Sudden Perturbation
+Instantaneous change in $H$ produce no instantaneous change in $\left| \psi \right\rangle$.
+** Adiabatic Perturbation
+The system will end up in the corresponding eigenket.
+The adiabatic theorem suggests a way of recovering the results of time-independent perturbation theory from time-dependent theory.
+\[
+H=H^0+H^1 e^{\frac{t}{\tau}}, -\infty \le t \le 0
+\]
+\[
+d_m \left( 0 \right) = \frac{-i}{\hbar} \int^0_{-\infty} \left\langle m^0 \right| H^1 \left| n^0 \right\rangle e^{\frac{t}{\tau}} e^{-\omega_{mn}t}dt = \frac{\frac{-i}{\hbar} \left\langle m^0  \right| H^1 \left| n^0 \right\rangle}{\frac{1}{\tau}+i \omega_{mn}}
+\]
+
+let $\tau \Rightarrow \infty$, we get
+\[
+\left\langle m^0 \big| n \right\rangle = \frac{\left\langle m^0 \right|H^1 \left| n^0 \right\rangle}{E^0_n - E^0_m}
+\]
+
+Large $\tau$ means $\frac{1}{\tau} \ll \omega_{\mbox{min}}$. So if the system is degenerate and it becomes impossible to change the state of the system adiabatically.
+
+** Periodic Perturbation
+\[
+H^1 \left( t \right) = H^1 e^{-i \omega t}
+\]
+\[
+d_f \left( t \right) = \left( \frac{i}{\hbar} \right) \int^t_0 \left\langle f^0 \right| H^1 \left| i^0 \right\rangle \exp \left( i \left( \omega_{fi}-\omega \right)t^{\prime} \right)dt^{\prime} = \frac{-1}{\hbar} \left\langle f^0 \right|H^1 \left| i^0 \right\rangle \frac{e^{i \left( \omega_{fi}-\omega \right)t}-1}{\omega_{fi}-\omega}
+\]
+Note that this is fourier transform.
+\[
+P_{i\Rightarrow f} = \left| d_f \right|^2 = \frac{1}{\hbar^2} \left| \left\langle f^0 \right| H^1 \left| i^0 \right\rangle\right|^2 \left\{ \frac{\sin \left[ \Delta \omega t/2 \right]}{\Delta \omega^{1/2}t} \right\}^2 t^{2}
+\]
+
+For longer time.
+\[
+d_f = \lim_{T\Rightarrow\infty} \frac{-i}{\hbar} \int^T_-T H^1_{fi} e^{i \left( \omega_{fi}-\omega \right)t^{\prime}}dt^{\prime}= \frac{-2\pi i}{\hbar} H^1_{fi} \delta \left( \omega_{fi}-\omega \right)
+\]
+
+since, $\int^{\infty}_{-\infty} e^{i \omega t} dt = 2\pi \delta \left( \omega \right)$
+\[
+P_{i\Rightarrow f} = \frac{4\pi^2}{\hbar^2} \left| H^1_{fi} \right|^2 \left( \delta \left( \omega_{fi}-\omega \right) \right)^{2}
+\]
+
+\[
+\delta\delta = \lim_{T\Rightarrow\infty} \delta \left( \omega_{fi}-\omega \right) \frac{1}{2\pi} \int^T_{-T} e^{i \left( \omega_{fi}-\omega \right)t^{\prime}} dt^{\prime} = \delta \left( \omega_{fi}-\omega \right) \lim_{T\Rightarrow\infty} \frac{T}{2\pi}
+\]
+
+Put this in $P_{i\Rightarrow f}$ and devided by $T$ get the /average transition rate/.
+\[
+R_{i\Rightarrow f} = \frac{2 \pi}{\hbar} \left| \left\langle f^0 \right| H^1 \left| i^0 \right\rangle\right|^2 \delta \left( E^0_f - E^0_i - \hbar \omega \right)
+\]
+The $\hbar$ is timed in to the delta function.  This is called /Fermi Golden Rule/.
+
+- 18.3 skipped
+** A General Discussion of Electromagnetic Interactions
+*** Classical Electrodynamics
+\[
+\mathbf{F} = q \left( \mathbf{E} + \frac{\mathbf{v}}{c}\times \mathbf{B} \right)
+\]
 -----
 [[file:index.org][Back to Index]]
 

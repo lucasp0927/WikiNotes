@@ -125,7 +125,7 @@ A set of isolated singularities can be handled by intergrate them clockwise, in 
 
 for every singular point,
 
-$\oint f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sing because of clockwise direction.
+$\oint f(z) dz = -2\pi i a_{-1,z_{i}}$, minus sign because of clockwise direction.
 
 so,
 \begin{equation*}
