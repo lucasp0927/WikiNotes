@@ -355,9 +355,70 @@ The $\hbar$ is timed in to the delta function.  This is called /Fermi Golden Rul
 - 18.3 skipped
 ** A General Discussion of Electromagnetic Interactions
 *** Classical Electrodynamics
+- Gauge Transformation
 \[
-\mathbf{F} = q \left( \mathbf{E} + \frac{\mathbf{v}}{c}\times \mathbf{B} \right)
+\left\{ 
+\begin{align}
+\mathbf{A}^{\prime} =& \mathbf{A} - \nabla\Lambda\\
+\phi^{\prime} =& \phi + \frac{\partial \Lambda}{\partial t}
+\end{align}
+\right.
 \]
+- Coulomb Gauge
+\[
+\left\{ 
+\begin{align}
+\nabla \cdot \mathbf{A} =& 0\\
+\phi =& 0
+\end{align}
+\right.
+\]
+In the coulomb gauge, the equations of motion for the electromagnetic field simplify to:
+\[
+\left\{ 
+\begin{align}
+\nabla^2 \mathbf{A} - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{A}}{\partial t^2} =& 0\\
+\nabla \cdot \mathbf{A} =& 0\\
+\nabla \cdot \dot{\mathbf{A}} =& 0
+\end{align}
+\right.
+\]
+*** The Electromagnetic Force in the Hamiltonian Scheme
+\[
+L_{e.m}=\frac{1}{2} mv\cdot v-q \phi + q v\cdot A
+\]
+and 
+\[
+p = \frac{\partial L}{\partial v} = m \dot{x} + q A
+\]
+Rearrange above,
+\[
+\dot{x} = \frac{p-qA}{m}
+\]
+\[
+H_{e.m} = \dot{x} p - L = \frac{\left( p-qA \right)^2}{2m}+q\phi
+\]
+** The Potentials in Quantum Theory
+In path integral
+\[
+U = N \sum_{\mbox{paths}}\exp \left[ \frac{i S}{\hbar} \right]
+\]
+Where $N$ is a normalization factor and the action,
+\[
+S = \int^t_{t^{\prime}} L dt^{\prime\prime} = \int^t_{t^{\prime}} \left( \frac{1}{2}m v^2 + q v\cdot A - q \phi \right)
+\]
+
+/Aharonov-Bohm effect/
+
+** Interaction of Atoms with Electromagnetic Radiation
+*** Phoroelectric Effect in Hydrogen
+\[
+\mathbf{A} \left( \mathbf{r},t \right) = \mathbf{A}_0 \cos \left( \mathbf{k} \cdot \mathbf{r} -\omega t \right)
+\]
+** Field Quantization
+The basic idea behind quantizing the field is familiar: one finds a complete set of canonical coordinates and momenta to discribe the classical field, and promotes them to operators obeying canonical commutation relations.
+
+
 -----
 [[file:index.org][Back to Index]]
 
