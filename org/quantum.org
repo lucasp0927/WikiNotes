@@ -142,9 +142,110 @@ L_{\pm}=L_x \pm i L_y
 J_{\pm} \left| jm \right\rangle = \hbar \sqrt{\left( j \mp m \right)\left( j \pm m+1 \right)} \left| j,m\pm 1 \right\rangle
 \]
 
+since,
+\[
+J_{-}J_{+} = J^2-J_z^2-\hbar J_z
+\]
+
+*** Spherical harmonics
+\[
+Y^m_l = \left[ \frac{\left( 2l+1 \right)\left( l-m \right)}{4\pi \left( l+m \right)!} \right]^{1/2} \left( -1 \right)^m e^{im\phi} P^m_l \left( \cos \left( \theta \right) \right)
+\]
+
 ** Finite Rotation
 \[
 D^{(j)}\left[ R \left( \theta \right) \right] = \exp \left[ - \frac{i \theta \cdot \mathbf{J}^{(j)}}{\hbar} \right]
+\]
+
+** Solution Of Rotationally Invatiant Problams
+- radial equation
+\[
+\left\{ \frac{-\hbar}{2\mu} \left[ \frac{1}{r^2}\frac{\partial}{\partial r}r^2 \frac{\partial}{\partial r}- \frac{l \left( l+1 \right)}{r^2} \right]+V \left( r \right) \right\} R_{El} = E R_{El}
+\] 
+
+define $R_{El} = U_{El}/r$.
+\[
+\left\{ \frac{d^2}{d r^2}+\frac{2\mu}{\hbar^2} \left[ E-V \left( r \right)-\frac{l \left( l+1 \right)\hbar^2}{2\mu r^2} \right] \right\}U_{El} = 0
+\]
+Properties
+- Repulse centrifugal barrier $l \left( l+1 \right)\hbar^2 / 2\mu r^{2}$
+
+*** Normalization
+\[
+\int^{\infty}_0 \left| R_{El} \right|^2 r^2 dr = \int^{\infty}_0 \left| U_{El} \right|^2 dr
+\]
+
+To be normalizable to unity or Dirac delta function is that
+\[
+U_{El}\Longrightarrow_{r\Rightarrow \infty}0
+\]
+\[
+U_{El}\Longrightarrow_{r\Rightarrow \infty} r^{ikr}
+\]
+
+\[
+U\Longrightarrow_{r\Rightarrow 0} 0
+\]
+non-zero does not satisfy Schrodinger's equation at origin.
+
+** The General Properties of $U_{El}$
+
+** The Free Particle in Spherical Coordinates
+\[
+\left[ \frac{d^2}{d r^2} + k^2 - \frac{l \left( l+1 \right)}{r^2} \right] U_{El}=0, k^2=\frac{2\mu E}{\hbar^2}
+\]
+set $\rho = kr$,
+\[
+\left[ -\frac{d^2}{d r^2}+\frac{l \left( l +1\right)}{\rho^2} \right]U_l = U_l
+\]
+looks kile harmonic oscillator except for the fact that we have a potential $1/\rho^2$ instead of $\rho^2$.
+Define operators analogous to the raising and lowering operators.
+\[
+d_l = \frac{d}{d\rho}+ \frac{l \left( l+1 \right)}{\rho}
+\]
+\[
+d_l^{\dagger} = -\frac{d}{d\rho}+ \frac{l \left( l+1 \right)}{\rho}
+\]
+note that $\frac{d}{d\rho}$ is anti-Hermitian.
+
+\[
+d_l^{\dagger} U_l = U_{l+1}
+\]
+
+if $l=0$
+
+\[
+U^A_0 = \sin \rho
+\]
+
+\[
+U^B_0 = -\cos \rho,\mbox{not acceptable at origin}
+\]
+
+\[
+\rho R_{l+1} = d_l^{\dagger} \left( \rho R_l \right) = \left( -\frac{d}{d\rho}+\frac{l+1}{\rho} \right) \left( \rho R_l \right)
+\]
+
+\[
+R_{l+1} = \left( -\frac{d}{d\rho}+\frac{l}{\rho} \right)R_l = \rho^l \left( -\frac{d}{d\rho} \right)\frac{R_l}{r^l}
+\]
+or 
+\[
+\frac{R_{l+1}}{\rho^{l+1}} = \left( -\frac{1}{\rho} \frac{d}{dr} \right)\frac{R_l}{\rho^l}=\left( -\frac{1}{\rho} \frac{d}{dr} \right)^{l+1}\frac{R_0}{\rho^{0}}
+\]
+\[
+R^A_0 = \frac{\sin \rho}{\rho}
+\]
+\[
+R^B_0 = \frac{-\cos \rho}{\rho}
+\]
+/Spherical Bessel function/
+\[
+R^A_l=j_l=\left( -\rho \right)^l \left( \frac{1}{\rho} \frac{d}{d\rho} \right)^l \left( \frac{\sin \rho}{\rho} \right)
+\]
+/Spherical Neumann function/
+\[
+R^B_l=n_l=\left( -\rho \right)^l \left( \frac{1}{\rho} \frac{d}{d\rho} \right)^l \left( \frac{-\cos \rho}{\rho} \right)
 \]
 * The Hydrogen Atom
 ** The eigenvalue problem
