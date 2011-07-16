@@ -56,5 +56,29 @@ Assume evolution of the system and meter over the time $T_{2}$ is negligible.
 \]
 
 See the forth equation in /projective measurement/.
+
+The measurement on the meter disentangles the system and the meter, so that the final state can be written as 
+\[
+\left| \psi_r \left( t+T \right) \right\rangle = \left| r \right\rangle \frac{\hat{M}_r \left| \psi \left( t \right) \right\rangle}{\sqrt P_r}
+\]
+
+Where $\hat{M}_r$ is an operator that acts only in the system Hilbert space, defined by
+
+\[
+\hat{M}_r = \left\langle r \right|\hat{U} \left( T_1 \right) \left| \theta \left( t \right) \right\rangle
+\]
+
+We call it a /measurement operator/ The probability distribution for $R$ can similarly be written as
+\[
+P_r = \left\langle \psi \left( t \right) \right| \hat{M}^{\dagger}_r \hat{M}_r \left| \psi \left( t \right) \right\rangle
+\]
+
+
+* Measurement Operators And Effects
+After the measurement the system and meters are no longer entangled. So it is not necessary to continue to include the meter in our description of the measurement.
+
+\[
+\left| \psi \left( t+T \right) \right\rangle = \frac{\hat{M}_r \left| \psi \left( t \right) \right\rangle}{\sqrt P_r}
+\] 
 ------
 [[file:index.org][Back to Index]]
