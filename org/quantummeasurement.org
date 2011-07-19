@@ -80,5 +80,33 @@ After the measurement the system and meters are no longer entangled. So it is no
 \[
 \left| \psi \left( t+T \right) \right\rangle = \frac{\hat{M}_r \left| \psi \left( t \right) \right\rangle}{\sqrt P_r}
 \] 
+
+The probabilities are given by the expectation of another operator, defined in terms of the measurement operators by, 
+\[
+\hat{E}_r = \hat{M}_e^{\dagger} \hat{M}_r
+\]
+These operators are known as /probability operators or effects/.
+
+\[
+\sum_r \hat{E}_r = \hat{I}_S
+\]
+
+Why measurement operator must be positive?
+
+If one often wishes to consider a sequence of measurements, in which case the conditioned system state is vital. The conditioned state is,
+
+\[
+\rho \left( t+T \right) = \frac{\hat{M}_r \rho \left( t \right) \hat{M}_r^{\dagger}}{P_r}=\frac{J \left[ \hat{M}_r \right]\rho \left( t \right)}{P_r}
+\]
+
+where $P_r = Tr \left[ \rho \left( t \right) \hat{E}_r \right]$, and of arbitrary operators $A$ and $B$,
+
+\[
+J \left[ \hat{A} \right] \hat{B} = \hat{A} \hat{B} \hat{A}^{\dagger}
+\]
+
+The /superoperator/ $O_r = J \left[ \hat{M}_r \right]$ is known as the /operation/ for $r$.
+
+For non-projective measurements, there is no guarantee that repeating the measuremetn will yield the same result.
 ------
 [[file:index.org][Back to Index]]
