@@ -9,3 +9,4 @@ org/\#*
 *.swp
 *~
 \#*
+.DS_Store

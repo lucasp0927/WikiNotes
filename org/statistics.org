@@ -1,6 +1,5 @@
 #+TITLE: Statistics
 #+AUTHOR: Lucas Peng
-#+OPTIONS: LaTeX:dvipng
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:2
