@@ -1,0 +1,15 @@
+#+TITLE: Plasma
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+* Introduction
+$N_D = n \lambda_D^3$, number of particles in a Debye cube, this is called the [[http://en.wikipedia.org/wiki/Plasma_parameter][plasma parameter]].
+
+Plasma physics via computer simulation is viable becuase, 
+1. Collecrive behavior of collisionless plasmas occur at wavelengths longer than the Debye length, $\lambda > \lambda_D$
+2. We can obtain usefule information in lower dimension, 1D, 2D. So fewer particles needed to be simulated.
+
+For plasma $KE/PE \gg 1$. And the ratio is $N_D$ (why?).
+
+For collisionless plasma $\frac{v}{\omega_p} \approx \frac{1}{N_D} \ln N_D \ll 1$
+* Reference
+- Plasma PHysics Via Computer Simulation, 1985, Charles K. Birdsall, A. Bruce Langdon

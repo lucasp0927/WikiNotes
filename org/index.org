@@ -20,7 +20,7 @@ Notes on physics and other stuff.
 - [[file:quantum.org][Quantum Mechanics]]
 - [[file: quantummeasurement.org][Quantum Measurement]]
 - [[file:quantumoptics.org][Quantum Optics]]
-
+- [[file:plasma.org][Plasma]]
 * Math
 - [[file:complex.org][Complex Variable]]
 - [[file:coordinate.org][How to Remember Div and Curl]]
