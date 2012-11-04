@@ -248,5 +248,28 @@ real part of complex susceptibility
 Where $N_a$ is the atom number density and 
 
 \[Z=\left( \Delta^2-\gamma_{1}\gamma_3-\Omega_{\mu}^2/4 \right)^2+\Delta^2 \left( \gamma_{1}+\gamma_3 \right)^2\]
+
+* Frequency Modulation
+** Sinusoidoal Baseband Signal
+\[
+y(t) = A_c \cos \left( 2 \pi f_c t + \frac{f_{\Delta}}{f_{m}} \cos \left( 2\pi f_m t \right) \right)
+\]
+$f_{\Delta}$ is the frequency deviation (maximum shift from $f_c$).
+** Modulation Index
+\[
+h = \frac{\Delta f}{f_m} = \frac{f_{\Delta} \left| x_m \left( t \right) \right|}{f_{m}}
+\]
+
+** Bessel Functions
+*** Bessel functions of the first kind: $J_{\alpha}$
+\[
+ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m+\alpha+1)} {\left(\tfrac{1}{2}x\right)}^{2m+\alpha}
+\]
+
+\[
+J_{-n} \left( x \right) = \left( -1 \right)^2 J_n \left( x \right)
+\]
+
+
 ------
 [[file:index.org][Back to Index]]

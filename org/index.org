@@ -21,6 +21,7 @@ Notes on physics and other stuff.
 - [[file: quantummeasurement.org][Quantum Measurement]]
 - [[file:quantumoptics.org][Quantum Optics]]
 - [[file:plasma.org][Plasma]]
+- [[file:useful.org][Useful Formula]]
 * Math
 - [[file:complex.org][Complex Variable]]
 - [[file:coordinate.org][How to Remember Div and Curl]]

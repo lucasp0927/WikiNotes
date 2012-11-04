@@ -1,0 +1,14 @@
+#+TITLE:Useful Formula
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+OPTIONS: toc:3
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+
+- Stirling's formula
+\[
+m! \approx \left( 2 \pi m \right) \left( \frac{m}{e} \right)^{m}
+\]
+-----
+[[file:index.org][Back to Index]]
