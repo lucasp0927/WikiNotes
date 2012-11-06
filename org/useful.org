@@ -10,5 +10,10 @@
 \[
 m! \approx \left( 2 \pi m \right) \left( \frac{m}{e} \right)^{m}
 \]
+
+- Gaussian Integrals
+\[
+I_0 \left( \alpha,\beta \right) = \int^{\infty}_{-\infty} e^{-\alpha x^2 + \beta x} dx = e^{\beta^2/4\alpha} \left( \frac{\pi}{\alpha} \right)^{1/2}
+\]
 -----
 [[file:index.org][Back to Index]]
