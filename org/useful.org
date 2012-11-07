@@ -6,14 +6,29 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 
-- Stirling's formula
+* Stirling's formula
 \[
 m! \approx \left( 2 \pi m \right) \left( \frac{m}{e} \right)^{m}
 \]
 
-- Gaussian Integrals
+* Gaussian Integrals
 \[
 I_0 \left( \alpha,\beta \right) = \int^{\infty}_{-\infty} e^{-\alpha x^2 + \beta x} dx = e^{\beta^2/4\alpha} \left( \frac{\pi}{\alpha} \right)^{1/2}
+\]
+
+* Error function
+Definition
+\[
+\operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_{0}^x e^{-t^2} dt
+\]
+relationship with CDF of gaussian distribution:
+\[
+\Phi (x) = \frac{1}{2}+ \frac{1}{2} \operatorname{erf} \left(x/ \sqrt{2}\right)
+\]
+\[
+F(x;\,\mu,\sigma^2)
+    = \Phi\left(\frac{x-\mu}{\sigma}\right)
+    = \frac12\left[\, 1 + \operatorname{erf}\left(\frac{x-\mu}{\sigma\sqrt{2}}\right)\,\right],\quad x\in\mathbb{R}
 \]
 -----
 [[file:index.org][Back to Index]]
