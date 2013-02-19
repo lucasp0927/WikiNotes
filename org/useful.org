@@ -30,5 +30,9 @@ F(x;\,\mu,\sigma^2)
     = \Phi\left(\frac{x-\mu}{\sigma}\right)
     = \frac12\left[\, 1 + \operatorname{erf}\left(\frac{x-\mu}{\sigma\sqrt{2}}\right)\,\right],\quad x\in\mathbb{R}
 \]
+* Delta function
+\[
+\delta(x-\alpha)=\frac{1}{2\pi} \int \limits_{-\infty} ^ \infty e^{ip(x-\alpha)}\ dp
+\]
 -----
 [[file:index.org][Back to Index]]
