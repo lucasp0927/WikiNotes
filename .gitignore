@@ -10,3 +10,4 @@ org/\#*
 *~
 \#*
 .DS_Store
+publish/.htpasswd
