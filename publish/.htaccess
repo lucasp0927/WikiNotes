@@ -1,0 +1,4 @@
+AuthType Basic  
+AuthName "restricted area"  
+AuthUserFile /home/ubuntu/Wikinotes/publish/.htpasswd
+require valid-user

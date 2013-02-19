@@ -111,15 +111,21 @@ P_{X}(x)=\begin{cases}
 * Continuous Random Variables
 ** Uniform Random Variable
 PDF:\\
-\[f_X(x)=\begin{cases}
-1/(b-a) & a\leq x<b \\
-0 & \textrm{otherwise}\end{cases}\]
+\[
+f_X(x)=\begin{cases}
+1/(b-a) & a \leq x < b \\
+0 & \textrm{otherwise}
+\end{cases}
+\]
 
 CDF:\\
-\[F_X(x)=\begin{cases}
+ \[
+F_X(x)=\begin{cases}
 0 & x \leq a \\
-(x-a)/(b-a) & a<x\leq b \\
-1 & x>b\end{cases}\]
+(x-a)/(b-a) & a < x\leq b \\
+1 & x>b
+\end{cases}
+\]
 
 \[E[X]=(b+a)/2\]
 

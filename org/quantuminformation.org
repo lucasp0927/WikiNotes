@@ -5,6 +5,32 @@
 #+INCLUDE: header/header.org org
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsmath}
+* Fundamental Concepts
+** Introduction and Overview
+*** Computation
+- Church-Turing thesis :: If an algorithm can be performed on /any/ piece of hardware, then there is an equivalent algorithm for an Universal Turing Machine.
+- Strengthened version of Church-Turing thesis :: Any algorithmic process can be simulated efficiently using a Turing machine.
 
+Analog computation appear to violate CT thesis. \to consider realistic noise.
+
+/keyword/: quantum error-correcting codes, falt-tolerant quantum computation.
+
+Whether an integer is prime or coposite can be tested using randomized algorithm. That is the *Solovay-Strassen test*.
+
+- Modify strong Church-Turing thesis :: Any algorithmic process can be simulated efficiently using a probabilistic Turing machine.
+
+1985 David Deutsch : quantum computer might have computational powers exceeding those of classical computers. 1994 Peter Shor, 1995 Lov Grover.
+
+*** Communication
+1948 Claude Shannon mathematically define the concept of information.
+- Shannon's noiseless channel coding theorem :: quantifies the physical resources required to store the output from an information source.
+- Shannon's noisy channel coding theorem :: how much information it is possible to reliably transmit through a noisy communications channel.
+
+1995 Ben Schumacher provided an analogue to noiseless coding theorem, and defined qubit. However, no analogue to noisy channel coding theorem is yet known for quantum information.
+
+1996, Robert Calderbank and Peter Shor, Andrew Steane discovered *CSS codes*.
+1992, Charles Bennett and Stephen Wiesner explained how to transmit two classical bits using one qubit. *Superdense coding*
+* Reference
+- Quantum Computation and Quantum Information, Michael A. Nielsen, Isaac L. Chuang
 ------
 [[file:index.org][Back to Index]]
