@@ -1,10 +1,10 @@
-#+TITLE:
+#+TITLE: Quantum Field Theory
+#+OPTIONS: toc:3
 #+AUTHOR: Lucas Peng
 #+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
-#+OPTIONS: toc:3
 #+LATEX_HEADER: \usepackage{amssymb}
-* chap9 
+#+LATEX_HEADER: \usepackage{amsmath}
 
 ------
 [[file:index.org][Back to Index]]

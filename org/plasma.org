@@ -14,4 +14,6 @@ For collisionless plasma $\frac{v}{\omega_p} \approx \frac{1}{N_D} \ln N_D \ll 1
 ** Finite Sized Particles
 - As finite sized particle radius $R$ is made comparable or larger than the Debye length, the collision cross section and collision frequency diminish rapidly.
 * Reference
-- Plasma PHysics Via Computer Simulation, 1985, Charles K. Birdsall, A. Bruce Langdon
+- Plasma Physics Via Computer Simulation, 1985, Charles K. Birdsall, A. Bruce Langdon
+------
+[[file:index.org][Back to Index]]

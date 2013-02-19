@@ -58,7 +58,7 @@ g_m &=& \mu_n C_{ox} \frac{W}{L}V_{ov} \\  &=& \sqrt{2\mu_n C_{ox}\frac{W}{L}I_D
 *** High frequency Response
 - Using Miller's Theorem
 
- \[C_{gd} \xrightarrow{\hspace*{2cm}} C_{gd}\left( 1+g_m R^{\prime}_{L} \right)\].
+ \[C_{gd} \rightarrow C_{gd}\left( 1+g_m R^{\prime}_{L} \right)\].
 
  So $f_H=\frac{1}{2\pi C_{in}R_{sig}}$, where $C_{in}=C_{gs}+C_{gd}\left( 1+g_m R^{\prime}_{L} \right)$
 
