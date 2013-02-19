@@ -205,19 +205,20 @@ $\beta$ is determined by the equation
 ** Physical Significance Of The Various Statistical Quantities In The Caconical Ensemble
 \[A = U-TS\]
 \[dA = -SdT-PdV +\mu dN\]
+
 \[
-\left\{ 
-\begin{align}
+\left\{
+\begin{array}{ll}
 S =& -\frac{dA}{dT}\\
 P =& \underbrace{-\frac{dA}{dV}}_{
-\begin{align}
+\begin{array}{l}
 P=-\frac{\sum_{r} \frac{\partial E_r}{\partial V}\exp \left( - \beta E_r \right)}{\sum_r \exp \left( -\beta E_r \right)}\\
-PdV=-\sum_r P_r dE_r = -dU\\
-\end{align}
+PdV=-\sum_r P_r dE_r = -dU
+\end{array}
 }\\
 \mu=& \frac{dA}{dN}\\
 U=& A+TS = \underbrace{A - T \frac{\partial A}{\partial T}}_{C_V = \left( \frac{\partial U}{\partial T} \right)_{N,V}=-T \left( \frac{\partial^2 A}{\partial T^2} \right)_{N,V}}=-T^2 \left[ \frac{\partial}{\partial T} \frac{A}{T} \right]= \left[ \frac{\partial \left( A/T \right)}{\partial \left( 1/T \right)} \right]
-\end{align}
+\end{array}
 \right.
 \]
 
