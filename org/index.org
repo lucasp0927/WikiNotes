@@ -36,5 +36,5 @@ Notes on physics and other stuff.
 - [[file:emacsorg.org][Org-Mode Setting]]
 
 -----
-** TODO General Physics
 ** TODO Signals and Systems
+** TODO Relativity
