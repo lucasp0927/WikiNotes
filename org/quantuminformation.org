@@ -8,6 +8,7 @@
 * Fundamental Concepts
 ** Introduction and Overview
 *** Computation
+- No signal is faster than light \to No-cloning theorem
 - Church-Turing thesis :: If an algorithm can be performed on /any/ piece of hardware, then there is an equivalent algorithm for an Universal Turing Machine.
 - Strengthened version of Church-Turing thesis :: Any algorithmic process can be simulated efficiently using a Turing machine.
 
@@ -40,14 +41,15 @@ networked quantum information theory: While two reverse direction zero capacity 
 \left| \psi \right\rangle = \alpha \left| 0 \right\rangle + \beta \left| 1 \right\rangle
 \]
 
-- Bloch sphere
+**** Bloch sphere
 \[
 \left| \psi \right\rangle = \cos \frac{\theta}{2} \left| 0 \right\rangle + e^{i \phi} \sin \frac{\theta}{2} \left| 1 \right\rangle
 \]
+#+CAPTION: Bloch Sphere
 #+ATTR_HTML: width="300px"
 [[./img/blochsphere.png]]
 
-- *Bell state* or *EPR pair*
+**** *Bell state* or *EPR pair*
 \[
 \frac{\left| 00 \right\rangle + \left| 11 \right\rangle}{\sqrt{2}}
 \]
@@ -56,7 +58,7 @@ networked quantum information theory: While two reverse direction zero capacity 
 *** Single qubit gates
 There is only one single bit gate in classical bit.
 - *Unitary* $U^{\dagger}U = I$ is the only constraint on quantum gates.
-- Quantum NOT gate acts /linarly/
+**** Quantum NOT gate acts /linarly/
 \[
 X \equiv \left[ 
 \begin{array}{cc}
@@ -68,7 +70,7 @@ X \equiv \left[
 \[
 \alpha \left| 0 \right\rangle + \beta \left| 1 \right\rangle \Rightarrow \alpha \left| 1 \right\rangle + \beta \left| 0 \right\rangle
 \]
-- $Z$ gate
+**** $Z$ gate
 \[
 Z \equiv \left[ 
 \begin{array}{cc}
@@ -77,7 +79,7 @@ Z \equiv \left[
 \end{array}
 \right]
 \]
-- /Hadamard/ gate
+**** /Hadamard/ gate
 \[
 H \equiv \frac{1}{\sqrt{2}}\left[ 
 \begin{array}{cc}
@@ -86,6 +88,49 @@ H \equiv \frac{1}{\sqrt{2}}\left[
 \end{array}
 \right]
 \]
+*** Multiple qubit gates
+- Any classical logic can be computed from the composition of NAND gates alone.
+- Controlled-NOT gate
+  1. Control qubit, target qubit
+  2. The control qubit and the target qubit are XORed and stored in the target qubit
+  3. \[
+     U_{CN} = 
+     \begin{array}{cccc}
+     1&0&0&0\\
+     0&1&0&0\\
+     0&0&0&1\\
+     0&0&1&0
+     \end{array}
+     \]
+- Quantum gates are /reversible/.
+- Any multiple qubit logic gate may be composed from CNOT and single qubit gates.
+*** Quantum circuits
+Requirement of quantum circuits:
+- No loop (/acyclic/)
+- No FANIN (not reversible)
+- NO FANOUT (no-cloning theorem)
+Example:
+**** Swaps the states of the two qubits.
+#+CAPTION: Circuit swapping two qubits.
+#+ATTR_HTML: width="200px"
+[[./img/QI/swap.png]]
+
+#+CAPTION: Controlled-U gate
+#+ATTR_HTML: width="200px"
+[[./img/QI/controlledu.png]]
+**** The measure operation converts a single qubit state $\left| \psi \right\rangle \alpha \left| 0 \right\rangle + \beta \left| 1 \right\rangle$ into a probablistic classical bit M. (double-line means classical bit). Which is 0 with probability $\left| \alpha \right|^2$, or 1 with probability $\left| \beta \right|^2$.
+#+CAPTION: measure operation
+#+ATTR_HTML: width="200px"
+[[./img/QI/measure.png]]
+**** A CNOT gate cannot copy a quantum state.$\left| \psi \right\rangle = \alpha \left| 0 \right\rangle + \beta \left| 1 \right\rangle$. Input $\left| \psi \right\rangle \left| 0 \right\rangle$ to a CNOT gate.
+\[
+\left[ \alpha \left| 0 \right\rangle + \beta \left| 1 \right\rangle\right] \left| 0 \right\rangle \Rightarrow \alpha \left| 00 \right\rangle+\beta \left| 11 \right\rangle
+\]
+however, 
+\[
+\left| \psi \right\rangle \left| \psi \right\rangle = \alpha^2 \left| 00 \right\rangle + \alpha \beta \left| 01 \right\rangle + \alpha \beta \left| 10 \right\rangle + \beta^2 \left| 11 \right\rangle
+\]
+
 * Reference
 - Quantum Computation and Quantum Information, Michael A. Nielsen, Isaac L. Chuang
 ------

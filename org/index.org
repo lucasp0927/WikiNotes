@@ -4,7 +4,6 @@
 #+EMAIL: lucasp0927@gmail.com
 #+TITLE: WikiNotes
 #+INCLUDE: header/header.org org
------
 Notes on physics and other stuff.
 -----
 * Physics
@@ -23,15 +22,16 @@ Notes on physics and other stuff.
 *** [[file:relativity.org][Relativity]]
 *** [[file:useful.org][Useful Formula]]
 ***
+-----
 * Math
 *** [[file:complex.org][Complex Variable]]
 *** [[file:coordinate.org][How to Remember Div and Curl]]
 *** [[file:probability.org][Probability]]
-
+-----
 * EE
 *** [[file:electronics.org][Electronics]]
 *** [[file:sselectronics.org][Solid State Electronics]]
-
+-----
 * emacs
 *** [[file:emacsorg.org][Org-Mode Setting]]
 -----
