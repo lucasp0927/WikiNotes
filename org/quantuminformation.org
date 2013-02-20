@@ -54,7 +54,38 @@ networked quantum information theory: While two reverse direction zero capacity 
 
 ** Quantum computation
 *** Single qubit gates
-
+There is only one single bit gate in classical bit.
+- *Unitary* $U^{\dagger}U = I$ is the only constraint on quantum gates.
+- Quantum NOT gate acts /linarly/
+\[
+X \equiv \left[ 
+\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}
+\right]
+\]
+\[
+\alpha \left| 0 \right\rangle + \beta \left| 1 \right\rangle \Rightarrow \alpha \left| 1 \right\rangle + \beta \left| 0 \right\rangle
+\]
+- $Z$ gate
+\[
+Z \equiv \left[ 
+\begin{array}{cc}
+1&0\\
+0&-1
+\end{array}
+\right]
+\]
+- /Hadamard/ gate
+\[
+H \equiv \frac{1}{\sqrt{2}}\left[ 
+\begin{array}{cc}
+1&1\\
+1&-1
+\end{array}
+\right]
+\]
 * Reference
 - Quantum Computation and Quantum Information, Michael A. Nielsen, Isaac L. Chuang
 ------
