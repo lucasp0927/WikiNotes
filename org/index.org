@@ -35,5 +35,13 @@ Notes on physics and other stuff.
 * emacs
 *** [[file:emacsorg.org][Org-Mode Setting]]
 -----
+* Author
+** Lucas Peng
+#+ATTR_HTML: width="200px"
+
+[[./img/lucas_avatar.jpeg]]
+
+e-mail: lucasp0927 at gmail dot com
+-----
 ** TODO Signals and Systems
 ** TODO Relativity

@@ -108,11 +108,11 @@ H \equiv \frac{1}{\sqrt{2}}\left[
 Requirement of quantum circuits:
 - No loop (/acyclic/)
 - No FANIN (not reversible)
-- NO FANOUT (no-cloning theorem)
+- No FANOUT (no-cloning theorem)
 Example:
 **** Swaps the states of the two qubits.
 #+CAPTION: Circuit swapping two qubits.
-#+ATTR_HTML: width="200px"
+#+ATTR_HTML: width="300px"
 [[./img/QI/swap.png]]
 
 #+CAPTION: Controlled-U gate
