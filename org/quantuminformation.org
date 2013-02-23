@@ -31,6 +31,7 @@ Whether an integer is prime or coposite can be tested using randomized algorithm
 
 1996, Robert Calderbank and Peter Shor, Andrew Steane discovered *CSS codes*.
 1992, Charles Bennett and Stephen Wiesner explained how to transmit two classical bits using one qubit. *Superdense coding*
+
 *Distributed quantum computation* quantum computers can require exponentially less communication to solve certain problems than would be required if the networked computers were classical.
 *** Networked information theory
 networked quantum information theory: While two reverse direction zero capacity channel has zero capacity in classical information theory, we can use it to send information using networked quantum information theory.
