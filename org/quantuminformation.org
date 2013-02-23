@@ -14,7 +14,7 @@
 
 Analog computation appear to violate CT thesis. \to consider realistic noise.
 
-/keyword/: quantum error-correcting codes, falt-tolerant quantum computation.
+/keyword/: quantum error-correcting codes, fault-tolerant quantum computation.
 
 Whether an integer is prime or coposite can be tested using randomized algorithm. That is the *Solovay-Strassen test*.
 

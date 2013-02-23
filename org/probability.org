@@ -1,6 +1,6 @@
 #+Title: Probability and Statistic 
-#+AUTHOR: Andrew Liu
-#+EMAIL: andrewliu33@gmail.com
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
 #+INCLUDE: header/header.org org
 #+STARTUP: showall
 #+OPTIONS: toc:3
@@ -209,3 +209,5 @@ Standard normal complementary CDF:\\
 
 ** Bivariate Gussian Random Variables
 \[f_{X,Y}(x,y)=\frac{e^{\displaystyle{-\frac{\left(\frac{x-\mu_1}{\sigma_1}\right)^2-\frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1 \sigma+2}+\left(\frac{y-\mu_2}{\sigma_2}\right)^2}{2(1-\rho^2)}}}}{2\pi\sigma_1 \sigma_2\sqrt{1-\rho^2}}\]
+------
+[[file:index.org][Back to Index]]
