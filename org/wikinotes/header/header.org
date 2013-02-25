@@ -1,5 +1,5 @@
 -----
-[[file:index.org][Index]] | [[file: index.org][Main]]
+[[file:index.org][Index]] | [[file: ../index.org][Main]]
 -----
 #+AUTHOR Lucas Peng
 

@@ -3,6 +3,10 @@ publish/web_physic/*.html*
 publish/ltxpng/
 publish/MathJax/
 publish/header/
+publish/img/
+publish/css/
+publish/js/
+publish/wikinotes/
 publish/MathJax_1.0/
 org/*~
 org/\#*

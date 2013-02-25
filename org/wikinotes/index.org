@@ -1,0 +1,39 @@
+#+OPTIONS: toc:nil
+#+STARTUP: showall
+#+AUTHOR: Lucas Peng, Andrew Liu 
+#+EMAIL: lucasp0927@gmail.com
+#+TITLE: WikiNotes
+#+INCLUDE: header/header.org org
+Notes on physics and other stuff.
+-----
+* Physics
+** WIP
+*** [[file: openquantumsystem.org][Open Quantum System]]
+*** [[file: quantuminformation.org][Quantum Information]]
+*** [[file:quantumfieldtheory.org][Quantum Field Theory]]
+*** [[file:quantum.org][Quantum Mechanics]]
+*** [[file:quantumoptics.org][Quantum Optics]]
+
+** Archive
+*** [[file:thermal.org][Thermal Physics]]
+*** [[file:statistical_mechanics.org][Statistical Mechanics]]
+*** [[file:plasma.org][Plasma]]
+*** [[file:electromagnetic.org][Electromagnetics]]
+*** [[file:relativity.org][Relativity]]
+*** [[file:useful.org][Useful Formula]]
+***
+-----
+* Math
+*** [[file:complex.org][Complex Variable]]
+*** [[file:coordinate.org][How to Remember Div and Curl]]
+*** [[file:probability.org][Probability]]
+-----
+* EE
+*** [[file:electronics.org][Electronics]]
+*** [[file:sselectronics.org][Solid State Electronics]]
+-----
+* emacs
+*** [[file:emacsorg.org][Org-Mode Setting]]
+-----
+** TODO Signals and Systems
+** TODO Relativity
