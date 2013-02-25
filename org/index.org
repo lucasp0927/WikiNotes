@@ -17,5 +17,6 @@ B.S. Physics / B.S. Electrical Engineering
 * WikiNotes
 [[file: ./wikinotes/index.org][WikiNotes]]
 * Journal
+[[file: ./journal][Journal]]
 * Memo
 -----

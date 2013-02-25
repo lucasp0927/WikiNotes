@@ -1,0 +1,11 @@
+#+TITLE: <2013-02-26 Tue>
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+* Five steps of a scientist
+journal \to Memo \to paper \to review paper \to book
+------
+[[file:index.org][Back to Index]]
