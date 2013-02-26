@@ -4,6 +4,7 @@
 #+EMAIL: lucasp0927@gmail.com
 #+TITLE: WikiNotes
 #+INCLUDE: header/header.org org
+#+STYLE: <link rel='stylesheet' type='text/css' href='css/worg-narrow.css' /><script type='text/javascript' src='js/jquery.js'></script><script type='text/javascript' src='js/toggle.js'></script>
 Notes on physics and other stuff.
 -----
 * Physics
