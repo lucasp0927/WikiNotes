@@ -2,7 +2,7 @@
 #+STARTUP: showall
 #+AUTHOR: Lucas Peng
 #+EMAIL: lucasp0927@gmail.com
-#+TITLE: Lucas Peng
+#+TITLE: Lucas S. Peng
 #+INCLUDE: header/header.org org
 * Lucas Peng
 #+ATTR_HTML: width="200px"
