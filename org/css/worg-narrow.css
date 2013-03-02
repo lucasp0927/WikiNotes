@@ -5,8 +5,8 @@
     font-size: 14px;
     line-height: 21px;
     color: #333;
-	padding: 50px 200px 50px 200px;
-    /*max-width: 95%;*/
+	/*padding: 50px 200px 50px 200px;*/
+    max-width: 600px;
     margin: auto;
     /*background-image: url(http://orgmode.org/worg-unicorn.png);*/
     background-position: 25px 5px;
