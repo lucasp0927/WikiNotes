@@ -5,11 +5,15 @@
 #+TITLE: Lucas S. Peng
 #+INCLUDE: header/header.org org
 * Lucas Peng
-#+ATTR_HTML: width="200px"
 #+STYLE: <link rel='stylesheet' type='text/css' href='css/worg-narrow.css' /><script type='text/javascript' src='js/jquery.js'></script><script type='text/javascript' src='js/toggle.js'></script>
+
+#+ATTR_HTML: width="200px"
 [[./img/lucas_avatar.jpeg]]
 
-e-mail: lucasp0927 at gmail dot com
+e-mail: 
+#+ATTR_HTML: width="200px" align="middle"
+[[./img/email_gmail.png]]
+
 
 ** Education
 National Taiwan University
