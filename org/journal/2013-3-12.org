@@ -1,0 +1,17 @@
+#+TITLE: <2013-03-12 Tue>
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+ATTR_HTML: width="1000px"
+[[./img/2013_3_8_fe_1.png]]
+#+ATTR_HTML: width="1000px"
+[[./img/2013_3_8_fe_2.png]]
+#+ATTR_HTML: width="1000px"
+[[./img/2013_3_4_qos_1.png]]
+#+ATTR_HTML: width="1000px"
+[[./img/2013_3_4_qos_2.png]]
+#+ATTR_HTML: width="1000px"
+[[./img/2013_3_4_qos_3.png]]

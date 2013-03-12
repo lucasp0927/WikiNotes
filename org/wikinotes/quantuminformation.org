@@ -132,6 +132,15 @@ however,
 \left| \psi \right\rangle \left| \psi \right\rangle = \alpha^2 \left| 00 \right\rangle + \alpha \beta \left| 01 \right\rangle + \alpha \beta \left| 10 \right\rangle + \beta^2 \left| 11 \right\rangle
 \]
 
+**** Bell states
+Consider a circuit, which has a Hadamard gate followed by a CNOT gate. This circuits can generate Bell states of EPR pairs.
+\[
+\left| \beta_{xy} \right\rangle = \frac{\left| 0,y \right\rangle + \left( -1 \right)^x \left| 1, \bar{y} \right\rangle}{\sqrt{2}}
+\]
+
+**** Quantum teleportation
+
+
 * Reference
 - Quantum Computation and Quantum Information, Michael A. Nielsen, Isaac L. Chuang
 ------
