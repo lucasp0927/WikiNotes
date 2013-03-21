@@ -1,0 +1,11 @@
+#+TITLE: <2013-03-21 Thu>
+#+OPTIONS: toc:3
+#+AUTHOR: Lucas Peng
+#+EMAIL: lucasp0927@gmail.com
+#+INCLUDE: header/header.org org
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+[[./img/2013_2_21_fe_1.png]]
+[[./img/2013_2_21_fe_2.png]]
+------
+[[file:index.org][Back to Index]]
