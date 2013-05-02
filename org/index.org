@@ -7,8 +7,9 @@
 * Lucas Peng
 #+STYLE: <link rel='stylesheet' type='text/css' href='css/worg-narrow.css' /><script type='text/javascript' src='js/jquery.js'></script><script type='text/javascript' src='js/toggle.js'></script>
 
-#+ATTR_HTML: width="200px"
-[[./img/lucas_avatar.jpeg]]
+#+BEGIN_HTML
+<img src="http://www.gravatar.com/avatar/5e339f13bfd32e939c591cb8417dead9?s=250" />
+#+END_HTML
 
 e-mail: 
 #+ATTR_HTML: width="200px" align="middle"
