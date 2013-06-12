@@ -7,8 +7,8 @@
 #+OPTIONS: toc:3
 
 * Special Relativity
-** Lorentz transformation
 
+** Lorentz transformation
 *** Four Velocity
 \begin{equation*}
 \mathbf{x}=X^{\mu}\left( \tau \right)= \left[ \begin{array}{c}
