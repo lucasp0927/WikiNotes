@@ -6,8 +6,77 @@
 #+INCLUDE: header/header.org org
 #+OPTIONS: toc:3
 
-* Special Relativity
+* The Geometry of Special Relativity
+** Hyperbola Geometry
+\[
+\cosh \beta = \frac{e^\beta + e^{-\beta}}{2}
+\]
+\[
+\sinh \beta = \frac{e^\beta - e^{-\beta}}{2}
+\]
+\[
+\tanh \beta = \frac{\sinh\beta}{\cosh\beta}
+\]
+\[
+\cosh^2\beta - \sinh^2\beta = 1
+\]
+\[
+\sinh \left( \alpha + \beta \right) = \sinh \alpha \cosh \beta + \cosh \alpha \sinh \beta
+\]
+\[
+\cosh \left( \alpha + \beta \right) = \cosh \alpha \cosh \beta + \sinh \alpha \sinh \beta
+\]
+\[
+\tanh \left( \alpha + \beta \right) = \frac{\tanh \alpha + \tanh \beta}{1+\tanh\alpha\tanh\beta}
+\]
+\[
+\frac{d}{d\beta} \sinh \beta = \cosh \beta
+\]
+\[
+\frac{d}{d\beta} \cosh \beta = \sinh \beta
+\]
+\[
+\rho^2 = x^{2 - y^2}
+\]
 
+\[
+\left\{ \begin{array}{ccc}
+\cosh \beta &=& \frac{x}{\rho} \\
+\sinh \beta &=& \frac{y}{\rho}
+ \end{array} \right.
+\]
+*** rotation
+\[
+\left( \begin{array}{c}
+x\\y
+\end{array} \right) = 
+\left(\begin{array}{cc}
+\cosh\beta & \sinh\beta\\
+\sinh \beta & \cosh\beta
+\end{array}\right)
+\left(\begin{array}{c}
+x^{\prime}\\y^{\prime}
+\end{array}\right)
+\]
+** Lorentz Transformations
+\[
+v = c \tanh \beta
+\]
+
+\[
+\left( \begin{array}{c}
+x\\ct
+\end{array} \right) = 
+\left(\begin{array}{cc}
+\cosh\beta & \sinh\beta\\
+\sinh \beta & \cosh\beta
+\end{array}\right)
+\left(\begin{array}{c}
+x^{\prime}\\ct^{\prime}
+\end{array}\right)
+\]
+
+* Special Relativity
 ** Lorentz transformation
 *** Four Velocity
 \begin{equation*}
